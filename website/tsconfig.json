@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "include": [
+    "src/"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "strictNullChecks": false,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "strict": true,
+    "types": [
+      "@types/jest"
+    ],
+    "paths": {
+      "@site/*": [
+        "./*"
+      ],
+      "@theme/*": [
+        "./node_modules/@docusaurus/theme-common/src/theme/*"
+      ]
+    }
+  }
+}
