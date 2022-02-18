@@ -64,7 +64,7 @@ export default function HomepageFeatures() {
 
   return (
     <section className={styles.features}>
-      <button onClick={answer}>go</button>
+     
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
