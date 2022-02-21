@@ -17,6 +17,7 @@
     "@docusaurus/core": "2.0.0-beta.15",
     "@docusaurus/preset-classic": "2.0.0-beta.15",
     "@mdx-js/react": "^1.6.21",
+    "buffer": "^6.0.3",
     "clsx": "^1.1.1",
     "firebase": "^9.6.7",
     "prism-react-renderer": "^1.2.1",

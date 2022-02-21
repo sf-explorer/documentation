@@ -1,13 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
-import { useDocumentData } from "react-firebase-hooks/firestore"
-import { useAuthState } from "react-firebase-hooks/auth"
-import db, { auth } from "../firebase"
-import {
-  doc,
-} from "firebase/firestore"
-import { getCurrentUser } from "../model/user"
 
 const FeatureList = [
   {
@@ -57,10 +50,6 @@ function Feature({ Svg, title, description }) {
 }
 
 export default function HomepageFeatures() {
-  const loggedUser = getCurrentUser()
-  const [user] = useAuthState(auth)
-  const [userData] = useDocumentData(doc(db, "users", user?.uid || "anonymous"))
-
 
   return (
     <section className={styles.features}>

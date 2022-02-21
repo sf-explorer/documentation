@@ -25,9 +25,7 @@ import NavbarItem, {type Props as NavbarItemConfig} from '@theme/NavbarItem';
 import Logo from '@theme/Logo';
 import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
-import { signIn, signOutUser } from "../../model/user"
-import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "../../firebase"
+import Avatar from '@site/src/components/Avatar'
 import styles from './styles.module.css';
 
 // retrocompatible with v1
@@ -226,7 +224,7 @@ function Navbar(): JSX.Element {
   const {
     navbar: {hideOnScroll, style},
   } = useThemeConfig();
-  const [user] = useAuthState(auth)
+  
   const mobileSidebar = useMobileSidebar();
   const colorModeToggle = useColorModeToggle();
   const activeDocPlugin = useActivePlugin();
@@ -279,18 +277,7 @@ function Navbar(): JSX.Element {
               onChange={colorModeToggle.toggle}
             />
           )}
-          {user ? (
-          <>
-            {user.displayName}{" "}
-            <a onClick={signOutUser} className="ml-2">
-              Sign out
-            </a>
-          </>
-        ) : (
-          <a className="btn btn-outline-primary" onClick={signIn}>
-            Sign in with github
-          </a>
-        )}
+         <Avatar />
           {!hasSearchNavbarItem && <SearchBar />}
         </div>
       </div>
