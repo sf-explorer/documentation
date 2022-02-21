@@ -1,6 +1,6 @@
 import { getFirestore } from 'firebase/firestore'
 import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth';
+import { getAuth } from 'firebase/auth'
 
 //# https://stackoverflow.com/questions/37482366/is-it-safe-to-expose-firebase-apikey-to-the-public
 

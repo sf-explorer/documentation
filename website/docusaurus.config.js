@@ -6,10 +6,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Learn map LMS',
+  tagline: 'Docusaurus LMS',
   url: 'https://learn-map.github.io',
-  baseUrl: '/',
+  baseUrl: '/docusaurus-lms/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

@@ -1,5 +1,4 @@
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore"
-import db from "../firebase"
+import { doc, Firestore, getDoc, setDoc, updateDoc, getFirestore } from "firebase/firestore"
 import {
    getAuth,
    GithubAuthProvider,
@@ -7,6 +6,7 @@ import {
    signOut,
    onAuthStateChanged,
 } from "firebase/auth"
+
 
 export interface SubjectStatus {
    answer?: number
@@ -31,10 +31,11 @@ export interface User {
 }
 
 export class LoggedUser implements User {
+   db: Firestore
    constructor(readonly id: string) {
    }
    async getAllSubjectStatus(): Promise<{ [subjectId: string]: SubjectStatus }> {
-      const userRef = doc(db, 'users', this.id)
+      const userRef = doc(getFirestore(), 'users', this.id)
       const docSnap = await getDoc<UserStatus>(userRef)
       if (docSnap.exists()) {
          const data = docSnap.data()
@@ -46,7 +47,7 @@ export class LoggedUser implements User {
       return (await this.getAllSubjectStatus())[id]
    }
    async setSubjectStatus(id: string, status: Partial<SubjectStatus>): Promise<SubjectStatus> {
-      const userRef = doc(db, 'users', this.id)
+      const userRef = doc(getFirestore(), 'users', this.id)
       const docSnap = await getDoc<UserStatus>(userRef)
       if (docSnap.exists()) {
          const data = docSnap.data()
@@ -89,7 +90,7 @@ onAuthStateChanged(getAuth(), (user) => {
    currentUser = null
 })
 
-export async function signIn() {
+export const signIn = (db: Firestore) => async () => {
    var provider = new GithubAuthProvider()
    const userInfo = await signInWithPopup(getAuth(), provider)
    if (userInfo?.user) {

@@ -1,10 +1,8 @@
 import React from "react"
-import { signIn, signOutUser } from "../../model/user"
+import { signIn, signOutUser } from "@site/src/model/user"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "../../firebase"
 
-
-const Avatar = (props) => {
+const Avatar = ({ db, auth }) => {
   const [user] = useAuthState(auth)
 
   if (user) {
@@ -21,11 +19,10 @@ const Avatar = (props) => {
       </a>
     </>)
   } else {
-    return (<a className="btn btn-outline-primary" onClick={signIn}>
+    return (<a className="btn btn-outline-primary" onClick={signIn(db)}>
       Sign in with github
     </a>)
   }
-
 }
 
 export default Avatar

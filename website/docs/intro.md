@@ -8,14 +8,14 @@ import Quizz from '@site/src/components/firebase/Quizz';
 Let's discover **Docusaurus in less than 5 minutes**.
 
 <Quizz id="managerEmail"
-points={50}
-description="What is your manager email?"
+  points={50}
+  description="What is your manager email?"
 />
 
 <Quizz id="location"
-points={50}
-choices={["USA", "France", "Poland", "India", "Other"]}
-description="Where are you currently located?"
+  points={50}
+  choices={["USA", "France", "Poland", "India", "Other"]}
+  description="Where are you currently located?"
 />
 
 ## Getting Started
