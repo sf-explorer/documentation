@@ -1,27 +1,23 @@
 import React from "react"
-import * as QuizzUI from '@site/src/components/Quizz';
+import { Quizz as QuizzUI } from '@hikeman/lms'
 import { useDocumentData } from "react-firebase-hooks/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
-//import db, { auth } from "@site/src/firebase"
+import type { QuizzProps } from '@hikeman/lms'
+
 import {
-  doc, Firestore, getFirestore
+  doc, getFirestore
 } from "firebase/firestore"
 import { getCurrentUser } from "@site/src/model/user"
-import type { Choice, QuizzProps } from '@site/src/components/Quizz';
 import {
-  Auth,
   getAuth
 } from "firebase/auth"
 
-type FirebaseProps = {
-  db: Firestore
-  auth: Auth
-}
 
-function Quizz(props: QuizzProps & FirebaseProps) {
+function Quizz(props: QuizzProps) {
   let {
     id,
   } = props
+
   const db = getFirestore()
   const auth = getAuth()
   const loggedUser = getCurrentUser()
@@ -37,7 +33,7 @@ function Quizz(props: QuizzProps & FirebaseProps) {
   }
 
   return (
-    <QuizzUI.default {...props} userChoice={userChoice} onSubmitted={(value) => SubmitAnswer(value)} />
+    <QuizzUI {...props} userChoice={userChoice} onSubmitted={(value) => SubmitAnswer(value)} />
   )
 }
 
