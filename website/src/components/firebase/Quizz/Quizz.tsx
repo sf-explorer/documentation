@@ -1,16 +1,13 @@
 import React from "react"
+import db, {auth} from "@site/src/firebase"
 import { Quizz as QuizzUI } from '@hikeman/lms'
+import type { QuizzProps } from '@hikeman/lms'
 import { useDocumentData } from "react-firebase-hooks/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
-import type { QuizzProps } from '@hikeman/lms'
-
 import {
-  doc, getFirestore
+  doc
 } from "firebase/firestore"
 import { getCurrentUser } from "@site/src/model/user"
-import {
-  getAuth
-} from "firebase/auth"
 
 
 function Quizz(props: QuizzProps) {
@@ -18,8 +15,6 @@ function Quizz(props: QuizzProps) {
     id,
   } = props
 
-  const db = getFirestore()
-  const auth = getAuth()
   const loggedUser = getCurrentUser()
   const [user] = useAuthState(auth)
   const [userData] = useDocumentData(doc(db, "users", user?.uid || "anonymous"))

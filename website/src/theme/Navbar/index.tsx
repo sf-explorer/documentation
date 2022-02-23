@@ -27,7 +27,6 @@ import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
 import Avatar from '@site/src/components/Avatar'
 import styles from './styles.module.css';
-import db, {auth} from '@site/src/firebase'
 
 // retrocompatible with v1
 const DefaultNavItemPosition = 'right';
@@ -278,7 +277,7 @@ function Navbar(): JSX.Element {
               onChange={colorModeToggle.toggle}
             />
           )}
-         <Avatar db={db} auth={auth} />
+         <Avatar />
           {!hasSearchNavbarItem && <SearchBar />}
         </div>
       </div>

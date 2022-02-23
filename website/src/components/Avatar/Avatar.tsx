@@ -1,8 +1,10 @@
 import React from "react"
+import db, {auth} from "@site/src/firebase"
 import { signIn, signOutUser } from "@site/src/model/user"
 import { useAuthState } from "react-firebase-hooks/auth"
 
-const Avatar = ({ db, auth }) => {
+const Avatar = () => {
+
   const [user] = useAuthState(auth)
 
   if (user) {
