@@ -63,5 +63,3 @@ You can also define a correct option using the response property:
 />
 
 
-
-
