@@ -1,4 +1,4 @@
-import { doc, Firestore, getDoc, setDoc, updateDoc, getFirestore } from "firebase/firestore"
+import { doc, Firestore, getDoc, setDoc, updateDoc, getFirestore, increment } from "firebase/firestore"
 import {
    getAuth,
    GithubAuthProvider,
@@ -27,7 +27,7 @@ export interface User {
 
    getAllSubjectStatus(): Promise<{ [subjectId: string]: SubjectStatus }>
    getSubjectStatus(id: string): Promise<SubjectStatus>
-   setSubjectStatus(id: string, status: Partial<SubjectStatus>): Promise<SubjectStatus>
+   setSubjectStatus(id: string, status: Partial<SubjectStatus>, points?: number): Promise<SubjectStatus>
 }
 
 export class LoggedUser implements User {
@@ -46,7 +46,7 @@ export class LoggedUser implements User {
    async getSubjectStatus(id: string): Promise<SubjectStatus> {
       return (await this.getAllSubjectStatus())[id]
    }
-   async setSubjectStatus(id: string, status: Partial<SubjectStatus>): Promise<SubjectStatus> {
+   async setSubjectStatus(id: string, status: Partial<SubjectStatus>, points?: number): Promise<SubjectStatus> {
       const userRef = doc(getFirestore(), 'users', this.id)
       const docSnap = await getDoc<UserStatus>(userRef)
       if (docSnap.exists()) {
@@ -56,6 +56,7 @@ export class LoggedUser implements User {
             ...status,
          }
          await updateDoc(userRef, {
+            points: increment(points || 0),
             answers: {
                ...data.answers,
                [id]: statusUpdate

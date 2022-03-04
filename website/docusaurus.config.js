@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Learn map LMS',
-  tagline: 'Docusaurus LMS',
+  title: 'Docusaurus Firebase LMS',
+  tagline: 'LMS made simple',
   url: 'https://learn-map.github.io',
   baseUrl: '/docusaurus-lms/',
   onBrokenLinks: 'throw',
@@ -15,7 +15,6 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'learn-map',
   projectName: 'docusaurus-lms', 
-
   presets: [
     [
       'classic',
