@@ -53,6 +53,7 @@ You can also define a correct option using the response property:
   choices={["undefined", "3", "-3", "-4"]}
   description="Math.floor(-3.4) returns?"
   response={3}
+  explanation="Well done"
 />
 ```
 <Quizz id="mathFloor"
@@ -60,6 +61,7 @@ You can also define a correct option using the response property:
   choices={["undefined", "3", "-3", "-4"]}
   description="Math.floor(-3.4) returns"
   response={3}
+  explanation="Well done"
 />
 
 

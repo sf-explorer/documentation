@@ -16,7 +16,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.17",
     "@docusaurus/preset-classic": "2.0.0-beta.17",
-    "@hikeman/lms": "0.0.8",
+    "@hikeman/lms": "0.0.9",
     "@mdx-js/react": "^1.6.21",
     "buffer": "^6.0.3",
     "clsx": "^1.1.1",

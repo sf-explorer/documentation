@@ -1,6 +1,6 @@
 import React from "react"
 import db, { auth } from "@site/src/firebase"
-import QuizzUI from '../../Quizz'
+import { Quizz as QuizzUI } from '@hikeman/lms'
 import type { QuizzProps } from '@hikeman/lms'
 import { useDocumentData } from "react-firebase-hooks/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
@@ -8,7 +8,6 @@ import {
   doc
 } from "firebase/firestore"
 import { getCurrentUser } from "@site/src/model/user"
-
 
 function Quizz(props: QuizzProps) {
   let {
