@@ -20,7 +20,7 @@ function Quizz(props: QuizzProps) {
   const [userData] = useDocumentData(doc(db, "users", user?.uid || "anonymous"))
   const userChoice = userData?.answers[id] ? userData?.answers[id].answer : undefined
   if (!user) {
-    return (<>Log in to answer quizz</>)
+    return (<p>Log in to answer quizz</p>)
   }
 
   const SubmitAnswer = (value) => {
