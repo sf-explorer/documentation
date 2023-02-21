@@ -7,9 +7,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Salesforce Industry Explorer',
-  tagline: 'Unleash the traiblazer',
+  tagline: 'Unleash the traiblazer in you',
   url: 'https://sfi-explorer.github.io',
-  baseUrl: '/docusaurus-lms/',
+  baseUrl: '/sfi-explorer-website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
