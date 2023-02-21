@@ -3,7 +3,7 @@ import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 
 //# https://stackoverflow.com/questions/37482366/is-it-safe-to-expose-firebase-apikey-to-the-public
-
+//
 const config = {
   apiKey: "AIzaSyAsIgTtbQkg_u6sUjCYMuPJqT7rqz41v5U",
   authDomain: "learn-map-ez.firebaseapp.com",
