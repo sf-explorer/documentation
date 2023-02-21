@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Docusaurus Firebase LMS',
-  tagline: 'LMS made simple',
-  url: 'https://learn-map.github.io',
+  title: 'Salesforce Industry Explorer',
+  tagline: 'Unleash the traiblazer',
+  url: 'https://sfi-explorer.github.io',
   baseUrl: '/docusaurus-lms/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'learn-map',
-  projectName: 'docusaurus-lms', 
+  organizationName: 'sfi-explorer',
+  projectName: 'sfi-explorer-website', 
   presets: [
     [
       'classic',
@@ -23,13 +23,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/learn-map/docusaurus-lms/tree/master/',
+          editUrl: 'https://github.com/sfi-explorer/sfi-explorer-website/tree/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/learn-map/docusaurus-lms/tree/master/',
+            'https://github.com/sfi-explorer/sfi-explorer-website/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
