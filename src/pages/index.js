@@ -5,12 +5,12 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
+import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 
-const Version='04t09000000W3Vh'
+const Version = '04t09000000W3Vh'
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -29,14 +29,14 @@ function HomepageHeader() {
             Install in Production 📥
           </Link>
         </div>
-      
+
       </div>
     </header>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -44,17 +44,30 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-
-      </main>
-      <div className="text--center">
-      <img
-            
-            className={styles.heroLogo}
-            src={useBaseUrl('/img/doc_explorer.gif')}
-           maxWidth="600"
-           width={550}
-          />
+        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+          <div className="container">
+            <div className="text--center">
+              <h1>Principles</h1>
+              <img
+                className={styles.heroLogo}
+                src={useBaseUrl('/img/principles.png')}
+                width="80%"
+              />
+            </div>
           </div>
+        </header>
+      </main>
+
+      <div className="text--center">
+        <h1>Demo</h1>
+        <img
+
+          className={styles.heroLogo}
+          src={useBaseUrl('/img/doc_explorer.gif')}
+          width="80%"
+        />
+      </div>
+
     </Layout>
   );
 }
