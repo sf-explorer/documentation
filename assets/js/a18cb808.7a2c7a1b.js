@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[74],{3376:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/sfi-explorer-website/blog/tags/hello","allTagsPath":"/sfi-explorer-website/blog/tags","count":2}')}}]);

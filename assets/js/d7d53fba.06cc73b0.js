@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[686],{3860:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/sfi-explorer-website/blog/tags/docusaurus","allTagsPath":"/sfi-explorer-website/blog/tags","count":4}')}}]);
