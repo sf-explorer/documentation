@@ -9,12 +9,12 @@ const config = {
   title: 'Salesforce Industry Explorer',
   tagline: 'Unleash the traiblazer in you',
   url: 'https://sfi-explorer.github.io',
-  baseUrl: '/sfi-explorer-website/',
+  baseUrl: '/documentation/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'sfi-explorer',
-  projectName: 'sfi-explorer-website', 
+  projectName: 'documentation', 
   presets: [
     [
       'classic',
@@ -23,13 +23,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/sfi-explorer/sfi-explorer-website/tree/master/',
+          editUrl: 'https://github.com/sfi-explorer/documentation/tree/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/sfi-explorer/sfi-explorer-website/tree/master/',
+            'https://github.com/sfi-explorer/documentation/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -42,12 +42,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'LMS Demo',
+        title: 'SFI Explorer',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Salesforce',
+          src: 'img/logo_sf.svg',
         },
-        items: [
+       /* items: [
           {
             type: 'doc',
             docId: 'intro',
@@ -87,8 +87,8 @@ const config = {
               },
             ],
           },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        ],*/
+        //copyright: `Copyright © ${new Date().getFullYear()} SFI Explorer.`,
       },
       prism: {
         theme: lightCodeTheme,
