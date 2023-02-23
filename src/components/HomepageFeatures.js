@@ -1,14 +1,17 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
-
+import Link from '@docusaurus/Link';
 const FeatureList = [
   {
     title: 'Explore Omniscripts',
     Svg: require('../../static/img/undraw_programming.svg').default,
     description: (
       <>
-        Get an overview of your omniscripts: how they are built and what security requirements they need
+        Get an overview of your omniscripts: how they are built and what <Link
+            to={`/docs/omniscript/security`}>
+            security requirements
+          </Link> they need  
       </>
     ),
   },

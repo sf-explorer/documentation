@@ -7,7 +7,7 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 
-const Version = '04t09000000W3vW'
+const Version = '04t09000000W3vb'
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -39,7 +39,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
