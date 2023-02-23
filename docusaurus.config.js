@@ -42,11 +42,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'SFI Explorer',
-        logo: {
+        title: 'Industry Explorer',
+        /*logo: {
           alt: 'Salesforce',
           src: 'img/logo_sf.svg',
-        },
+        },*/
        /* items: [
           {
             type: 'doc',
