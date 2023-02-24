@@ -43,10 +43,10 @@ const config = {
     ({
       navbar: {
         title: 'Industry Explorer',
-        /*logo: {
-          alt: 'Salesforce',
-          src: 'img/logo_sf.svg',
-        },*/
+        logo: {
+          alt: 'Explorer',
+          src: 'img/apple-touch-icon.png',
+        },
        /* items: [
           {
             type: 'doc',
