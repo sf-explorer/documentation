@@ -47,20 +47,21 @@ const config = {
           alt: 'Explorer',
           src: 'img/apple-touch-icon.png',
         },
-       /* items: [
+       items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'Omniscript/Getting started',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Omniscript',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/learn-map/docusaurus-lms',
-            label: 'GitHub',
-            position: 'right',
+            type: 'doc',
+            docId: 'Insurance Product/Getting started',
+            position: 'left',
+            label: 'Product',
           },
-        ],
+    
+        ] /*
       },
       footer: {
         style: 'dark',

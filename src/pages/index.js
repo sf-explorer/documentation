@@ -61,7 +61,7 @@ export default function Home() {
       </main>
 
       <div className="text--center">
-        <h1>Demo</h1>
+        <h1>1 min Demo</h1>
         <img
 
           className={styles.heroLogo}
