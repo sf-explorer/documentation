@@ -9,7 +9,7 @@ import {
   doc
 } from "firebase/firestore"
 
-const Version = '04t09000000W5yw'
+const Version = '04t09000000W5z1'
 
 const Install = () => {
 
