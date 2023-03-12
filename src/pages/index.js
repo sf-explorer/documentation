@@ -7,6 +7,7 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import Install from '../components/Install';
 import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
+import Quizz from '@site/src/components/firebase/Quizz';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -48,11 +49,12 @@ export default function Home() {
       <div className="text--center">
         <h1>1 min Demo</h1>
         <img
-
           className={styles.heroLogo}
           src={useBaseUrl('/img/doc_explorer.gif')}
           width="80%"
         />
+         <Quizz id="interest" choices={["Omniscript", "Products", "Both"]} description="## What topics are you interested in?" />
+         <Quizz id="newsletter"  choices={["Yes", "No",]} description="## Subscribe to newsletter?" />
       </div>
 
     </Layout>

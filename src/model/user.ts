@@ -82,6 +82,8 @@ onAuthStateChanged(getAuth(), (user) => {
       currentUser = Object.assign(new LoggedUser(user.uid), {
          email: user.email,
          name: user.displayName,
+         answers: {},
+         points: 0,
       })
    }
    else {
@@ -100,6 +102,7 @@ export const signIn = (db: Firestore) => async () => {
       const profile = {
          email: userInfo.user.email,
          name: userInfo.user.displayName,
+         answers: {},
       }
       if (!docSnap.exists()) {
          await setDoc(userRef, profile)

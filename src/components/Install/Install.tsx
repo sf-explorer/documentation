@@ -17,6 +17,7 @@ const Install = () => {
   const [userData] = useDocumentData(doc(db, "users", user?.uid || "anonymous"))
   if (user) {
     return (
+      <>
        <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg margin-right--xs"
@@ -29,7 +30,9 @@ const Install = () => {
             to={`https://login.salesforce.com/packaging/installPackage.apexp?p0=${Version}`}>
             Install in Production 📥
           </Link>
+          
         </div>
+        </>
      )
   } else {
     return (<a className="button button--secondary button--lg margin-right--xs" onClick={signIn(db)}>

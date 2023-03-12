@@ -12,7 +12,7 @@ const Avatar = () => {
   const [userData] = useDocumentData(doc(db, "users", user?.uid || "anonymous"))
   if (user) {
     return (<>
-      {userData &&  <span className="badge badge--primary margin--xs"> {userData.points} pts </span>}
+      {userData && userData.points ? <span className="badge badge--primary margin--xs"> {userData.points} pts </span>:<></>}
       <img
         className="avatar__photo avatar__photo--md"
         src={user.photoURL}
