@@ -26,9 +26,15 @@ const Install = () => {
           </Link>
           {' '}
           <Link
-            className="button button--info button--lg"
+            className="button button--info button--lg margin-right--xs"
             to={`https://login.salesforce.com/packaging/installPackage.apexp?p0=${Version}`}>
             Install in Production 📥
+          </Link>
+          <Link
+            download target="_blank"
+            className="button button--secondary button--lg"
+            to={`/chrome/industry-explorer-0.0.2.zip`}>
+            Download chrome extension 🔥
           </Link>
           
         </div>
