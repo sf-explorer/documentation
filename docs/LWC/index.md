@@ -4,7 +4,7 @@
 SF Explorer parses your LWC contents to find [JS Docs](https://jsdoc.app/) annotations, 
 This information is then available in the UI. The content can be changed from this screen as well.
 
-![principles](./lwc.png)
+![principles](./LWC.png)
 
 In the above example you can see in particular
 - description
@@ -12,7 +12,7 @@ In the above example you can see in particular
 - `@todo` => will 
 
 Various features like filtering and grouping are available, for example
-![principles](./grouping.png)
+![principles](./Grouping.png)
 
 
 ## Example
