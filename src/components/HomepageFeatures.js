@@ -20,10 +20,10 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_programming.svg').default,
     description: (
       <>
-        Get an overview of your omniscripts: how they are built and what <Link
-            to={`/docs/omniscrip`}>
-            security requirements
-          </Link> they need  
+        Get an overview of your omniscripts: how they <Link
+            to={`/docs/omniscript/Getting%20started`}>
+            are built
+          </Link>
       </>
     ),
   },
