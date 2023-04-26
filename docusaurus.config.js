@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Salesforce Industry Explorer',
+  title: 'SF Explorer',
   tagline: 'Unleash the traiblazer in you',
   url: 'https://sfi-explorer.github.io',
   baseUrl: '/documentation/',
@@ -42,7 +42,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Industry Explorer',
+        title: 'SF Explorer',
         logo: {
           alt: 'Explorer',
           src: 'img/apple-touch-icon.png',

@@ -24,6 +24,7 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -47,12 +48,7 @@ export default function Home() {
       </main>
 
       <div className="text--center">
-        <h1>1 min Demo</h1>
-        <img
-          className={styles.heroLogo}
-          src={useBaseUrl('/img/doc_explorer.gif')}
-          width="80%"
-        />
+        
          <Quizz id="interest" choices={["Omniscript", "Products", "Both"]} description="## What topics are you interested in?" />
          <Quizz id="newsletter"  choices={["Yes", "No",]} description="## Subscribe to newsletter?" />
       </div>

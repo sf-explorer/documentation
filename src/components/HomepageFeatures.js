@@ -4,12 +4,24 @@ import styles from './HomepageFeatures.module.css';
 import Link from '@docusaurus/Link';
 const FeatureList = [
   {
+    title: 'LWC Documentation',
+    Svg: require('../../static/img/undraw_building_blocks.svg').default,
+    description: (
+      <>
+         Extract JSDoc inforamation <Link
+            to={`/docs/LWC`}>
+            from your LWCs
+          </Link> to generate a status report 
+      </>
+    ),
+  },
+  {
     title: 'Explore Omniscripts',
     Svg: require('../../static/img/undraw_programming.svg').default,
     description: (
       <>
         Get an overview of your omniscripts: how they are built and what <Link
-            to={`/docs/omniscript/security`}>
+            to={`/docs/omniscrip`}>
             security requirements
           </Link> they need  
       </>
@@ -21,15 +33,6 @@ const FeatureList = [
     description: (
       <>
         Explore Insurance Products with their coverage, attributes, rules and dependencies
-      </>
-    ),
-  },
-  {
-    title: 'Reusable components',
-    Svg: require('../../static/img/undraw_building_blocks.svg').default,
-    description: (
-      <>
-        Built on components you can reuse for other use cases
       </>
     ),
   },
