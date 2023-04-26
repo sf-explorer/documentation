@@ -20,9 +20,9 @@ const Install = () => {
     <>
       <div className={styles.buttons}>
         <Link
-          download target="_blank"
+          target="_blank"
           className="button button--secondary button--lg"
-          to={`/chrome/industry-explorer-0.0.2.zip`}>
+          to={`https://chrome.google.com/webstore/detail/salesforce-industry-explo/eabpolgjfkpchgffbkiedgfemcgbnbde`}>
           Install chrome extension 🔥
         </Link>
       </div>
