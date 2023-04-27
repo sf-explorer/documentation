@@ -21,7 +21,7 @@ const FeatureList = [
     description: (
       <>
         Get an overview of your omniscripts: how they <Link
-            to={`/docs/omniscript/Getting%20started`}>
+            to={`/docs/omnistudio/omniscript`}>
             are built
           </Link>
       </>

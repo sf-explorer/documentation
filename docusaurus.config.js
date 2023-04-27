@@ -50,7 +50,7 @@ const config = {
        items: [
           {
             type: 'doc',
-            docId: 'Omniscript/Getting started',
+            docId: 'Omnistudio/Omniscript',
             position: 'left',
             label: 'Omniscript',
           },

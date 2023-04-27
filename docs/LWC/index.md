@@ -7,9 +7,9 @@ This information is then available in the UI. The content can be changed from th
 ![principles](./LWC.png)
 
 In the above example you can see in particular
-- description
+- description => Description column
 - `@see` => we generate a link in the Link Column to serve as a reference
-- `@todo` => will 
+- `@todo` => will populate the Todo column
 
 Various features like filtering and grouping are available, for example
 ![principles](./Grouping.png)
