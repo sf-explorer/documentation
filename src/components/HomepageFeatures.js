@@ -4,26 +4,44 @@ import styles from './HomepageFeatures.module.css';
 import Link from '@docusaurus/Link';
 const FeatureList = [
   {
-    title: 'LWC Documentation',
+    title: 'Explore Code',
     Svg: require('../../static/img/undraw_building_blocks.svg').default,
     description: (
       <>
-         Extract JSDoc inforamation <Link
-            to={`/docs/LWC`}>
+         Extract JSDoc information <Link
+            to={`/docs/Code/LWC`}>
             from your LWCs
-          </Link> to generate a status report 
+          </Link> and your Apex to generate a status report 
       </>
     ),
   },
   {
-    title: 'Explore Omniscripts',
+    title: 'Multi org',
+    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+       Read, modify and compare data from different orgs in a single UI
+      </>
+    ),
+  },
+  {
+    title: 'Explore Data',
     Svg: require('../../static/img/undraw_programming.svg').default,
     description: (
       <>
-        Get an overview of your omniscripts: how they <Link
+       Query any data using public templates or your own queries
+      </>
+    ),
+  },
+  {
+    title: 'Explore Omnistudio',
+    Svg: require('../../static/img/undraw_programming.svg').default,
+    description: (
+      <>
+        Get an overview of your <Link
             to={`/docs/omnistudio/omniscript`}>
-            are built
-          </Link>
+            omniscripts
+          </Link> and your flexcards
       </>
     ),
   },

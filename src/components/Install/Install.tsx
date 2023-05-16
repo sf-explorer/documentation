@@ -22,8 +22,8 @@ const Install = () => {
         <Link
           target="_blank"
           className="button button--secondary button--lg"
-          to={`https://chrome.google.com/webstore/detail/salesforce-industry-explo/eabpolgjfkpchgffbkiedgfemcgbnbde`}>
-          Install chrome extension 🔥
+          to={`/docs/intro`}>
+          Get started in 2 min 🔥
         </Link>
       </div>
     </>

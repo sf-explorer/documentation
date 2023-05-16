@@ -50,22 +50,16 @@ const config = {
        items: [
           {
             type: 'doc',
-            docId: 'Omnistudio/Omniscript',
+            docId: 'intro',
             position: 'left',
-            label: 'Omniscript',
-          },
-          {
-            type: 'doc',
-            docId: 'Insurance Product/Getting started',
-            position: 'left',
-            label: 'Product',
+            label: 'Documentation',
           },
     
-        ] /*
+        ]
       },
       footer: {
         style: 'dark',
-        links: [
+        /*links: [
           {
             title: 'Docs',
             items: [
@@ -89,7 +83,7 @@ const config = {
             ],
           },
         ],*/
-        //copyright: `Copyright © ${new Date().getFullYear()} SFI Explorer.`,
+        copyright: `Made by Nicolas Despres while discovering salesforce ecosystem`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -36,10 +36,10 @@ export default function Home() {
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
           <div className="container">
             <div className="text--center">
-              <h1>Principles</h1>
+              <h1>Architecture</h1>
               <img
                 className={styles.heroLogo}
-                src={useBaseUrl('/img/principles.png')}
+                src={useBaseUrl('/img/architecture.png')}
                 width="80%"
               />
             </div>
