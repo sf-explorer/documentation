@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'SF Explorer',
   tagline: 'Unleash the traiblazer in you',
-  url: 'https://sfi-explorer.github.io',
+  url: 'https://sf-explorer.github.io',
   baseUrl: '/documentation/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -23,13 +23,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/sfi-explorer/documentation/tree/master/',
+          editUrl: 'https://github.com/sf-explorer/documentation/tree/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/sfi-explorer/documentation/tree/master/',
+            'https://github.com/sf-explorer/documentation/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -4,6 +4,15 @@ import styles from './HomepageFeatures.module.css';
 import Link from '@docusaurus/Link';
 const FeatureList = [
   {
+    title: 'Interact with ChatGPT',
+    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Get Contextualized help with ChatGPT to facilitate your work.
+      </>
+    ),
+  },
+  {
     title: 'Explore Code',
     Svg: require('../../static/img/undraw_building_blocks.svg').default,
     description: (
