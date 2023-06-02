@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="SF explorer is a chrome extension to help you browse your salesforce orgs">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
