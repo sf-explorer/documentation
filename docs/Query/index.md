@@ -1,22 +1,31 @@
 ---
-description: View and Compare flexipages
+description: Browse your org data and datamodel
 keywords:
-  - flexipage
   - salesforce
-  - compare
+  - search
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-# Flexipage Explorer
 
-SF Explorer let you inspect and compare the content of your flexipages to extract information such as Visibility rules or used custom components
+# Query Builder
+
+## Introduction
+
+SF Explorer allows you to browse your org model with queries with:
+- autocompletion 
+- shared templates
+- ability to chain queries
+- ability to run accross multiple orgs
+
+The query results can be compared
 
 <LiteYouTubeEmbed
-              id="z2jNAPK4d5I"
+              id="Yz6EHxIq35s"
               params="autoplay=1&autohide=1&showinfo=0&rel=0"
               title="View and compare flexipages"
               poster="maxresdefault"
               webp
             />
+

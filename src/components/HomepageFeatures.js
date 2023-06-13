@@ -38,7 +38,10 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_programming.svg').default,
     description: (
       <>
-       Query any data using public templates or your own queries
+       <Link
+            to={`/docs/query/`}>
+            Query any data
+          </Link> using public templates or your own queries
       </>
     ),
   },
