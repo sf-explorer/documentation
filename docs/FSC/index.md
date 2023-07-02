@@ -20,6 +20,6 @@ With that in mind, SF Explorer help you find:
 ![example](./fsc.png) 
 
 ## Example with InsurancePolicy
+
 <D3Graphviz value = 'InsurancePolicy' />
 
-<D3Graphviz value = 'legend' options={{ width: 200, height: 100 }} />
