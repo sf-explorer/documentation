@@ -1,8 +1,11 @@
 ---
-description: Browse FSC model and generate documentation contextualized to your org
+description: Browse and analyze your salesforce org focusing on the object you most use
 title: Org Details
 keywords:
   - Documentation
+  - Salesforce
+  - PermissionSet
+  - PermissionSetGroup
 ---
 import D3Graphviz from '../../src/components/D3Graphviz'
 
@@ -33,6 +36,10 @@ The proposed vizualisation is just an example - you can use excel like feature t
 Your salesforce model can be complex like the **InsurancePolicy** FSC object below. 
 
 <D3Graphviz value = 'InsurancePolicy' />
+
+:::tip Interactive graph
+A node can be click to zoom on the associated object. A tooltip is also providing additional contextual information.
+:::
 
 Note that the color of each node is associated to the selected profil/permission set group selected above (see 5️⃣ Object Permissions)
 
