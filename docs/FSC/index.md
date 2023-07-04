@@ -23,3 +23,4 @@ With that in mind, SF Explorer help you find:
 
 <D3Graphviz value = 'InsurancePolicy' />
 
+<img src="/documentation/img/legend.png" alt="drawing" width="300"/>
