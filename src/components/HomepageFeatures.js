@@ -4,56 +4,51 @@ import styles from './HomepageFeatures.module.css';
 import Link from '@docusaurus/Link';
 const FeatureList = [
   {
-    title: 'Interact with ChatGPT',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Review Org Details',
+    Svg: require('../../static/img/undraw_mind_map_re_nlb6.svg').default,
     description: (
       <>
-        Get <Link to="/docs/OpenAI/useCases">Contextualized help</Link> with ChatGPT to facilitate your work.
+       Retrieve <Link to="/docs/OrgDetails/">key information</Link> on the objects you use. Visualize dependencies and which psets are required to access it.
       </>
     ),
   },
   {
     title: 'Explore Code',
-    Svg: require('../../static/img/undraw_building_blocks.svg').default,
+    Svg: require('../../static/img/undraw_pair_programming_re_or4x.svg').default,
     description: (
       <>
          Extract JSDoc information <Link
             to={`/docs/Code/LWC`}>
             from your LWCs
-          </Link> and your Apex to generate a status report 
-      </>
-    ),
-  },
-  {
-    title: 'Multi org',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-       Read, modify and compare data from different orgs in a single UI
+          </Link> and  <Link
+            to={`/docs/Code/Apex`}>your Apex</Link> to generate a status report 
       </>
     ),
   },
   {
     title: 'Explore Data',
-    Svg: require('../../static/img/undraw_programming.svg').default,
+    Svg: require('../../static/img/undraw_server_down_s4lk.svg').default,
     description: (
       <>
        <Link
             to={`/docs/query/`}>
             Query any data
-          </Link> using public templates or your own queries
+          </Link> accross multiple orgs using autocompletion and public templates
       </>
     ),
   },
   {
     title: 'Explore Omnistudio',
-    Svg: require('../../static/img/undraw_programming.svg').default,
+    Svg: require('../../static/img/undraw_dev_focus_re_6iwt.svg').default,
     description: (
       <>
         Get an overview of your <Link
             to={`/docs/omnistudio/omniscript`}>
             omniscripts
-          </Link> and your flexcards
+          </Link> and your  <Link
+            to={`/docs/omnistudio/Flexcard`}>
+            flexcards
+          </Link>
       </>
     ),
   },
@@ -62,10 +57,30 @@ const FeatureList = [
     Svg: require('../../static/img/packaging.svg').default,
     description: (
       <>
-        Explore Insurance Products with their coverage, attributes, rules and dependencies
+        Explore <Link to="/docs/Insurance%20Product/Getting%20started" >Insurance Products</Link> with their coverage, attributes, rules and dependencies
       </>
     ),
   },
+  {
+    title: 'Interact with ChatGPT',
+    Svg: require('../../static/img/undraw_firmware_re_fgdy.svg').default,
+    description: (
+      <>
+        Get <Link to="/docs/OpenAI/useCases">Contextualized help</Link> with ChatGPT to facilitate your work.
+      </>
+    ),
+  },
+  {
+    title: 'Compare records',
+    Svg: require('../../static/img/undraw_split_testing_l1uw.svg').default,
+    description: (
+      <>
+        Compare <Link to="/docs/OpenAI/useCases">Flexipages</Link> or any other record in your orgs.
+      </>
+    ),
+  },
+
+  
 ];
 
 function Feature({ Svg, title, description }) {
