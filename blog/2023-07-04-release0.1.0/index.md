@@ -9,11 +9,11 @@ import HomepageFeatures from '../../src/components/HomepageFeatures'
 # Release 0.1.0
 
 :::success
-Release 0.1.0 is out this week and the extension already have more than 50 users.
+Release 0.1.0 is out this week and the extension already have more than **50 users**.
 :::
 
 ## But wait - what is Salesforce Explorer ?
-**Salesforce Explorer** is a productivity tool provided as a chrome extension intended for Salesforce **administrators** and **developers**.
+**Salesforce Explorer** is a productivity tool provided as a [chrome extension](https://chrome.google.com/webstore/detail/salesforce-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde) intended for Salesforce **administrators** and **developers**.
 It contains features I needed on some of my previous assignments that I decided to package.
 
 
