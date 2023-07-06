@@ -23,7 +23,7 @@ Here is the list of the most important features provided:
 <HomepageFeatures />
 
 ## But why?
-Most of the time I started working on something because I needed it on my project and I could not find the capability in salesforce.
+Most of the time I started working on something because I needed it on my project and I could not find the capability in salesforce or I was not comfortable with the user experience.
 
 
 ## How is it built?
@@ -31,9 +31,11 @@ It is built with React, Typescript and [React SLDS](https://github.com/mashmatri
 
 
 ## Why not an Appexchange?
-Chrome extension architecture offer the following advantages
+Chrome extension architecture offers the following advantages
+* First and foremost: **No need to be admin of your org to install/use it!**
 * A single installation is enough for all your orgs
-* React, Typescript, webpack and friends offer a better developer experience than lwc 
+* React, Typescript, webpack and friends offer a better developer experience than lwc
+* Interestingly you can access the tooling API from a chrome extension and in LWC to do the same you need to [a configuration with a connected app](https://salesforcecodex.com/salesforce/call-tooling-api-from-lightning-web-component/) which is more complex in my opinion
 
 ## Is it open source?
 Not yet, but the plan is to make it open source - code needs to be cleaned and documented first.
