@@ -42,7 +42,7 @@ export default function Home() {
             <div className="text--center">
               <h1>Introduction</h1>
               <LiteYouTubeEmbed
-                id="Yz6EHxIq35s"
+                id="Gk3ohzw-wVE"
                 params="autoplay=1&autohide=1&showinfo=0&rel=0"
                 title="Introduction"
                 poster="maxresdefault"

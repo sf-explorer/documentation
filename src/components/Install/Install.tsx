@@ -20,7 +20,6 @@ const Install = () => {
     <>
       <div className={styles.buttons}>
         <Link
-          target="_blank"
           className="button button--secondary button--lg"
           to={`/docs/intro`}>
           Get started in 2 min 🔥

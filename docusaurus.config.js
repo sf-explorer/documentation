@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SF Explorer',
-  tagline: 'Unleash the traiblazer in you',
+  tagline: 'Chrome Extension for Salesforce Admins and Devs',
   url: 'https://sf-explorer.github.io',
   baseUrl: '/documentation/',
   onBrokenLinks: 'throw',
