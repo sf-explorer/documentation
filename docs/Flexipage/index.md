@@ -13,6 +13,10 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 SF Explorer let you inspect and compare the content of your flexipages to extract information such as Visibility rules or used custom components
 
+![example](./overview.png) 
+
+
+## Demonstration
 <LiteYouTubeEmbed
               id="z2jNAPK4d5I"
               params="autoplay=1&autohide=1&showinfo=0&rel=0"
