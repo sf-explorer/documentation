@@ -107,6 +107,16 @@ const FeatureList = [
     ),
   },
   {
+    title: 'GraphQL',
+    version: '0.3.0',
+    Svg: require('../../static/img/graphQL.svg').default,
+    description: (
+      <>
+        Browse your org using <Link to="/docs/GraphQL/">GraphQL</Link>
+      </>
+    ),
+  },
+  {
     title: 'Security',
     version: '0.2.0',
     Svg: require('../../static/img/undraw_security_on_re_e491.svg').default,
