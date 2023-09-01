@@ -28,3 +28,10 @@ If you open the history button you will find a number of queries to help you get
 * QueryAccountsWithCriteria
 * QueryCasesWithCriteria
 * Object info for Account and Case
+
+
+## Roadmap
+
+:::info
+In the next release SF Explorer will allow you to generate/read LWC using the graphQL wire adapter.
+:::
