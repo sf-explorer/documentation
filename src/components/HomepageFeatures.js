@@ -112,7 +112,7 @@ const FeatureList = [
     Svg: require('../../static/img/graphQL.svg').default,
     description: (
       <>
-        Browse your org using <Link to="/docs/GraphQL/">GraphQL</Link>
+        Browse your org using <Link to="/docs/Query/GraphQL/">GraphQL</Link>
       </>
     ),
   },
