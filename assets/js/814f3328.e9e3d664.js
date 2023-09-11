@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Release 0.1.0","permalink":"/documentation/blog/release01"},{"title":"See you at Dreamforce ... 2024?","permalink":"/documentation/blog/Dreamforce24"}]}')}}]);
