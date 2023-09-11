@@ -8,7 +8,7 @@ import HomepageFeatures from '../../src/components/HomepageFeatures'
 
 # Release 0.1.0
 
-:::success
+:::info
 Release 0.1.0 is out this week and the extension already have more than **50 users**.
 :::
 
@@ -20,7 +20,7 @@ It contains features I needed on some of my previous assignments that I decided 
 ## What is included ?
 
 Here is the list of the most important features provided:
-<HomepageFeatures />
+<HomepageFeatures version="0.1.0" />
 
 ## But why?
 Most of the time I started working on something because I needed it on my project and I could not find the capability in salesforce or I was not comfortable with the user experience.

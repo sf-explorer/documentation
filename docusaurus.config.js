@@ -60,30 +60,21 @@ const config = {
       },
       footer: {
         style: 'dark',
-        /*links: [
+        links: [
           {
-            title: 'Docs',
+            title: 'Learn More',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/salesforce-explorer/',
+              },
+              {
+                label: 'Issues',
+                href: 'https://github.com/sf-explorer/documentation/issues',
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/learn-map/docusaurus-lms',
-              },
-            ],
-          },
-        ],*/
+        ],
         copyright: `Made by Nicolas Despres while discovering salesforce ecosystem`,
       },
       prism: {

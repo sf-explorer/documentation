@@ -97,6 +97,37 @@ const FeatureList = [
     ),
   },
   {
+    title: 'GraphQL',
+    version: '0.3.0',
+    Svg: require('../../static/img/graphQL.svg').default,
+    description: (
+      <>
+        Browse your org using <Link to="/docs/Query/GraphQL/">GraphQL</Link> and generate LWC starters accordingly
+      </>
+    ),
+  },
+  {
+    title: 'Security',
+    version: '0.3.0',
+    Svg: require('../../static/img/undraw_security_on_re_e491.svg').default,
+    description: (
+      <>
+       Explore your org  <Link to="/docs/Security/">security model</Link> with an interactive UI to make the bridge between theory and practice  
+       
+      </>
+    ),
+  },
+  {
+    title: 'Usage',
+    version: '0.3.0',
+    Svg: require('../../static/img/undraw_booked_re_vtod.svg').default,
+    description: (
+      <>
+       Explore chosen records child relation at once
+      </>
+    ),
+  },
+  {
     title: 'Timeline',
     version: '0.2.0',
     Svg: require('../../static/img/undraw_time_management_re_tk5w.svg').default,
@@ -106,27 +137,8 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: 'GraphQL',
-    version: '0.3.0',
-    Svg: require('../../static/img/graphQL.svg').default,
-    description: (
-      <>
-        Browse your org using <Link to="/docs/Query/GraphQL/">GraphQL</Link>
-      </>
-    ),
-  },
-  {
-    title: 'Security',
-    version: '0.2.0',
-    Svg: require('../../static/img/undraw_security_on_re_e491.svg').default,
-    description: (
-      <>
-       Explore your org  <Link to="/docs/Security/">security model</Link>: <ul><li>Compare psets or profile</li><li>Analyze OWD</li><li>...</li></ul>   
-       
-      </>
-    ),
-  },
+  
+  
 
 ];
 
@@ -144,14 +156,14 @@ function Feature({ Svg, title, description }) {
   );
 }
 
-export default function HomepageFeatures() {
+export default function HomepageFeatures({version}) {
 
   return (
     <section className={styles.features}>
 
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {FeatureList.filter(feature=> !version || feature.version === version).map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
