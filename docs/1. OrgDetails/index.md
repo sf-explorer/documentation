@@ -1,6 +1,6 @@
 ---
 description: Browse and analyze your salesforce org focusing on the object you most use
-title: Org Details
+title: Object Manager
 keywords:
   - Documentation
   - Salesforce
@@ -9,13 +9,13 @@ keywords:
 ---
 import D3Graphviz from '../../src/components/D3Graphviz'
 
-# Overview of your org
+# Object Manager
 
 :::tip
 The best documentation is the one you don't write
 :::
 
-**SF Explorer** retrieve the usage of your org objects and provide:
+**SF Explorer Object Manager** retrieve the usage of your org objects and provide:
 * 1️⃣ Grouping and filtering based on the different exposed attributes (category, usage, record types...) 
 * 2️⃣ API Name and associated documentation - a click on the API Name provide extra detail on the object
 * 3️⃣ Usage with associated percentage in org

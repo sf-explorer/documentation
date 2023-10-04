@@ -14,7 +14,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Review Org Details',
+    title: 'Object Manager',
     version: '0.1.0',
     Svg: require('../../static/img/undraw_mind_map_re_nlb6.svg').default,
     description: (
@@ -57,10 +57,10 @@ const FeatureList = [
     description: (
       <>
         Get an overview of your <Link
-          to={`/docs/omnistudio/omniscript`}>
+          to={`/docs/Industries/Omniscript`}>
           omniscripts
         </Link> and your  <Link
-          to={`/docs/omnistudio/Flexcard`}>
+          to={`/docs/Industries/Flexcard`}>
           flexcards
         </Link>
       </>
@@ -72,7 +72,7 @@ const FeatureList = [
     Svg: require('../../static/img/packaging.svg').default,
     description: (
       <>
-        Explore <Link to="/docs/Insurance%20Product/Getting%20started" >Insurance Products</Link> with their coverage, attributes, rules and dependencies
+        Explore <Link to="/docs/Industries/Insurance%20Product" >Insurance Products</Link> with their coverage, attributes, rules and dependencies
       </>
     ),
   },
@@ -92,7 +92,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_split_testing_l1uw.svg').default,
     description: (
       <>
-        Compare <Link to="/docs/OpenAI/useCases">Flexipages</Link> or any other record in your orgs.
+        Compare <Link to="/docs/Code/Flexipage/">Flexipages</Link> or any other record in your orgs.
       </>
     ),
   },

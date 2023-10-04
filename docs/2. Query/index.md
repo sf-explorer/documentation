@@ -1,10 +1,10 @@
 ---
 description: Browse your org data and datamodel
+title: Search
 keywords:
   - salesforce
   - search
 ---
-
 
 # Query Builder
 
