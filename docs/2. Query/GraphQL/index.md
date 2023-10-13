@@ -15,16 +15,29 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 GraphQL offers very interesting use cases for salesforce. A number of tools are available in the community and **SF Explorer** ships with a built in version of **GraphiQL** with the following advantages:
 * No need to authenticate - as easy as it should be
+* SOQL transition tool
 * Sample queries to get you started  
 * LWC Generation with the graphql `wire` adapter
 
-To give it a try navigate to **Query Builder** and then select **GraphQL** in the dropdown:
+To give it a try navigate to **Code** and then select **GraphQL** in the dropdown:
 
 ![example](./graphQL.png) 
 
-:::info
-This feature is available with orgs within **Winter'24**
+
+## SOQL transition tool (beta)
+
+:::warning
+This feature is in beta, not all SOQL equivalent like subqueries are supported but it will come in future releases
 :::
+
+If you are not familiar with graphQL but you are a SOQL ninja, you can use the SOQL transition tool:
+* Write your query with auto completion and the syntax you know
+* Generate the graphQL equivalent
+
+
+![example](./soqlTransition.png) 
+
+
 
 ## Provided examples
 If you open the history button you will find a number of queries to help you get started:
