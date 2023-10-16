@@ -8,20 +8,20 @@ keywords:
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import GraphQL from '../../../src/pages/graphQL'
 
 # GraphQL
 
 GraphQL offers very interesting use cases for salesforce. A number of tools are available in the community and **SF Explorer** ships with a built in version of **GraphiQL** with the following advantages:
-* No need to authenticate - as easy as it should be
-* SOQL transition tool
-* Sample queries to get you started  
-* LWC Generation with the graphql `wire` adapter
+* **No need to authenticate** - as easy as it should be
+* **SOQL** transition tool
+* **Sample queries** to get you started  
+* **LWC** Generation with the graphql `wire` adapter
 
-To give it a try navigate to **Code** and then select **GraphQL** in the dropdown:
+To give it a try navigate to **Code** and then select **GraphQL**:
 
-![example](./graphQL.png) 
+![example](./soqlTransition.png) 
 
 
 ## SOQL transition tool (beta)
@@ -30,13 +30,21 @@ To give it a try navigate to **Code** and then select **GraphQL** in the dropdow
 This feature is in beta, not all SOQL equivalent like subqueries are supported but it will come in future releases
 :::
 
-If you are not familiar with graphQL but you are a SOQL ninja, you can use the SOQL transition tool:
-* Write your query with auto completion and the syntax you know
+If you are not familiar with graphQL but you are a **SOQL ninja** 🥷🏿, you can use the `SOQL transition tool`:
+* Write your query with **auto completion** and the syntax you know
 * Generate the graphQL equivalent
 
 
-![example](./soqlTransition.png) 
 
+### Playground
+
+
+
+<GraphQL />
+
+:::info
+Beware that graphQL is case sensitive compared to SOQL
+:::
 
 
 ## Provided examples
