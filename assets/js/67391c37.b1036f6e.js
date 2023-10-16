@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[6908],{9494:e=>{e.exports=JSON.parse('[{"label":"Salesforce","permalink":"/documentation/blog/tags/salesforce","count":3},{"label":"graphQL","permalink":"/documentation/blog/tags/graph-ql","count":1}]')}}]);
