@@ -6,7 +6,7 @@ import soql2graphQL from './soql2graphQL'
 import GraphiQL  from '../components/GraphiQL'
 import type { Fetcher } from '@graphiql/toolkit'
 import 'graphiql/graphiql.min.css'
-import MonacoEditor from '@uiw/react-monacoeditor'
+import converter from '@sf-explorer/soql-to-graphql'
 
 
 const fetcher: Fetcher = async graphQLParams => {
@@ -40,12 +40,9 @@ export default function SOQL2GraphQL({
 
     useEffect(() => {
         try {
-            debugger
-            const parseResult = parseQuery(query)
-            console.log('query', parseResult)
-
-            const generatedQuery = soql2graphQL(parseResult)
-            setGraphQuery(generatedQuery)
+            
+           
+            setGraphQuery(converter(query))
         } catch (e: any) {
             console.error(e)
             setGraphQuery(e.message || JSON.stringify(e))

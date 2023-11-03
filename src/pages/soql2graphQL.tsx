@@ -9,6 +9,14 @@ function getWhereOperator(cond: any): string {
             return 'like'
         case 'IN':
             return 'in'
+        case '>':
+            return 'gt'
+        case '>=':
+            return 'gte'
+        case '<':
+            return 'lt'
+        case '<=':
+            return 'lte'
         default:
             return 'eq'
     }
@@ -16,9 +24,15 @@ function getWhereOperator(cond: any): string {
 }
 
 function getWhereField(cond: any) {
-    const value = Array.isArray(cond.value) ? JSON.stringify(cond.value) : JSON.stringify(cond.value)
+    let value: any
 
-    return `${cond.field}: { ${getWhereOperator(cond)} : ${value?.replaceAll("'", "")} }  `
+    if (cond.literalType === 'INTEGER') {
+        value = parseInt(cond.value)
+    } else {
+        value = JSON.stringify(cond.value).replaceAll("'", "")
+    }
+
+    return `${cond.field}: { ${getWhereOperator(cond)} : ${value} }  `
 }
 
 function getField(field: any): string {
@@ -52,7 +66,7 @@ function getField(field: any): string {
     if (field.type === "FieldSubquery") {
         return getQuery(field.subquery)
     }
-
+    return ''
 }
 
 function getWhereClause(parsedQuery: any) {
@@ -79,8 +93,10 @@ ${parsedQuery.fields?.map(getField).join('\n')}
 }
 
 
-export default function (parsedQuery: any): string {
-    return `query ${parsedQuery.sObject}s {
+export default function transfrom(parsedQuery: any, fullQuery: string): string {
+    const input = fullQuery.indexOf('$recordIds') ? '($recordIds: [ID])' : (fullQuery.indexOf('$recordId') ? '($recordIds: ID)' : '')
+
+    return `query ${parsedQuery.sObject}s${input} {
         uiapi {
           query {
             ${getQuery(parsedQuery)}
