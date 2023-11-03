@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect, useContext } from 'react'
 import { parseQuery, Query } from 'soql-parser-js'
 //import GraphiQL from 'GraphiQL'
-import soql2graphQL from './soql2graphQL'
+//import soql2graphQL from './soql2graphQL'
 import GraphiQL  from '../components/GraphiQL'
 import type { Fetcher } from '@graphiql/toolkit'
 import 'graphiql/graphiql.min.css'
@@ -35,13 +35,9 @@ export default function SOQL2GraphQL({
 }: DefaultProps) {
     const [query, setQuery] = useState<string>("select Id, Name, (select Name from Opportunities) from Account limit 3")
     const [graphQuery, setGraphQuery] = useState(undefined)
-    debugger
-
 
     useEffect(() => {
         try {
-            
-           
             setGraphQuery(converter(query))
         } catch (e: any) {
             console.error(e)
