@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from 'react'
 import { parseQuery, Query } from 'soql-parser-js'
 //import GraphiQL from 'GraphiQL'
 //import soql2graphQL from './soql2graphQL'
-import GraphiQL  from '../components/GraphiQL'
+import GraphiQL from '../components/GraphiQL'
 import type { Fetcher } from '@graphiql/toolkit'
 import 'graphiql/graphiql.min.css'
 import converter from '@sf-explorer/soql-to-graphql'
@@ -33,7 +33,7 @@ interface DefaultProps {
 
 export default function SOQL2GraphQL({
 }: DefaultProps) {
-    const [query, setQuery] = useState<string>("select Id, Name, (select Name from Opportunities) from Account limit 3")
+    const [query, setQuery] = useState<string>("select Id, Name, (select Name from Opportunities) from Account where Name like '%a' order by CreationDate limit 3")
     const [graphQuery, setGraphQuery] = useState(undefined)
 
     useEffect(() => {
@@ -57,11 +57,13 @@ export default function SOQL2GraphQL({
         */
 
     return (<>
-    
-        <textarea name="postContent" value={query} onChange={(e) => setQuery(e.target.value)} style={{width: "100%"}}/>
 
+        <textarea name="postContent" value={query} onChange={(e) => setQuery(e.target.value)} style={{ width: "100%" }} />
 
-        <GraphiQL query={graphQuery} fetcher={fetcher} />
+        <div style={{ height: "700px" }}>
+            <GraphiQL query={graphQuery} fetcher={fetcher} />
+        </div>
+
 
     </>
 

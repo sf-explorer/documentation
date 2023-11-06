@@ -19,7 +19,7 @@
     "@graphiql/toolkit": "^0.9.1",
     "@hikeman/lms": "0.0.14",
     "@mdx-js/react": "^1.6.21",
-    "@sf-explorer/soql-to-graphql": "^0.0.1-alpha6",
+    "@sf-explorer/soql-to-graphql": "^0.0.1-alpha8",
     "@uiw/react-monacoeditor": "^3.5.9",
     "buffer": "^6.0.3",
     "clsx": "^1.1.1",

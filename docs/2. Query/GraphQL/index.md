@@ -1,6 +1,7 @@
 ---
 description: Explore graphQL winter'24 API with builtin examples
 title: GraphQL
+hide_table_of_contents: true
 keywords:
   - GraphQL
   - Documentation
@@ -30,15 +31,11 @@ To give it a try navigate to **Code** and then select **GraphQL**:
 This feature is in beta, not all SOQL equivalent like subqueries are supported but it will come in future releases
 :::
 
-If you are not familiar with graphQL but you are a **SOQL ninja** 🥷🏿, you can use the `SOQL transition tool`:
+If you are not familiar with graphQL but you are a **SOQL ninja** 🥷🏿, you can use the [SOQL transition tool](https://github.com/nicolas-despres/soql-to-graphql/blob/main/Readme.md):
 * Write your query with **auto completion** and the syntax you know
 * Generate the graphQL equivalent
 
-
-
 ### Playground
-
-
 
 <GraphQL />
 
