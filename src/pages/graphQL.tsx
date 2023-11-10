@@ -7,7 +7,10 @@ import GraphiQL from '../components/GraphiQL'
 import type { Fetcher } from '@graphiql/toolkit'
 import 'graphiql/graphiql.min.css'
 import converter from '@sf-explorer/soql-to-graphql'
-
+import AceEditor from "react-ace"
+import "ace-builds/src-noconflict/mode-json";
+import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/mode-sql"
 
 const fetcher: Fetcher = async graphQLParams => {
     const data = await fetch(
@@ -33,17 +36,27 @@ interface DefaultProps {
 
 export default function SOQL2GraphQL({
 }: DefaultProps) {
-    const [query, setQuery] = useState<string>("select Id, Name, (select Name from Opportunities) from Account where Name like '%a' order by CreationDate limit 3")
+    const [query, setQuery] = useState<string>(`select Id, Name, (select Name from Opportunities) 
+    from Account 
+        where Name like ':criteria' 
+        order by CreationDate
+        limit 3`)
+    const [variables, setVariables] = useState<string>(`{
+    "criteria":"String=\\\"%\\\""
+}`)
     const [graphQuery, setGraphQuery] = useState(undefined)
 
     useEffect(() => {
         try {
-            setGraphQuery(converter(query))
+
+            const vars = JSON.parse(variables)
+            setGraphQuery(converter(query, vars))
+
         } catch (e: any) {
             console.error(e)
             setGraphQuery(e.message || JSON.stringify(e))
         }
-    }, [query])
+    }, [query, variables])
     /*
      <MonacoEditor
             language="sql"
@@ -58,10 +71,44 @@ export default function SOQL2GraphQL({
 
     return (<>
 
-        <textarea name="postContent" value={query} onChange={(e) => setQuery(e.target.value)} style={{ width: "100%" }} />
+        <h4>Variables</h4>
+        <AceEditor
+            mode='json'
+            theme='github'
+            value={variables}
+            width='100%'
+            onChange={e => setVariables(e)}
+            height='70px'
+            editorProps={{ $blockScrolling: true }}
+            setOptions={{
+                enableBasicAutocompletion: true,
+                enableLiveAutocompletion: true,
+                enableSnippets: true,
+                useWorker: false,
+            }}
+        />
+
+        <h4>Query</h4>
+        <AceEditor
+            mode='sql'
+            theme='github'
+            value={query}
+            width='100%'
+            onChange={e => setQuery(e)}
+            height='100px'
+            editorProps={{ $blockScrolling: true }}
+            setOptions={{
+                enableBasicAutocompletion: true,
+                enableLiveAutocompletion: true,
+                enableSnippets: true,
+                useWorker: false,
+            }}
+        />
+       
+
 
         <div style={{ height: "700px" }}>
-            <GraphiQL query={graphQuery} fetcher={fetcher} />
+            <GraphiQL query={graphQuery} fetcher={fetcher} variables={variables} />
         </div>
 
 
