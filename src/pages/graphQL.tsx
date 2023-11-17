@@ -8,8 +8,8 @@ import type { Fetcher } from '@graphiql/toolkit'
 import 'graphiql/graphiql.min.css'
 import converter from '@sf-explorer/soql-to-graphql'
 import AceEditor from "react-ace"
-import "ace-builds/src-noconflict/mode-json";
-import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/mode-json"
+import "ace-builds/src-noconflict/theme-github"
 import "ace-builds/src-noconflict/mode-sql"
 
 const fetcher: Fetcher = async graphQLParams => {
@@ -34,44 +34,33 @@ interface DefaultProps {
 }
 
 
+
 export default function SOQL2GraphQL({
 }: DefaultProps) {
-    const [query, setQuery] = useState<string>(`select Id, Name, (select Name from Opportunities) 
+    const [query, setQuery] = useState<string>(`SELECT Id, Name, (select Name from Opportunities) 
     from Account 
-        where Name like ':criteria' 
+        where Name like :criteria 
         order by CreationDate
         limit 3`)
     const [variables, setVariables] = useState<string>(`{
-    "criteria":"String=\\\"%\\\""
+    "criteria":"String!=\\\"%\\\""
 }`)
     const [graphQuery, setGraphQuery] = useState(undefined)
 
     useEffect(() => {
         try {
-
             const vars = JSON.parse(variables)
             setGraphQuery(converter(query, vars))
-
         } catch (e: any) {
             console.error(e)
             setGraphQuery(e.message || JSON.stringify(e))
         }
     }, [query, variables])
-    /*
-     <MonacoEditor
-            language="sql"
-            value={query}
-            height="100px"
-            onChange={(value) => setQuery(value)}
-            options={{
-                theme: 'vs-dark',
-            }}
-        />
-        */
 
     return (<>
 
         <h4>Variables</h4>
+        <p>TLDR: Refer the variables with traditional SOQL Apex Binding ie <code>:varname</code></p>
         <AceEditor
             mode='json'
             theme='github'
