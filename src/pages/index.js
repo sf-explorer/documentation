@@ -26,16 +26,27 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-
+ 
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="SF explorer is a chrome extension to help you browse your salesforce orgs">
+      description="SF explorer is a productivity tool for your salesforce related work">
       <HomepageHeader />
       <main>
+        <div className={styles.topBanner}>
+          <div className={styles.topBannerTitle}>
+            {'🎉\xa0'}
+            <Link to="/blog/release20" className={styles.topBannerTitleText}>
+
+              {'Release\xa02.0 is\xa0out!️'}
+
+            </Link>
+            {'\xa0🥳'}
+          </div>
+        </div>
         <HomepageFeatures />
 
-       
+
 
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
           <div className="container">

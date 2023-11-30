@@ -14,6 +14,25 @@ import GraphQL from '../../../src/pages/graphQL'
 
 # GraphQL
 
+## Introduction
+What is GraphQL:
+* Specification for API Server + Query Language - Facebook 2015
+* Single endpoint for all the resources, that can be aggregated
+* Requests only the necessary data
+* Schema-driven, enabling introspection - metadata friendly
+* Widely adopted through a fast growing community
+
+Useful resources:
+- [GraphQL Foundation](https://graphql.org/)
+- [Landscape](https://landscape.graphql.org/)
+- [Salesforce doc](https://developer.salesforce.com/docs/platform/graphql/overview)
+- [soql-to-graphql](https://github.com/nicolas-despres/soql-to-graphql/blob/main/Readme.md)
+- [Full stack Tutorial](https://www.howtographql.com/)
+- [SF Community group](https://trailhead.salesforce.com/fr/trailblazer-community/groups/0F94S000000kRExSAM)
+- [annual survey results](https://2022.stateofgraphql.com/)
+
+
+## Usage with SF Explorer
 GraphQL offers very interesting use cases for salesforce. A number of tools are available in the community and **SF Explorer** ships with a built in version of **GraphiQL** with the following advantages:
 * **No need to authenticate** - as easy as it should be
 * **SOQL** transition tool
