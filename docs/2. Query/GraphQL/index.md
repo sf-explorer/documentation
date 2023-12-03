@@ -44,11 +44,7 @@ To give it a try navigate to **Code** and then select **GraphQL**:
 ![example](./soqlTransition.png) 
 
 
-## SOQL transition tool (beta)
-
-:::warning
-This feature is in beta, not all SOQL equivalent like subqueries are supported but it will come in future releases
-:::
+## SOQL transition tool
 
 If you are not familiar with graphQL but you are a **SOQL ninja** 🥷🏿, you can use the [SOQL transition tool](https://github.com/nicolas-despres/soql-to-graphql/blob/main/Readme.md):
 * Write your query with **auto completion** and the syntax you know

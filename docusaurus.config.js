@@ -7,13 +7,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SF Explorer',
-  tagline: 'Productivity tool for your salesforce related work',
+  tagline: 'Salesforce Productivity Tool',
   url: 'https://sf-explorer.github.io',
   baseUrl: '/documentation/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'sfi-explorer',
+  organizationName: 'sf-explorer',
   projectName: 'documentation', 
   presets: [
     [
