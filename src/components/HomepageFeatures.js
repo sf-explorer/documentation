@@ -9,7 +9,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_dev_productivity_re_fylf.svg').default,
     description: (
       <>
-        Connect to multiple orgs to browse and compare records accross them.
+        Connect to multiple orgs to browse and compare records across them.
       </>
     ),
   },
@@ -19,7 +19,32 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_mind_map_re_nlb6.svg').default,
     description: (
       <>
-        Retrieve <Link to="/docs/OrgDetails/">key information</Link> on the objects you use. Visualize dependencies and which psets are required to access it.
+        Retrieve <Link to="/docs/OrgDetails/">key information</Link> on the objects you use the most.
+      </>
+    ),
+  },
+ 
+  {
+    title: 'Explore Data',
+    version: '0.1.0',
+    Svg: require('../../static/img/undraw_server_down_s4lk.svg').default,
+    description: (
+      <>
+        Chain requests and <Link
+          to={`/docs/query/`}>
+          Query data
+        </Link> across multiple with ease
+      </>
+    ),
+  },
+  {
+    title: 'Security',
+    version: '0.3.0',
+    Svg: require('../../static/img/undraw_security_on_re_e491.svg').default,
+    description: (
+      <>
+       Explore your org  <Link to="/docs/Security/">security model</Link> with an interactive UI to make the bridge between theory and practice  
+       
       </>
     ),
   },
@@ -34,19 +59,6 @@ const FeatureList = [
           from your LWCs
         </Link> and  <Link
           to={`/docs/Code/Apex`}>your Apex</Link> to generate a status report
-      </>
-    ),
-  },
-  {
-    title: 'Explore Data',
-    version: '0.1.0',
-    Svg: require('../../static/img/undraw_server_down_s4lk.svg').default,
-    description: (
-      <>
-        <Link
-          to={`/docs/query/`}>
-          Query any data
-        </Link> accross multiple orgs using autocompletion and public templates
       </>
     ),
   },
@@ -92,7 +104,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_split_testing_l1uw.svg').default,
     description: (
       <>
-        Compare <Link to="/docs/Code/Flexipage/">Flexipages</Link> or any other record in your orgs.
+        Compare any other record in your orgs such as <Link to="/docs/Code/Flexipage/">Flexipages</Link>, accounts or Flows.
       </>
     ),
   },
@@ -106,17 +118,7 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: 'Security',
-    version: '0.3.0',
-    Svg: require('../../static/img/undraw_security_on_re_e491.svg').default,
-    description: (
-      <>
-       Explore your org  <Link to="/docs/Security/">security model</Link> with an interactive UI to make the bridge between theory and practice  
-       
-      </>
-    ),
-  },
+ 
   {
     title: 'Usage',
     version: '0.3.0',
@@ -144,7 +146,7 @@ const FeatureList = [
 
 function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4 col--center')}>
+    <div className={clsx('col col--2 col--center')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
