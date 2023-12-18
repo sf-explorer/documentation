@@ -69,8 +69,8 @@ const config = {
                 href: 'https://www.linkedin.com/company/salesforce-explorer/',
               },
               {
-                label: 'Issues',
-                href: 'https://github.com/sf-explorer/documentation/issues',
+                label: 'Youtube Channel',
+                href: 'https://www.youtube.com/@SFExplorer',
               },
             ],
           },
