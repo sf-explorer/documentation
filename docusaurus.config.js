@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'SF Explorer',
   tagline: 'Salesforce Productivity Tool',
-  url: 'https://sf-explorer.github.io',
-  baseUrl: '/documentation/',
+  url: 'http://info.sf-explorer.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
