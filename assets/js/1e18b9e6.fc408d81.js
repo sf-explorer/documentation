@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[8087],{2194:a=>{a.exports=JSON.parse('{"label":"graphQL","permalink":"/documentation/blog/tags/graph-ql","allTagsPath":"/documentation/blog/tags","count":2}')}}]);
