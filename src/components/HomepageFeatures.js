@@ -33,7 +33,7 @@ const FeatureList = [
         Chain requests and <Link
           to={`/docs/query/`}>
           Query data
-        </Link> across multiple with ease
+        </Link> across multiple orgs with ease
       </>
     ),
   },
@@ -71,7 +71,10 @@ const FeatureList = [
         Get an overview of your <Link
           to={`/docs/Industries/Omniscript`}>
           omniscripts
-        </Link> and your  <Link
+        </Link>, <Link
+          to={`/docs/Industries/DataRaptor`}>
+          DataRaptors
+        </Link>  and your  <Link
           to={`/docs/Industries/Flexcard`}>
           flexcards
         </Link>
