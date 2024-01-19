@@ -21,13 +21,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          //sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/sf-explorer/documentation/tree/master/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
             'https://github.com/sf-explorer/documentation/tree/master/',
         },
@@ -35,6 +33,18 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'devops',
+        path: 'devops',
+        routeBasePath: 'devops',
+        //sidebarPath: './sidebarDevops.js',
+        // ... other options
+      },
     ],
   ],
 
@@ -52,8 +62,9 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Documentation',
+            label: 'Explorer',
           },
+          {to: 'devops', label: 'DevOps Center', position: 'left'},
           {to: 'blog', label: 'Blog', position: 'left'},
     
         ]
