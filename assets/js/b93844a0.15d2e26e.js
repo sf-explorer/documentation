@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[2911],{25601:s=>{s.exports=JSON.parse('{"permalink":"/blog/tags/devops","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
