@@ -12,7 +12,7 @@ Let's bridge the gap between best practice theory and how we enforce it!
 **SF Explorer** allows you to define and perform simple checks on your orgs Data and Metadata in a simple yet flexible manner. 
 
 You can access, run and configure those rules via **Devops > Best Practices**  
-
+                                                      
 ![example](RuleExecution.png) 
 
 :::info
