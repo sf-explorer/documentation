@@ -11,6 +11,7 @@ keywords:
 Browse your org data with the tool of your choice:
 
 * [SOQL](./SOQL)
+* [SOSL](./SOSL)
 * [GraphQL](./GraphQL)
 * [Apex](./Apex)
-* SOSL (roadmap)
+
