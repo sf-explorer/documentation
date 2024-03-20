@@ -16,8 +16,17 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        <img
+          src={'https://img.shields.io/chrome-web-store/users/eabpolgjfkpchgffbkiedgfemcgbnbde'}
+        />
+
+        <img
+          src={'https://img.shields.io/chrome-web-store/rating/eabpolgjfkpchgffbkiedgfemcgbnbde'}
+        />
         <h1 className="hero__title">{siteConfig.title}</h1>
+
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+
         <Install />
       </div>
     </header>
@@ -26,11 +35,13 @@ function HomepageHeader() {
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
- 
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="SF explorer is a productivity tool for your salesforce related work">
+
+
       <HomepageHeader />
       <main>
         <div className={styles.topBanner}>
