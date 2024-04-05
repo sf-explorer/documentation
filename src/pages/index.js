@@ -47,9 +47,9 @@ export default function Home() {
         <div className={styles.topBanner}>
           <div className={styles.topBannerTitle}>
             {'🎉\xa0'}
-            <Link to="/blog/release30" className={styles.topBannerTitleText}>
+            <Link to="/blog/release40" className={styles.topBannerTitleText}>
 
-              {'Release\xa03.0 is\xa0out!️'}
+              {'Release\xa04.0 is\xa0out!️'}
 
             </Link>
             {'\xa0🥳'}
@@ -74,14 +74,18 @@ export default function Home() {
           </div>
         </header>
 
+        SvmSatZbsvM
+
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
           <div className="container">
             <div className="text--center">
               <h1>Architecture</h1>
-              <img
-                className={styles.heroLogo}
-                src={useBaseUrl('/img/architecture.png')}
-                width="80%"
+              <LiteYouTubeEmbed
+                id="SvmSatZbsvM"
+                params="autoplay=1&autohide=1&showinfo=0&rel=0"
+                title="Architecture"
+                poster="maxresdefault"
+                webp
               />
             </div>
           </div>
