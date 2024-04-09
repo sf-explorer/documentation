@@ -64,7 +64,7 @@ Run the command:
 ```cmd
 npx @sf-explorer/devops.cli
 ```
-The command will generate an output file name `testReport.xml` similar to the one you can find [here](./cli/test-report.xml).
+The command will generate an output file name `testReport.xml` (in JUnit format).
 
 ## Ignore metadata
 You can ignore specific errors with a file named `.sfexplorerignore` (using regex similar to a .gitignore file)
