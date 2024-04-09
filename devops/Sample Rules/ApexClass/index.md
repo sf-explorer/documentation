@@ -1,7 +1,7 @@
 # ApexClass
 ## An Apex class name must be PascalCase and use a correct Suffix
 Field: `Name`   
-Regex: `^[A-Z][A-Za-z0-9_]*(_Controller|_ServiceIn|_ServiceOut|_Test|_Helper|_Interface|_Mock|_ServiceAPI|_Util|_Batchable|_Queuable|_Schedulable)$`    
+Regex: `^[A-Z][A-Za-z0-9_]*(Controller|CallIn|CallOut|Test|Helper|Mapping|Mock|TriggerHandler|TestDataFactory|Wrapper|Constant|Batchable|Queuable|Schedulable|EntityManager|ServiceManager|DataManager)$`    
 #### Example
 
 * ActivityTimeline_Controller

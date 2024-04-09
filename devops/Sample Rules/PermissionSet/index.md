@@ -1,10 +1,5 @@
 # PermissionSet
-## Description is required
-Field: `Description`   
-
-
-
-## Name is required
+## Name is following project convention
 Field: `Name`   
 #### Example
 ### For Object/Field pern sets,
@@ -34,4 +29,10 @@ Start with APP:
 ### For Apex Class access:
 * APEX - Account LWC Controller
 * APEX - Case Invocable Actions  
+
+
+## Description is required (more than 20 chars)
+Field: `Description`   
+Regex: `^.{20,}$`    
+
 
