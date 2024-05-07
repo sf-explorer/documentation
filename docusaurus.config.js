@@ -83,6 +83,27 @@ const config = {
                 label: 'Youtube Channel',
                 href: 'https://www.youtube.com/@SFExplorer',
               },
+            
+
+              
+            ],
+          },
+          {
+            title: 'Apps',
+            items: [
+          
+              {
+                label: 'Web',
+                href: 'https://app.sf-explorer.com',
+              },
+              {
+                label: 'Chrome',
+                href: 'https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde',
+              },
+              {
+                label: 'Edge',
+                href: 'https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh',
+              },
             ],
           },
         ],
