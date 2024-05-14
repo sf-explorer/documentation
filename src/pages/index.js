@@ -17,9 +17,11 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <img
-          src={'https://img.shields.io/chrome-web-store/users/eabpolgjfkpchgffbkiedgfemcgbnbde'}
+          src={'https://img.shields.io/chrome-web-store/users/eabpolgjfkpchgffbkiedgfemcgbnbde?label=Google%20Chrome'}
         />
-
+        <img
+          src={'https://img.shields.io/badge/dynamic/json?label=Microsoft%20Edge&query=%24.activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpoadmeoldhchlfeaiicmfjlfjmkjbgdh'}
+        />
         <img
           src={'https://img.shields.io/chrome-web-store/rating/eabpolgjfkpchgffbkiedgfemcgbnbde'}
         />
