@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[8242],{17445:s=>{s.exports=JSON.parse('{"permalink":"/blog/tags/graph-ql","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
