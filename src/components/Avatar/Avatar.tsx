@@ -6,6 +6,9 @@ import { useDocumentData } from "react-firebase-hooks/firestore"
 import {
   doc
 } from "firebase/firestore"
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+
+
 const Avatar = () => {
 
   const [user] = useAuthState(auth)
@@ -22,11 +25,18 @@ const Avatar = () => {
       <a onClick={signOutUser} className="ml-2">
         Sign out
       </a>
+      <TawkMessengerReact
+      propertyId="6644b2a29a809f19fb312db7"
+      widgetId="1htu5kasp"/>
     </>)
   } else {
-    return (<a className="btn btn-outline-primary" onClick={signIn(db)}>
+    return (<>
+    <a className="btn btn-outline-primary" onClick={signIn(db)}>
       Sign in with github
-    </a>)
+    </a>
+    <TawkMessengerReact
+      propertyId="6644b2a29a809f19fb312db7"
+      widgetId="1htu5kasp"/></>)
   }
 }
 
