@@ -1,8 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -66,7 +64,6 @@ const config = {
           },
           {to: 'devops', label: 'DevOps Center', position: 'left'},
           {to: 'blog', label: 'Blog', position: 'left'},
-    
         ]
       },
       footer: {
@@ -83,15 +80,11 @@ const config = {
                 label: 'Youtube Channel',
                 href: 'https://www.youtube.com/@SFExplorer',
               },
-            
-
-              
             ],
           },
           {
             title: 'Apps',
-            items: [
-          
+            items: [  
               {
                 label: 'Web',
                 href: 'https://app.sf-explorer.com',
@@ -110,9 +103,8 @@ const config = {
         copyright: `Made by Nicolas Despres while discovering salesforce ecosystem`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,      },
     }),
 };
 

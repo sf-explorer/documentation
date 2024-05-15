@@ -14,23 +14,23 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "2.1.0",
-    "@docusaurus/preset-classic": "2.1.0",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "@docusaurus/core": "3.3.2",
+    "@docusaurus/preset-classic": "3.3.2",
     "@graphiql/toolkit": "^0.9.1",
     "@hikeman/lms": "0.0.14",
-    "@mdx-js/react": "^1.6.21",
     "@sf-explorer/soql-to-graphql": "^0.0.1-alpha16",
     "@uiw/react-monacoeditor": "^3.5.9",
     "buffer": "^6.0.3",
-    "clsx": "^1.1.1",
     "d3-graphviz": "^5.0.2",
     "firebase": "^9.6.7",
     "graphiql": "^2.0.0",
-    "prism-react-renderer": "^1.2.1",
-    "react": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-ace": "^10.1.0",
     "react-d3-tree": "^3.5.0",
-    "react-dom": "^17.0.2",
     "react-firebase-hooks": "^5.0.2",
     "react-lite-youtube-embed": "^2.3.52",
     "soql-parser-js": "^4.9.2"
@@ -48,9 +48,12 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.1.0",
+    "@docusaurus/module-type-aliases": "3.3.2",
     "@tsconfig/docusaurus": "^1.0.6",
     "install": "^0.13.0",
-    "typescript": "^4.5.5"
+    "@docusaurus/tsconfig": "3.3.2",
+    "@docusaurus/types": "3.3.2",
+    "typescript": "~5.2.2"
   }
+
 }
