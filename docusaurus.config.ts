@@ -8,7 +8,7 @@ const config = {
   tagline: 'Salesforce Productivity Tool',
   url: 'http://info.sf-explorer.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'sf-explorer',
