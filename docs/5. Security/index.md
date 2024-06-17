@@ -22,13 +22,24 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 * User, Profile comparisons
 * Excel like interface for deep analysis
 
+![example](./erd_security.png) 
+
 ![example](./security.png) 
 
 
 
 ## Demonstration
 
-Here is a detailed presentation of the most important features.
+Here is quick overview (44s):
+<LiteYouTubeEmbed
+              id="_zkBEMZ-KxU"
+              params="autoplay=1&autohide=1&showinfo=0&rel=0"
+              title="Security with ERD"
+              poster="maxresdefault"
+              webp
+            />
+
+Some other important features:
 
 <LiteYouTubeEmbed
               id="wtF5dZR9dmY"
