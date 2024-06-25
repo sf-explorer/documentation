@@ -49,9 +49,9 @@ export default function Home() {
         <div className={styles.topBanner}>
           <div className={styles.topBannerTitle}>
             {'🎉\xa0'}
-            <Link to="/blog/release40" className={styles.topBannerTitleText}>
+            <Link to="/blog/release50" className={styles.topBannerTitleText}>
 
-              {'Release\xa04.0 is\xa0out!️'}
+              {'Release\xa05.0 is\xa0out!️'}
 
             </Link>
             {'\xa0🥳'}
