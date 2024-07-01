@@ -20,6 +20,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 * An interactive UI to try to make the bridge between theory and practice
 * User, Profile comparisons
+* Action to empty a profile or remove an object from multiple profiles
 * Excel like interface for deep analysis
 
 ![example](./erd_security.png) 
@@ -28,8 +29,9 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 
 
-## Demonstration
+## Demonstrations
 
+### Overview
 Here is quick overview (44s):
 <LiteYouTubeEmbed
               id="_zkBEMZ-KxU"
@@ -39,6 +41,18 @@ Here is quick overview (44s):
               webp
             />
 
+### Moving from Profile to PermissionSet Model
+This video shows tools to help you create object level permission set model.
+<LiteYouTubeEmbed
+              id="Hf8SbbqBxfo"
+              params="autoplay=1&autohide=1&showinfo=0&rel=0"
+              title="From Profile to PermissionSet"
+              poster="maxresdefault"
+              webp
+            />
+
+
+### Other features
 Some other important features:
 
 <LiteYouTubeEmbed
