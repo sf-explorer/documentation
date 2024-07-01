@@ -22,6 +22,9 @@ function HomepageHeader() {
         <img
           src={'https://img.shields.io/badge/dynamic/json?label=Microsoft%20Edge&query=%24.activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpoadmeoldhchlfeaiicmfjlfjmkjbgdh'}
         />
+         <img
+          src={'https://img.shields.io/badge/Web-_80_-orange'}
+        />
         <img
           src={'https://img.shields.io/chrome-web-store/rating/eabpolgjfkpchgffbkiedgfemcgbnbde'}
         />
