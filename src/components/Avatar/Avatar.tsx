@@ -30,6 +30,7 @@ const Avatar = () => {
       widgetId="1htu5kasp"/>
     </>)
   } else {
+    return <></>
     return (<>
     <a className="btn btn-outline-primary" onClick={signIn(db)}>
       Sign in with github
