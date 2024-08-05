@@ -10,12 +10,19 @@ const Roadmap = (props: any) => {
     useEffect(() => {
         fetch("https://api.github.com/repos/sf-explorer/documentation/issues?q=is%3Aopen+is%3Aissue")
             .then(response => response.json())
-            .then(data => setIssues(data))
+            .then(data => {
+                if (data && Array.isArray(data)){
+
+                } else {
+                    setIssues([])
+                }
+                //setIssues(data)
+    })
             .catch(e => console.error(e))
     }, [])
 
     return (
-        <ul>{issues.filter(issue=>issue.author_association === 'MEMBER').map(issue => {
+        <ul>{issues?.filter(issue=>issue.author_association === 'MEMBER').map(issue => {
             return <li><a href={issue.html_url} target="_blank">{issue.title}</a> ({issue.reactions?.total_count} reaction(s))</li>
         })}</ul>
     )
