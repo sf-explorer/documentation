@@ -1,6 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-import {themes as prismThemes} from 'prism-react-renderer'
+import { themes as prismThemes } from 'prism-react-renderer'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,7 +12,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'sf-explorer',
-  projectName: 'documentation', 
+  projectName: 'documentation',
   presets: [
     [
       'classic',
@@ -36,6 +36,7 @@ const config = {
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
+      //'docusaurus-lunr-search',
       {
         id: 'devops',
         path: 'devops',
@@ -44,6 +45,9 @@ const config = {
         // ... other options
       },
     ],
+    [require.resolve("docusaurus-lunr-search"), {
+      enableHighlight: true
+    }]
   ],
 
   themeConfig:
@@ -55,15 +59,15 @@ const config = {
           alt: 'Explorer',
           src: 'img/apple-touch-icon.png',
         },
-       items: [
+        items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Explorer',
           },
-          {to: 'devops', label: 'DevOps Center', position: 'left'},
-          {to: 'blog', label: 'Blog', position: 'left'},
+          { to: 'devops', label: 'DevOps Center', position: 'left' },
+          { to: 'blog', label: 'Blog', position: 'left' },
         ]
       },
       footer: {
@@ -84,7 +88,7 @@ const config = {
           },
           {
             title: 'Apps',
-            items: [  
+            items: [
               {
                 label: 'Web',
                 href: 'https://app.sf-explorer.com',
@@ -104,7 +108,8 @@ const config = {
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,      },
+        darkTheme: prismThemes.dracula,
+      },
     }),
 };
 

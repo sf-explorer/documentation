@@ -25,6 +25,7 @@
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",
     "d3-graphviz": "^5.0.2",
+    "docusaurus-lunr-search": "^3.4.0",
     "firebase": "^9.6.7",
     "graphiql": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
