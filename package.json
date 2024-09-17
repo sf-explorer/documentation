@@ -19,7 +19,7 @@
     "@graphiql/toolkit": "^0.9.1",
     "@hikeman/lms": "0.0.14",
     "@mdx-js/react": "^3.0.0",
-    "@sf-explorer/soql-to-graphql": "^0.0.2",
+    "@sf-explorer/soql-to-graphql": "^0.1.3",
     "@tawk.to/tawk-messenger-react": "^2.0.2",
     "@uiw/react-monacoeditor": "^3.5.9",
     "buffer": "^6.0.3",
