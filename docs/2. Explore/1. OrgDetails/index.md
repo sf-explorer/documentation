@@ -7,7 +7,7 @@ keywords:
   - PermissionSet
   - PermissionSetGroup
 ---
-import D3Graphviz from '../../src/components/D3Graphviz'
+import D3Graphviz from '../../../src/components/D3Graphviz'
 
 # Object Manager
 

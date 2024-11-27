@@ -1,6 +1,6 @@
 ---
 description: Analyze security model
-title: Security
+title: Secure
 keywords:
   - sharing
   - security

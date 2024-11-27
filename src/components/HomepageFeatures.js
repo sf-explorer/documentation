@@ -19,7 +19,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_mind_map_re_nlb6.svg').default,
     description: (
       <>
-        Retrieve <Link to="/docs/OrgDetails/">key information</Link> on the objects you use the most.
+        Retrieve <Link to="/docs/explore/OrgDetails/">key information</Link> on the objects you use the most.
       </>
     ),
   },
@@ -31,7 +31,7 @@ const FeatureList = [
     description: (
       <>
         Chain requests and <Link
-          to={`/docs/query/`}>
+          to={`/docs/explore`}>
           Query data
         </Link> across multiple orgs with ease
       </>
@@ -58,7 +58,7 @@ const FeatureList = [
           to={`/docs/Code/LWC`}>
           from your LWCs
         </Link> and  <Link
-          to={`/docs/Code/Apex`}>your Apex</Link> to generate a status report
+          to={`/docs/Develop/Apex`}>your Apex</Link> to generate a status report
       </>
     ),
   },
@@ -69,13 +69,13 @@ const FeatureList = [
     description: (
       <>
         Get an overview of your <Link
-          to={`/docs/Industries/Omniscript`}>
+          to={`/docs/Configure/Industries/Omniscript`}>
           omniscripts
         </Link>, <Link
-          to={`/docs/Industries/DataRaptor`}>
+          to={`/docs/Configure/Industries/DataRaptor`}>
           DataRaptors
         </Link>  and your  <Link
-          to={`/docs/Industries/Flexcard`}>
+          to={`/docs/Configure/Industries/Flexcard`}>
           flexcards
         </Link>
       </>
@@ -87,7 +87,7 @@ const FeatureList = [
     Svg: require('../../static/img/packaging.svg').default,
     description: (
       <>
-        Explore <Link to="/docs/Industries/Insurance%20Product" >Insurance Products</Link> with their coverage, attributes, rules and dependencies
+        Explore <Link to="/docs/Configure/Industries/Insurance%20Product" >Insurance Products</Link> with their coverage, attributes, rules and dependencies
       </>
     ),
   },
@@ -107,7 +107,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_split_testing_l1uw.svg').default,
     description: (
       <>
-        Compare any other record in your orgs such as <Link to="/docs/Code/Flexipage/">Flexipages</Link>, accounts or Flows.
+        Compare any other record in your orgs such as <Link to="/docs/Develop/Flexipage/">Flexipages</Link>, accounts or Flows.
       </>
     ),
   },
@@ -117,7 +117,7 @@ const FeatureList = [
     Svg: require('../../static/img/graphQL.svg').default,
     description: (
       <>
-        Browse your org using <Link to="/docs/Query/GraphQL/">GraphQL</Link> and generate LWC starters accordingly
+        Browse your org using <Link to="/docs/Explore/GraphQL/">GraphQL</Link> and generate LWC starters accordingly
       </>
     ),
   },

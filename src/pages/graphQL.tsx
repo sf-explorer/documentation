@@ -1,6 +1,6 @@
 import React from "react"
-import { useState, useEffect, useContext } from 'react'
-import { parseQuery, Query } from 'soql-parser-js'
+import { useState, useEffect } from 'react'
+
 //import GraphiQL from 'GraphiQL'
 //import soql2graphQL from './soql2graphQL'
 import GraphiQL from '../components/GraphiQL'

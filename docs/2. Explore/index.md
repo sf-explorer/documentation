@@ -1,12 +1,12 @@
 ---
 description: Browse your org data and datamodel
-title: Search
+title: Explore
 keywords:
   - salesforce
   - search
 ---
 
-# Query Builder
+# Explore your orgs
 
 Browse your org data with the tool of your choice:
 

@@ -6,7 +6,7 @@ keywords:
   - Documentation
 ---
 
-import D3Graphviz from '../../src/components/D3Graphviz'
+import D3Graphviz from '../../../src/components/D3Graphviz'
 
 # Browse used FSC objects
 

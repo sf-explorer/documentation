@@ -67,9 +67,9 @@ If you open the history button you will find a number of queries to help you get
 * Object info for Account and Case
 
 <LiteYouTubeEmbed
-              id="8kOW8amHmPI"
+              id="aqj22aEKUoM"
               params="autoplay=1&autohide=1&showinfo=0&rel=0"
-              title="Security"
+              title="GraphQL"
               poster="maxresdefault"
               webp
             />

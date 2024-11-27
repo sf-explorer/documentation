@@ -19,9 +19,9 @@
     "@graphiql/toolkit": "^0.9.1",
     "@hikeman/lms": "0.0.14",
     "@mdx-js/react": "^3.0.0",
-    "@sf-explorer/soql-to-graphql": "^0.1.3",
+    "@sf-explorer/soql-to-graphql": "^0.1.4",
     "@tawk.to/tawk-messenger-react": "^2.0.2",
-    "@uiw/react-monacoeditor": "^3.5.9",
+    "@uiw/react-monacoeditor": "^3.6.0",
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",
     "d3-graphviz": "^5.0.2",
@@ -34,8 +34,7 @@
     "react-d3-tree": "^3.5.0",
     "react-dom": "^18.0.0",
     "react-firebase-hooks": "^5.0.2",
-    "react-lite-youtube-embed": "^2.3.52",
-    "soql-parser-js": "^4.9.2"
+    "react-lite-youtube-embed": "^2.3.52"
   },
   "browserslist": {
     "production": [
