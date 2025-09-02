@@ -14,12 +14,12 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.5.2",
-    "@docusaurus/preset-classic": "^3.5.2",
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
     "@graphiql/toolkit": "^0.9.1",
     "@hikeman/lms": "0.0.14",
     "@mdx-js/react": "^3.0.0",
-    "@sf-explorer/soql-to-graphql": "^0.1.4",
+    "@sf-explorer/soql-to-graphql": "^0.2.0",
     "@tawk.to/tawk-messenger-react": "^2.0.2",
     "@uiw/react-monacoeditor": "^3.6.0",
     "buffer": "^6.0.3",
@@ -49,9 +49,9 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.4.0",
-    "@docusaurus/tsconfig": "^3.4.0",
-    "@docusaurus/types": "^3.4.0",
+    "@docusaurus/module-type-aliases": "^3.8.1",
+    "@docusaurus/tsconfig": "^3.8.1",
+    "@docusaurus/types": "^3.8.1",
     "@tsconfig/docusaurus": "^1.0.6",
     "install": "^0.13.0",
     "typescript": "~5.2.2"
