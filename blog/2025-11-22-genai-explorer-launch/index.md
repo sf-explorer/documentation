@@ -6,7 +6,8 @@ tags: [release, genai, agentforce, einstein, chrome-extension]
 image: ./genai-explorer-logo.png
 ---
 
-![GenAI Explorer](./genai-explorer-logo.png)
+<img src={require('./genai-explorer-logo.png').default} alt="GenAI Explorer Logo" width="200" />
+
 
 **Humans and agents are meant to live together, yet we have to understand agents better to understand what they have done and, more importantly, why.**
 
