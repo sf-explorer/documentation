@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">GenAI Explorer Overview | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="GenAI Explorer Overview | SF Explorer"><meta data-rh="true" name="description" content="A comprehensive Chrome extension for exploring, testing, and monitoring Salesforce Generative AI capabilities."><meta data-rh="true" property="og:description" content="A comprehensive Chrome extension for exploring, testing, and monitoring Salesforce Generative AI capabilities."><meta data-rh="true" name="keywords" content="genai explorer,agentforce,einstein,chrome extension,salesforce ai"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"GenAI Explorer Overview","item":"http://info.sf-explorer.com/genai/"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.c37cf0fb.js" defer="defer"></script>
+<script src="/assets/js/main.e080f877.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/configuration-explorer">Agent blueprint</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/conversation-history">Conversation History</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/data-cloud-integration">Data Cloud Integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/topic-collision-analysis">Topic Collision Analysis</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">GenAI Explorer Overview</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>GenAI Explorer</h1></header>
+<img src="/assets/images/genai-explorer-logo-5aa9c275c090415eafbb37778440a262.png" alt="GenAI Explorer Logo" width="200">
+<p>A comprehensive Chrome extension for exploring, testing, and monitoring Salesforce Generative AI capabilities including Agentforce, Einstein models, and Data Cloud insights.</p>
+<p><img decoding="async" loading="lazy" alt="GenAI Explorer" src="/assets/images/agent-detail-banner-e7ace04aed4d781fa4552f487c0da556.png" width="1800" height="750" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Humans and agents are meant to live together, yet we need better tools to understand what agents have done and, more importantly, why.</strong></p>
+<p>As AI agents become integral to business operations, teams face key challenges:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="understanding-ai-behavior">Understanding AI Behavior<a href="#understanding-ai-behavior" class="hash-link" aria-label="Direct link to Understanding AI Behavior" title="Direct link to Understanding AI Behavior">​</a></h3>
+<ul>
+<li>🤔 <strong>Complex Reasoning</strong>: AI decision-making involves multiple stages and considerations</li>
+<li>🔍 <strong>Tracing Decisions</strong>: Need to understand why agents chose specific actions or responses</li>
+<li>📊 <strong>Performance Visibility</strong>: Token usage, timing, and quality metrics require analysis</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="testing--validation">Testing &amp; Validation<a href="#testing--validation" class="hash-link" aria-label="Direct link to Testing &amp; Validation" title="Direct link to Testing &amp; Validation">​</a></h3>
+<ul>
+<li>🧪 <strong>Safe Testing</strong>: Need controlled environments to validate agent behavior</li>
+<li>🔄 <strong>Iteration Speed</strong>: Want to test and refine agents quickly</li>
+<li>🐛 <strong>Issue Reproduction</strong>: Need to replay and debug specific interactions</li>
+<li>📈 <strong>Data Analysis</strong>: AI data spans multiple objects and requires specialized queries</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="configuration-management">Configuration Management<a href="#configuration-management" class="hash-link" aria-label="Direct link to Configuration Management" title="Direct link to Configuration Management">​</a></h3>
+<ul>
+<li>🗺️ <strong>Component Relationships</strong>: Understanding how agents, topics, and actions connect</li>
+<li>📋 <strong>Version Control</strong>: Tracking which configurations are active vs. draft</li>
+<li>🎯 <strong>Impact Analysis</strong>: Knowing what will be affected by changes</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="development-tools">Development Tools<a href="#development-tools" class="hash-link" aria-label="Direct link to Development Tools" title="Direct link to Development Tools">​</a></h3>
+<ul>
+<li>🔧 <strong>Specialized Needs</strong>: AI development requires different tools than traditional Salesforce</li>
+<li>💬 <strong>Prompt Engineering</strong>: Testing different models, prompts, and parameters</li>
+<li>📊 <strong>Analytics Access</strong>: Analyzing conversation data for insights</li>
+</ul>
+<p><strong>In short</strong>: Teams need specialized tools to build, test, and optimize AI agents effectively.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p><strong>GenAI Explorer is the Chrome DevTools for Salesforce AI</strong> - bringing complete transparency, powerful debugging, and rapid iteration to AI development.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-complete-visibility">🔍 Complete Visibility<a href="#-complete-visibility" class="hash-link" aria-label="Direct link to 🔍 Complete Visibility" title="Direct link to 🔍 Complete Visibility">​</a></h3>
+<p>✅ <strong>See Inside AI Reasoning</strong>: Visual Atlas pipeline showing all 6 processing stages<br>
+<!-- -->✅ <strong>Track Every Decision</strong>: View which topics matched, which actions executed, and why<br>
+<!-- -->✅ <strong>Live Performance Metrics</strong>: Token usage, processing time, quality scores in real-time</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-safe-testing-environment">🧪 Safe Testing Environment<a href="#-safe-testing-environment" class="hash-link" aria-label="Direct link to 🧪 Safe Testing Environment" title="Direct link to 🧪 Safe Testing Environment">​</a></h3>
+<p>✅ <strong>Chat Without Risk</strong>: Test agents locally before production<br>
+<!-- -->✅ <strong>Control Context</strong>: Set session and message variables to simulate any scenario<br>
+<!-- -->✅ <strong>Replay Requests</strong>: Reproduce any historical request with one click<br>
+<!-- -->✅ <strong>Edit &amp; Test</strong>: Modify prompts and compare results instantly</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-data-driven-insights">📊 Data-Driven Insights<a href="#-data-driven-insights" class="hash-link" aria-label="Direct link to 📊 Data-Driven Insights" title="Direct link to 📊 Data-Driven Insights">​</a></h3>
+<p>✅ <strong>Pre-Built Analytics</strong>: 8+ ready-to-use Data Cloud queries<br>
+<!-- -->✅ <strong>Conversation History</strong>: Filter and analyze all past conversations<br>
+<!-- -->✅ <strong>Export Capabilities</strong>: Get data into Excel, JSON, or CSV instantly<br>
+<!-- -->✅ <strong>No SQL Required</strong>: Visual query builder with auto-complete</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-visual-understanding">🎨 Visual Understanding<a href="#-visual-understanding" class="hash-link" aria-label="Direct link to 🎨 Visual Understanding" title="Direct link to 🎨 Visual Understanding">​</a></h3>
+<p>✅ <strong>ERD Diagrams</strong>: See all AI objects and relationships<br>
+<!-- -->✅ <strong>Atlas Pipeline</strong>: Interactive 6-stage reasoning visualization<br>
+<!-- -->✅ <strong>Interactive Boards</strong>: Create documentation with drag-and-drop<br>
+<!-- -->✅ <strong>Configuration Browser</strong>: Explore all agents, topics, actions at once</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-developer-acceleration">⚡ Developer Acceleration<a href="#-developer-acceleration" class="hash-link" aria-label="Direct link to ⚡ Developer Acceleration" title="Direct link to ⚡ Developer Acceleration">​</a></h3>
+<p>✅ <strong>Topic Collision Detection</strong>: Einstein-powered overlap analysis<br>
+<!-- -->✅ <strong>AI Prompt Optimization</strong>: Get improvement suggestions automatically<br>
+<!-- -->✅ <strong>Model Comparison</strong>: Test GPT-4 vs GPT-4o Mini side-by-side<br>
+<!-- -->✅ <strong>Unified Interface</strong>: Everything in one extension - no context switching</p>
+<p><strong>Impact:</strong></p>
+<ul>
+<li>🚀 <strong>80% faster testing</strong> - minutes instead of hours</li>
+<li>🔍 <strong>70% faster debugging</strong> - see exactly what went wrong</li>
+<li>💰 <strong>50-70% cost reduction</strong> - optimize model selection</li>
+<li>📚 <strong>10x faster onboarding</strong> - visual docs and live data</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-we-built-it">Why We Built It<a href="#why-we-built-it" class="hash-link" aria-label="Direct link to Why We Built It" title="Direct link to Why We Built It">​</a></h2>
+<p><strong>Humans and agents are meant to live together.</strong> But for this collaboration to succeed, we need transparency.</p>
+<p>GenAI Explorer was created by Salesforce developers and AI engineers building Agentforce implementations who needed better tooling. The project started with a simple question:</p>
+<blockquote>
+<p>&quot;How can we see what&#x27;s happening inside an Agentforce conversation?&quot;</p>
+</blockquote>
+<p>From that question came a comprehensive toolkit that answers:</p>
+<ul>
+<li><strong>What did the agent do?</strong> Which actions, topics, and data?</li>
+<li><strong>Why did it do that?</strong> What reasoning led to those decisions?</li>
+<li><strong>How can we improve it?</strong> Where are bottlenecks and optimization opportunities?</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="our-vision">Our Vision<a href="#our-vision" class="hash-link" aria-label="Direct link to Our Vision" title="Direct link to Our Vision">​</a></h3>
+<p><strong>Today:</strong> Salesforce Agentforce, Einstein, Data Cloud<br>
+<strong>Tomorrow:</strong> Multi-platform AI agent support<br>
+<strong>Future:</strong> A unified lens for understanding any AI agent, anywhere</p>
+<p><strong>The goal:</strong> Make AI agent behavior transparent and understandable, regardless of platform.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>GenAI Explorer is a browser extension designed for Salesforce administrators, developers, and AI engineers who need to interact with, test, and monitor Generative AI capabilities within their Salesforce orgs. It provides a unified interface for working with your organization&#x27;s AI agents, understanding their configuration, and analyzing their performance.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="single-purpose">Single Purpose<a href="#single-purpose" class="hash-link" aria-label="Direct link to Single Purpose" title="Direct link to Single Purpose">​</a></h2>
+<p><strong>A developer and administrator tool for chatting with, testing, and monitoring Salesforce Agentforce and Einstein AI capabilities.</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-capabilities">Key Capabilities<a href="#key-capabilities" class="hash-link" aria-label="Direct link to Key Capabilities" title="Direct link to Key Capabilities">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-chat-with-agentforce-agents">💬 Chat with Agentforce Agents<a href="#-chat-with-agentforce-agents" class="hash-link" aria-label="Direct link to 💬 Chat with Agentforce Agents" title="Direct link to 💬 Chat with Agentforce Agents">​</a></h3>
+<p>Have real-time conversations with your Agentforce agents, test scenarios, configure session variables, and analyze agent responses.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-configuration-explorer">🤖 Configuration Explorer<a href="#-configuration-explorer" class="hash-link" aria-label="Direct link to 🤖 Configuration Explorer" title="Direct link to 🤖 Configuration Explorer">​</a></h3>
+<p>Browse all AI Agents, Topics, Actions, and Prompts in your org with comprehensive entity relationship diagrams.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-atlas-reasoning-engine">🧠 Atlas Reasoning Engine<a href="#-atlas-reasoning-engine" class="hash-link" aria-label="Direct link to 🧠 Atlas Reasoning Engine" title="Direct link to 🧠 Atlas Reasoning Engine">​</a></h3>
+<p>Visualize the six-stage AI processing pipeline and understand how Salesforce processes AI queries.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-einstein-model-testing">🔬 Einstein Model Testing<a href="#-einstein-model-testing" class="hash-link" aria-label="Direct link to 🔬 Einstein Model Testing" title="Direct link to 🔬 Einstein Model Testing">​</a></h3>
+<p>Test and compare multiple Einstein AI models with custom prompts and parameter control.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-interactive-boards">🎨 Interactive Boards<a href="#-interactive-boards" class="hash-link" aria-label="Direct link to 🎨 Interactive Boards" title="Direct link to 🎨 Interactive Boards">​</a></h3>
+<p>Create visual workflows and documentation using drag-and-drop boards with AI-powered editing.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-data-cloud-integration">☁️ Data Cloud Integration<a href="#️-data-cloud-integration" class="hash-link" aria-label="Direct link to ☁️ Data Cloud Integration" title="Direct link to ☁️ Data Cloud Integration">​</a></h3>
+<p>Execute queries and monitor AI data directly with pre-built analytics queries.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quick-start">Quick Start<a href="#quick-start" class="hash-link" aria-label="Direct link to Quick Start" title="Direct link to Quick Start">​</a></h2>
+<ol>
+<li>Use the online version (webapp) or <strong>Install</strong> the extension from the Chrome Web Store</li>
+<li><strong>Connect</strong> to your Salesforce org using OAuth authentication (connected app)</li>
+<li><strong>Explore</strong> your AI agents, topics, and actions</li>
+<li><strong>Chat</strong> with your agents to test their behavior</li>
+<li><strong>Monitor</strong> performance using Data Cloud queries</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="who-should-use-genai-explorer">Who Should Use GenAI Explorer?<a href="#who-should-use-genai-explorer" class="hash-link" aria-label="Direct link to Who Should Use GenAI Explorer?" title="Direct link to Who Should Use GenAI Explorer?">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-administrators">For Administrators<a href="#for-administrators" class="hash-link" aria-label="Direct link to For Administrators" title="Direct link to For Administrators">​</a></h3>
+<ul>
+<li>Monitor Agentforce agent performance</li>
+<li>Track conversation flows and user interactions</li>
+<li>Analyze agent usage patterns</li>
+<li>Troubleshoot configuration issues</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-developers">For Developers<a href="#for-developers" class="hash-link" aria-label="Direct link to For Developers" title="Direct link to For Developers">​</a></h3>
+<ul>
+<li>Test Einstein AI models during development</li>
+<li>Debug prompt templates and responses</li>
+<li>Explore GenAI Function Definitions</li>
+<li>Optimize token usage and costs</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-aiml-engineers">For AI/ML Engineers<a href="#for-aiml-engineers" class="hash-link" aria-label="Direct link to For AI/ML Engineers" title="Direct link to For AI/ML Engineers">​</a></h3>
+<ul>
+<li>Understand the Atlas reasoning pipeline</li>
+<li>Analyze AI model performance</li>
+<li>Monitor safety and compliance metrics</li>
+<li>Optimize retrieval strategies</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="for-data-scientists">For Data Scientists<a href="#for-data-scientists" class="hash-link" aria-label="Direct link to For Data Scientists" title="Direct link to For Data Scientists">​</a></h3>
+<ul>
+<li>Query Data Cloud for AI analytics</li>
+<li>Analyze conversation patterns</li>
+<li>Track feature usage statistics</li>
+<li>Export data for analysis</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements<a href="#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements">​</a></h2>
+<ul>
+<li><strong>Browser</strong>: Chrome version 88 or higher</li>
+<li><strong>Salesforce</strong>: Org with Agentforce or Einstein AI features enabled</li>
+<li><strong>Permissions</strong>: Appropriate access to AI metadata and Data Cloud</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="architecture">Architecture<a href="#architecture" class="hash-link" aria-label="Direct link to Architecture" title="Direct link to Architecture">​</a></h2>
+<p>Built with modern web technologies:</p>
+<ul>
+<li><strong>React 18</strong> - Modern UI framework</li>
+<li><strong>TypeScript</strong> - Type-safe development</li>
+<li><strong>Salesforce Lightning Design System</strong> - Native Salesforce UI/UX</li>
+<li><strong>React Flow</strong> - Interactive visualizations</li>
+<li><strong>JSForce</strong> - Salesforce API integration</li>
+<li><strong>Material-UI</strong> - Additional UI components</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="privacy--security">Privacy &amp; Security<a href="#privacy--security" class="hash-link" aria-label="Direct link to Privacy &amp; Security" title="Direct link to Privacy &amp; Security">​</a></h2>
+<ul>
+<li>🔒 <strong>Secure Authentication</strong>: Official OAuth 2.0 flows</li>
+<li>🏠 <strong>No External Storage</strong>: All data remains in your Salesforce org</li>
+<li>🎯 <strong>Direct API Calls</strong>: Queries execute directly against your instance</li>
+<li>💾 <strong>Browser-Only Storage</strong>: Preferences saved locally</li>
+<li>🚫 <strong>No Third-Party Services</strong>: No data sent externally</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<p>Explore the detailed documentation:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting Started<a href="#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started">​</a></h3>
+<ul>
+<li><a href="/genai/chat-with-agents">Chat with Agents</a> - Learn how to have conversations with your AI agents</li>
+<li><a href="/genai/configuration-explorer">Configuration Explorer</a> - Browse your AI setup</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="understanding-the-platform">Understanding the Platform<a href="#understanding-the-platform" class="hash-link" aria-label="Direct link to Understanding the Platform" title="Direct link to Understanding the Platform">​</a></h3>
+<ul>
+<li><a href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a> - Understand AI processing</li>
+<li><a href="/genai/data-cloud-integration">Data Cloud Integration</a> - Query and analyze AI data</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-features">Advanced Features<a href="#advanced-features" class="hash-link" aria-label="Direct link to Advanced Features" title="Direct link to Advanced Features">​</a></h3>
+<ul>
+<li><a href="/genai/einstein-model-testing">Einstein Model Testing</a> - Test and compare models</li>
+<li><a href="/genai/topic-collision-analysis">Topic Collision Analysis</a> - Prevent routing issues</li>
+<li><a href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a> - Debug and optimize AI requests</li>
+<li><a href="/genai/conversation-history">Conversation History</a> - View, filter, and analyze all conversations</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reference">Reference<a href="#reference" class="hash-link" aria-label="Direct link to Reference" title="Direct link to Reference">​</a></h3>
+<ul>
+<li><a href="/genai/faq">FAQ</a> - Frequently asked questions</li>
+</ul>
+<hr>
+<p><strong>Built for the Salesforce community to unlock the full potential of Generative AI</strong> 🚀</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--next" href="/genai/chat-with-agents"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Chat with Agents</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a><ul><li><a href="#understanding-ai-behavior" class="table-of-contents__link toc-highlight">Understanding AI Behavior</a></li><li><a href="#testing--validation" class="table-of-contents__link toc-highlight">Testing &amp; Validation</a></li><li><a href="#configuration-management" class="table-of-contents__link toc-highlight">Configuration Management</a></li><li><a href="#development-tools" class="table-of-contents__link toc-highlight">Development Tools</a></li></ul></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a><ul><li><a href="#-complete-visibility" class="table-of-contents__link toc-highlight">🔍 Complete Visibility</a></li><li><a href="#-safe-testing-environment" class="table-of-contents__link toc-highlight">🧪 Safe Testing Environment</a></li><li><a href="#-data-driven-insights" class="table-of-contents__link toc-highlight">📊 Data-Driven Insights</a></li><li><a href="#-visual-understanding" class="table-of-contents__link toc-highlight">🎨 Visual Understanding</a></li><li><a href="#-developer-acceleration" class="table-of-contents__link toc-highlight">⚡ Developer Acceleration</a></li></ul></li><li><a href="#why-we-built-it" class="table-of-contents__link toc-highlight">Why We Built It</a><ul><li><a href="#our-vision" class="table-of-contents__link toc-highlight">Our Vision</a></li></ul></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#single-purpose" class="table-of-contents__link toc-highlight">Single Purpose</a></li><li><a href="#key-capabilities" class="table-of-contents__link toc-highlight">Key Capabilities</a><ul><li><a href="#-chat-with-agentforce-agents" class="table-of-contents__link toc-highlight">💬 Chat with Agentforce Agents</a></li><li><a href="#-configuration-explorer" class="table-of-contents__link toc-highlight">🤖 Configuration Explorer</a></li><li><a href="#-atlas-reasoning-engine" class="table-of-contents__link toc-highlight">🧠 Atlas Reasoning Engine</a></li><li><a href="#-einstein-model-testing" class="table-of-contents__link toc-highlight">🔬 Einstein Model Testing</a></li><li><a href="#-interactive-boards" class="table-of-contents__link toc-highlight">🎨 Interactive Boards</a></li><li><a href="#️-data-cloud-integration" class="table-of-contents__link toc-highlight">☁️ Data Cloud Integration</a></li></ul></li><li><a href="#quick-start" class="table-of-contents__link toc-highlight">Quick Start</a></li><li><a href="#who-should-use-genai-explorer" class="table-of-contents__link toc-highlight">Who Should Use GenAI Explorer?</a><ul><li><a href="#for-administrators" class="table-of-contents__link toc-highlight">For Administrators</a></li><li><a href="#for-developers" class="table-of-contents__link toc-highlight">For Developers</a></li><li><a href="#for-aiml-engineers" class="table-of-contents__link toc-highlight">For AI/ML Engineers</a></li><li><a href="#for-data-scientists" class="table-of-contents__link toc-highlight">For Data Scientists</a></li></ul></li><li><a href="#requirements" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#architecture" class="table-of-contents__link toc-highlight">Architecture</a></li><li><a href="#privacy--security" class="table-of-contents__link toc-highlight">Privacy &amp; Security</a></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a><ul><li><a href="#getting-started" class="table-of-contents__link toc-highlight">Getting Started</a></li><li><a href="#understanding-the-platform" class="table-of-contents__link toc-highlight">Understanding the Platform</a></li><li><a href="#advanced-features" class="table-of-contents__link toc-highlight">Advanced Features</a></li><li><a href="#reference" class="table-of-contents__link toc-highlight">Reference</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>

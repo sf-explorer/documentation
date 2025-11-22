@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-einstein-model-testing" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Einstein Model Testing | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/einstein-model-testing"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="Einstein Model Testing | SF Explorer"><meta data-rh="true" name="description" content="Test and compare different Einstein AI models side-by-side with custom prompts and parameters."><meta data-rh="true" property="og:description" content="Test and compare different Einstein AI models side-by-side with custom prompts and parameters."><meta data-rh="true" name="keywords" content="einstein,models,testing,gpt-4,comparison,llm"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/einstein-model-testing"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/einstein-model-testing" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/einstein-model-testing" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Einstein Model Testing","item":"http://info.sf-explorer.com/genai/einstein-model-testing"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.c37cf0fb.js" defer="defer"></script>
+<script src="/assets/js/main.e080f877.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/configuration-explorer">Agent blueprint</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/conversation-history">Conversation History</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/data-cloud-integration">Data Cloud Integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/topic-collision-analysis">Topic Collision Analysis</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Einstein Model Testing</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Einstein Model Testing</h1></header>
+<p>Test and compare Einstein AI models directly from your browser with custom prompts, parameter control, and real-time results.</p>
+<p><img decoding="async" loading="lazy" alt="Model Testing" src="/assets/images/einstein-model-testing-9336d8b2e5c8185e09686151ca06aae3.png" width="961" height="742" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Choosing the right AI model for your use case requires understanding the tradeoffs between cost, speed, and quality.</strong></p>
+<p>When building AI solutions, teams need to:</p>
+<ul>
+<li>🎯 <strong>Model Selection</strong>: Determine which model provides the best balance for specific use cases</li>
+<li>💰 <strong>Cost Optimization</strong>: Understand token consumption and pricing implications</li>
+<li>⚡ <strong>Performance Testing</strong>: Compare response times across different models</li>
+<li>🎨 <strong>Quality Assessment</strong>: Evaluate output quality for your specific prompts</li>
+<li>🔧 <strong>Parameter Tuning</strong>: Experiment with temperature, max tokens, and other settings</li>
+<li>📊 <strong>Side-by-Side Comparison</strong>: Test multiple models with identical inputs</li>
+</ul>
+<p><strong>In short</strong>: You need a sandbox to experiment with different models and parameters before committing to production.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p>GenAI Explorer provides <strong>comprehensive model testing</strong> with:</p>
+<p>✅ <strong>Side-by-Side Comparison</strong>: Test multiple models with identical prompts simultaneously</p>
+<p>✅ <strong>Parameter Control</strong>: Adjust and understand key settings</p>
+<ul>
+<li>Temperature (creativity vs consistency)</li>
+<li>Max tokens (response length limits)</li>
+<li>Top-p, frequency penalty, presence penalty</li>
+</ul>
+<p>✅ <strong>Cost Transparency</strong>: See token usage and estimated costs in real-time</p>
+<p>✅ <strong>Performance Metrics</strong>: Compare response time, quality, and token efficiency</p>
+<p>✅ <strong>Sample Prompts Library</strong>: Pre-built prompts for common scenarios</p>
+<ul>
+<li>Customer service responses</li>
+<li>Data analysis</li>
+<li>Code generation</li>
+<li>Creative writing</li>
+</ul>
+<p>✅ <strong>A/B Testing</strong>: Save and compare results across multiple test runs</p>
+<p><strong>Impact:</strong> Choose the right model for each use case, reduce costs by 50-70% with smarter model selection, and validate quality before deployment.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Einstein Model Testing interface allows you to experiment with different AI models, adjust generation parameters, and compare results side-by-side. This is essential for selecting the right model for your use case and optimizing your AI implementation.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="supported-models">Supported Models<a href="#supported-models" class="hash-link" aria-label="Direct link to Supported Models" title="Direct link to Supported Models">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gpt-4-omni">GPT-4 Omni<a href="#gpt-4-omni" class="hash-link" aria-label="Direct link to GPT-4 Omni" title="Direct link to GPT-4 Omni">​</a></h3>
+<p><strong>Best for:</strong> Complex reasoning, detailed analysis, multi-step tasks</p>
+<p><strong>Specifications:</strong></p>
+<ul>
+<li>Context window: 128K tokens</li>
+<li>Max output: 4096 tokens</li>
+<li>Cost: Higher</li>
+<li>Speed: Slower</li>
+<li>Quality: Highest</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Complex problem-solving</li>
+<li>Detailed explanations</li>
+<li>Code generation and review</li>
+<li>Multi-step reasoning</li>
+<li>Creative content</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gpt-4o-mini">GPT-4o Mini<a href="#gpt-4o-mini" class="hash-link" aria-label="Direct link to GPT-4o Mini" title="Direct link to GPT-4o Mini">​</a></h3>
+<p><strong>Best for:</strong> Fast, cost-effective general tasks</p>
+<p><strong>Specifications:</strong></p>
+<ul>
+<li>Context window: 128K tokens</li>
+<li>Max output: 4096 tokens</li>
+<li>Cost: Medium</li>
+<li>Speed: Fast</li>
+<li>Quality: High</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Quick responses</li>
+<li>Simple queries</li>
+<li>High-volume applications</li>
+<li>Real-time chat</li>
+<li>Summarization</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gpt-35-turbo">GPT-3.5 Turbo<a href="#gpt-35-turbo" class="hash-link" aria-label="Direct link to GPT-3.5 Turbo" title="Direct link to GPT-3.5 Turbo">​</a></h3>
+<p><strong>Best for:</strong> Simple, efficient tasks with fast response times</p>
+<p><strong>Specifications:</strong></p>
+<ul>
+<li>Context window: 16K tokens</li>
+<li>Max output: 4096 tokens</li>
+<li>Cost: Lower</li>
+<li>Speed: Fastest</li>
+<li>Quality: Good</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Simple questions</li>
+<li>Data extraction</li>
+<li>Classification</li>
+<li>Translation</li>
+<li>Basic chat</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting Started<a href="#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-access-model-testing">1. Access Model Testing<a href="#1-access-model-testing" class="hash-link" aria-label="Direct link to 1. Access Model Testing" title="Direct link to 1. Access Model Testing">​</a></h3>
+<p>Navigate to <strong>Einstein Model Testing</strong> from the main menu.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-select-a-model">2. Select a Model<a href="#2-select-a-model" class="hash-link" aria-label="Direct link to 2. Select a Model" title="Direct link to 2. Select a Model">​</a></h3>
+<p>Choose one or more models to test:</p>
+<ul>
+<li>☐ GPT-4 Omni</li>
+<li>☐ GPT-4o Mini</li>
+<li>☐ GPT-3.5 Turbo</li>
+</ul>
+<p><strong>Pro Tip:</strong> Select multiple models to compare results side-by-side.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-configure-parameters">3. Configure Parameters<a href="#3-configure-parameters" class="hash-link" aria-label="Direct link to 3. Configure Parameters" title="Direct link to 3. Configure Parameters">​</a></h3>
+<p>Adjust generation parameters to control behavior:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="temperature-00---20">Temperature (0.0 - 2.0)<a href="#temperature-00---20" class="hash-link" aria-label="Direct link to Temperature (0.0 - 2.0)" title="Direct link to Temperature (0.0 - 2.0)">​</a></h4>
+<p><strong>Controls randomness and creativity</strong></p>
+<ul>
+<li><strong>0.0 - 0.3</strong>: Deterministic, factual, consistent<!-- -->
+<ul>
+<li>Use for: Data extraction, classification, coding</li>
+</ul>
+</li>
+<li><strong>0.4 - 0.7</strong>: Balanced creativity and coherence<!-- -->
+<ul>
+<li>Use for: General chat, explanations, Q&amp;A</li>
+</ul>
+</li>
+<li><strong>0.8 - 1.2</strong>: Creative, varied responses<!-- -->
+<ul>
+<li>Use for: Brainstorming, content creation, stories</li>
+</ul>
+</li>
+<li><strong>1.3 - 2.0</strong>: Highly creative, unpredictable<!-- -->
+<ul>
+<li>Use for: Creative writing, experimental outputs</li>
+</ul>
+</li>
+</ul>
+<p><strong>Default: 0.7</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="max-tokens-1---4096">Max Tokens (1 - 4096)<a href="#max-tokens-1---4096" class="hash-link" aria-label="Direct link to Max Tokens (1 - 4096)" title="Direct link to Max Tokens (1 - 4096)">​</a></h4>
+<p><strong>Controls response length</strong></p>
+<ul>
+<li><strong>50-100</strong>: Brief, concise answers</li>
+<li><strong>200-500</strong>: Paragraph-length responses</li>
+<li><strong>500-1000</strong>: Detailed explanations</li>
+<li><strong>1000-2000</strong>: Comprehensive answers</li>
+<li><strong>2000-4096</strong>: Very long, detailed content</li>
+</ul>
+<p><strong>Default: 500</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="top-p-00---10">Top P (0.0 - 1.0)<a href="#top-p-00---10" class="hash-link" aria-label="Direct link to Top P (0.0 - 1.0)" title="Direct link to Top P (0.0 - 1.0)">​</a></h4>
+<p><strong>Nucleus sampling - alternative to temperature</strong></p>
+<ul>
+<li><strong>0.1</strong>: Very focused, deterministic</li>
+<li><strong>0.5</strong>: Balanced</li>
+<li><strong>0.9</strong>: More diverse</li>
+<li><strong>1.0</strong>: Full diversity</li>
+</ul>
+<p><strong>Default: 1.0</strong></p>
+<p><strong>Note:</strong> Use either temperature OR top_p, not both.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="frequency-penalty-00---20">Frequency Penalty (0.0 - 2.0)<a href="#frequency-penalty-00---20" class="hash-link" aria-label="Direct link to Frequency Penalty (0.0 - 2.0)" title="Direct link to Frequency Penalty (0.0 - 2.0)">​</a></h4>
+<p><strong>Reduces repetition of tokens based on frequency</strong></p>
+<ul>
+<li><strong>0.0</strong>: No penalty, allows repetition</li>
+<li><strong>0.5</strong>: Moderate penalty</li>
+<li><strong>1.0</strong>: Strong penalty</li>
+<li><strong>2.0</strong>: Maximum penalty</li>
+</ul>
+<p><strong>Default: 0.0</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="presence-penalty-00---20">Presence Penalty (0.0 - 2.0)<a href="#presence-penalty-00---20" class="hash-link" aria-label="Direct link to Presence Penalty (0.0 - 2.0)" title="Direct link to Presence Penalty (0.0 - 2.0)">​</a></h4>
+<p><strong>Reduces repetition of topics already mentioned</strong></p>
+<ul>
+<li><strong>0.0</strong>: No penalty</li>
+<li><strong>0.5</strong>: Moderate penalty</li>
+<li><strong>1.0</strong>: Strong penalty</li>
+<li><strong>2.0</strong>: Maximum penalty</li>
+</ul>
+<p><strong>Default: 0.0</strong></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-enter-your-prompt">4. Enter Your Prompt<a href="#4-enter-your-prompt" class="hash-link" aria-label="Direct link to 4. Enter Your Prompt" title="Direct link to 4. Enter Your Prompt">​</a></h3>
+<p>Type or paste your prompt in the text area.</p>
+<p><strong>Pro Tip:</strong> Use the sample prompts to get started quickly.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-generate-response">5. Generate Response<a href="#5-generate-response" class="hash-link" aria-label="Direct link to 5. Generate Response" title="Direct link to 5. Generate Response">​</a></h3>
+<p>Click <strong>Generate</strong> to send the prompt to the selected model(s).</p>
+<p>Results appear in real-time below the prompt area.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sample-prompts">Sample Prompts<a href="#sample-prompts" class="hash-link" aria-label="Direct link to Sample Prompts" title="Direct link to Sample Prompts">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="story-generation">Story Generation<a href="#story-generation" class="hash-link" aria-label="Direct link to Story Generation" title="Direct link to Story Generation">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Write a short story about a robot learning to appreciate art. </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Include a plot twist and make it emotional.</span><br></span></code></pre></div></div>
+<p><strong>Recommended Settings:</strong></p>
+<ul>
+<li>Model: GPT-4 Omni</li>
+<li>Temperature: 0.9</li>
+<li>Max Tokens: 1000</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="customer-service-response">Customer Service Response<a href="#customer-service-response" class="hash-link" aria-label="Direct link to Customer Service Response" title="Direct link to Customer Service Response">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Generate a professional customer service response to this complaint:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&quot;I ordered my package 2 weeks ago and it still hasn&#x27;t arrived. </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">This is unacceptable. I want a refund.&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Tone: Empathetic and professional</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Include: Apology, explanation, solution, timeline</span><br></span></code></pre></div></div>
+<p><strong>Recommended Settings:</strong></p>
+<ul>
+<li>Model: GPT-4o Mini</li>
+<li>Temperature: 0.6</li>
+<li>Max Tokens: 300</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="code-explanation">Code Explanation<a href="#code-explanation" class="hash-link" aria-label="Direct link to Code Explanation" title="Direct link to Code Explanation">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Explain this TypeScript function in simple terms:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const debounce = &lt;T extends (...args: any[]) =&gt; any&gt;(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  func: T,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  delay: number</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">): ((...args: Parameters&lt;T&gt;) =&gt; void) =&gt; {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  let timeoutId: NodeJS.Timeout;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  return (...args: Parameters&lt;T&gt;) =&gt; {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    clearTimeout(timeoutId);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    timeoutId = setTimeout(() =&gt; func(...args), delay);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  };</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">};</span><br></span></code></pre></div></div>
+<p><strong>Recommended Settings:</strong></p>
+<ul>
+<li>Model: GPT-4 Omni</li>
+<li>Temperature: 0.3</li>
+<li>Max Tokens: 500</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summarization">Summarization<a href="#summarization" class="hash-link" aria-label="Direct link to Summarization" title="Direct link to Summarization">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Summarize this article in 3 bullet points:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[Paste article text here]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Focus on: key findings, practical implications, and recommendations.</span><br></span></code></pre></div></div>
+<p><strong>Recommended Settings:</strong></p>
+<ul>
+<li>Model: GPT-3.5 Turbo</li>
+<li>Temperature: 0.4</li>
+<li>Max Tokens: 200</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-extraction">Data Extraction<a href="#data-extraction" class="hash-link" aria-label="Direct link to Data Extraction" title="Direct link to Data Extraction">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Extract the following information from this email and return as JSON:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Sender name</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Company name</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Requested meeting date</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Meeting purpose</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Urgency level (low/medium/high)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Email:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&quot;Hi, I&#x27;m Sarah from Acme Corporation. I&#x27;d like to schedule a meeting </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">next Tuesday to discuss our Q4 partnership opportunities. This is quite </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">urgent as we need to finalize contracts by end of month.&quot;</span><br></span></code></pre></div></div>
+<p><strong>Recommended Settings:</strong></p>
+<ul>
+<li>Model: GPT-3.5 Turbo</li>
+<li>Temperature: 0.0</li>
+<li>Max Tokens: 150</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="creative-brainstorming">Creative Brainstorming<a href="#creative-brainstorming" class="hash-link" aria-label="Direct link to Creative Brainstorming" title="Direct link to Creative Brainstorming">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Brainstorm 10 creative names for a new app that helps remote teams </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">collaborate on design projects. The names should be:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Memorable</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Easy to spell</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Available as .com domains</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- Modern and tech-forward</span><br></span></code></pre></div></div>
+<p><strong>Recommended Settings:</strong></p>
+<ul>
+<li>Model: GPT-4o Mini</li>
+<li>Temperature: 1.0</li>
+<li>Max Tokens: 400</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="multi-model-comparison">Multi-Model Comparison<a href="#multi-model-comparison" class="hash-link" aria-label="Direct link to Multi-Model Comparison" title="Direct link to Multi-Model Comparison">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="side-by-side-testing">Side-by-Side Testing<a href="#side-by-side-testing" class="hash-link" aria-label="Direct link to Side-by-Side Testing" title="Direct link to Side-by-Side Testing">​</a></h3>
+<p>When you select multiple models, results display side-by-side:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────┬─────────────────────┬─────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│    GPT-4 Omni       │    GPT-4o Mini      │   GPT-3.5 Turbo     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─────────────────────┼─────────────────────┼─────────────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Response Time: 3.2s │ Response Time: 1.8s │ Response Time: 0.9s │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Tokens: 342         │ Tokens: 285         │ Tokens: 198         │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                     │                     │                     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ [Response content]  │ [Response content]  │ [Response content]  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                     │                     │                     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────┴─────────────────────┴─────────────────────┘</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="comparison-metrics">Comparison Metrics<a href="#comparison-metrics" class="hash-link" aria-label="Direct link to Comparison Metrics" title="Direct link to Comparison Metrics">​</a></h3>
+<p><strong>Automatically displayed:</strong></p>
+<ul>
+<li>Response time</li>
+<li>Token usage</li>
+<li>Cost estimate</li>
+<li>Character count</li>
+<li>Word count</li>
+<li>Response quality (experimental)</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="use-cases-for-comparison">Use Cases for Comparison<a href="#use-cases-for-comparison" class="hash-link" aria-label="Direct link to Use Cases for Comparison" title="Direct link to Use Cases for Comparison">​</a></h3>
+<p><strong>1. Model Selection</strong>
+Test the same prompt across all models to find the best fit:</p>
+<ul>
+<li>Quality vs. speed tradeoff</li>
+<li>Cost optimization</li>
+<li>Response consistency</li>
+</ul>
+<p><strong>2. Parameter Tuning</strong>
+Run the same prompt with different parameters:</p>
+<ul>
+<li>Compare temperature settings</li>
+<li>Test max token limits</li>
+<li>Evaluate penalty effects</li>
+</ul>
+<p><strong>3. Prompt Engineering</strong>
+Test prompt variations to find what works best:</p>
+<ul>
+<li>Different wording</li>
+<li>More/less context</li>
+<li>Various formats</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-features">Advanced Features<a href="#advanced-features" class="hash-link" aria-label="Direct link to Advanced Features" title="Direct link to Advanced Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="custom-system-prompts">Custom System Prompts<a href="#custom-system-prompts" class="hash-link" aria-label="Direct link to Custom System Prompts" title="Direct link to Custom System Prompts">​</a></h3>
+<p>Override the default system prompt:</p>
+<p><strong>Default System Prompt:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">You are a helpful AI assistant.</span><br></span></code></pre></div></div>
+<p><strong>Custom System Prompt Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">You are a Salesforce expert with deep knowledge of CRM best practices. </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Always cite Salesforce documentation when making recommendations.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Keep responses concise and actionable.</span><br></span></code></pre></div></div>
+<p><strong>To Set Custom System Prompt:</strong></p>
+<ol>
+<li>Click <strong>Advanced Settings</strong></li>
+<li>Toggle <strong>Custom System Prompt</strong></li>
+<li>Enter your system prompt</li>
+<li>Generate responses</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="response-history">Response History<a href="#response-history" class="hash-link" aria-label="Direct link to Response History" title="Direct link to Response History">​</a></h3>
+<p>View and manage previous test results:</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Browse all past tests</li>
+<li>Re-run previous prompts</li>
+<li>Compare historical results</li>
+<li>Export test data</li>
+</ul>
+<p><strong>To Access History:</strong></p>
+<ol>
+<li>Click <strong>History</strong> tab</li>
+<li>Select a previous test</li>
+<li>View original prompt and results</li>
+<li>Optionally re-run or modify</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="batch-testing">Batch Testing<a href="#batch-testing" class="hash-link" aria-label="Direct link to Batch Testing" title="Direct link to Batch Testing">​</a></h3>
+<p>Test multiple prompts sequentially:</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click <strong>Batch Mode</strong></li>
+<li>Enter prompts (one per line)</li>
+<li>Select model(s)</li>
+<li>Click <strong>Run Batch</strong></li>
+<li>View all results in a table</li>
+</ol>
+<p><strong>Use Case:</strong> Test consistency across similar prompts</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="export-results">Export Results<a href="#export-results" class="hash-link" aria-label="Direct link to Export Results" title="Direct link to Export Results">​</a></h3>
+<p>Export test results for analysis:</p>
+<p><strong>Export Formats:</strong></p>
+<ul>
+<li><strong>JSON</strong>: Full test data including parameters</li>
+<li><strong>CSV</strong>: Tabular results for spreadsheet analysis</li>
+<li><strong>Markdown</strong>: Human-readable documentation</li>
+<li><strong>PDF</strong>: Formatted report</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="performance-analysis">Performance Analysis<a href="#performance-analysis" class="hash-link" aria-label="Direct link to Performance Analysis" title="Direct link to Performance Analysis">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="response-time-analysis">Response Time Analysis<a href="#response-time-analysis" class="hash-link" aria-label="Direct link to Response Time Analysis" title="Direct link to Response Time Analysis">​</a></h3>
+<p>Compare average response times:</p>
+<table><thead><tr><th>Model</th><th>Avg Response Time</th><th>Min</th><th>Max</th></tr></thead><tbody><tr><td>GPT-4 Omni</td><td>2.8s</td><td>1.5s</td><td>5.2s</td></tr><tr><td>GPT-4o Mini</td><td>1.5s</td><td>0.8s</td><td>2.9s</td></tr><tr><td>GPT-3.5 Turbo</td><td>0.7s</td><td>0.4s</td><td>1.3s</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="token-usage-analysis">Token Usage Analysis<a href="#token-usage-analysis" class="hash-link" aria-label="Direct link to Token Usage Analysis" title="Direct link to Token Usage Analysis">​</a></h3>
+<p>Track token consumption:</p>
+<table><thead><tr><th>Model</th><th>Avg Tokens</th><th>Cost per 1K Tokens</th></tr></thead><tbody><tr><td>GPT-4 Omni</td><td>450</td><td>$0.03</td></tr><tr><td>GPT-4o Mini</td><td>380</td><td>$0.015</td></tr><tr><td>GPT-3.5 Turbo</td><td>320</td><td>$0.002</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="quality-metrics">Quality Metrics<a href="#quality-metrics" class="hash-link" aria-label="Direct link to Quality Metrics" title="Direct link to Quality Metrics">​</a></h3>
+<p>Experimental quality scoring:</p>
+<ul>
+<li><strong>Relevance</strong>: How well it answers the question</li>
+<li><strong>Coherence</strong>: Logical flow and consistency</li>
+<li><strong>Completeness</strong>: Addresses all aspects</li>
+<li><strong>Accuracy</strong>: Factual correctness (when verifiable)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-start-simple">1. Start Simple<a href="#1-start-simple" class="hash-link" aria-label="Direct link to 1. Start Simple" title="Direct link to 1. Start Simple">​</a></h3>
+<p>Begin with basic prompts and gradually increase complexity.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-use-appropriate-models">2. Use Appropriate Models<a href="#2-use-appropriate-models" class="hash-link" aria-label="Direct link to 2. Use Appropriate Models" title="Direct link to 2. Use Appropriate Models">​</a></h3>
+<ul>
+<li>GPT-4 Omni: Complex tasks requiring deep reasoning</li>
+<li>GPT-4o Mini: General purpose, balanced quality/speed</li>
+<li>GPT-3.5 Turbo: Simple, high-volume tasks</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-optimize-temperature">3. Optimize Temperature<a href="#3-optimize-temperature" class="hash-link" aria-label="Direct link to 3. Optimize Temperature" title="Direct link to 3. Optimize Temperature">​</a></h3>
+<ul>
+<li>Factual tasks: 0.0 - 0.3</li>
+<li>Balanced: 0.4 - 0.7</li>
+<li>Creative: 0.8 - 1.2</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-control-token-usage">4. Control Token Usage<a href="#4-control-token-usage" class="hash-link" aria-label="Direct link to 4. Control Token Usage" title="Direct link to 4. Control Token Usage">​</a></h3>
+<p>Set max_tokens based on expected response length to avoid unnecessary costs.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-test-consistency">5. Test Consistency<a href="#5-test-consistency" class="hash-link" aria-label="Direct link to 5. Test Consistency" title="Direct link to 5. Test Consistency">​</a></h3>
+<p>Run the same prompt multiple times (especially with temperature &gt; 0) to ensure consistent quality.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-compare-before-deploying">6. Compare Before Deploying<a href="#6-compare-before-deploying" class="hash-link" aria-label="Direct link to 6. Compare Before Deploying" title="Direct link to 6. Compare Before Deploying">​</a></h3>
+<p>Always test with multiple models before choosing one for production use.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-use-custom-system-prompts">7. Use Custom System Prompts<a href="#7-use-custom-system-prompts" class="hash-link" aria-label="Direct link to 7. Use Custom System Prompts" title="Direct link to 7. Use Custom System Prompts">​</a></h3>
+<p>Tailor the system prompt to your specific domain or use case for better results.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-monitor-costs">8. Monitor Costs<a href="#8-monitor-costs" class="hash-link" aria-label="Direct link to 8. Monitor Costs" title="Direct link to 8. Monitor Costs">​</a></h3>
+<p>Track token usage and costs, especially when testing with GPT-4 models.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="slow-response-times">Slow Response Times<a href="#slow-response-times" class="hash-link" aria-label="Direct link to Slow Response Times" title="Direct link to Slow Response Times">​</a></h3>
+<ul>
+<li>Try a faster model (GPT-4o Mini or GPT-3.5 Turbo)</li>
+<li>Reduce max_tokens</li>
+<li>Simplify the prompt</li>
+<li>Check Salesforce API limits</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="low-quality-responses">Low Quality Responses<a href="#low-quality-responses" class="hash-link" aria-label="Direct link to Low Quality Responses" title="Direct link to Low Quality Responses">​</a></h3>
+<ul>
+<li>Switch to GPT-4 Omni for complex tasks</li>
+<li>Increase max_tokens for longer responses</li>
+<li>Add more context to the prompt</li>
+<li>Use a custom system prompt</li>
+<li>Adjust temperature for more/less creativity</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="inconsistent-results">Inconsistent Results<a href="#inconsistent-results" class="hash-link" aria-label="Direct link to Inconsistent Results" title="Direct link to Inconsistent Results">​</a></h3>
+<ul>
+<li>Lower temperature for more consistency</li>
+<li>Test multiple times to verify</li>
+<li>Add more specific instructions</li>
+<li>Use examples in the prompt</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="token-limit-errors">Token Limit Errors<a href="#token-limit-errors" class="hash-link" aria-label="Direct link to Token Limit Errors" title="Direct link to Token Limit Errors">​</a></h3>
+<ul>
+<li>Reduce max_tokens setting</li>
+<li>Shorten the input prompt</li>
+<li>Remove unnecessary context</li>
+<li>Split into multiple requests</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cost-optimization">Cost Optimization<a href="#cost-optimization" class="hash-link" aria-label="Direct link to Cost Optimization" title="Direct link to Cost Optimization">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="strategies">Strategies<a href="#strategies" class="hash-link" aria-label="Direct link to Strategies" title="Direct link to Strategies">​</a></h3>
+<p><strong>1. Use the Right Model</strong></p>
+<ul>
+<li>Don&#x27;t use GPT-4 Omni for simple tasks</li>
+<li>GPT-3.5 Turbo is 15x cheaper for basic queries</li>
+</ul>
+<p><strong>2. Limit Token Usage</strong></p>
+<ul>
+<li>Set appropriate max_tokens</li>
+<li>Keep prompts concise</li>
+<li>Remove unnecessary context</li>
+</ul>
+<p><strong>3. Cache Responses</strong></p>
+<ul>
+<li>Store and reuse common responses</li>
+<li>Avoid regenerating static content</li>
+</ul>
+<p><strong>4. Batch Requests</strong></p>
+<ul>
+<li>Process multiple items together when possible</li>
+<li>Reduces overhead</li>
+</ul>
+<p><strong>5. Monitor Usage</strong></p>
+<ul>
+<li>Track costs regularly</li>
+<li>Set budget alerts</li>
+<li>Identify optimization opportunities</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<ul>
+<li><a href="/genai/chat-with-agents">Chat with Agents</a> - Test models in agent context</li>
+<li><a href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a> - Debug and optimize</li>
+</ul>
+<hr>
+<p><strong>Effective model testing leads to better AI implementations and significant cost savings.</strong></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/genai/atlas-reasoning-engine"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Atlas Reasoning Engine</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/genai/conversation-history"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Conversation History</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#supported-models" class="table-of-contents__link toc-highlight">Supported Models</a><ul><li><a href="#gpt-4-omni" class="table-of-contents__link toc-highlight">GPT-4 Omni</a></li><li><a href="#gpt-4o-mini" class="table-of-contents__link toc-highlight">GPT-4o Mini</a></li><li><a href="#gpt-35-turbo" class="table-of-contents__link toc-highlight">GPT-3.5 Turbo</a></li></ul></li><li><a href="#getting-started" class="table-of-contents__link toc-highlight">Getting Started</a><ul><li><a href="#1-access-model-testing" class="table-of-contents__link toc-highlight">1. Access Model Testing</a></li><li><a href="#2-select-a-model" class="table-of-contents__link toc-highlight">2. Select a Model</a></li><li><a href="#3-configure-parameters" class="table-of-contents__link toc-highlight">3. Configure Parameters</a></li><li><a href="#4-enter-your-prompt" class="table-of-contents__link toc-highlight">4. Enter Your Prompt</a></li><li><a href="#5-generate-response" class="table-of-contents__link toc-highlight">5. Generate Response</a></li></ul></li><li><a href="#sample-prompts" class="table-of-contents__link toc-highlight">Sample Prompts</a><ul><li><a href="#story-generation" class="table-of-contents__link toc-highlight">Story Generation</a></li><li><a href="#customer-service-response" class="table-of-contents__link toc-highlight">Customer Service Response</a></li><li><a href="#code-explanation" class="table-of-contents__link toc-highlight">Code Explanation</a></li><li><a href="#summarization" class="table-of-contents__link toc-highlight">Summarization</a></li><li><a href="#data-extraction" class="table-of-contents__link toc-highlight">Data Extraction</a></li><li><a href="#creative-brainstorming" class="table-of-contents__link toc-highlight">Creative Brainstorming</a></li></ul></li><li><a href="#multi-model-comparison" class="table-of-contents__link toc-highlight">Multi-Model Comparison</a><ul><li><a href="#side-by-side-testing" class="table-of-contents__link toc-highlight">Side-by-Side Testing</a></li><li><a href="#comparison-metrics" class="table-of-contents__link toc-highlight">Comparison Metrics</a></li><li><a href="#use-cases-for-comparison" class="table-of-contents__link toc-highlight">Use Cases for Comparison</a></li></ul></li><li><a href="#advanced-features" class="table-of-contents__link toc-highlight">Advanced Features</a><ul><li><a href="#custom-system-prompts" class="table-of-contents__link toc-highlight">Custom System Prompts</a></li><li><a href="#response-history" class="table-of-contents__link toc-highlight">Response History</a></li><li><a href="#batch-testing" class="table-of-contents__link toc-highlight">Batch Testing</a></li><li><a href="#export-results" class="table-of-contents__link toc-highlight">Export Results</a></li></ul></li><li><a href="#performance-analysis" class="table-of-contents__link toc-highlight">Performance Analysis</a><ul><li><a href="#response-time-analysis" class="table-of-contents__link toc-highlight">Response Time Analysis</a></li><li><a href="#token-usage-analysis" class="table-of-contents__link toc-highlight">Token Usage Analysis</a></li><li><a href="#quality-metrics" class="table-of-contents__link toc-highlight">Quality Metrics</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#1-start-simple" class="table-of-contents__link toc-highlight">1. Start Simple</a></li><li><a href="#2-use-appropriate-models" class="table-of-contents__link toc-highlight">2. Use Appropriate Models</a></li><li><a href="#3-optimize-temperature" class="table-of-contents__link toc-highlight">3. Optimize Temperature</a></li><li><a href="#4-control-token-usage" class="table-of-contents__link toc-highlight">4. Control Token Usage</a></li><li><a href="#5-test-consistency" class="table-of-contents__link toc-highlight">5. Test Consistency</a></li><li><a href="#6-compare-before-deploying" class="table-of-contents__link toc-highlight">6. Compare Before Deploying</a></li><li><a href="#7-use-custom-system-prompts" class="table-of-contents__link toc-highlight">7. Use Custom System Prompts</a></li><li><a href="#8-monitor-costs" class="table-of-contents__link toc-highlight">8. Monitor Costs</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#slow-response-times" class="table-of-contents__link toc-highlight">Slow Response Times</a></li><li><a href="#low-quality-responses" class="table-of-contents__link toc-highlight">Low Quality Responses</a></li><li><a href="#inconsistent-results" class="table-of-contents__link toc-highlight">Inconsistent Results</a></li><li><a href="#token-limit-errors" class="table-of-contents__link toc-highlight">Token Limit Errors</a></li></ul></li><li><a href="#cost-optimization" class="table-of-contents__link toc-highlight">Cost Optimization</a><ul><li><a href="#strategies" class="table-of-contents__link toc-highlight">Strategies</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>

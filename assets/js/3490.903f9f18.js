@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_lms_demo=self.webpackChunkdocusaurus_lms_demo||[]).push([[3490],{3490:(s,e,u)=>{u.d(e,{createInfoServices:()=>c.v});var c=u(91885);u(87960)}}]);

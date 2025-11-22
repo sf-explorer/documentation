@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-conversation-history" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Conversation History | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/conversation-history"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="Conversation History | SF Explorer"><meta data-rh="true" name="description" content="View, filter, and analyze all historical conversations with advanced filtering and analytics."><meta data-rh="true" property="og:description" content="View, filter, and analyze all historical conversations with advanced filtering and analytics."><meta data-rh="true" name="keywords" content="conversation history,filtering,analytics,monitoring,export"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/conversation-history"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/conversation-history" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/conversation-history" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Conversation History","item":"http://info.sf-explorer.com/genai/conversation-history"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.c37cf0fb.js" defer="defer"></script>
+<script src="/assets/js/main.e080f877.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/configuration-explorer">Agent blueprint</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/genai/conversation-history">Conversation History</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/data-cloud-integration">Data Cloud Integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/topic-collision-analysis">Topic Collision Analysis</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Conversation History</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Conversation History</h1></header>
+<p>View, filter, and analyze all historical conversations with your Agentforce agents.</p>
+<p><img decoding="async" loading="lazy" alt="Conversation History" src="/assets/images/conversation-history-2f09db3cf957dfeb3a4ca15b2d32f1d3.png" width="1492" height="886" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Understanding how your agents are performing requires visibility into past conversations, including successful interactions and errors.</strong></p>
+<p>Teams need to:</p>
+<ul>
+<li>📊 <strong>Monitor Quality</strong>: Review conversations to ensure agents are responding appropriately</li>
+<li>🐛 <strong>Debug Issues</strong>: Investigate specific conversations where users reported problems</li>
+<li>📈 <strong>Analyze Patterns</strong>: Identify common queries, popular topics, and frequent errors</li>
+<li>🔍 <strong>Filter Effectively</strong>: Find specific conversations by date, errors, or content</li>
+<li>✅ <strong>Audit Behavior</strong>: Review agent decisions for compliance and governance</li>
+<li>📤 <strong>Share Insights</strong>: Export conversations for team review or stakeholder updates</li>
+</ul>
+<p><strong>In short</strong>: You need a centralized view of all conversations to monitor, debug, and improve your agent implementations.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p>GenAI Explorer provides <strong>comprehensive conversation analytics</strong> with:</p>
+<p>✅ <strong>Complete Conversation View</strong>: See all sessions, messages, topics, and actions in one place</p>
+<p>✅ <strong>Advanced Filtering</strong>: Find exactly what you need</p>
+<ul>
+<li>Text search across all content</li>
+<li>Date range filters (From/To)</li>
+<li>Error-only conversations</li>
+<li>By topic or agent</li>
+<li>Clear all filters with one click</li>
+</ul>
+<p>✅ <strong>Visual Filter Badges</strong>: Active filters shown as colored badges for clarity</p>
+<p>✅ <strong>Expanded Details</strong>: Click any conversation to see</p>
+<ul>
+<li>Full message timeline</li>
+<li>Topics invoked</li>
+<li>Actions executed (success/failure)</li>
+<li>Step-by-step processing</li>
+<li>Error messages with context</li>
+</ul>
+<p>✅ <strong>Analytics &amp; Insights</strong>: Built-in metrics</p>
+<ul>
+<li>Total conversations, interactions, messages</li>
+<li>Average turns per session</li>
+<li>Failed action rates</li>
+<li>Performance trends</li>
+</ul>
+<p>✅ <strong>Export Capabilities</strong>: Export to JSON, CSV, or Text for reporting</p>
+<p><strong>Impact:</strong> Review quality in minutes, debug issues 5x faster, and gain actionable insights into agent performance and user patterns.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Conversation History feature provides a comprehensive view of all past interactions with your Agentforce agents. It&#x27;s an essential tool for monitoring agent performance, debugging issues, analyzing user patterns, and ensuring quality customer service.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="key-features">Key Features<a href="#key-features" class="hash-link" aria-label="Direct link to Key Features" title="Direct link to Key Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-complete-conversation-view">📊 Complete Conversation View<a href="#-complete-conversation-view" class="hash-link" aria-label="Direct link to 📊 Complete Conversation View" title="Direct link to 📊 Complete Conversation View">​</a></h3>
+<ul>
+<li><strong>All Sessions</strong>: See every conversation across all agents</li>
+<li><strong>Message Details</strong>: Full transcript with timestamps</li>
+<li><strong>Topic Information</strong>: Which topics were invoked</li>
+<li><strong>Action Tracking</strong>: What actions were executed</li>
+<li><strong>Error Visibility</strong>: Failed actions and error messages</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-advanced-filtering">🔍 Advanced Filtering<a href="#-advanced-filtering" class="hash-link" aria-label="Direct link to 🔍 Advanced Filtering" title="Direct link to 🔍 Advanced Filtering">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Conversation History Filters" src="/assets/images/conversation-history-filters-5b0e48467904b04a4a82cbf3a18cec5c.png" width="2200" height="950" class="img_ev3q"></p>
+<ul>
+<li><strong>Text Search</strong>: Search across all conversation content</li>
+<li><strong>Date Range</strong>: Filter by time period (From/To dates)</li>
+<li><strong>Error Filter</strong>: Show only conversations with errors</li>
+<li><strong>Topic Filter</strong>: Filter by specific topics</li>
+<li><strong>Agent Filter</strong>: Filter by specific agents/planners</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-analytics--insights">📈 Analytics &amp; Insights<a href="#-analytics--insights" class="hash-link" aria-label="Direct link to 📈 Analytics &amp; Insights" title="Direct link to 📈 Analytics &amp; Insights">​</a></h3>
+<ul>
+<li><strong>Total Statistics</strong>: Messages, interactions, and sessions count</li>
+<li><strong>Performance Metrics</strong>: Response times and success rates</li>
+<li><strong>Usage Patterns</strong>: Most active topics and actions</li>
+<li><strong>Error Analysis</strong>: Failure rates and common issues</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-conversation-history">Accessing Conversation History<a href="#accessing-conversation-history" class="hash-link" aria-label="Direct link to Accessing Conversation History" title="Direct link to Accessing Conversation History">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="from-the-home-page">From the Home Page<a href="#from-the-home-page" class="hash-link" aria-label="Direct link to From the Home Page" title="Direct link to From the Home Page">​</a></h3>
+<!-- -->
+<ol>
+<li>Open GenAI Explorer</li>
+<li>Navigate to <strong>Home</strong> or <strong>Agentforce</strong></li>
+<li>Look for the <strong>&quot;Conversation History&quot;</strong> section</li>
+<li>Browse the list of conversations</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="navigation-options">Navigation Options<a href="#navigation-options" class="hash-link" aria-label="Direct link to Navigation Options" title="Direct link to Navigation Options">​</a></h3>
+<p><strong>Main View:</strong></p>
+<ul>
+<li><strong>Home → Conversation History</strong> - All conversations across all agents</li>
+<li><strong>Agent Details → Conversations</strong> - Conversations for specific agent</li>
+<li><strong>Atlas → Query Lab → Recent Requests</strong> - Technical request view</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="using-filters">Using Filters<a href="#using-filters" class="hash-link" aria-label="Direct link to Using Filters" title="Direct link to Using Filters">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="text-search">Text Search<a href="#text-search" class="hash-link" aria-label="Direct link to Text Search" title="Direct link to Text Search">​</a></h3>
+<p><strong>Search across:</strong></p>
+<ul>
+<li>User messages</li>
+<li>Agent responses</li>
+<li>Topic names</li>
+<li>Action names</li>
+<li>Error messages</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ol>
+<li>Type your search term in the search box</li>
+<li>Results filter automatically as you type</li>
+<li>Search is case-insensitive</li>
+<li>Supports partial matches</li>
+</ol>
+<p><strong>Example Searches:</strong></p>
+<ul>
+<li><code>&quot;order&quot;</code> - Find all conversations about orders</li>
+<li><code>&quot;error&quot;</code> - Find conversations with errors</li>
+<li><code>&quot;refund&quot;</code> - Find refund-related conversations</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="date-range-filter">Date Range Filter<a href="#date-range-filter" class="hash-link" aria-label="Direct link to Date Range Filter" title="Direct link to Date Range Filter">​</a></h3>
+<p><strong>Filter by conversation date:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ From: [2024-01-01]  To: [2024-01-31]   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>Options:</strong></p>
+<ul>
+<li><strong>From Date Only</strong>: Show conversations from this date forward</li>
+<li><strong>To Date Only</strong>: Show conversations up to this date</li>
+<li><strong>Both Dates</strong>: Show conversations in the date range</li>
+</ul>
+<p><strong>Date Handling:</strong></p>
+<ul>
+<li>From Date: Includes entire day (00:00:00 start)</li>
+<li>To Date: Includes entire day (23:59:59 end)</li>
+<li>Dates are inclusive</li>
+</ul>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Monthly reviews: Set first and last day of month</li>
+<li>Incident investigation: Set date range around incident</li>
+<li>Performance analysis: Compare different time periods</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="error-filter">Error Filter<a href="#error-filter" class="hash-link" aria-label="Direct link to Error Filter" title="Direct link to Error Filter">​</a></h3>
+<p><strong>Show only conversations with errors:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">☑️ Show only conversations with errors</span><br></span></code></pre></div></div>
+<p><strong>What counts as an error:</strong></p>
+<ul>
+<li>Failed action executions</li>
+<li>API errors</li>
+<li>Timeout errors</li>
+<li>Data validation errors</li>
+<li>Permission errors</li>
+</ul>
+<p><strong>When to use:</strong></p>
+<ol>
+<li><strong>Troubleshooting</strong>: Find problematic conversations quickly</li>
+<li><strong>Quality Assurance</strong>: Review all failures</li>
+<li><strong>Pattern Detection</strong>: Identify recurring issues</li>
+<li><strong>Root Cause Analysis</strong>: Investigate error causes</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="topic-filter">Topic Filter<a href="#topic-filter" class="hash-link" aria-label="Direct link to Topic Filter" title="Direct link to Topic Filter">​</a></h3>
+<p><strong>Filter by specific topics:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Topic: [Select Topic ▼]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Billing Inquiries</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Technical Support</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Account Management</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Order Status</span><br></span></code></pre></div></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Analyze specific topic performance</li>
+<li>Review topic-specific conversations</li>
+<li>Compare topics against each other</li>
+<li>Identify topic-specific issues</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="agentplanner-filter">Agent/Planner Filter<a href="#agentplanner-filter" class="hash-link" aria-label="Direct link to Agent/Planner Filter" title="Direct link to Agent/Planner Filter">​</a></h3>
+<p><strong>Filter by agent:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Agent: [Select Agent ▼]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Service Agent v2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Sales Agent v1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       - Support Agent v3</span><br></span></code></pre></div></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li>Compare agent versions</li>
+<li>Test new agent configurations</li>
+<li>Isolate agent-specific issues</li>
+<li>Agent performance analysis</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="clear-all-filters">Clear All Filters<a href="#clear-all-filters" class="hash-link" aria-label="Direct link to Clear All Filters" title="Direct link to Clear All Filters">​</a></h3>
+<p><strong>Reset all filters at once:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[🗑️ Clear All Filters]</span><br></span></code></pre></div></div>
+<p><strong>Clears:</strong></p>
+<ul>
+<li>Text search</li>
+<li>Date range (From/To)</li>
+<li>Error filter checkbox</li>
+<li>Topic selection</li>
+<li>Agent/Planner selection</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="filter-badges">Filter Badges<a href="#filter-badges" class="hash-link" aria-label="Direct link to Filter Badges" title="Direct link to Filter Badges">​</a></h2>
+<p>Active filters display as badges in the header:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Conversation History                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 🔴 With Errors  🔵 Jan 1 - Jan 31  🟢 Billing      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>Badge Colors:</strong></p>
+<ul>
+<li>🔴 <strong>Red</strong>: Error filter active</li>
+<li>🔵 <strong>Blue</strong>: Date range active</li>
+<li>🟢 <strong>Green</strong>: Topic/Agent filter active</li>
+</ul>
+<p>Click any badge to remove that filter.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conversation-details">Conversation Details<a href="#conversation-details" class="hash-link" aria-label="Direct link to Conversation Details" title="Direct link to Conversation Details">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="expanded-view">Expanded View<a href="#expanded-view" class="hash-link" aria-label="Direct link to Expanded View" title="Direct link to Expanded View">​</a></h3>
+<p>Click on any conversation to expand and see:</p>
+<p><img decoding="async" loading="lazy" alt="Conversation Expanded" src="/assets/images/conversation-expanded-7bbfa086d487956b036c2b90629dca74.png" width="1800" height="750" class="img_ev3q"></p>
+<p><strong>1. Header Information:</strong></p>
+<ul>
+<li>Conversation ID</li>
+<li>Start and end timestamps</li>
+<li>Duration</li>
+<li>Agent name and version</li>
+</ul>
+<p><strong>2. Statistics:</strong></p>
+<ul>
+<li>Total messages exchanged</li>
+<li>Number of topics invoked</li>
+<li>Actions executed</li>
+<li>Steps taken (Action/Topic steps)</li>
+</ul>
+<p><strong>3. Topics Used:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Topics:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Billing Inquiries</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• Account Management</span><br></span></code></pre></div></div>
+<p><strong>4. Actions Executed:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Actions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• GetOrderStatus ✓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• ProcessRefund ❌ (Failed)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">• SendConfirmationEmail ✓</span><br></span></code></pre></div></div>
+<p><strong>5. Message Timeline:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 👤 USER (2:30 PM)                       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ I need help with my order               │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────┘</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 🤖 AGENT (2:30 PM)                      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ I&#x27;ll help you with your order. Let me   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ check the status for you.               │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────┘</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 🤖 AGENT (2:30 PM)                      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Your order #12345 is in transit...      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>6. Step Details:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Step 1: TOPIC_MATCH → Billing Inquiries (1.2s)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 2: ACTION → GetOrderStatus (0.8s)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 3: TOPIC_MATCH → Order Status (0.5s)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 4: GENERATION → Response Generated (2.1s)</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="viewing-options">Viewing Options<a href="#viewing-options" class="hash-link" aria-label="Direct link to Viewing Options" title="Direct link to Viewing Options">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="expandcollapse-controls">Expand/Collapse Controls<a href="#expandcollapse-controls" class="hash-link" aria-label="Direct link to Expand/Collapse Controls" title="Direct link to Expand/Collapse Controls">​</a></h3>
+<p><strong>Expand All Button:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[⬇️ Expand All]</span><br></span></code></pre></div></div>
+<p>Opens all conversations at once to see full details.</p>
+<p><strong>Individual Expansion:</strong>
+Click on any conversation header to toggle its expansion.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="display-options">Display Options<a href="#display-options" class="hash-link" aria-label="Direct link to Display Options" title="Direct link to Display Options">​</a></h3>
+<p><strong>Markdown Rendering:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[📝 Markdown] Toggle</span><br></span></code></pre></div></div>
+<p>Enable/disable markdown formatting in agent responses.</p>
+<p><strong>Prompt Info:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[ℹ️ Prompt Info] Toggle</span><br></span></code></pre></div></div>
+<p>Show/hide system prompts and instructions used.</p>
+<p><strong>Refresh:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[🔄 Refresh All]</span><br></span></code></pre></div></div>
+<p>Reload conversations and get latest data.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="analytics--insights">Analytics &amp; Insights<a href="#analytics--insights" class="hash-link" aria-label="Direct link to Analytics &amp; Insights" title="Direct link to Analytics &amp; Insights">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary-statistics">Summary Statistics<a href="#summary-statistics" class="hash-link" aria-label="Direct link to Summary Statistics" title="Direct link to Summary Statistics">​</a></h3>
+<p>At the top of the page:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 200 total messages • 103 interactions • 66 sessions │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────  ───────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>After Filtering:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Showing 15 conversations matching your filters       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 45 messages • 23 interactions • 15 sessions         │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="performance-metrics">Performance Metrics<a href="#performance-metrics" class="hash-link" aria-label="Direct link to Performance Metrics" title="Direct link to Performance Metrics">​</a></h3>
+<p><strong>Available at bottom of page:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 📊 Analytics                         │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Total Sessions:        66            │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Total Interactions:    103           │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Avg Turns/Session:     1.6           │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Failed Actions:        19 (18%)      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="use-cases">Use Cases<a href="#use-cases" class="hash-link" aria-label="Direct link to Use Cases" title="Direct link to Use Cases">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-quality-assurance-review">1. Quality Assurance Review<a href="#1-quality-assurance-review" class="hash-link" aria-label="Direct link to 1. Quality Assurance Review" title="Direct link to 1. Quality Assurance Review">​</a></h3>
+<p><strong>Goal:</strong> Review recent agent conversations for quality</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Set date range to last 7 days</li>
+<li>Browse conversations</li>
+<li>Check agent response quality</li>
+<li>Look for incorrect information</li>
+<li>Identify training needs</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-error-investigation">2. Error Investigation<a href="#2-error-investigation" class="hash-link" aria-label="Direct link to 2. Error Investigation" title="Direct link to 2. Error Investigation">​</a></h3>
+<p><strong>Goal:</strong> Debug why certain conversations fail</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Enable &quot;With Errors&quot; filter</li>
+<li>Review failed conversations</li>
+<li>Check error messages in steps</li>
+<li>Identify patterns (same action failing?)</li>
+<li>Fix configuration or data issues</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-topic-performance-analysis">3. Topic Performance Analysis<a href="#3-topic-performance-analysis" class="hash-link" aria-label="Direct link to 3. Topic Performance Analysis" title="Direct link to 3. Topic Performance Analysis">​</a></h3>
+<p><strong>Goal:</strong> Understand how well a topic is performing</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Filter by specific topic</li>
+<li>Review all conversations for that topic</li>
+<li>Check success rate</li>
+<li>Analyze response times</li>
+<li>Identify improvement opportunities</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-agent-comparison">4. Agent Comparison<a href="#4-agent-comparison" class="hash-link" aria-label="Direct link to 4. Agent Comparison" title="Direct link to 4. Agent Comparison">​</a></h3>
+<p><strong>Goal:</strong> Compare two agent versions</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Filter by Agent v1, note metrics</li>
+<li>Filter by Agent v2, note metrics</li>
+<li>Compare:<!-- -->
+<ul>
+<li>Success rates</li>
+<li>Response times</li>
+<li>Error rates</li>
+<li>User satisfaction patterns</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-usage-pattern-analysis">5. Usage Pattern Analysis<a href="#5-usage-pattern-analysis" class="hash-link" aria-label="Direct link to 5. Usage Pattern Analysis" title="Direct link to 5. Usage Pattern Analysis">​</a></h3>
+<p><strong>Goal:</strong> Understand when and how agents are used</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Review conversations across date ranges</li>
+<li>Identify peak usage times</li>
+<li>Common topics and questions</li>
+<li>Seasonal patterns</li>
+<li>Capacity planning insights</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-filtering-combinations">Advanced Filtering Combinations<a href="#advanced-filtering-combinations" class="hash-link" aria-label="Direct link to Advanced Filtering Combinations" title="Direct link to Advanced Filtering Combinations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-recent-billing-errors">Example: Recent Billing Errors<a href="#example-recent-billing-errors" class="hash-link" aria-label="Direct link to Example: Recent Billing Errors" title="Direct link to Example: Recent Billing Errors">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Filters:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Date Range: Last 7 days</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Topic: Billing Inquiries</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ With Errors: Yes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Result: All failed billing conversations in the past week</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-successful-sales-conversations-this-month">Example: Successful Sales Conversations This Month<a href="#example-successful-sales-conversations-this-month" class="hash-link" aria-label="Direct link to Example: Successful Sales Conversations This Month" title="Direct link to Example: Successful Sales Conversations This Month">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Filters:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Date Range: This month</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Agent: Sales Agent v2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">❌ With Errors: No (unchecked)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Search: &quot;purchase&quot; OR &quot;buy&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Result: All successful sales-related conversations</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="example-high-value-customer-interactions">Example: High-Value Customer Interactions<a href="#example-high-value-customer-interactions" class="hash-link" aria-label="Direct link to Example: High-Value Customer Interactions" title="Direct link to Example: High-Value Customer Interactions">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Filters:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Search: &quot;premium&quot; OR &quot;vip&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ Date Range: Last 30 days</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">❌ With Errors: No</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Result: All premium customer conversations without issues</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="exporting-conversations">Exporting Conversations<a href="#exporting-conversations" class="hash-link" aria-label="Direct link to Exporting Conversations" title="Direct link to Exporting Conversations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="export-options">Export Options<a href="#export-options" class="hash-link" aria-label="Direct link to Export Options" title="Direct link to Export Options">​</a></h3>
+<p><strong>1. Individual Conversation:</strong></p>
+<ul>
+<li>Click conversation</li>
+<li>Click export icon</li>
+<li>Choose format: JSON, CSV, or Text</li>
+</ul>
+<p><strong>2. Filtered Results:</strong></p>
+<ul>
+<li>Apply your filters</li>
+<li>Click &quot;Export Filtered&quot;</li>
+<li>All matching conversations export</li>
+</ul>
+<p><strong>3. Full History:</strong></p>
+<ul>
+<li>No filters applied</li>
+<li>Click &quot;Export All&quot;</li>
+<li>Complete conversation history</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="export-formats">Export Formats<a href="#export-formats" class="hash-link" aria-label="Direct link to Export Formats" title="Direct link to Export Formats">​</a></h3>
+<p><strong>JSON:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;sessionId&quot;: &quot;a4j5g000...&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;startTime&quot;: &quot;2024-01-15T14:30:00Z&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;messages&quot;: [...],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;interactions&quot;: [...],</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;steps&quot;: [...]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>CSV:</strong></p>
+<div class="language-csv codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csv codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">SessionID,Timestamp,Role,Message,Topic,Action,Error</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">a4j5g...,2024-01-15 14:30,USER,&quot;Help with order&quot;,,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">a4j5g...,2024-01-15 14:30,AGENT,&quot;Let me check&quot;,Billing,GetOrder,</span><br></span></code></pre></div></div>
+<p><strong>Text:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Conversation: a4j5g000...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Date: January 15, 2024 2:30 PM</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">USER: Help with my order</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AGENT: Let me check your order status...</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-regular-review">1. Regular Review<a href="#1-regular-review" class="hash-link" aria-label="Direct link to 1. Regular Review" title="Direct link to 1. Regular Review">​</a></h3>
+<p>✅ <strong>DO:</strong></p>
+<ul>
+<li>Review conversations weekly</li>
+<li>Check error rates regularly</li>
+<li>Monitor topic performance</li>
+<li>Track improvement trends</li>
+</ul>
+<p>❌ <strong>DON&#x27;T:</strong></p>
+<ul>
+<li>Wait for issues to escalate</li>
+<li>Ignore error patterns</li>
+<li>Skip regular audits</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-effective-filtering">2. Effective Filtering<a href="#2-effective-filtering" class="hash-link" aria-label="Direct link to 2. Effective Filtering" title="Direct link to 2. Effective Filtering">​</a></h3>
+<p>✅ <strong>DO:</strong></p>
+<ul>
+<li>Start broad, then narrow</li>
+<li>Use date ranges for context</li>
+<li>Combine multiple filters</li>
+<li>Save common filter combinations</li>
+</ul>
+<p>❌ <strong>DON&#x27;T:</strong></p>
+<ul>
+<li>Apply too many filters at once</li>
+<li>Filter so narrowly you miss patterns</li>
+<li>Forget to clear filters between searches</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-error-analysis">3. Error Analysis<a href="#3-error-analysis" class="hash-link" aria-label="Direct link to 3. Error Analysis" title="Direct link to 3. Error Analysis">​</a></h3>
+<p>✅ <strong>DO:</strong></p>
+<ul>
+<li>Use error filter first</li>
+<li>Group errors by type</li>
+<li>Track resolution status</li>
+<li>Document fixes applied</li>
+</ul>
+<p>❌ <strong>DON&#x27;T:</strong></p>
+<ul>
+<li>Ignore low-frequency errors</li>
+<li>Assume one-off errors</li>
+<li>Skip root cause analysis</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-performance-monitoring">4. Performance Monitoring<a href="#4-performance-monitoring" class="hash-link" aria-label="Direct link to 4. Performance Monitoring" title="Direct link to 4. Performance Monitoring">​</a></h3>
+<p>✅ <strong>DO:</strong></p>
+<ul>
+<li>Track metrics over time</li>
+<li>Compare periods</li>
+<li>Set benchmarks</li>
+<li>Alert on degradation</li>
+</ul>
+<p>❌ <strong>DON&#x27;T:</strong></p>
+<ul>
+<li>React to single conversations</li>
+<li>Ignore seasonal patterns</li>
+<li>Skip context analysis</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="issue-no-conversations-showing">Issue: No Conversations Showing<a href="#issue-no-conversations-showing" class="hash-link" aria-label="Direct link to Issue: No Conversations Showing" title="Direct link to Issue: No Conversations Showing">​</a></h3>
+<p><strong>Possible Causes:</strong></p>
+<ul>
+<li>Filters too restrictive</li>
+<li>No data synced yet</li>
+<li>Date range excludes all data</li>
+<li>Permission issues</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Click &quot;Clear All Filters&quot;</li>
+<li>Check date range is reasonable</li>
+<li>Wait for Data Cloud sync (5 min)</li>
+<li>Verify Data Cloud access</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="issue-missing-message-content">Issue: Missing Message Content<a href="#issue-missing-message-content" class="hash-link" aria-label="Direct link to Issue: Missing Message Content" title="Direct link to Issue: Missing Message Content">​</a></h3>
+<p><strong>Possible Causes:</strong></p>
+<ul>
+<li>PII masking enabled</li>
+<li>Data not fully synced</li>
+<li>Permissions limited</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Check PII settings</li>
+<li>Wait for full sync</li>
+<li>Verify field-level security</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="issue-slow-loading">Issue: Slow Loading<a href="#issue-slow-loading" class="hash-link" aria-label="Direct link to Issue: Slow Loading" title="Direct link to Issue: Slow Loading">​</a></h3>
+<p><strong>Possible Causes:</strong></p>
+<ul>
+<li>Too many conversations</li>
+<li>No date range filter</li>
+<li>Large message content</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Add date range filter</li>
+<li>Limit to last 30 days</li>
+<li>Use search to narrow results</li>
+<li>Export for offline analysis</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<ul>
+<li><a href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a> - Debug specific conversations</li>
+<li><a href="/genai/data-cloud-integration">Data Cloud Integration</a> - Advanced queries</li>
+<li><a href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a> - Understanding AI processing stages</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/genai/einstein-model-testing"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Einstein Model Testing</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/genai/data-cloud-integration"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Data Cloud Integration</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#key-features" class="table-of-contents__link toc-highlight">Key Features</a><ul><li><a href="#-complete-conversation-view" class="table-of-contents__link toc-highlight">📊 Complete Conversation View</a></li><li><a href="#-advanced-filtering" class="table-of-contents__link toc-highlight">🔍 Advanced Filtering</a></li><li><a href="#-analytics--insights" class="table-of-contents__link toc-highlight">📈 Analytics &amp; Insights</a></li></ul></li><li><a href="#accessing-conversation-history" class="table-of-contents__link toc-highlight">Accessing Conversation History</a><ul><li><a href="#from-the-home-page" class="table-of-contents__link toc-highlight">From the Home Page</a></li><li><a href="#navigation-options" class="table-of-contents__link toc-highlight">Navigation Options</a></li></ul></li><li><a href="#using-filters" class="table-of-contents__link toc-highlight">Using Filters</a><ul><li><a href="#text-search" class="table-of-contents__link toc-highlight">Text Search</a></li><li><a href="#date-range-filter" class="table-of-contents__link toc-highlight">Date Range Filter</a></li><li><a href="#error-filter" class="table-of-contents__link toc-highlight">Error Filter</a></li><li><a href="#topic-filter" class="table-of-contents__link toc-highlight">Topic Filter</a></li><li><a href="#agentplanner-filter" class="table-of-contents__link toc-highlight">Agent/Planner Filter</a></li><li><a href="#clear-all-filters" class="table-of-contents__link toc-highlight">Clear All Filters</a></li></ul></li><li><a href="#filter-badges" class="table-of-contents__link toc-highlight">Filter Badges</a></li><li><a href="#conversation-details" class="table-of-contents__link toc-highlight">Conversation Details</a><ul><li><a href="#expanded-view" class="table-of-contents__link toc-highlight">Expanded View</a></li></ul></li><li><a href="#viewing-options" class="table-of-contents__link toc-highlight">Viewing Options</a><ul><li><a href="#expandcollapse-controls" class="table-of-contents__link toc-highlight">Expand/Collapse Controls</a></li><li><a href="#display-options" class="table-of-contents__link toc-highlight">Display Options</a></li></ul></li><li><a href="#analytics--insights" class="table-of-contents__link toc-highlight">Analytics &amp; Insights</a><ul><li><a href="#summary-statistics" class="table-of-contents__link toc-highlight">Summary Statistics</a></li><li><a href="#performance-metrics" class="table-of-contents__link toc-highlight">Performance Metrics</a></li></ul></li><li><a href="#use-cases" class="table-of-contents__link toc-highlight">Use Cases</a><ul><li><a href="#1-quality-assurance-review" class="table-of-contents__link toc-highlight">1. Quality Assurance Review</a></li><li><a href="#2-error-investigation" class="table-of-contents__link toc-highlight">2. Error Investigation</a></li><li><a href="#3-topic-performance-analysis" class="table-of-contents__link toc-highlight">3. Topic Performance Analysis</a></li><li><a href="#4-agent-comparison" class="table-of-contents__link toc-highlight">4. Agent Comparison</a></li><li><a href="#5-usage-pattern-analysis" class="table-of-contents__link toc-highlight">5. Usage Pattern Analysis</a></li></ul></li><li><a href="#advanced-filtering-combinations" class="table-of-contents__link toc-highlight">Advanced Filtering Combinations</a><ul><li><a href="#example-recent-billing-errors" class="table-of-contents__link toc-highlight">Example: Recent Billing Errors</a></li><li><a href="#example-successful-sales-conversations-this-month" class="table-of-contents__link toc-highlight">Example: Successful Sales Conversations This Month</a></li><li><a href="#example-high-value-customer-interactions" class="table-of-contents__link toc-highlight">Example: High-Value Customer Interactions</a></li></ul></li><li><a href="#exporting-conversations" class="table-of-contents__link toc-highlight">Exporting Conversations</a><ul><li><a href="#export-options" class="table-of-contents__link toc-highlight">Export Options</a></li><li><a href="#export-formats" class="table-of-contents__link toc-highlight">Export Formats</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#1-regular-review" class="table-of-contents__link toc-highlight">1. Regular Review</a></li><li><a href="#2-effective-filtering" class="table-of-contents__link toc-highlight">2. Effective Filtering</a></li><li><a href="#3-error-analysis" class="table-of-contents__link toc-highlight">3. Error Analysis</a></li><li><a href="#4-performance-monitoring" class="table-of-contents__link toc-highlight">4. Performance Monitoring</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#issue-no-conversations-showing" class="table-of-contents__link toc-highlight">Issue: No Conversations Showing</a></li><li><a href="#issue-missing-message-content" class="table-of-contents__link toc-highlight">Issue: Missing Message Content</a></li><li><a href="#issue-slow-loading" class="table-of-contents__link toc-highlight">Issue: Slow Loading</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>

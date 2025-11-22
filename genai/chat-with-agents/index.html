@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-chat-with-agents" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Chat with Agentforce Agents | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/chat-with-agents"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="Chat with Agentforce Agents | SF Explorer"><meta data-rh="true" name="description" content="Learn how to have real-time conversations with your Agentforce agents, configure session variables, and test different scenarios."><meta data-rh="true" property="og:description" content="Learn how to have real-time conversations with your Agentforce agents, configure session variables, and test different scenarios."><meta data-rh="true" name="keywords" content="agentforce,chat,conversation,testing,session variables"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/chat-with-agents"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/chat-with-agents" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/chat-with-agents" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Chat with Agents","item":"http://info.sf-explorer.com/genai/chat-with-agents"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.c37cf0fb.js" defer="defer"></script>
+<script src="/assets/js/main.e080f877.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/configuration-explorer">Agent blueprint</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/conversation-history">Conversation History</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/data-cloud-integration">Data Cloud Integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/topic-collision-analysis">Topic Collision Analysis</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Chat with Agents</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Chat with Agentforce Agents</h1></header>
+<p>The primary feature of GenAI Explorer - have real-time conversations with your Agentforce agents directly from your browser.</p>
+<p><img decoding="async" loading="lazy" alt="Chat Interface" src="/assets/images/chat-98ec5e3222102c77cb70b24b7fa41419.png" width="1492" height="886" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Testing and validating AI agents requires a safe environment where you can experiment without affecting production users.</strong></p>
+<p>When building Agentforce implementations, teams face these challenges:</p>
+<ul>
+<li>🤔 <strong>Validation Uncertainty</strong>: How do you verify an agent behaves correctly before going live?</li>
+<li>🎯 <strong>Scenario Testing</strong>: Need to test specific customer contexts, edge cases, and error conditions</li>
+<li>👁️ <strong>Limited Insight</strong>: Want to understand what the agent is thinking and which actions it chooses</li>
+<li>🔄 <strong>Context Testing</strong>: Need to test with different user profiles, account types, and data scenarios</li>
+<li>🐛 <strong>Debugging Difficulty</strong>: When something goes wrong, you need to trace through the entire conversation</li>
+</ul>
+<p><strong>In short</strong>: You need a controlled environment to thoroughly test and understand your agents before deployment.</p>
+<ul>
+<li>❌ <strong>Manual Debugging</strong>: No way to replay or analyze past conversations</li>
+<li>❌ <strong>Slow Iteration</strong>: Deploy, test, debug, repeat - very slow feedback loop</li>
+</ul>
+<p><strong>Result:</strong> Developers and admins struggle to validate agent behavior, leading to production issues and frustrated users.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p>GenAI Explorer provides a <strong>safe, interactive testing environment</strong> where you can:</p>
+<p>✅ <strong>Chat in Real-Time</strong>: Instant conversations without deployment - test locally before going live</p>
+<p>✅ <strong>Control Context</strong>: Set session and message variables to simulate any user scenario</p>
+<p>✅ <strong>See Everything</strong>: View cited references, actions invoked, and reasoning steps</p>
+<p>✅ <strong>Replay &amp; Debug</strong>: Access complete conversation history with filtering and analysis</p>
+<p>✅ <strong>Fast Iteration</strong>: Test changes immediately, no deployment cycle needed</p>
+<p>✅ <strong>Multiple Scenarios</strong>: Test edge cases, error handling, and different user types in minutes</p>
+<p><strong>Impact:</strong> Reduce testing time by 80%, catch issues before production, and build confidence in your agent&#x27;s behavior.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Chat interface allows you to test and interact with any Agentforce agent configured in your Salesforce org. You can start conversations, configure context, view cited references, and analyze agent responses in real-time.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="getting-started">Getting Started<a href="#getting-started" class="hash-link" aria-label="Direct link to Getting Started" title="Direct link to Getting Started">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-select-an-agent">1. Select an Agent<a href="#1-select-an-agent" class="hash-link" aria-label="Direct link to 1. Select an Agent" title="Direct link to 1. Select an Agent">​</a></h3>
+<p>From the main interface:</p>
+<ol>
+<li>Click on <strong>&quot;Chat&quot;</strong> in the navigation</li>
+<li>Choose an agent from the <strong>Agent Browser</strong></li>
+<li>The agent details will display, including:<!-- -->
+<ul>
+<li>Agent name and description</li>
+<li>Associated topics</li>
+<li>Available actions</li>
+<li>Configuration status</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-start-a-conversation">2. Start a Conversation<a href="#2-start-a-conversation" class="hash-link" aria-label="Direct link to 2. Start a Conversation" title="Direct link to 2. Start a Conversation">​</a></h3>
+<p>Click <strong>&quot;Start Chat Session&quot;</strong> to create a new conversation with the selected agent.</p>
+<p>Each session is independent and maintains its own context and history.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="chat-features">Chat Features<a href="#chat-features" class="hash-link" aria-label="Direct link to Chat Features" title="Direct link to Chat Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="live-chat-interface">Live Chat Interface<a href="#live-chat-interface" class="hash-link" aria-label="Direct link to Live Chat Interface" title="Direct link to Live Chat Interface">​</a></h3>
+<p>Send messages and receive real-time responses from your Agentforce agent:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">You: How can I help customers with returns?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Agent: I can help you process customer returns. First, I&#x27;ll need to know...</span><br></span></code></pre></div></div>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li>Real-time message streaming</li>
+<li>Markdown formatting support</li>
+<li>Rich media responses</li>
+<li>Inline citations</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="session-variables">Session Variables<a href="#session-variables" class="hash-link" aria-label="Direct link to Session Variables" title="Direct link to Session Variables">​</a></h3>
+<p>Configure context variables that persist throughout the conversation:</p>
+<p><strong>Example Session Variables:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;customerId&quot;: &quot;001xx000001234AAA&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;accountType&quot;: &quot;Premium&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;region&quot;: &quot;North America&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>To Set Session Variables:</strong></p>
+<ol>
+<li>Click <strong>&quot;Configure Session Variables&quot;</strong></li>
+<li>Add key-value pairs</li>
+<li>Save and continue chatting</li>
+</ol>
+<p>The agent will use these variables to personalize responses and make better decisions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="message-variables">Message Variables<a href="#message-variables" class="hash-link" aria-label="Direct link to Message Variables" title="Direct link to Message Variables">​</a></h3>
+<p>Pass dynamic data with individual messages:</p>
+<p><strong>Example Message Variables:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;orderId&quot;: &quot;ORD-12345&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;amount&quot;: &quot;299.99&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>To Use Message Variables:</strong></p>
+<ol>
+<li>Enter your message text</li>
+<li>Click <strong>&quot;Add Variables&quot;</strong></li>
+<li>Provide variable key-value pairs</li>
+<li>Send the message</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cited-references">Cited References<a href="#cited-references" class="hash-link" aria-label="Direct link to Cited References" title="Direct link to Cited References">​</a></h3>
+<p>View sources and data the agent used to generate responses:</p>
+<p>Each response can include:</p>
+<ul>
+<li><strong>Knowledge Articles</strong> - Referenced documentation</li>
+<li><strong>Data Records</strong> - Salesforce records used</li>
+<li><strong>External Sources</strong> - APIs or external data</li>
+<li><strong>Prompt Context</strong> - System prompts used</li>
+</ul>
+<p><strong>To View Citations:</strong></p>
+<ol>
+<li>Look for the citation indicator on agent messages</li>
+<li>Click to expand the citations panel</li>
+<li>See all sources with links to original records</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multi-turn-conversations">Multi-Turn Conversations<a href="#multi-turn-conversations" class="hash-link" aria-label="Direct link to Multi-Turn Conversations" title="Direct link to Multi-Turn Conversations">​</a></h3>
+<p>The agent maintains context across multiple exchanges:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Turn 1:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">You: What&#x27;s the status of order 12345?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Agent: Order 12345 is currently in transit...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Turn 2:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">You: When will it arrive?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Agent: Based on the shipping information, it should arrive on Friday...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Turn 3:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">You: Can you expedite it?</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Agent: Yes, I can expedite that order for you. Let me process that...</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conversation-history">Conversation History<a href="#conversation-history" class="hash-link" aria-label="Direct link to Conversation History" title="Direct link to Conversation History">​</a></h3>
+<p>Browse and replay past conversations:</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>View all past sessions</li>
+<li>Filter by agent, date, or topic</li>
+<li>Replay entire conversations</li>
+<li>Export conversation logs</li>
+<li>Analyze conversation patterns</li>
+</ul>
+<p><strong>To Access History:</strong></p>
+<ol>
+<li>Click <strong>&quot;Conversation History&quot;</strong></li>
+<li>Select a past session</li>
+<li>View the complete conversation thread</li>
+<li>Optionally continue the conversation</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-features">Advanced Features<a href="#advanced-features" class="hash-link" aria-label="Direct link to Advanced Features" title="Direct link to Advanced Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="testing-different-scenarios">Testing Different Scenarios<a href="#testing-different-scenarios" class="hash-link" aria-label="Direct link to Testing Different Scenarios" title="Direct link to Testing Different Scenarios">​</a></h3>
+<p>Create multiple sessions to test different use cases:</p>
+<p><strong>Test Scenario 1: New Customer</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Session Variables:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;customerType&quot;: &quot;new&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;hasAccount&quot;: false</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Test Scenario 2: Premium Customer</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Session Variables:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;customerType&quot;: &quot;existing&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;accountTier&quot;: &quot;premium&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;loyaltyPoints&quot;: 5000</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="real-time-performance-monitoring">Real-Time Performance Monitoring<a href="#real-time-performance-monitoring" class="hash-link" aria-label="Direct link to Real-Time Performance Monitoring" title="Direct link to Real-Time Performance Monitoring">​</a></h3>
+<p>Monitor agent response times and quality:</p>
+<ul>
+<li><strong>Response Time</strong>: Time to first token and total response</li>
+<li><strong>Token Usage</strong>: Input and output tokens consumed</li>
+<li><strong>Actions Invoked</strong>: Functions called by the agent</li>
+<li><strong>Context Size</strong>: Amount of context used</li>
+<li><strong>Quality Score</strong>: AI-generated quality assessment</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="session-management">Session Management<a href="#session-management" class="hash-link" aria-label="Direct link to Session Management" title="Direct link to Session Management">​</a></h3>
+<p>Manage multiple active sessions:</p>
+<p><strong>Actions:</strong></p>
+<ul>
+<li><strong>Pause/Resume</strong> - Temporarily pause a session</li>
+<li><strong>End Session</strong> - Gracefully close a session</li>
+<li><strong>Fork Session</strong> - Create a new session with copied context</li>
+<li><strong>Share Session</strong> - Export session details</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="debug-mode">Debug Mode<a href="#debug-mode" class="hash-link" aria-label="Direct link to Debug Mode" title="Direct link to Debug Mode">​</a></h3>
+<p>Enable debug mode to see additional technical details:</p>
+<p><strong>Debug Information Includes:</strong></p>
+<ul>
+<li>Raw API requests and responses</li>
+<li>Prompt templates used</li>
+<li>Token counts and timing</li>
+<li>Model parameters</li>
+<li>Error details and stack traces</li>
+</ul>
+<p><strong>To Enable Debug Mode:</strong></p>
+<ol>
+<li>Click the settings icon</li>
+<li>Toggle <strong>&quot;Debug Mode&quot;</strong></li>
+<li>Chat messages will now include debug panels</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-use-session-variables-for-context">1. Use Session Variables for Context<a href="#1-use-session-variables-for-context" class="hash-link" aria-label="Direct link to 1. Use Session Variables for Context" title="Direct link to 1. Use Session Variables for Context">​</a></h3>
+<p>Set consistent context at the session level rather than repeating it in each message.</p>
+<p><strong>Good:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Session Variables: { &quot;customerId&quot;: &quot;001xx...&quot; }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Message: &quot;What are this customer&#x27;s open cases?&quot;</span><br></span></code></pre></div></div>
+<p><strong>Less Efficient:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Message: &quot;What are the open cases for customer 001xx...?&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-test-edge-cases">2. Test Edge Cases<a href="#2-test-edge-cases" class="hash-link" aria-label="Direct link to 2. Test Edge Cases" title="Direct link to 2. Test Edge Cases">​</a></h3>
+<p>Create sessions with unusual or edge-case variables to ensure your agent handles them gracefully.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-monitor-citations">3. Monitor Citations<a href="#3-monitor-citations" class="hash-link" aria-label="Direct link to 3. Monitor Citations" title="Direct link to 3. Monitor Citations">​</a></h3>
+<p>Always check what sources the agent is using to verify accuracy and relevance.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-use-conversation-history">4. Use Conversation History<a href="#4-use-conversation-history" class="hash-link" aria-label="Direct link to 4. Use Conversation History" title="Direct link to 4. Use Conversation History">​</a></h3>
+<p>Review past conversations to identify patterns and improvement opportunities.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-test-incrementally">5. Test Incrementally<a href="#5-test-incrementally" class="hash-link" aria-label="Direct link to 5. Test Incrementally" title="Direct link to 5. Test Incrementally">​</a></h3>
+<p>Start with simple queries and gradually increase complexity to isolate issues.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="common-use-cases">Common Use Cases<a href="#common-use-cases" class="hash-link" aria-label="Direct link to Common Use Cases" title="Direct link to Common Use Cases">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="customer-service-testing">Customer Service Testing<a href="#customer-service-testing" class="hash-link" aria-label="Direct link to Customer Service Testing" title="Direct link to Customer Service Testing">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Session: { &quot;customerId&quot;: &quot;001...&quot;, &quot;accountType&quot;: &quot;Premium&quot; }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 1: &quot;I need to return an item&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 2: &quot;Where is my order?&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 3: &quot;I have a billing question&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sales-enablement">Sales Enablement<a href="#sales-enablement" class="hash-link" aria-label="Direct link to Sales Enablement" title="Direct link to Sales Enablement">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Session: { &quot;opportunityId&quot;: &quot;006...&quot;, &quot;stage&quot;: &quot;Proposal&quot; }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 1: &quot;What&#x27;s the next best action?&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 2: &quot;Show me similar won deals&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 3: &quot;Generate a proposal summary&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-support">Technical Support<a href="#technical-support" class="hash-link" aria-label="Direct link to Technical Support" title="Direct link to Technical Support">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Session: { &quot;caseId&quot;: &quot;500...&quot;, &quot;product&quot;: &quot;Enterprise&quot; }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 1: &quot;Diagnose this error&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 2: &quot;Suggest troubleshooting steps&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test 3: &quot;Find related knowledge articles&quot;</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="agent-not-responding">Agent Not Responding<a href="#agent-not-responding" class="hash-link" aria-label="Direct link to Agent Not Responding" title="Direct link to Agent Not Responding">​</a></h3>
+<ul>
+<li>Verify the agent is active in your org</li>
+<li>Check your Salesforce permissions</li>
+<li>Ensure Data Cloud is enabled</li>
+<li>Review session variables for errors</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="slow-response-times">Slow Response Times<a href="#slow-response-times" class="hash-link" aria-label="Direct link to Slow Response Times" title="Direct link to Slow Response Times">​</a></h3>
+<ul>
+<li>Reduce context size</li>
+<li>Simplify queries</li>
+<li>Check Data Cloud query performance</li>
+<li>Monitor token usage</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="unexpected-responses">Unexpected Responses<a href="#unexpected-responses" class="hash-link" aria-label="Direct link to Unexpected Responses" title="Direct link to Unexpected Responses">​</a></h3>
+<ul>
+<li>Review cited references</li>
+<li>Check prompt templates</li>
+<li>Verify topic configuration</li>
+<li>Enable debug mode for details</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="session-errors">Session Errors<a href="#session-errors" class="hash-link" aria-label="Direct link to Session Errors" title="Direct link to Session Errors">​</a></h3>
+<ul>
+<li>Clear browser cache</li>
+<li>Re-authenticate to Salesforce</li>
+<li>Check API limits</li>
+<li>Review error logs in debug mode</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<ul>
+<li><a href="/genai/configuration-explorer">Configuration Explorer</a> - Understand your agent setup</li>
+<li><a href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a> - See how queries are processed</li>
+<li><a href="/genai/data-cloud-integration">Data Cloud Integration</a> - Analyze conversation data</li>
+</ul>
+<hr>
+<p><strong>Have questions?</strong> See the <a href="/genai/faq">FAQ</a></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/genai/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">GenAI Explorer Overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/genai/configuration-explorer"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Agent blueprint</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#getting-started" class="table-of-contents__link toc-highlight">Getting Started</a><ul><li><a href="#1-select-an-agent" class="table-of-contents__link toc-highlight">1. Select an Agent</a></li><li><a href="#2-start-a-conversation" class="table-of-contents__link toc-highlight">2. Start a Conversation</a></li></ul></li><li><a href="#chat-features" class="table-of-contents__link toc-highlight">Chat Features</a><ul><li><a href="#live-chat-interface" class="table-of-contents__link toc-highlight">Live Chat Interface</a></li><li><a href="#session-variables" class="table-of-contents__link toc-highlight">Session Variables</a></li><li><a href="#message-variables" class="table-of-contents__link toc-highlight">Message Variables</a></li><li><a href="#cited-references" class="table-of-contents__link toc-highlight">Cited References</a></li><li><a href="#multi-turn-conversations" class="table-of-contents__link toc-highlight">Multi-Turn Conversations</a></li><li><a href="#conversation-history" class="table-of-contents__link toc-highlight">Conversation History</a></li></ul></li><li><a href="#advanced-features" class="table-of-contents__link toc-highlight">Advanced Features</a><ul><li><a href="#testing-different-scenarios" class="table-of-contents__link toc-highlight">Testing Different Scenarios</a></li><li><a href="#real-time-performance-monitoring" class="table-of-contents__link toc-highlight">Real-Time Performance Monitoring</a></li><li><a href="#session-management" class="table-of-contents__link toc-highlight">Session Management</a></li><li><a href="#debug-mode" class="table-of-contents__link toc-highlight">Debug Mode</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#1-use-session-variables-for-context" class="table-of-contents__link toc-highlight">1. Use Session Variables for Context</a></li><li><a href="#2-test-edge-cases" class="table-of-contents__link toc-highlight">2. Test Edge Cases</a></li><li><a href="#3-monitor-citations" class="table-of-contents__link toc-highlight">3. Monitor Citations</a></li><li><a href="#4-use-conversation-history" class="table-of-contents__link toc-highlight">4. Use Conversation History</a></li><li><a href="#5-test-incrementally" class="table-of-contents__link toc-highlight">5. Test Incrementally</a></li></ul></li><li><a href="#common-use-cases" class="table-of-contents__link toc-highlight">Common Use Cases</a><ul><li><a href="#customer-service-testing" class="table-of-contents__link toc-highlight">Customer Service Testing</a></li><li><a href="#sales-enablement" class="table-of-contents__link toc-highlight">Sales Enablement</a></li><li><a href="#technical-support" class="table-of-contents__link toc-highlight">Technical Support</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#agent-not-responding" class="table-of-contents__link toc-highlight">Agent Not Responding</a></li><li><a href="#slow-response-times" class="table-of-contents__link toc-highlight">Slow Response Times</a></li><li><a href="#unexpected-responses" class="table-of-contents__link toc-highlight">Unexpected Responses</a></li><li><a href="#session-errors" class="table-of-contents__link toc-highlight">Session Errors</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>

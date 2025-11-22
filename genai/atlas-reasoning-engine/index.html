@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-atlas-reasoning-engine" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Atlas Reasoning Engine | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/atlas-reasoning-engine"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="Atlas Reasoning Engine | SF Explorer"><meta data-rh="true" name="description" content="Understand the six-stage AI processing pipeline that powers Agentforce with interactive visualizations and Query Lab."><meta data-rh="true" property="og:description" content="Understand the six-stage AI processing pipeline that powers Agentforce with interactive visualizations and Query Lab."><meta data-rh="true" name="keywords" content="atlas,reasoning engine,pipeline,react,data cloud,query lab"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/atlas-reasoning-engine"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/atlas-reasoning-engine" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/atlas-reasoning-engine" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Atlas Reasoning Engine","item":"http://info.sf-explorer.com/genai/atlas-reasoning-engine"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.c37cf0fb.js" defer="defer"></script>
+<script src="/assets/js/main.e080f877.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/configuration-explorer">Agent blueprint</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/conversation-history">Conversation History</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/data-cloud-integration">Data Cloud Integration</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/topic-collision-analysis">Topic Collision Analysis</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Atlas Reasoning Engine</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Atlas Reasoning Engine</h1></header>
+<p>Understand and visualize the &quot;brain&quot; behind Salesforce Agentforce - the six-stage AI processing pipeline that powers intelligent agent responses.</p>
+<p><img decoding="async" loading="lazy" alt="Atlas Overview" src="/assets/images/atlas-124503c8eee43a62896c5d91ee5eb14b.png" width="1631" height="382" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Understanding what happens between sending a query and receiving an AI response is crucial for optimization and debugging.</strong></p>
+<p>When working with AI agents, you need to:</p>
+<ul>
+<li>🔍 <strong>Understand Processing</strong>: See how your queries flow through the AI pipeline</li>
+<li>⚡ <strong>Identify Bottlenecks</strong>: Find which stages are consuming time or tokens</li>
+<li>🐛 <strong>Debug Issues</strong>: Trace where problems occur in the reasoning process</li>
+<li>📊 <strong>Analyze Performance</strong>: Monitor token usage, response times, and quality scores</li>
+<li>💰 <strong>Optimize Costs</strong>: Identify opportunities to reduce token consumption</li>
+</ul>
+<p><strong>In short</strong>: You need visibility into the AI reasoning process to build better, faster, and more cost-effective agents.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-it">How GenAI Explorer Solves It<a href="#how-genai-explorer-solves-it" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves It" title="Direct link to How GenAI Explorer Solves It">​</a></h2>
+<p>Atlas Reasoning Engine visualization provides <strong>complete transparency</strong> into AI processing:</p>
+<ol>
+<li><strong>Six-Stage Visualization</strong>: See the entire pipeline from chit-chat detection to safety gates</li>
+<li><strong>Live Data Integration</strong>: Query Lab runs pre-built queries against your actual Data Cloud</li>
+<li><strong>Performance Metrics</strong>: See processing time and token usage for each stage</li>
+<li><strong>Complete Reasoning Traces</strong>: Follow a request through all six stages with full details</li>
+<li><strong>Ready-to-Use Queries</strong>: 6+ pre-built SQL queries for common analysis tasks</li>
+</ol>
+<p>Think of it as <strong>observability for AI</strong> - understand what&#x27;s happening inside the black box.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem-1">The Problem<a href="#the-problem-1" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>AI agents are black boxes - you have no idea how they process queries or why they make certain decisions.</strong></p>
+<p>The visibility gap developers and AI engineers face:</p>
+<ul>
+<li>❌ <strong>No Transparency</strong>: Can&#x27;t see the reasoning process behind agent responses</li>
+<li>❌ <strong>Unknown Pipeline</strong>: Don&#x27;t understand the stages AI queries go through</li>
+<li>❌ <strong>Performance Mystery</strong>: No visibility into which stage causes delays</li>
+<li>❌ <strong>Debugging Nightmare</strong>: When something goes wrong, where do you even start?</li>
+<li>❌ <strong>Token Waste</strong>: Don&#x27;t know which stages consume the most tokens</li>
+<li>❌ <strong>Data Inaccessibility</strong>: Performance data trapped in Data Cloud with complex queries</li>
+</ul>
+<p><strong>Result:</strong> Teams can&#x27;t optimize AI performance, debug issues efficiently, or understand why their agents behave unexpectedly.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p>GenAI Explorer <strong>opens the black box</strong> with:</p>
+<p>✅ <strong>Interactive Pipeline Visualization</strong>: See all 6 Atlas stages in an intuitive diagram</p>
+<ul>
+<li>Stage 1: Chit-Chat Detection</li>
+<li>Stage 2: Query Evaluation</li>
+<li>Stage 3: Context Refinement</li>
+<li>Stage 4: Query Planning &amp; Execution</li>
+<li>Stage 5: Advanced Retrieval (RAG)</li>
+<li>Stage 6: Quality &amp; Safety Gates</li>
+</ul>
+<p>✅ <strong>Query Lab</strong>: Pre-built Data Cloud queries to analyze real performance data</p>
+<ul>
+<li>Complete reasoning traces</li>
+<li>Token usage by model and stage</li>
+<li>Processing time per stage</li>
+<li>Safety and compliance metrics</li>
+</ul>
+<p>✅ <strong>Live Data Integration</strong>: Execute queries directly and see your actual org data</p>
+<p>✅ <strong>Performance Insights</strong>: Built-in benchmarks showing 2x relevance improvement and 33% accuracy increase</p>
+<p>✅ <strong>Educational Diagrams</strong>: ReAct loop, ERD diagrams, and data flow visualizations</p>
+<p><strong>Impact:</strong> Reduce debugging time by 70%, optimize token usage by 40%, and truly understand how your AI agents work under the hood.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview-1">Overview<a href="#overview-1" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Atlas Reasoning Engine is Salesforce&#x27;s proprietary AI orchestration system that processes every query through a sophisticated pipeline. GenAI Explorer provides interactive visualizations and live data integration to help you understand exactly how your AI queries are processed.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-is-atlas">What is Atlas?<a href="#what-is-atlas" class="hash-link" aria-label="Direct link to What is Atlas?" title="Direct link to What is Atlas?">​</a></h2>
+<p>Atlas is the reasoning engine that coordinates:</p>
+<ul>
+<li><strong>Query understanding</strong> and intent classification</li>
+<li><strong>Context enrichment</strong> from your Salesforce data</li>
+<li><strong>Action planning</strong> and execution</li>
+<li><strong>Information retrieval</strong> from multiple sources</li>
+<li><strong>Response generation</strong> with citations</li>
+<li><strong>Safety and quality</strong> checks</li>
+</ul>
+<p>Think of it as the conductor of an orchestra, coordinating multiple AI models, data sources, and safety systems to produce intelligent, grounded, and safe responses.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-six-stage-pipeline">The Six-Stage Pipeline<a href="#the-six-stage-pipeline" class="hash-link" aria-label="Direct link to The Six-Stage Pipeline" title="Direct link to The Six-Stage Pipeline">​</a></h2>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage-1-chit-chat-detection">Stage 1: Chit-Chat Detection<a href="#stage-1-chit-chat-detection" class="hash-link" aria-label="Direct link to Stage 1: Chit-Chat Detection" title="Direct link to Stage 1: Chit-Chat Detection">​</a></h3>
+<p><strong>Purpose:</strong> Determine if the query is a genuine request or casual conversation.</p>
+<p><strong>Process:</strong></p>
+<ul>
+<li>Analyzes input text</li>
+<li>Detects greetings, pleasantries, or off-topic requests</li>
+<li>Routes to appropriate handler</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>✅ Valid: &quot;What&#x27;s the status of order 12345?&quot;</li>
+<li>⚠️ Chit-chat: &quot;Hello, how are you?&quot;</li>
+<li>❌ Invalid: &quot;Tell me a joke&quot;</li>
+</ul>
+<p><strong>Why It Matters:</strong>
+Saves processing time and tokens by handling simple interactions efficiently.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage-2-query-evaluation">Stage 2: Query Evaluation<a href="#stage-2-query-evaluation" class="hash-link" aria-label="Direct link to Stage 2: Query Evaluation" title="Direct link to Stage 2: Query Evaluation">​</a></h3>
+<p><strong>Purpose:</strong> Determine if the query has enough information to be answered.</p>
+<p><strong>Process:</strong></p>
+<ul>
+<li>Checks for missing required parameters</li>
+<li>Identifies ambiguous references</li>
+<li>Validates context sufficiency</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>✅ Sufficient: &quot;Show me orders from this customer&quot; (with customer context set)</li>
+<li>❌ Insufficient: &quot;Show me orders&quot; (no customer specified)</li>
+</ul>
+<p><strong>Agent Response:</strong>
+&quot;I need more information. Which customer&#x27;s orders would you like to see?&quot;</p>
+<p><strong>Why It Matters:</strong>
+Prevents wasted API calls and ensures quality responses.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage-3-context-refinement">Stage 3: Context Refinement<a href="#stage-3-context-refinement" class="hash-link" aria-label="Direct link to Stage 3: Context Refinement" title="Direct link to Stage 3: Context Refinement">​</a></h3>
+<p><strong>Purpose:</strong> Enrich the query with relevant context from your Salesforce org.</p>
+<p><strong>Process:</strong></p>
+<ol>
+<li>Identifies entities mentioned (accounts, contacts, orders, etc.)</li>
+<li>Fetches relevant records from Salesforce</li>
+<li>Adds business context (account tier, region, history, etc.)</li>
+<li>Enriches with session variables</li>
+</ol>
+<p><strong>Example Enrichment:</strong></p>
+<!-- -->
+<p><strong>Why It Matters:</strong>
+Context is key to accurate, personalized AI responses.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage-4-query-planning--execution">Stage 4: Query Planning &amp; Execution<a href="#stage-4-query-planning--execution" class="hash-link" aria-label="Direct link to Stage 4: Query Planning &amp; Execution" title="Direct link to Stage 4: Query Planning &amp; Execution">​</a></h3>
+<p><strong>Purpose:</strong> Create and execute a plan to answer the query using available actions.</p>
+<p><strong>Components:</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="lams-large-action-models">LAMs (Large Action Models)<a href="#lams-large-action-models" class="hash-link" aria-label="Direct link to LAMs (Large Action Models)" title="Direct link to LAMs (Large Action Models)">​</a></h4>
+<ul>
+<li>Determines which actions to invoke</li>
+<li>Plans the sequence of operations</li>
+<li>Handles dependencies between actions</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="apigen">APIGen<a href="#apigen" class="hash-link" aria-label="Direct link to APIGen" title="Direct link to APIGen">​</a></h4>
+<ul>
+<li>Generates API calls dynamically</li>
+<li>Optimizes query parameters</li>
+<li>Handles error cases</li>
+</ul>
+<p><strong>Example Plan:</strong></p>
+<!-- -->
+<p><strong>Execution:</strong></p>
+<ul>
+<li>Actions run in parallel when possible (A1 and A2 run simultaneously)</li>
+<li>Results are cached for efficiency</li>
+<li>Errors trigger fallback strategies</li>
+</ul>
+<p><strong>Why It Matters:</strong>
+Intelligent action planning reduces latency and improves accuracy.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage-5-advanced-retrieval">Stage 5: Advanced Retrieval<a href="#stage-5-advanced-retrieval" class="hash-link" aria-label="Direct link to Stage 5: Advanced Retrieval" title="Direct link to Stage 5: Advanced Retrieval">​</a></h3>
+<p><strong>Purpose:</strong> Find and rank the most relevant information from all available sources.</p>
+<p><strong>Process:</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-initial-retrieval">1. Initial Retrieval<a href="#1-initial-retrieval" class="hash-link" aria-label="Direct link to 1. Initial Retrieval" title="Direct link to 1. Initial Retrieval">​</a></h4>
+<p>Fetch candidates from multiple sources:</p>
+<ul>
+<li>Knowledge articles</li>
+<li>Salesforce records</li>
+<li>External APIs</li>
+<li>Vector embeddings (RAG)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-re-ranking">2. Re-Ranking<a href="#2-re-ranking" class="hash-link" aria-label="Direct link to 2. Re-Ranking" title="Direct link to 2. Re-Ranking">​</a></h4>
+<p>Score and sort results by relevance:</p>
+<ul>
+<li>Semantic similarity</li>
+<li>Recency</li>
+<li>Authority</li>
+<li>User preferences</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-context-selection">3. Context Selection<a href="#3-context-selection" class="hash-link" aria-label="Direct link to 3. Context Selection" title="Direct link to 3. Context Selection">​</a></h4>
+<p>Choose the best information to include:</p>
+<ul>
+<li>Most relevant results</li>
+<li>Diverse perspectives</li>
+<li>Within token limits</li>
+</ul>
+<p><strong>Example:</strong></p>
+<!-- -->
+<p><strong>Why It Matters:</strong>
+RAG (Retrieval Augmented Generation) with re-ranking provides 2x relevance improvement.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="stage-6-quality--safety-gates">Stage 6: Quality &amp; Safety Gates<a href="#stage-6-quality--safety-gates" class="hash-link" aria-label="Direct link to Stage 6: Quality &amp; Safety Gates" title="Direct link to Stage 6: Quality &amp; Safety Gates">​</a></h3>
+<p><strong>Purpose:</strong> Ensure responses are safe, compliant, and high-quality before delivery.</p>
+<p><strong>Checks:</strong></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="toxicity-detection">Toxicity Detection<a href="#toxicity-detection" class="hash-link" aria-label="Direct link to Toxicity Detection" title="Direct link to Toxicity Detection">​</a></h4>
+<ul>
+<li>Offensive language</li>
+<li>Aggressive tone</li>
+<li>Inappropriate content</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="bias-detection">Bias Detection<a href="#bias-detection" class="hash-link" aria-label="Direct link to Bias Detection" title="Direct link to Bias Detection">​</a></h4>
+<ul>
+<li>Gender bias</li>
+<li>Cultural bias</li>
+<li>Age bias</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="pii-protection">PII Protection<a href="#pii-protection" class="hash-link" aria-label="Direct link to PII Protection" title="Direct link to PII Protection">​</a></h4>
+<ul>
+<li>Detects sensitive data</li>
+<li>Masks PII automatically</li>
+<li>Logs PII usage</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="accuracy-verification">Accuracy Verification<a href="#accuracy-verification" class="hash-link" aria-label="Direct link to Accuracy Verification" title="Direct link to Accuracy Verification">​</a></h4>
+<ul>
+<li>Fact-checking against sources</li>
+<li>Consistency checks</li>
+<li>Hallucination detection</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="compliance">Compliance<a href="#compliance" class="hash-link" aria-label="Direct link to Compliance" title="Direct link to Compliance">​</a></h4>
+<ul>
+<li>GDPR compliance</li>
+<li>Industry regulations</li>
+<li>Company policies</li>
+</ul>
+<p><strong>Example Safety Gate:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Generated Response:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&quot;The customer&#x27;s SSN is 123-45-6789. Their credit card...&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">After Safety Gate:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&quot;The customer&#x27;s SSN is ***-**-6789. Their credit card...&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">PII Detected: Yes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">PII Masked: Yes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Safety Score: 0.98</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Allowed: Yes</span><br></span></code></pre></div></div>
+<p><strong>Why It Matters:</strong>
+33% accuracy increase and ensures compliance with regulations.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-react-loop">The ReAct Loop<a href="#the-react-loop" class="hash-link" aria-label="Direct link to The ReAct Loop" title="Direct link to The ReAct Loop">​</a></h2>
+<p>Atlas uses the ReAct (Reason-Act-Observe) pattern for complex queries:</p>
+<!-- -->
+<p><strong>Why ReAct Matters:</strong></p>
+<ul>
+<li>Handles complex, multi-step queries</li>
+<li>Self-corrects when actions fail</li>
+<li>Adapts to unexpected results</li>
+<li>Explains its reasoning</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="data-cloud-architecture">Data Cloud Architecture<a href="#data-cloud-architecture" class="hash-link" aria-label="Direct link to Data Cloud Architecture" title="Direct link to Data Cloud Architecture">​</a></h2>
+<p>Atlas stores comprehensive data about every AI interaction in Data Cloud using a three-table structure:</p>
+<!-- -->
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-genaigatewayrequest">1. GenAIGatewayRequest<a href="#1-genaigatewayrequest" class="hash-link" aria-label="Direct link to 1. GenAIGatewayRequest" title="Direct link to 1. GenAIGatewayRequest">​</a></h3>
+<p><strong>Purpose:</strong> Incoming requests from users</p>
+<p><strong>Key Fields:</strong></p>
+<ul>
+<li>Request ID</li>
+<li>User ID</li>
+<li>Session ID</li>
+<li>Input text</li>
+<li>Timestamp</li>
+<li>Model requested</li>
+<li>Temperature</li>
+<li>Max tokens</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-genaigatewayresponse">2. GenAIGatewayResponse<a href="#2-genaigatewayresponse" class="hash-link" aria-label="Direct link to 2. GenAIGatewayResponse" title="Direct link to 2. GenAIGatewayResponse">​</a></h3>
+<p><strong>Purpose:</strong> AI-generated responses</p>
+<p><strong>Key Fields:</strong></p>
+<ul>
+<li>Response ID</li>
+<li>Request ID (foreign key)</li>
+<li>Output text</li>
+<li>Cited sources</li>
+<li>Token usage</li>
+<li>Response time</li>
+<li>Quality score</li>
+<li>Safety scores</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-genaigatewaygeneration">3. GenAIGatewayGeneration<a href="#3-genaigatewaygeneration" class="hash-link" aria-label="Direct link to 3. GenAIGatewayGeneration" title="Direct link to 3. GenAIGatewayGeneration">​</a></h3>
+<p><strong>Purpose:</strong> Token-level generation details</p>
+<p><strong>Key Fields:</strong></p>
+<ul>
+<li>Generation ID</li>
+<li>Response ID (foreign key)</li>
+<li>Model used</li>
+<li>Input tokens</li>
+<li>Output tokens</li>
+<li>Total tokens</li>
+<li>Cost estimate</li>
+<li>Processing stages</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="three-table-join-structure">Three-Table Join Structure<a href="#three-table-join-structure" class="hash-link" aria-label="Direct link to Three-Table Join Structure" title="Direct link to Three-Table Join Structure">​</a></h3>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">InputText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  response</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">OutputText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  generation</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">TotalTokens</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  generation</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Model</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayRequest request</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayResponse response </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> response</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">RequestId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayGeneration generation </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> response</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> generation</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">WHERE</span><span class="token plain"> request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> TODAY</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="query-lab">Query Lab<a href="#query-lab" class="hash-link" aria-label="Direct link to Query Lab" title="Direct link to Query Lab">​</a></h2>
+<p>Pre-built Data Cloud queries for analyzing AI performance:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-complete-reasoning-trace">1. Complete Reasoning Trace<a href="#1-complete-reasoning-trace" class="hash-link" aria-label="Direct link to 1. Complete Reasoning Trace" title="Direct link to 1. Complete Reasoning Trace">​</a></h3>
+<p><strong>Purpose:</strong> Follow the full request → response lifecycle</p>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">InputText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">OutputText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Model</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">TotalTokens</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseTimeMs</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">SafetyScore</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayRequest r</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayResponse resp </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">RequestId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayGeneration gen </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">ORDER</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token keyword" style="color:#00009f">DESC</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">LIMIT</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">100</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Debug specific conversations and understand exactly what happened.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-token-usage-by-model">2. Token Usage by Model<a href="#2-token-usage-by-model" class="hash-link" aria-label="Direct link to 2. Token Usage by Model" title="Direct link to 2. Token Usage by Model">​</a></h3>
+<p><strong>Purpose:</strong> Analyze costs and optimize model selection</p>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Model</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">COUNT</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">*</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> RequestCount</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">SUM</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">InputTokens</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> TotalInputTokens</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">SUM</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">OutputTokens</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> TotalOutputTokens</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">SUM</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">TotalTokens</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> TotalTokens</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">AVG</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">TotalTokens</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> AvgTokensPerRequest</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayGeneration gen</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">WHERE</span><span class="token plain"> gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> LAST_N_DAYS:</span><span class="token number" style="color:#36acaa">7</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">GROUP</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Model</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">ORDER</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> TotalTokens </span><span class="token keyword" style="color:#00009f">DESC</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Cost analysis and model optimization.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-feature-usage-analysis">3. Feature Usage Analysis<a href="#3-feature-usage-analysis" class="hash-link" aria-label="Direct link to 3. Feature Usage Analysis" title="Direct link to 3. Feature Usage Analysis">​</a></h3>
+<p><strong>Purpose:</strong> Track which AI features are most used</p>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">FeatureType</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ActionInvoked</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">COUNT</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">*</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> UsageCount</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">AVG</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseTimeMs</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> AvgResponseTime</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">AVG</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">QualityScore</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> AvgQuality</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayRequest r</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayResponse resp </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">RequestId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">WHERE</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> LAST_N_DAYS:</span><span class="token number" style="color:#36acaa">30</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">GROUP</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">FeatureType</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ActionInvoked</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">ORDER</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> UsageCount </span><span class="token keyword" style="color:#00009f">DESC</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Identify most valuable features and optimization opportunities.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-session-conversation-threading">4. Session Conversation Threading<a href="#4-session-conversation-threading" class="hash-link" aria-label="Direct link to 4. Session Conversation Threading" title="Direct link to 4. Session Conversation Threading">​</a></h3>
+<p><strong>Purpose:</strong> Analyze conversation flows and context usage</p>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">SessionId</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">COUNT</span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">*</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> MessageCount</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">MIN</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> SessionStart</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">MAX</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> SessionEnd</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">AVG</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">TotalTokens</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> AvgTokensPerMessage</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token function" style="color:#d73a49">SUM</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">TotalTokens</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">as</span><span class="token plain"> TotalSessionTokens</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayRequest r</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayResponse resp </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">RequestId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayGeneration gen </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">WHERE</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> LAST_N_DAYS:</span><span class="token number" style="color:#36acaa">7</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">GROUP</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">SessionId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">HAVING</span><span class="token plain"> MessageCount </span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">ORDER</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> MessageCount </span><span class="token keyword" style="color:#00009f">DESC</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Understand conversation patterns and multi-turn interactions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-safety--compliance-monitoring">5. Safety &amp; Compliance Monitoring<a href="#5-safety--compliance-monitoring" class="hash-link" aria-label="Direct link to 5. Safety &amp; Compliance Monitoring" title="Direct link to 5. Safety &amp; Compliance Monitoring">​</a></h3>
+<p><strong>Purpose:</strong> Track PII masking and safety scores</p>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">UserId</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">SafetyScore</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">PIIDetected</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">PIIMasked</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ToxicityScore</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">BiasScore</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayRequest r</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayResponse resp </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">RequestId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">WHERE</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">SafetyScore </span><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0.8</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   </span><span class="token operator" style="color:#393A34">OR</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">PIIDetected </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   </span><span class="token operator" style="color:#393A34">OR</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ToxicityScore </span><span class="token operator" style="color:#393A34">&gt;</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0.3</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">ORDER</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token keyword" style="color:#00009f">DESC</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Compliance reporting and safety auditing.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-recent-requests-tracking">6. Recent Requests Tracking<a href="#6-recent-requests-tracking" class="hash-link" aria-label="Direct link to 6. Recent Requests Tracking" title="Direct link to 6. Recent Requests Tracking">​</a></h3>
+<p><strong>Purpose:</strong> Monitor live AI activity</p>
+<div class="language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-sql codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">SELECT</span><span class="token plain"> </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">InputText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">OutputText</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Model</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseTimeMs</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">QualityScore</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">FROM</span><span class="token plain"> GenAIGatewayRequest r</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayResponse resp </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">RequestId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">JOIN</span><span class="token plain"> GenAIGatewayGeneration gen </span><span class="token keyword" style="color:#00009f">ON</span><span class="token plain"> resp</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Id </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> gen</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">ResponseId</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">WHERE</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> TODAY</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">ORDER</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">BY</span><span class="token plain"> r</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">CreatedDate </span><span class="token keyword" style="color:#00009f">DESC</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">LIMIT</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">50</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Real-time monitoring and debugging.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="interactive-visualization">Interactive Visualization<a href="#interactive-visualization" class="hash-link" aria-label="Direct link to Interactive Visualization" title="Direct link to Interactive Visualization">​</a></h2>
+<p>GenAI Explorer provides an interactive flow diagram of the Atlas pipeline:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="features">Features<a href="#features" class="hash-link" aria-label="Direct link to Features" title="Direct link to Features">​</a></h3>
+<p><strong>Clickable Stages:</strong></p>
+<ul>
+<li>Click any stage to see detailed information</li>
+<li>View processing time and token usage</li>
+<li>See data flowing through the pipeline</li>
+</ul>
+<p><strong>Live Data:</strong></p>
+<ul>
+<li>Execute queries directly from the visualization</li>
+<li>See real results from your org</li>
+<li>Filter by date, model, or user</li>
+</ul>
+<p><strong>Performance Metrics:</strong></p>
+<ul>
+<li>2x relevance improvement (Stage 5: Advanced Retrieval)</li>
+<li>33% accuracy increase (Stage 6: Quality Gates)</li>
+<li>Average processing time per stage</li>
+<li>Token usage distribution</li>
+</ul>
+<p><strong>Export Options:</strong></p>
+<ul>
+<li>Save diagram as image</li>
+<li>Export metrics as CSV</li>
+<li>Generate PDF report</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="using-the-atlas-screen">Using the Atlas Screen<a href="#using-the-atlas-screen" class="hash-link" aria-label="Direct link to Using the Atlas Screen" title="Direct link to Using the Atlas Screen">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-view-the-pipeline">1. View the Pipeline<a href="#1-view-the-pipeline" class="hash-link" aria-label="Direct link to 1. View the Pipeline" title="Direct link to 1. View the Pipeline">​</a></h3>
+<p>Navigate to <strong>Atlas Reasoning Engine</strong> from the main menu.</p>
+<p>The interactive diagram shows all six stages with:</p>
+<ul>
+<li>Visual flow indicators</li>
+<li>Processing statistics</li>
+<li>Live data indicators</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-execute-query-lab-queries">2. Execute Query Lab Queries<a href="#2-execute-query-lab-queries" class="hash-link" aria-label="Direct link to 2. Execute Query Lab Queries" title="Direct link to 2. Execute Query Lab Queries">​</a></h3>
+<p>Click on <strong>Query Lab</strong> to access pre-built queries:</p>
+<ol>
+<li>Select a query from the list</li>
+<li>Adjust date ranges or filters</li>
+<li>Click <strong>Execute</strong></li>
+<li>View results in a data table</li>
+<li>Export results for further analysis</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-analyze-results">3. Analyze Results<a href="#3-analyze-results" class="hash-link" aria-label="Direct link to 3. Analyze Results" title="Direct link to 3. Analyze Results">​</a></h3>
+<p>Use the results viewer to:</p>
+<ul>
+<li>Sort by any column</li>
+<li>Filter data</li>
+<li>Visualize trends</li>
+<li>Export to CSV or Excel</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-monitor-performance">4. Monitor Performance<a href="#4-monitor-performance" class="hash-link" aria-label="Direct link to 4. Monitor Performance" title="Direct link to 4. Monitor Performance">​</a></h3>
+<p>Track key metrics:</p>
+<ul>
+<li>Requests per hour</li>
+<li>Average response time</li>
+<li>Token usage trends</li>
+<li>Model distribution</li>
+<li>Safety score averages</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-regular-performance-reviews">1. Regular Performance Reviews<a href="#1-regular-performance-reviews" class="hash-link" aria-label="Direct link to 1. Regular Performance Reviews" title="Direct link to 1. Regular Performance Reviews">​</a></h3>
+<p>Run Query Lab queries weekly to:</p>
+<ul>
+<li>Identify slow queries</li>
+<li>Optimize token usage</li>
+<li>Monitor model performance</li>
+<li>Track safety scores</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-cost-optimization">2. Cost Optimization<a href="#2-cost-optimization" class="hash-link" aria-label="Direct link to 2. Cost Optimization" title="Direct link to 2. Cost Optimization">​</a></h3>
+<p>Use token analysis queries to:</p>
+<ul>
+<li>Identify expensive models</li>
+<li>Find optimization opportunities</li>
+<li>Set budget alerts</li>
+<li>Right-size model selection</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-safety-monitoring">3. Safety Monitoring<a href="#3-safety-monitoring" class="hash-link" aria-label="Direct link to 3. Safety Monitoring" title="Direct link to 3. Safety Monitoring">​</a></h3>
+<p>Review safety metrics monthly:</p>
+<ul>
+<li>PII detection rates</li>
+<li>Toxicity scores</li>
+<li>Bias indicators</li>
+<li>Compliance violations</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-conversation-analysis">4. Conversation Analysis<a href="#4-conversation-analysis" class="hash-link" aria-label="Direct link to 4. Conversation Analysis" title="Direct link to 4. Conversation Analysis">​</a></h3>
+<p>Analyze session threading to:</p>
+<ul>
+<li>Understand user patterns</li>
+<li>Improve context handling</li>
+<li>Optimize multi-turn conversations</li>
+<li>Identify drop-off points</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-use-reasoning-traces-for-debugging">5. Use Reasoning Traces for Debugging<a href="#5-use-reasoning-traces-for-debugging" class="hash-link" aria-label="Direct link to 5. Use Reasoning Traces for Debugging" title="Direct link to 5. Use Reasoning Traces for Debugging">​</a></h3>
+<p>When troubleshooting issues:</p>
+<ol>
+<li>Find the specific request using Recent Requests query</li>
+<li>Run Complete Reasoning Trace for that request</li>
+<li>Examine each pipeline stage</li>
+<li>Identify where issues occurred</li>
+<li>Adjust configuration accordingly</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="performance-benchmarks">Performance Benchmarks<a href="#performance-benchmarks" class="hash-link" aria-label="Direct link to Performance Benchmarks" title="Direct link to Performance Benchmarks">​</a></h2>
+<p><strong>Typical Processing Times:</strong></p>
+<ul>
+<li>Stage 1 (Chit-Chat): 50-100ms</li>
+<li>Stage 2 (Query Eval): 100-200ms</li>
+<li>Stage 3 (Context): 200-500ms</li>
+<li>Stage 4 (Planning): 300-800ms</li>
+<li>Stage 5 (Retrieval): 400-1000ms</li>
+<li>Stage 6 (Safety): 100-300ms</li>
+</ul>
+<p><strong>Total Average:</strong> 1.2 - 3.0 seconds for complete query processing</p>
+<p><strong>Token Usage:</strong></p>
+<ul>
+<li>Simple query: 150-500 tokens</li>
+<li>Medium query: 500-1500 tokens</li>
+<li>Complex query: 1500-4000 tokens</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<ul>
+<li><a href="/genai/einstein-model-testing">Einstein Model Testing</a> - Test individual models</li>
+<li><a href="/genai/data-cloud-integration">Data Cloud Integration</a> - Deep dive into queries</li>
+<li><a href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a> - Advanced debugging</li>
+</ul>
+<hr>
+<p><strong>Understanding Atlas helps you optimize your AI implementation for better performance, lower costs, and improved user experience.</strong></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/genai/configuration-explorer"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Agent blueprint</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/genai/einstein-model-testing"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Einstein Model Testing</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-it" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves It</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#the-problem-1" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a></li><li><a href="#overview-1" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#what-is-atlas" class="table-of-contents__link toc-highlight">What is Atlas?</a></li><li><a href="#the-six-stage-pipeline" class="table-of-contents__link toc-highlight">The Six-Stage Pipeline</a><ul><li><a href="#stage-1-chit-chat-detection" class="table-of-contents__link toc-highlight">Stage 1: Chit-Chat Detection</a></li><li><a href="#stage-2-query-evaluation" class="table-of-contents__link toc-highlight">Stage 2: Query Evaluation</a></li><li><a href="#stage-3-context-refinement" class="table-of-contents__link toc-highlight">Stage 3: Context Refinement</a></li><li><a href="#stage-4-query-planning--execution" class="table-of-contents__link toc-highlight">Stage 4: Query Planning &amp; Execution</a></li><li><a href="#stage-5-advanced-retrieval" class="table-of-contents__link toc-highlight">Stage 5: Advanced Retrieval</a></li><li><a href="#stage-6-quality--safety-gates" class="table-of-contents__link toc-highlight">Stage 6: Quality &amp; Safety Gates</a></li></ul></li><li><a href="#the-react-loop" class="table-of-contents__link toc-highlight">The ReAct Loop</a></li><li><a href="#data-cloud-architecture" class="table-of-contents__link toc-highlight">Data Cloud Architecture</a><ul><li><a href="#1-genaigatewayrequest" class="table-of-contents__link toc-highlight">1. GenAIGatewayRequest</a></li><li><a href="#2-genaigatewayresponse" class="table-of-contents__link toc-highlight">2. GenAIGatewayResponse</a></li><li><a href="#3-genaigatewaygeneration" class="table-of-contents__link toc-highlight">3. GenAIGatewayGeneration</a></li><li><a href="#three-table-join-structure" class="table-of-contents__link toc-highlight">Three-Table Join Structure</a></li></ul></li><li><a href="#query-lab" class="table-of-contents__link toc-highlight">Query Lab</a><ul><li><a href="#1-complete-reasoning-trace" class="table-of-contents__link toc-highlight">1. Complete Reasoning Trace</a></li><li><a href="#2-token-usage-by-model" class="table-of-contents__link toc-highlight">2. Token Usage by Model</a></li><li><a href="#3-feature-usage-analysis" class="table-of-contents__link toc-highlight">3. Feature Usage Analysis</a></li><li><a href="#4-session-conversation-threading" class="table-of-contents__link toc-highlight">4. Session Conversation Threading</a></li><li><a href="#5-safety--compliance-monitoring" class="table-of-contents__link toc-highlight">5. Safety &amp; Compliance Monitoring</a></li><li><a href="#6-recent-requests-tracking" class="table-of-contents__link toc-highlight">6. Recent Requests Tracking</a></li></ul></li><li><a href="#interactive-visualization" class="table-of-contents__link toc-highlight">Interactive Visualization</a><ul><li><a href="#features" class="table-of-contents__link toc-highlight">Features</a></li></ul></li><li><a href="#using-the-atlas-screen" class="table-of-contents__link toc-highlight">Using the Atlas Screen</a><ul><li><a href="#1-view-the-pipeline" class="table-of-contents__link toc-highlight">1. View the Pipeline</a></li><li><a href="#2-execute-query-lab-queries" class="table-of-contents__link toc-highlight">2. Execute Query Lab Queries</a></li><li><a href="#3-analyze-results" class="table-of-contents__link toc-highlight">3. Analyze Results</a></li><li><a href="#4-monitor-performance" class="table-of-contents__link toc-highlight">4. Monitor Performance</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#1-regular-performance-reviews" class="table-of-contents__link toc-highlight">1. Regular Performance Reviews</a></li><li><a href="#2-cost-optimization" class="table-of-contents__link toc-highlight">2. Cost Optimization</a></li><li><a href="#3-safety-monitoring" class="table-of-contents__link toc-highlight">3. Safety Monitoring</a></li><li><a href="#4-conversation-analysis" class="table-of-contents__link toc-highlight">4. Conversation Analysis</a></li><li><a href="#5-use-reasoning-traces-for-debugging" class="table-of-contents__link toc-highlight">5. Use Reasoning Traces for Debugging</a></li></ul></li><li><a href="#performance-benchmarks" class="table-of-contents__link toc-highlight">Performance Benchmarks</a></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>
