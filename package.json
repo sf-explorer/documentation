@@ -16,6 +16,7 @@
   "dependencies": {
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
+    "@docusaurus/theme-mermaid": "^3.8.1",
     "@graphiql/toolkit": "^0.9.1",
     "@hikeman/lms": "0.0.14",
     "@mdx-js/react": "^3.0.0",

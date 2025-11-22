@@ -52,9 +52,9 @@ export default function Home() {
         <div className={styles.topBanner}>
           <div className={styles.topBannerTitle}>
             {'🎉\xa0'}
-            <Link to="/blog/release60" className={styles.topBannerTitleText}>
+            <Link to="/blog/introducing-genai-explorer" className={styles.topBannerTitleText}>
 
-              {'Release\xa06.0 is\xa0out!️'}
+              {'GenAI Explorer is\xa0here!️'}
 
             </Link>
             {'\xa0🥳'}
@@ -78,8 +78,6 @@ export default function Home() {
             </div>
           </div>
         </header>
-
-        SvmSatZbsvM
 
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
           <div className="container">

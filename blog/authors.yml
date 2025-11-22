@@ -4,9 +4,14 @@ ndespres:
   url: https://github.com/nicolas-despres
   image_url: https://github.com/nicolas-despres.png
 
-
 FlorianLebrun:
   name: Florian Lebrun
   title: Senior Architect at Mphasis Wyde
   url: https://github.com/FlorianLebrun
   image_url: https://github.com/FlorianLebrun.png
+
+sf-explorer-team:
+  name: SF Explorer Team
+  title: SF Explorer Development Team
+  url: https://github.com/sf-explorer
+  image_url: https://github.com/nicolas-despres.png

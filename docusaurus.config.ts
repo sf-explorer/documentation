@@ -19,7 +19,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          //sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/sf-explorer/documentation/tree/master/',
         },
         blog: {
@@ -36,19 +36,30 @@ const config = {
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
-      //'docusaurus-lunr-search',
       {
         id: 'devops',
         path: 'devops',
         routeBasePath: 'devops',
-        //sidebarPath: './sidebarDevops.js',
-        // ... other options
+        sidebarPath: require.resolve('./sidebarDevops.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'genai',
+        path: 'genai',
+        routeBasePath: 'genai',
+        sidebarPath: require.resolve('./sidebarGenAI.js'),
       },
     ],
     [require.resolve("docusaurus-lunr-search"), {
       enableHighlight: true
     }]
   ],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -67,6 +78,7 @@ const config = {
             label: 'Explorer',
           },
           { to: 'devops', label: 'DevOps Center', position: 'left' },
+          { to: 'genai', label: 'GenAI Explorer', position: 'left' },
           { to: 'blog', label: 'Blog', position: 'left' },
         ]
       },

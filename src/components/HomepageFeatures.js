@@ -19,21 +19,18 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_mind_map_re_nlb6.svg').default,
     description: (
       <>
-        Retrieve <Link to="/docs/explore/OrgDetails/">key information</Link> on the objects you use the most.
+        Retrieve key information on the objects you use the most.
       </>
     ),
   },
- 
+
   {
     title: 'Explore Data',
     version: '0.1.0',
     Svg: require('../../static/img/undraw_server_down_s4lk.svg').default,
     description: (
       <>
-        Chain requests and <Link
-          to={`/docs/explore`}>
-          Query data
-        </Link> across multiple orgs with ease
+        Chain requests and query data across multiple orgs with ease
       </>
     ),
   },
@@ -43,7 +40,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_security_on_re_e491.svg').default,
     description: (
       <>
-       Explore your org  <Link to="/docs/Security/">security model</Link> with an interactive UI to make the bridge between theory and practice  
+       Explore your org security model with an interactive UI to make the bridge between theory and practice  
        
       </>
     ),
@@ -54,11 +51,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_pair_programming_re_or4x.svg').default,
     description: (
       <>
-        Extract JSDoc information <Link
-          to={`/docs/Code/LWC`}>
-          from your LWCs
-        </Link> and  <Link
-          to={`/docs/Develop/Apex`}>your Apex</Link> to generate a status report
+        Extract JSDoc information from your LWCs and your Apex to generate a status report
       </>
     ),
   },
@@ -68,16 +61,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_dev_focus_re_6iwt.svg').default,
     description: (
       <>
-        Get an overview of your <Link
-          to={`/docs/Configure/Industries/Omniscript`}>
-          omniscripts
-        </Link>, <Link
-          to={`/docs/Configure/Industries/DataRaptor`}>
-          DataRaptors
-        </Link>  and your  <Link
-          to={`/docs/Configure/Industries/Flexcard`}>
-          flexcards
-        </Link>
+        Get an overview of your omniscripts, DataRaptors and your flexcards
       </>
     ),
   },
@@ -87,7 +71,7 @@ const FeatureList = [
     Svg: require('../../static/img/packaging.svg').default,
     description: (
       <>
-        Explore <Link to="/docs/Configure/Industries/Insurance%20Product" >Insurance Products</Link> with their coverage, attributes, rules and dependencies
+        Explore Insurance Products with their coverage, attributes, rules and dependencies
       </>
     ),
   },
@@ -97,7 +81,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_firmware_re_fgdy.svg').default,
     description: (
       <>
-        Get <Link to="/docs/OpenAI/useCases">Contextualized help</Link> with ChatGPT to facilitate your work.
+        Get contextualized help with ChatGPT to facilitate your work.
       </>
     ),
   },
@@ -107,7 +91,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_split_testing_l1uw.svg').default,
     description: (
       <>
-        Compare any other record in your orgs such as <Link to="/docs/Develop/Flexipage/">Flexipages</Link>, accounts or Flows.
+        Compare any other record in your orgs such as Flexipages, accounts or Flows.
       </>
     ),
   },
@@ -117,7 +101,7 @@ const FeatureList = [
     Svg: require('../../static/img/graphQL.svg').default,
     description: (
       <>
-        Browse your org using <Link to="/docs/Explore/GraphQL/">GraphQL</Link> and generate LWC starters accordingly
+        Browse your org using GraphQL and generate LWC starters accordingly
       </>
     ),
   },
