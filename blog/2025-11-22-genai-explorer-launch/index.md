@@ -167,6 +167,12 @@ We take your data security seriously:
 
 ### Installation
 
+**🎉 Now Available on Chrome Web Store!**
+
+Install GenAI Explorer directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag) with one click!
+
+Or use the web version:
+
 1. Create a connected app in your org following the official salesforce doc: https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html
 2. Give some right to your API only user (Datacloud user, prompt user)
 3. Visit https://app.sf-explorer.com/gen-ai.html

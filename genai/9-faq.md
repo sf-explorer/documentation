@@ -31,10 +31,13 @@ Contact your Salesforce administrator if you don't have these permissions.
 
 ### How do I install GenAI Explorer?
 
-1. Visit the Chrome Web Store
-2. Search for "GenAI Explorer"
-3. Click "Add to Chrome"
-4. Click the extension icon and connect to your Salesforce org
+**Chrome Extension (Recommended):**
+1. Visit the [GenAI Explorer Chrome Web Store page](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag)
+2. Click "Add to Chrome"
+3. Click the extension icon and connect to your Salesforce org
+
+**Web Application:**
+Visit https://app.sf-explorer.com/gen-ai.html to use GenAI Explorer without installing an extension
 
 ### Can I use GenAI Explorer in multiple orgs?
 

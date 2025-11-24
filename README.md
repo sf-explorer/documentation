@@ -15,3 +15,21 @@ Productivity tool for Salesforce admins and devs
 * Org security analysis
 * ChatGPT native integration (optional)
 * and more...
+
+---
+
+## 🤖 GenAI Explorer
+
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue)](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag)
+
+**NEW!** [GenAI Explorer](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag) is a specialized Chrome extension for exploring, testing, and monitoring Salesforce Generative AI capabilities:
+
+* 💬 Chat with Agentforce agents in real-time
+* 🤖 Browse AI configuration (agents, topics, actions)
+* 🧠 Visualize Atlas Reasoning Engine pipeline
+* 🔬 Test Einstein AI models side-by-side
+* ☁️ Query Data Cloud for AI analytics
+* 🎨 Create visual documentation boards
+* 📊 Monitor AI performance and token usage
+
+[Read the full announcement →](https://app.sf-explorer.com/blog/introducing-genai-explorer)
