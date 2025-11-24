@@ -158,6 +158,9 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-getting-started">🚦 Getting Started<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#-getting-started" class="hash-link" aria-label="Direct link to 🚦 Getting Started" title="Direct link to 🚦 Getting Started">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="installation">Installation<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#installation" class="hash-link" aria-label="Direct link to Installation" title="Direct link to Installation">​</a></h3>
+<p><strong>🎉 Now Available on Chrome Web Store!</strong></p>
+<p>Install GenAI Explorer directly from the <a href="https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag" target="_blank" rel="noopener noreferrer">Chrome Web Store</a> with one click!</p>
+<p>Or use the web version:</p>
 <ol>
 <li>Create a connected app in your org following the official salesforce doc: <a href="https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html" target="_blank" rel="noopener noreferrer">https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html</a></li>
 <li>Give some right to your API only user (Datacloud user, prompt user)</li>
