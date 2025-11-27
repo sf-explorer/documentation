@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-Features/Testing Center/adding-test-cases" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Adding Test Cases | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:image" content="http://info.sf-explorer.com/img/demo.png"><meta data-rh="true" name="twitter:image" content="http://info.sf-explorer.com/img/demo.png"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/adding-test-cases"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="Adding Test Cases | SF Explorer"><meta data-rh="true" name="description" content="Create new test cases from scratch or convert real agent interactions into tests with multi-select support."><meta data-rh="true" property="og:description" content="Create new test cases from scratch or convert real agent interactions into tests with multi-select support."><meta data-rh="true" name="keywords" content="agentforce,test cases,test creation,interaction history,bulk creation"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/adding-test-cases"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/adding-test-cases" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/adding-test-cases" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Adding Test Cases","item":"http://info.sf-explorer.com/genai/adding-test-cases"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.70d1fab2.js" defer="defer"></script>
+<script src="/assets/js/main.ca2cd6f9.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/genai/conversation-history">Features</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/genai/conversation-history">Conversation History</a><button aria-label="Expand sidebar category &#x27;Conversation History&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/genai/configuration-explorer">Agent blueprint</a><button aria-label="Expand sidebar category &#x27;Agent blueprint&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/genai/test-case-editing">Testing Center</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/test-case-editing">Test Case Editing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/genai/adding-test-cases">Adding Test Cases</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/data-cloud-integration">Data Cloud Integration</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Features</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Testing Center</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Adding Test Cases</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Adding Test Cases</h1></header>
+<p>Create comprehensive test suites by building test cases from scratch or converting real agent interactions into reusable tests.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Creating comprehensive test suites manually is time-consuming and often misses edge cases.</strong></p>
+<p>When testing AI agents, teams struggle with:</p>
+<ul>
+<li>⏱️ <strong>Time Consuming</strong>: Manually writing dozens of test cases</li>
+<li>🔍 <strong>Missing Coverage</strong>: Hard to think of all possible user inputs</li>
+<li>🎯 <strong>Real-World Gaps</strong>: Test cases don&#x27;t match actual user behavior</li>
+<li>📝 <strong>Repetitive Work</strong>: Copy-pasting from interaction logs</li>
+<li>🔄 <strong>Iteration Speed</strong>: Slow to expand test coverage</li>
+<li>💡 <strong>Discovery</strong>: Not knowing what to test until users try it</li>
+</ul>
+<p><strong>In short</strong>: You need a fast way to build comprehensive test suites that reflect real user interactions.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p>GenAI Explorer provides <strong>flexible test case creation</strong> with:</p>
+<p>✅ <strong>Dual Creation Modes</strong></p>
+<ul>
+<li>Create from scratch with manual input</li>
+<li>Convert real interactions into test cases automatically</li>
+</ul>
+<p>✅ <strong>Smart Action Filtering</strong></p>
+<ul>
+<li>Actions automatically filtered by selected topic</li>
+<li>Multi-select checkbox interface</li>
+<li>See available actions per topic instantly</li>
+</ul>
+<p>✅ <strong>Bulk Creation</strong></p>
+<ul>
+<li>Select multiple interactions at once</li>
+<li>Create 10+ test cases in seconds</li>
+<li>Visual feedback for selections</li>
+</ul>
+<p>✅ <strong>Rich History View</strong></p>
+<ul>
+<li>See recent agent sessions</li>
+<li>Review topics, actions, and responses</li>
+<li>Filter by timestamp and channel</li>
+<li>Preview full conversations</li>
+</ul>
+<p>✅ <strong>Seamless Integration</strong></p>
+<ul>
+<li>One-click &quot;Add Test Case&quot; button</li>
+<li>Auto-numbering for new cases</li>
+<li>Immediate save integration</li>
+<li>Auto-recalculation of matches</li>
+</ul>
+<p><strong>Impact:</strong> Create test suites 10x faster, improve coverage by 300%, capture real user scenarios automatically.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Add Test Case feature provides two powerful ways to create test cases: manual creation for specific scenarios, and automatic creation from real agent interactions for comprehensive coverage.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-the-feature">Accessing the Feature<a href="#accessing-the-feature" class="hash-link" aria-label="Direct link to Accessing the Feature" title="Direct link to Accessing the Feature">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="location">Location<a href="#location" class="hash-link" aria-label="Direct link to Location" title="Direct link to Location">​</a></h3>
+<p>The &quot;Add Test Case&quot; button is located in the test cases table toolbar (top right).</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌────────── ──────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 📋 5 test cases • 3 types  [🔄 Refresh] [+ Add]   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                    │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ [Test cases table...]                              │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└────────────────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>Button</strong>: Blue button with &quot;+&quot; icon labeled &quot;Add Test Case&quot;</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="when-to-use-each-mode">When to Use Each Mode<a href="#when-to-use-each-mode" class="hash-link" aria-label="Direct link to When to Use Each Mode" title="Direct link to When to Use Each Mode">​</a></h3>
+<p><strong>From Scratch:</strong></p>
+<ul>
+<li>Testing specific edge cases</li>
+<li>Creating targeted validation tests</li>
+<li>Documenting expected behavior</li>
+<li>Building baseline test cases</li>
+</ul>
+<p><strong>From History:</strong></p>
+<ul>
+<li>Capturing real user scenarios</li>
+<li>Expanding test coverage quickly</li>
+<li>Documenting actual agent behavior</li>
+<li>Creating regression tests</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mode-1-create-from-scratch">Mode 1: Create from Scratch<a href="#mode-1-create-from-scratch" class="hash-link" aria-label="Direct link to Mode 1: Create from Scratch" title="Direct link to Mode 1: Create from Scratch">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="overview-1">Overview<a href="#overview-1" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h3>
+<p>Build a test case manually by specifying the user utterance and expected outcomes.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fields">Fields<a href="#fields" class="hash-link" aria-label="Direct link to Fields" title="Direct link to Fields">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-user-utterance-required">1. User Utterance (Required)<a href="#1-user-utterance-required" class="hash-link" aria-label="Direct link to 1. User Utterance (Required)" title="Direct link to 1. User Utterance (Required)">​</a></h4>
+<p><strong>What it is:</strong> The question or statement the user sends to the agent.</p>
+<p><strong>Input:</strong> Multiline text field (2 rows)</p>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">What is my account balance?</span><br></span></code></pre></div></div>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Be specific and clear</li>
+<li>Use natural language</li>
+<li>Match how users actually speak</li>
+<li>Vary phrasing for similar tests</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-expected-topic-optional">2. Expected Topic (Optional)<a href="#2-expected-topic-optional" class="hash-link" aria-label="Direct link to 2. Expected Topic (Optional)" title="Direct link to 2. Expected Topic (Optional)">​</a></h4>
+<p><strong>What it is:</strong> The conversational topic you expect the agent to identify.</p>
+<p><strong>Input:</strong> Dropdown selector</p>
+<p><strong>Options:</strong> Loaded from your GenAiPlanner configuration</p>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BillingTopic  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">SupportTopic</span><br></span></code></pre></div></div>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Select a topic to enable action selection</li>
+<li>Choose the most specific topic</li>
+<li>Leave blank if topic doesn&#x27;t matter</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="3-expected-actions-optional">3. Expected Actions (Optional)<a href="#3-expected-actions-optional" class="hash-link" aria-label="Direct link to 3. Expected Actions (Optional)" title="Direct link to 3. Expected Actions (Optional)">​</a></h4>
+<p><strong>What it is:</strong> The actions you expect the agent to execute.</p>
+<p><strong>Input:</strong> Multi-select with checkboxes</p>
+<p><strong>Behavior:</strong></p>
+<ul>
+<li><strong>Disabled</strong> until topic is selected</li>
+<li><strong>Filtered</strong> to show only actions from selected topic</li>
+<li><strong>Shows count:</strong> &quot;5 action(s) available from &#x27;ServiceTopic&#x27;&quot;</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Selected Topic: ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Available Actions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☑ GetBalance</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☑ TransferFunds</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ CheckAccountLimit</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ UpdateProfile</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ ResetPassword</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2 actions selected</span><br></span></code></pre></div></div>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Select topic first</li>
+<li>Choose all actions the agent should execute</li>
+<li>Order doesn&#x27;t matter</li>
+<li>Can select 1+ actions</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="4-expected-bot-response-optional">4. Expected Bot Response (Optional)<a href="#4-expected-bot-response-optional" class="hash-link" aria-label="Direct link to 4. Expected Bot Response (Optional)" title="Direct link to 4. Expected Bot Response (Optional)">​</a></h4>
+<p><strong>What it is:</strong> The text response you expect from the agent.</p>
+<p><strong>Input:</strong> Multiline textarea (3 rows)</p>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Your balance is $1,234.56. You have available credit of $500.</span><br></span></code></pre></div></div>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>Be specific about key information</li>
+<li>Can be partial or full match</li>
+<li>Leave blank if response text doesn&#x27;t matter</li>
+<li>Focus on factual content</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow">Workflow<a href="#workflow" class="hash-link" aria-label="Direct link to Workflow" title="Direct link to Workflow">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Step 1: Click &quot;Add Test Case&quot; button</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 2: Select &quot;Create from Scratch&quot; tab</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 3: Fill in fields:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   - Utterance (required)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   - Topic (optional)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   - Actions (optional, needs topic first)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   - Response (optional)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 4: Click &quot;Add Test Case&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Result: New test case added to table</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="complete-example">Complete Example<a href="#complete-example" class="hash-link" aria-label="Direct link to Complete Example" title="Direct link to Complete Example">​</a></h3>
+<p><strong>Input:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Utterance: &quot;I need to transfer $500 to my savings&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Topic: &quot;TransferTopic&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Actions: [&quot;ValidateAccount&quot;, &quot;TransferFunds&quot;, &quot;SendConfirmation&quot;]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Response: &quot;Successfully transferred $500 to your savings account.&quot;</span><br></span></code></pre></div></div>
+<p><strong>Generated Test Case:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;number&quot;: &quot;6&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;inputs&quot;: {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &quot;utterance&quot;: &quot;I need to transfer $500 to my savings&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;expectation&quot;: [</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;name&quot;: &quot;topic_sequence_match&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;expectedValue&quot;: &quot;TransferTopic&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;name&quot;: &quot;action_sequence_match&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;expectedValue&quot;: &quot;[&#x27;ValidateAccount&#x27;, &#x27;TransferFunds&#x27;, &#x27;SendConfirmation&#x27;]&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    },</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;name&quot;: &quot;bot_response_rating&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      &quot;expectedValue&quot;: &quot;Successfully transferred $500 to your savings account.&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mode-2-select-from-history">Mode 2: Select from History<a href="#mode-2-select-from-history" class="hash-link" aria-label="Direct link to Mode 2: Select from History" title="Direct link to Mode 2: Select from History">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="overview-2">Overview<a href="#overview-2" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h3>
+<p>Convert real agent interactions into test cases by selecting from recent sessions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="loading-process">Loading Process<a href="#loading-process" class="hash-link" aria-label="Direct link to Loading Process" title="Direct link to Loading Process">​</a></h3>
+<p>When you switch to the &quot;Select from History&quot; tab:</p>
+<p><strong>Step 1: Find Sessions</strong></p>
+<ul>
+<li>Queries recent sessions for your agent</li>
+<li>Limited to last 50 sessions</li>
+<li>Sorted by timestamp (newest first)</li>
+</ul>
+<p><strong>Step 2: Load Interactions</strong></p>
+<ul>
+<li>Gets all interactions from found sessions</li>
+<li>Limited to last 100 interactions</li>
+<li>Filters by agent name</li>
+</ul>
+<p><strong>Step 3: Load Related Data</strong></p>
+<ul>
+<li>Input/output messages</li>
+<li>Action steps</li>
+<li>Topics</li>
+<li>Channel information</li>
+</ul>
+<p><strong>Step 4: Display</strong></p>
+<ul>
+<li>Combines all data per interaction</li>
+<li>Shows rich preview of each</li>
+<li>Ready for selection</li>
+</ul>
+<p><strong>Loading Time:</strong> Usually 2-5 seconds depending on data volume.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="interaction-display">Interaction Display<a href="#interaction-display" class="hash-link" aria-label="Direct link to Interaction Display" title="Direct link to Interaction Display">​</a></h3>
+<p>Each interaction card shows:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ☐ &quot;What is my account balance?&quot;                  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ [ServiceTopic] [GetBalance] [CheckLimit] [Chat] │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ Your current balance is $1,234.56. You have   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ available credit of $500.                     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 11/26/2025, 2:30:15 PM                          │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>Components:</strong></p>
+<ol>
+<li><strong>Checkbox</strong> - Click to select/deselect</li>
+<li><strong>Utterance</strong> - User&#x27;s question (bold, quoted)</li>
+<li><strong>Chips:</strong>
+<ul>
+<li>🔵 Blue: Topics</li>
+<li>🟣 Purple: Actions</li>
+<li>⚪ Gray: Channel (Chat, Voice, etc.)</li>
+</ul>
+</li>
+<li><strong>Response Preview</strong> - Bot&#x27;s response (first 150 chars, italic, bordered)</li>
+<li><strong>Timestamp</strong> - When the interaction occurred</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="selection-behavior">Selection Behavior<a href="#selection-behavior" class="hash-link" aria-label="Direct link to Selection Behavior" title="Direct link to Selection Behavior">​</a></h3>
+<p><strong>Click anywhere on card:</strong> Toggles selection</p>
+<p><strong>Selected state:</strong></p>
+<ul>
+<li>✅ Checkbox checked</li>
+<li>🔵 Blue border (2px)</li>
+<li>💙 Light blue background</li>
+</ul>
+<p><strong>Unselected state:</strong></p>
+<ul>
+<li>☐ Checkbox unchecked</li>
+<li>⚪ Gray border (1px)</li>
+<li>⚪ White background</li>
+</ul>
+<p><strong>Counter:</strong> &quot;(X selected)&quot; shown at top</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multi-select-example">Multi-Select Example<a href="#multi-select-example" class="hash-link" aria-label="Direct link to Multi-Select Example" title="Direct link to Multi-Select Example">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">User clicks 3 interactions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✓ Interaction 1: &quot;What is my balance?&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   Topics: [ServiceTopic]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   Actions: [GetBalance]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✓ Interaction 2: &quot;Transfer $500&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   Topics: [TransferTopic]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   Actions: [ValidateAccount, TransferFunds]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✓ Interaction 3: &quot;Reset my password&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   Topics: [SecurityTopic]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   Actions: [ValidateIdentity, ResetPassword]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Clicks &quot;Add 3 Test Cases&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">System creates:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   1. Test case #6: Balance inquiry</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   2. Test case #7: Fund transfer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   3. Test case #8: Password reset</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-1">Workflow<a href="#workflow-1" class="hash-link" aria-label="Direct link to Workflow" title="Direct link to Workflow">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Step 1: Click &quot;Add Test Case&quot; button</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 2: Select &quot;Select from History&quot; tab</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 3: Wait for interactions to load (2-5 seconds)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 4: Review available interactions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 5: Click to select one or more</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 6: Click &quot;Add X Test Case(s)&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Result: X new test cases added to table</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="benefits">Benefits<a href="#benefits" class="hash-link" aria-label="Direct link to Benefits" title="Direct link to Benefits">​</a></h3>
+<p><strong>Speed:</strong></p>
+<ul>
+<li>Create 10+ test cases in under a minute</li>
+<li>No manual typing required</li>
+<li>Automatic expectation extraction</li>
+</ul>
+<p><strong>Accuracy:</strong></p>
+<ul>
+<li>Based on real interactions</li>
+<li>Captures actual topics and actions</li>
+<li>Preserves real bot responses</li>
+</ul>
+<p><strong>Coverage:</strong></p>
+<ul>
+<li>Tests reflect real user behavior</li>
+<li>Discovers edge cases you might miss</li>
+<li>Documents what actually works</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="common-workflows">Common Workflows<a href="#common-workflows" class="hash-link" aria-label="Direct link to Common Workflows" title="Direct link to Common Workflows">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-1-quick-start-from-scratch">Workflow 1: Quick Start (From Scratch)<a href="#workflow-1-quick-start-from-scratch" class="hash-link" aria-label="Direct link to Workflow 1: Quick Start (From Scratch)" title="Direct link to Workflow 1: Quick Start (From Scratch)">​</a></h3>
+<p><strong>Scenario:</strong> You&#x27;re starting a new evaluation and want basic test cases.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click &quot;Add Test Case&quot;</li>
+<li>Tab: &quot;Create from Scratch&quot;</li>
+<li>Enter 3-5 common utterances</li>
+<li>Add topics and actions for each</li>
+<li>Click &quot;Add Test Case&quot; for each</li>
+<li>Click &quot;Save&quot; in main view</li>
+</ol>
+<p><strong>Time:</strong> 5-10 minutes for 5 test cases</p>
+<p><strong>Result:</strong> Baseline test suite ready to run</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-2-capture-production-behavior">Workflow 2: Capture Production Behavior<a href="#workflow-2-capture-production-behavior" class="hash-link" aria-label="Direct link to Workflow 2: Capture Production Behavior" title="Direct link to Workflow 2: Capture Production Behavior">​</a></h3>
+<p><strong>Scenario:</strong> Your agent has been running in production, you want to test actual scenarios.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click &quot;Add Test Case&quot;</li>
+<li>Tab: &quot;Select from History&quot;</li>
+<li>Review recent interactions</li>
+<li>Select all successful ones (5-15)</li>
+<li>Click &quot;Add X Test Cases&quot;</li>
+<li>Review in table</li>
+<li>Click &quot;Save&quot;</li>
+</ol>
+<p><strong>Time:</strong> 2-3 minutes for 15 test cases</p>
+<p><strong>Result:</strong> Comprehensive test suite from real data</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-3-regression-testing">Workflow 3: Regression Testing<a href="#workflow-3-regression-testing" class="hash-link" aria-label="Direct link to Workflow 3: Regression Testing" title="Direct link to Workflow 3: Regression Testing">​</a></h3>
+<p><strong>Scenario:</strong> You changed your agent, want to ensure it still handles previous scenarios.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Before changes: Add test cases from history</li>
+<li>Save the evaluation</li>
+<li>Make agent changes</li>
+<li>Run tests</li>
+<li>See what broke</li>
+<li>Fix agent or update expectations</li>
+</ol>
+<p><strong>Time:</strong> Initial setup 5 minutes, ongoing validation seconds</p>
+<p><strong>Result:</strong> Confidence that changes didn&#x27;t break existing behavior</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-4-edge-case-testing">Workflow 4: Edge Case Testing<a href="#workflow-4-edge-case-testing" class="hash-link" aria-label="Direct link to Workflow 4: Edge Case Testing" title="Direct link to Workflow 4: Edge Case Testing">​</a></h3>
+<p><strong>Scenario:</strong> You discovered an edge case, want to add it to your suite.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Test the edge case with your agent</li>
+<li>Click &quot;Add Test Case&quot;</li>
+<li>Tab: &quot;Select from History&quot;</li>
+<li>Find the recent interaction</li>
+<li>Select it</li>
+<li>Click &quot;Add Test Case&quot;</li>
+<li>Save</li>
+</ol>
+<p><strong>Time:</strong> 1 minute</p>
+<p><strong>Result:</strong> Edge case permanently captured in test suite</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-5-coverage-expansion">Workflow 5: Coverage Expansion<a href="#workflow-5-coverage-expansion" class="hash-link" aria-label="Direct link to Workflow 5: Coverage Expansion" title="Direct link to Workflow 5: Coverage Expansion">​</a></h3>
+<p><strong>Scenario:</strong> You want comprehensive coverage across all topics.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Chat with agent covering all topics</li>
+<li>Click &quot;Add Test Case&quot;</li>
+<li>Tab: &quot;Select from History&quot;</li>
+<li>Select one interaction per topic</li>
+<li>Click &quot;Add X Test Cases&quot;</li>
+<li>Verify coverage in table</li>
+<li>Save</li>
+</ol>
+<p><strong>Time:</strong> 10 minutes (including chatting)</p>
+<p><strong>Result:</strong> Full topic coverage in test suite</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tips-and-best-practices">Tips and Best Practices<a href="#tips-and-best-practices" class="hash-link" aria-label="Direct link to Tips and Best Practices" title="Direct link to Tips and Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="creating-from-scratch">Creating from Scratch<a href="#creating-from-scratch" class="hash-link" aria-label="Direct link to Creating from Scratch" title="Direct link to Creating from Scratch">​</a></h3>
+<p><strong>Do:</strong></p>
+<ul>
+<li>✅ Use natural language</li>
+<li>✅ Be specific with utterances</li>
+<li>✅ Select topic before actions</li>
+<li>✅ Focus on key response content</li>
+</ul>
+<p><strong>Don&#x27;t:</strong></p>
+<ul>
+<li>❌ Use robotic or formal language</li>
+<li>❌ Leave utterance blank</li>
+<li>❌ Select actions without a topic</li>
+<li>❌ Expect exact response matches</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="selecting-from-history">Selecting from History<a href="#selecting-from-history" class="hash-link" aria-label="Direct link to Selecting from History" title="Direct link to Selecting from History">​</a></h3>
+<p><strong>Do:</strong></p>
+<ul>
+<li>✅ Review interactions before selecting</li>
+<li>✅ Select diverse scenarios</li>
+<li>✅ Check timestamps (use recent data)</li>
+<li>✅ Bulk select related interactions</li>
+</ul>
+<p><strong>Don&#x27;t:</strong></p>
+<ul>
+<li>❌ Select failed interactions blindly</li>
+<li>❌ Ignore the response preview</li>
+<li>❌ Select too many at once (review first)</li>
+<li>❌ Forget to save after adding</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="after-adding">After Adding<a href="#after-adding" class="hash-link" aria-label="Direct link to After Adding" title="Direct link to After Adding">​</a></h3>
+<p><strong>Do:</strong></p>
+<ul>
+<li>✅ Review new test cases in table</li>
+<li>✅ Click &quot;Save&quot; to persist</li>
+<li>✅ Run tests to validate</li>
+<li>✅ Edit expectations if needed</li>
+</ul>
+<p><strong>Don&#x27;t:</strong></p>
+<ul>
+<li>❌ Add too many without saving</li>
+<li>❌ Skip validation</li>
+<li>❌ Forget about auto-numbering</li>
+<li>❌ Ignore session match results</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="error-handling">Error Handling<a href="#error-handling" class="hash-link" aria-label="Direct link to Error Handling" title="Direct link to Error Handling">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-sessions-found">No Sessions Found<a href="#no-sessions-found" class="hash-link" aria-label="Direct link to No Sessions Found" title="Direct link to No Sessions Found">​</a></h3>
+<p><strong>Error:</strong> &quot;No sessions found for agent: MyAgent&quot;</p>
+<p><strong>Cause:</strong> No sessions exist for this agent yet.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Chat with your agent first</li>
+<li>Wait for sessions to sync (~1 minute)</li>
+<li>Try again</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-interactions-found">No Interactions Found<a href="#no-interactions-found" class="hash-link" aria-label="Direct link to No Interactions Found" title="Direct link to No Interactions Found">​</a></h3>
+<p><strong>Error:</strong> &quot;No interactions found for recent sessions&quot;</p>
+<p><strong>Cause:</strong> Sessions exist but have no interactions.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Ensure agent is properly configured</li>
+<li>Check that interactions are being recorded</li>
+<li>Verify Data Cloud setup</li>
+<li>Contact admin if persistent</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="load-failed">Load Failed<a href="#load-failed" class="hash-link" aria-label="Direct link to Load Failed" title="Direct link to Load Failed">​</a></h3>
+<p><strong>Error:</strong> &quot;Failed to load interactions: [error message]&quot;</p>
+<p><strong>Cause:</strong> API error, permission issue, or network problem.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Check Salesforce connection</li>
+<li>Verify user has read access to Data Cloud</li>
+<li>Retry loading</li>
+<li>Check browser console for details</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="empty-utterance">Empty Utterance<a href="#empty-utterance" class="hash-link" aria-label="Direct link to Empty Utterance" title="Direct link to Empty Utterance">​</a></h3>
+<p><strong>Alert:</strong> &quot;Please enter an utterance&quot;</p>
+<p><strong>Cause:</strong> User didn&#x27;t fill in required field.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Enter a user question in the utterance field</li>
+<li>Try adding again</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-selection">No Selection<a href="#no-selection" class="hash-link" aria-label="Direct link to No Selection" title="Direct link to No Selection">​</a></h3>
+<p><strong>Alert:</strong> &quot;Please select at least one interaction&quot;</p>
+<p><strong>Cause:</strong> User tried to add from history without selecting.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Click to select one or more interactions</li>
+<li>Checkbox should be checked</li>
+<li>Try adding again</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="technical-details">Technical Details<a href="#technical-details" class="hash-link" aria-label="Direct link to Technical Details" title="Direct link to Technical Details">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="test-case-numbering">Test Case Numbering<a href="#test-case-numbering" class="hash-link" aria-label="Direct link to Test Case Numbering" title="Direct link to Test Case Numbering">​</a></h3>
+<p><strong>Automatic:</strong></p>
+<ul>
+<li>System finds highest existing number</li>
+<li>Increments by 1 for each new case</li>
+<li>Example: If you have tests 1-5, new tests are 6, 7, 8, etc.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="expectation-formatting">Expectation Formatting<a href="#expectation-formatting" class="hash-link" aria-label="Direct link to Expectation Formatting" title="Direct link to Expectation Formatting">​</a></h3>
+<p><strong>Topic:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;name&quot;: &quot;topic_sequence_match&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;expectedValue&quot;: &quot;ServiceTopic&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Actions:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;name&quot;: &quot;action_sequence_match&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;expectedValue&quot;: &quot;[&#x27;GetBalance&#x27;, &#x27;TransferFunds&#x27;]&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p><strong>Response:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;name&quot;: &quot;bot_response_rating&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &quot;expectedValue&quot;: &quot;Your balance is $1,234.56&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-sources">Data Sources<a href="#data-sources" class="hash-link" aria-label="Direct link to Data Sources" title="Direct link to Data Sources">​</a></h3>
+<p><strong>From Scratch:</strong></p>
+<ul>
+<li>Manual user input only</li>
+</ul>
+<p><strong>From History:</strong></p>
+<ul>
+<li><code>ssot__AiAgentSession__dlm</code> - Sessions</li>
+<li><code>ssot__AiAgentInteraction__dlm</code> - Interactions</li>
+<li><code>ssot__AiAgentInteractionMessage__dlm</code> - Messages</li>
+<li><code>ssot__AiAgentInteractionStep__dlm</code> - Steps</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="query-limits">Query Limits<a href="#query-limits" class="hash-link" aria-label="Direct link to Query Limits" title="Direct link to Query Limits">​</a></h3>
+<ul>
+<li><strong>Sessions:</strong> Last 50</li>
+<li><strong>Interactions:</strong> Last 100</li>
+<li><strong>Messages:</strong> All for selected interactions</li>
+<li><strong>Steps:</strong> All for selected interactions</li>
+</ul>
+<p><strong>Why limits?</strong></p>
+<ul>
+<li>Performance (faster loading)</li>
+<li>Relevance (recent data)</li>
+<li>UX (manageable list size)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="keyboard-shortcuts">Keyboard Shortcuts<a href="#keyboard-shortcuts" class="hash-link" aria-label="Direct link to Keyboard Shortcuts" title="Direct link to Keyboard Shortcuts">​</a></h2>
+<p><em>Coming soon:</em></p>
+<ul>
+<li><code>Ctrl/Cmd + K</code> - Open add dialog</li>
+<li><code>Ctrl/Cmd + Enter</code> - Add test case</li>
+<li><code>Space</code> - Toggle selection (history mode)</li>
+<li><code>Esc</code> - Close dialog</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-add-test-cases-in-bulk-from-scratch">Q: Can I add test cases in bulk from scratch?<a href="#q-can-i-add-test-cases-in-bulk-from-scratch" class="hash-link" aria-label="Direct link to Q: Can I add test cases in bulk from scratch?" title="Direct link to Q: Can I add test cases in bulk from scratch?">​</a></h3>
+<p><strong>A:</strong> Not directly in one action, but you can quickly add multiple by clicking &quot;Add Test Case&quot; after each entry. For bulk, use the history mode.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-how-many-interactions-can-i-select-at-once">Q: How many interactions can I select at once?<a href="#q-how-many-interactions-can-i-select-at-once" class="hash-link" aria-label="Direct link to Q: How many interactions can I select at once?" title="Direct link to Q: How many interactions can I select at once?">​</a></h3>
+<p><strong>A:</strong> There&#x27;s no hard limit, but we recommend reviewing them first. Selecting 10-20 at a time is typical.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-do-i-need-to-save-after-adding">Q: Do I need to save after adding?<a href="#q-do-i-need-to-save-after-adding" class="hash-link" aria-label="Direct link to Q: Do I need to save after adding?" title="Direct link to Q: Do I need to save after adding?">​</a></h3>
+<p><strong>A:</strong> Yes! Click &quot;Save&quot; in the main view to persist your changes to Salesforce. The &quot;isModified&quot; indicator will show if you have unsaved changes.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-edit-test-cases-after-adding">Q: Can I edit test cases after adding?<a href="#q-can-i-edit-test-cases-after-adding" class="hash-link" aria-label="Direct link to Q: Can I edit test cases after adding?" title="Direct link to Q: Can I edit test cases after adding?">​</a></h3>
+<p><strong>A:</strong> Yes, use the ✏️ Edit button on each test case row. See <a href="/genai/test-case-editing">Test Case Editing</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-what-if-the-history-is-empty">Q: What if the history is empty?<a href="#q-what-if-the-history-is-empty" class="hash-link" aria-label="Direct link to Q: What if the history is empty?" title="Direct link to Q: What if the history is empty?">​</a></h3>
+<p><strong>A:</strong> Chat with your agent first to create interactions, wait 1-2 minutes for data sync, then try loading history again.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-filter-or-search-history">Q: Can I filter or search history?<a href="#q-can-i-filter-or-search-history" class="hash-link" aria-label="Direct link to Q: Can I filter or search history?" title="Direct link to Q: Can I filter or search history?">​</a></h3>
+<p><strong>A:</strong> Not yet, but it&#x27;s on the roadmap. Currently shows most recent 100 interactions sorted by timestamp.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-what-happens-if-i-close-the-dialog-without-adding">Q: What happens if I close the dialog without adding?<a href="#q-what-happens-if-i-close-the-dialog-without-adding" class="hash-link" aria-label="Direct link to Q: What happens if I close the dialog without adding?" title="Direct link to Q: What happens if I close the dialog without adding?">​</a></h3>
+<p><strong>A:</strong> All selections and inputs are discarded. Nothing is added to your test suite.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-see-the-full-conversation-for-an-interaction">Q: Can I see the full conversation for an interaction?<a href="#q-can-i-see-the-full-conversation-for-an-interaction" class="hash-link" aria-label="Direct link to Q: Can I see the full conversation for an interaction?" title="Direct link to Q: Can I see the full conversation for an interaction?">​</a></h3>
+<p><strong>A:</strong> Currently shows a preview. Full conversation view is planned for a future release.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-how-do-i-know-which-interactions-are-good-test-cases">Q: How do I know which interactions are good test cases?<a href="#q-how-do-i-know-which-interactions-are-good-test-cases" class="hash-link" aria-label="Direct link to Q: How do I know which interactions are good test cases?" title="Direct link to Q: How do I know which interactions are good test cases?">​</a></h3>
+<p><strong>A:</strong> Look for:</p>
+<ul>
+<li>✅ Successful interactions (not errors)</li>
+<li>✅ Clear user intent</li>
+<li>✅ Representative of real use</li>
+<li>✅ Diverse topics and actions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-import-test-cases-from-a-file">Q: Can I import test cases from a file?<a href="#q-can-i-import-test-cases-from-a-file" class="hash-link" aria-label="Direct link to Q: Can I import test cases from a file?" title="Direct link to Q: Can I import test cases from a file?">​</a></h3>
+<p><strong>A:</strong> Not yet, but CSV/JSON import is on the roadmap.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<ul>
+<li><a href="/genai/test-case-editing">Test Case Editing</a> - Refine your test cases</li>
+<li><a href="/genai/einstein-model-testing">Einstein Model Testing</a> - Run your tests</li>
+<li><a href="/genai/conversation-history">Conversation History</a> - Explore interactions</li>
+</ul>
+<hr>
+<p><strong>Fast test case creation leads to comprehensive coverage and confident deployments!</strong></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/sf-explorer/documentation/tree/master/genai/Features/3. Testing Center/2-adding-test-cases.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2025-11-27T20:06:59.000Z" itemprop="dateModified">Nov 27, 2025</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/genai/test-case-editing"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Test Case Editing</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/genai/chat-with-agents"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Chat with Agents</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#accessing-the-feature" class="table-of-contents__link toc-highlight">Accessing the Feature</a><ul><li><a href="#location" class="table-of-contents__link toc-highlight">Location</a></li><li><a href="#when-to-use-each-mode" class="table-of-contents__link toc-highlight">When to Use Each Mode</a></li></ul></li><li><a href="#mode-1-create-from-scratch" class="table-of-contents__link toc-highlight">Mode 1: Create from Scratch</a><ul><li><a href="#overview-1" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#fields" class="table-of-contents__link toc-highlight">Fields</a></li><li><a href="#workflow" class="table-of-contents__link toc-highlight">Workflow</a></li><li><a href="#complete-example" class="table-of-contents__link toc-highlight">Complete Example</a></li></ul></li><li><a href="#mode-2-select-from-history" class="table-of-contents__link toc-highlight">Mode 2: Select from History</a><ul><li><a href="#overview-2" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#loading-process" class="table-of-contents__link toc-highlight">Loading Process</a></li><li><a href="#interaction-display" class="table-of-contents__link toc-highlight">Interaction Display</a></li><li><a href="#selection-behavior" class="table-of-contents__link toc-highlight">Selection Behavior</a></li><li><a href="#multi-select-example" class="table-of-contents__link toc-highlight">Multi-Select Example</a></li><li><a href="#workflow-1" class="table-of-contents__link toc-highlight">Workflow</a></li><li><a href="#benefits" class="table-of-contents__link toc-highlight">Benefits</a></li></ul></li><li><a href="#common-workflows" class="table-of-contents__link toc-highlight">Common Workflows</a><ul><li><a href="#workflow-1-quick-start-from-scratch" class="table-of-contents__link toc-highlight">Workflow 1: Quick Start (From Scratch)</a></li><li><a href="#workflow-2-capture-production-behavior" class="table-of-contents__link toc-highlight">Workflow 2: Capture Production Behavior</a></li><li><a href="#workflow-3-regression-testing" class="table-of-contents__link toc-highlight">Workflow 3: Regression Testing</a></li><li><a href="#workflow-4-edge-case-testing" class="table-of-contents__link toc-highlight">Workflow 4: Edge Case Testing</a></li><li><a href="#workflow-5-coverage-expansion" class="table-of-contents__link toc-highlight">Workflow 5: Coverage Expansion</a></li></ul></li><li><a href="#tips-and-best-practices" class="table-of-contents__link toc-highlight">Tips and Best Practices</a><ul><li><a href="#creating-from-scratch" class="table-of-contents__link toc-highlight">Creating from Scratch</a></li><li><a href="#selecting-from-history" class="table-of-contents__link toc-highlight">Selecting from History</a></li><li><a href="#after-adding" class="table-of-contents__link toc-highlight">After Adding</a></li></ul></li><li><a href="#error-handling" class="table-of-contents__link toc-highlight">Error Handling</a><ul><li><a href="#no-sessions-found" class="table-of-contents__link toc-highlight">No Sessions Found</a></li><li><a href="#no-interactions-found" class="table-of-contents__link toc-highlight">No Interactions Found</a></li><li><a href="#load-failed" class="table-of-contents__link toc-highlight">Load Failed</a></li><li><a href="#empty-utterance" class="table-of-contents__link toc-highlight">Empty Utterance</a></li><li><a href="#no-selection" class="table-of-contents__link toc-highlight">No Selection</a></li></ul></li><li><a href="#technical-details" class="table-of-contents__link toc-highlight">Technical Details</a><ul><li><a href="#test-case-numbering" class="table-of-contents__link toc-highlight">Test Case Numbering</a></li><li><a href="#expectation-formatting" class="table-of-contents__link toc-highlight">Expectation Formatting</a></li><li><a href="#data-sources" class="table-of-contents__link toc-highlight">Data Sources</a></li><li><a href="#query-limits" class="table-of-contents__link toc-highlight">Query Limits</a></li></ul></li><li><a href="#keyboard-shortcuts" class="table-of-contents__link toc-highlight">Keyboard Shortcuts</a></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a><ul><li><a href="#q-can-i-add-test-cases-in-bulk-from-scratch" class="table-of-contents__link toc-highlight">Q: Can I add test cases in bulk from scratch?</a></li><li><a href="#q-how-many-interactions-can-i-select-at-once" class="table-of-contents__link toc-highlight">Q: How many interactions can I select at once?</a></li><li><a href="#q-do-i-need-to-save-after-adding" class="table-of-contents__link toc-highlight">Q: Do I need to save after adding?</a></li><li><a href="#q-can-i-edit-test-cases-after-adding" class="table-of-contents__link toc-highlight">Q: Can I edit test cases after adding?</a></li><li><a href="#q-what-if-the-history-is-empty" class="table-of-contents__link toc-highlight">Q: What if the history is empty?</a></li><li><a href="#q-can-i-filter-or-search-history" class="table-of-contents__link toc-highlight">Q: Can I filter or search history?</a></li><li><a href="#q-what-happens-if-i-close-the-dialog-without-adding" class="table-of-contents__link toc-highlight">Q: What happens if I close the dialog without adding?</a></li><li><a href="#q-can-i-see-the-full-conversation-for-an-interaction" class="table-of-contents__link toc-highlight">Q: Can I see the full conversation for an interaction?</a></li><li><a href="#q-how-do-i-know-which-interactions-are-good-test-cases" class="table-of-contents__link toc-highlight">Q: How do I know which interactions are good test cases?</a></li><li><a href="#q-can-i-import-test-cases-from-a-file" class="table-of-contents__link toc-highlight">Q: Can I import test cases from a file?</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>

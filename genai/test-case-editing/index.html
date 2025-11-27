@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-genai docs-version-current docs-doc-page docs-doc-id-Features/Testing Center/test-case-editing" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Test Case Editing | SF Explorer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:image" content="http://info.sf-explorer.com/img/demo.png"><meta data-rh="true" name="twitter:image" content="http://info.sf-explorer.com/img/demo.png"><meta data-rh="true" property="og:url" content="http://info.sf-explorer.com/genai/test-case-editing"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-genai-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-genai-current"><meta data-rh="true" property="og:title" content="Test Case Editing | SF Explorer"><meta data-rh="true" name="description" content="Edit and manage AI agent test cases with side-by-side actual vs expected comparison, smart action filtering, and auto-recalculation."><meta data-rh="true" property="og:description" content="Edit and manage AI agent test cases with side-by-side actual vs expected comparison, smart action filtering, and auto-recalculation."><meta data-rh="true" name="keywords" content="agentforce,test cases,evaluation,testing,quality assurance,ai testing"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://info.sf-explorer.com/genai/test-case-editing"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/test-case-editing" hreflang="en"><link data-rh="true" rel="alternate" href="http://info.sf-explorer.com/genai/test-case-editing" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Test Case Editing","item":"http://info.sf-explorer.com/genai/test-case-editing"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SF Explorer RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SF Explorer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.be852234.css">
+<script src="/assets/js/runtime~main.70d1fab2.js" defer="defer"></script>
+<script src="/assets/js/main.ca2cd6f9.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/apple-touch-icon.png" alt="Explorer" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SF Explorer</b></a><a class="navbar__item navbar__link" href="/docs/intro">Explorer</a><a class="navbar__item navbar__link" href="/devops">DevOps Center</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/genai">GenAI Explorer</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_x44X"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div>Loading...</div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/">GenAI Explorer Overview</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/genai/faq">Frequently Asked Questions</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/genai/conversation-history">Features</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/genai/conversation-history">Conversation History</a><button aria-label="Expand sidebar category &#x27;Conversation History&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/genai/configuration-explorer">Agent blueprint</a><button aria-label="Expand sidebar category &#x27;Agent blueprint&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/atlas-reasoning-engine">Atlas Reasoning Engine</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/genai/test-case-editing">Testing Center</a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/genai/test-case-editing">Test Case Editing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/adding-test-cases">Adding Test Cases</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/chat-with-agents">Chat with Agents</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/einstein-model-testing">Einstein Model Testing</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/genai/data-cloud-integration">Data Cloud Integration</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Features</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Testing Center</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Test Case Editing</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Test Case Editing</h1></header>
+<p>Edit and refine your AI agent test cases with an intuitive interface that shows actual results alongside expected values, making it easy to update expectations and validate agent behavior.</p>
+<p><img decoding="async" loading="lazy" alt="Testing Center" src="/assets/images/testing_center-ce3f3a3826d0142a6216801de026c6d0.png" width="3214" height="1710" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-problem">The Problem<a href="#the-problem" class="hash-link" aria-label="Direct link to The Problem" title="Direct link to The Problem">​</a></h2>
+<p><strong>Testing AI agents requires constant refinement of test cases based on actual agent behavior.</strong></p>
+<p>When building and testing AI agents, teams face challenges:</p>
+<ul>
+<li>🔄 <strong>Iterative Refinement</strong>: Test expectations need frequent updates as agents evolve</li>
+<li>👀 <strong>Comparison Difficulty</strong>: Hard to compare expected vs actual results side-by-side</li>
+<li>⚡ <strong>Action Discovery</strong>: Finding which actions are available for a specific topic</li>
+<li>📝 <strong>Input Variations</strong>: Testing different phrasings of the same question</li>
+<li>🎯 <strong>Manual Verification</strong>: Time-consuming to verify each test result manually</li>
+<li>🔁 <strong>Status Updates</strong>: Need to re-run tests to see if changes fixed issues</li>
+</ul>
+<p><strong>In short</strong>: You need a streamlined way to edit test cases while comparing actual agent behavior with expected outcomes.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-genai-explorer-solves-this">How GenAI Explorer Solves This<a href="#how-genai-explorer-solves-this" class="hash-link" aria-label="Direct link to How GenAI Explorer Solves This" title="Direct link to How GenAI Explorer Solves This">​</a></h2>
+<p>GenAI Explorer provides <strong>comprehensive test case editing</strong> with:</p>
+<p>✅ <strong>Side-by-Side Comparison</strong>: See actual vs expected values in one glance</p>
+<ul>
+<li>Actual results on the LEFT (what the agent did)</li>
+<li>Expected values on the RIGHT (what you want)</li>
+<li>Natural left-to-right reading flow</li>
+</ul>
+<p>✅ <strong>Smart Action Filtering</strong>: Topic-aware action selection</p>
+<ul>
+<li>Multi-select checkboxes for actions</li>
+<li>Automatically filtered by selected topic</li>
+<li>Shows only relevant actions for the topic</li>
+</ul>
+<p>✅ <strong>Full Editability</strong>: Edit both inputs and outputs</p>
+<ul>
+<li>User utterance (question)</li>
+<li>Expected topic</li>
+<li>Expected actions (multi-select)</li>
+<li>Expected bot response</li>
+</ul>
+<p>✅ <strong>Auto-Recalculation</strong>: Instant feedback</p>
+<ul>
+<li>Test status recalculates after saving</li>
+<li>See pass/fail immediately</li>
+<li>No need to manually re-run tests</li>
+</ul>
+<p>✅ <strong>Visual Feedback</strong>: Color-coded comparison</p>
+<ul>
+<li>🟢 Green: Actual values (from agent)</li>
+<li>🔵 Blue/Orange: Expected values (editable)</li>
+<li>Clear visual distinction between the two</li>
+</ul>
+<p><strong>Impact:</strong> Reduce test maintenance time by 70%, catch issues earlier with side-by-side comparison, and refine test cases 3x faster with smart action filtering.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>The Test Case Editing interface allows you to modify test expectations while viewing actual agent results side-by-side. This makes it easy to update test cases when agent behavior changes or when you need to refine your expectations.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="accessing-test-case-editor">Accessing Test Case Editor<a href="#accessing-test-case-editor" class="hash-link" aria-label="Direct link to Accessing Test Case Editor" title="Direct link to Accessing Test Case Editor">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="from-test-cases-table">From Test Cases Table<a href="#from-test-cases-table" class="hash-link" aria-label="Direct link to From Test Cases Table" title="Direct link to From Test Cases Table">​</a></h3>
+<ol>
+<li>Navigate to your <strong>AiEvaluationDefinition</strong> record</li>
+<li>View the test cases table</li>
+<li>Click the <strong>✏️ Edit</strong> button in the &quot;Actions&quot; column for any test case</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="test-cases-table-features">Test Cases Table Features<a href="#test-cases-table-features" class="hash-link" aria-label="Direct link to Test Cases Table Features" title="Direct link to Test Cases Table Features">​</a></h3>
+<p>The table shows all your test cases with:</p>
+<ul>
+<li><strong>Session Match</strong>: Whether a matching agent session was found</li>
+<li><strong>Test Result</strong>: Overall pass/fail status (Success, Partial, Error, No Match)</li>
+<li><strong>Input Utterance</strong>: The user&#x27;s question</li>
+<li><strong>Topics</strong>: Expected vs actual topics comparison</li>
+<li><strong>Actions</strong>: Expected vs actual actions comparison</li>
+<li><strong>Response</strong>: Expected vs actual bot response comparison</li>
+</ul>
+<p><strong>Color Indicators:</strong></p>
+<ul>
+<li>🟢 Green checkmark: Match/Success</li>
+<li>🔴 Red X: Mismatch/Failure</li>
+<li>⚠️ Yellow warning: Partial match</li>
+<li>⚪ Gray: No session match</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="edit-dialog-layout">Edit Dialog Layout<a href="#edit-dialog-layout" class="hash-link" aria-label="Direct link to Edit Dialog Layout" title="Direct link to Edit Dialog Layout">​</a></h2>
+<p>When you click Edit, you&#x27;ll see a comprehensive dialog with all test case details:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────────────────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Edit Test Case #1                               │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ &quot;What is my account balance?&quot;          [Chip]   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─────────────────────────────────────────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 📝 Input Utterance (User Question) - EDITABLE  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ┌─────────────────────────────────────────────┐ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ What is my account balance?                 │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ └─────────────────────────────────────────────┘ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ────────────────────  ─────────────────────────── │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 🎯 Topics                                       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ┌──────────────────┬──────────────────────────┐ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ Actual ← LEFT    │ Expected → RIGHT         │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ├──────────────────┼──────────────────────────┤ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ [ServiceTopic]   │ [ServiceTopic      ▼]   │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ (Green chip)     │ (Dropdown)              │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ └──────────────────┴──────────────────────────┘ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ⚡ Actions                                       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ┌──────────────────┬─────────  ─────────────────┐ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ Actual ← LEFT    │ Expected → RIGHT         │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ├──────────────────┼──────────────────────────┤ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ [GetBalance]     │ ┌──────────────────────┐ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ [CheckLimit]     │ │ ☑ GetBalance         │ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ (Green chips)    │ │ ☑ TransferFunds      │ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │                  │ │ ☐ CheckLimit         │ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │                  │ └──────────────────────┘ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │                  │ 5 actions from &quot;Service&quot; │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ └──────────────────┴──────────────────────────┘ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ 💬 Bot Response - EDITABLE                      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ┌──────────────────┬──────────────────────────┐ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ Actual ← LEFT    │ Expected → RIGHT         │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ├──────────────────┼──────────────────────────┤ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ ┌──────────────┐ │ ┌──────────────────────┐ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ │ Your balance │ │ │ Your balance is      │ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ │ is $1,234.56 │ │ │ $1,234.56            │ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ │ └──────────────┘ │ │ (Editable textarea)  │ │ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ └──────────────────┴──────────────────────────┘ │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ℹ️ Changes saved locally. Click Save to update │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                                                 │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─────────────────────────────────────────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                     [Cancel]  [Save Changes]    │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────────────────────────────────────────────┘</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="editing-features">Editing Features<a href="#editing-features" class="hash-link" aria-label="Direct link to Editing Features" title="Direct link to Editing Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-input-utterance-user-question-">1. Input Utterance (User Question) ✨<a href="#1-input-utterance-user-question-" class="hash-link" aria-label="Direct link to 1. Input Utterance (User Question) ✨" title="Direct link to 1. Input Utterance (User Question) ✨">​</a></h3>
+<p><strong>What it is:</strong> The question or statement the user sends to the agent.</p>
+<p><strong>Why edit it:</strong></p>
+<ul>
+<li>Test different phrasings of the same question</li>
+<li>Fix typos in test cases</li>
+<li>Refine question clarity</li>
+<li>Add more context or details</li>
+</ul>
+<p><strong>How to edit:</strong></p>
+<ol>
+<li>Click in the &quot;Input Utterance&quot; text field</li>
+<li>Type your new question</li>
+<li>The change will be saved when you click &quot;Save Changes&quot;</li>
+</ol>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Before: &quot;What is my account balance?&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">After:  &quot;Show me my current account balance please&quot;</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> Testing if the agent handles polite variations differently.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-expected-topic">2. Expected Topic<a href="#2-expected-topic" class="hash-link" aria-label="Direct link to 2. Expected Topic" title="Direct link to 2. Expected Topic">​</a></h3>
+<p><strong>What it is:</strong> The topic (conversation intent) you expect the agent to identify.</p>
+<p><strong>Why edit it:</strong></p>
+<ul>
+<li>Update when topic names change</li>
+<li>Fix mismatched expectations</li>
+<li>Align with agent&#x27;s actual behavior</li>
+</ul>
+<p><strong>How to edit:</strong></p>
+<ol>
+<li>Click the topic dropdown (Expected side)</li>
+<li>Select from available topics</li>
+<li>Topics are loaded from your GenAiPlanner configuration</li>
+<li>Supports both developer names and labels</li>
+</ol>
+<p><strong>Visual:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────────┬──────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Actual           │ Expected             │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─── ───────────────┼──────────────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ [ServiceTopic]   │ [ServiceTopic   ▼]  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                  │  - ServiceTopic      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                  │  - BillingTopic      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                  │  - SupportTopic      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────────┴──────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>Pro Tip:</strong> The actual topic often includes a Salesforce suffix (e.g., <code>_16jgL000000oOlV</code>). The system automatically matches these with your expected values.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-expected-actions-">3. Expected Actions 🚀<a href="#3-expected-actions-" class="hash-link" aria-label="Direct link to 3. Expected Actions 🚀" title="Direct link to 3. Expected Actions 🚀">​</a></h3>
+<p><strong>What it is:</strong> The actions you expect the agent to execute.</p>
+<p><strong>Why edit it:</strong></p>
+<ul>
+<li>Add or remove expected actions</li>
+<li>Update based on new agent capabilities</li>
+<li>Match actual agent behavior</li>
+</ul>
+<p><strong>How to edit:</strong></p>
+<ol>
+<li>First, select a topic (actions filter by topic)</li>
+<li>The multi-select shows only actions from that topic</li>
+<li>Check/uncheck actions as needed</li>
+<li>Multiple actions can be selected</li>
+</ol>
+<p><strong>Smart Filtering:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Topic: &quot;ServiceTopic&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Available Actions (Filtered):</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☑ GetBalance          ← From ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☑ TransferFunds       ← From ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ CheckAccountLimit   ← From ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ UpdateProfile       ← From ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ ResetPassword       ← From ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5 action(s) available from &quot;ServiceTopic&quot;</span><br></span></code></pre></div></div>
+<p><strong>Features:</strong></p>
+<ul>
+<li>✅ Checkboxes for easy selection</li>
+<li>🔍 Filtered by selected topic</li>
+<li>📊 Shows count of available actions</li>
+<li>🔄 Updates when topic changes</li>
+<li>💡 Disabled until topic is selected</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Before: [&#x27;GetBalance&#x27;]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">After:  [&#x27;GetBalance&#x27;, &#x27;TransferFunds&#x27;, &#x27;CheckAccountLimit&#x27;]</span><br></span></code></pre></div></div>
+<p><strong>Use Case:</strong> When you realize the agent needs to execute multiple actions to fulfill the request.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-expected-bot-response">4. Expected Bot Response<a href="#4-expected-bot-response" class="hash-link" aria-label="Direct link to 4. Expected Bot Response" title="Direct link to 4. Expected Bot Response">​</a></h3>
+<p><strong>What it is:</strong> The text response you expect the bot to return to the user.</p>
+<p><strong>Why edit it:</strong></p>
+<ul>
+<li>Update for new response templates</li>
+<li>Allow for variations in wording</li>
+<li>Match improved agent responses</li>
+<li>Fix typos in expectations</li>
+</ul>
+<p><strong>How to edit:</strong></p>
+<ol>
+<li>Click in the &quot;Expected&quot; textarea</li>
+<li>Type or paste the expected response</li>
+<li>Supports multi-line text</li>
+<li>Can be detailed or general</li>
+</ol>
+<p><strong>Visual:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────────┬──────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Actual           │ Expected             │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├──────────────────┼──────────────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Your balance is  │ [Editable textarea]  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ $1,234.56. You   │ Your balance is      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ have available   │ $1,234.56            │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ credit of $500.  │                      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ (Green box)      │ (Blue border)        │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────────┴──────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>Pro Tip:</strong> You can see the actual response on the left to help you decide what the expected response should be.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="side-by-side-comparison">Side-by-Side Comparison<a href="#side-by-side-comparison" class="hash-link" aria-label="Direct link to Side-by-Side Comparison" title="Direct link to Side-by-Side Comparison">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="left-side-actual-what-agent-did-">Left Side: Actual (What Agent Did) 🟢<a href="#left-side-actual-what-agent-did-" class="hash-link" aria-label="Direct link to Left Side: Actual (What Agent Did) 🟢" title="Direct link to Left Side: Actual (What Agent Did) 🟢">​</a></h3>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li><strong>Color</strong>: Green styling</li>
+<li><strong>Editable</strong>: No (read-only)</li>
+<li><strong>Purpose</strong>: Shows what the agent actually did</li>
+<li><strong>Visual</strong>: Chips for topics/actions, text for responses</li>
+</ul>
+<p><strong>Display:</strong></p>
+<ul>
+<li>Topics: Green chips with topic names</li>
+<li>Actions: Green chips for each action</li>
+<li>Response: Green bordered box with full text</li>
+<li>Empty states: &quot;No topic/actions/response from agent yet&quot;</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="right-side-expected-what-you-want-">Right Side: Expected (What You Want) 🔵<a href="#right-side-expected-what-you-want-" class="hash-link" aria-label="Direct link to Right Side: Expected (What You Want) 🔵" title="Direct link to Right Side: Expected (What You Want) 🔵">​</a></h3>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li><strong>Color</strong>: Blue/Orange/Standard styling</li>
+<li><strong>Editable</strong>: Yes (all fields)</li>
+<li><strong>Purpose</strong>: Define what you expect</li>
+<li><strong>Visual</strong>: Form inputs, dropdowns, checkboxes</li>
+</ul>
+<p><strong>Display:</strong></p>
+<ul>
+<li>Topics: Autocomplete dropdown</li>
+<li>Actions: Multi-select with checkboxes</li>
+<li>Response: Multi-line textarea</li>
+<li>Empty states: Placeholder text</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="reading-flow">Reading Flow<a href="#reading-flow" class="hash-link" aria-label="Direct link to Reading Flow" title="Direct link to Reading Flow">​</a></h3>
+<p><strong>Natural left-to-right workflow:</strong></p>
+<ol>
+<li>👀 <strong>Look at Actual</strong> (left) - See what the agent did</li>
+<li>🤔 <strong>Decide if it&#x27;s correct</strong> - Is this what you expected?</li>
+<li>✏️ <strong>Adjust Expected</strong> (right) - Update if needed</li>
+<li>💾 <strong>Save</strong> - Persist changes</li>
+</ol>
+<p><strong>Example Workflow:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">User utterance: &quot;What is my account balance?&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 1: Run test</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Actual Topic: [ServiceTopic_v2]   ← Left side</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Actual Actions: [GetBalance]       ← Left side</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Actual Response: &quot;Your balance is $1,234.56&quot; ← Left side</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 2: Agent looks good! Copy to expected</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Expected Topic: ServiceTopic_v2    ← Right side</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Expected Actions: ☑ GetBalance     ← Right side</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Expected Response: &quot;$1,234.56&quot;     ← Right side (simplified)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 3: Save changes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">→ Status recalculates</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">→ Test shows &quot;Success&quot; ✅</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="auto-recalculation-feature">Auto-Recalculation Feature<a href="#auto-recalculation-feature" class="hash-link" aria-label="Direct link to Auto-Recalculation Feature" title="Direct link to Auto-Recalculation Feature">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="what-happens-after-saving">What Happens After Saving<a href="#what-happens-after-saving" class="hash-link" aria-label="Direct link to What Happens After Saving" title="Direct link to What Happens After Saving">​</a></h3>
+<p>When you click &quot;Save Changes&quot;, the system automatically:</p>
+<ol>
+<li>✅ <strong>Saves your edits</strong> to the test case metadata</li>
+<li>🔄 <strong>Recalculates matches</strong> against actual sessions</li>
+<li>📊 <strong>Updates test status</strong> (Success/Partial/Error/No Match)</li>
+<li>🎯 <strong>Refreshes the table</strong> with new results</li>
+</ol>
+<p><strong>You don&#x27;t need to:</strong></p>
+<ul>
+<li>Manually refresh the page</li>
+<li>Re-run the test</li>
+<li>Wait for async processes</li>
+<li>Click any additional buttons</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="status-indicators">Status Indicators<a href="#status-indicators" class="hash-link" aria-label="Direct link to Status Indicators" title="Direct link to Status Indicators">​</a></h3>
+<p>After recalculation, you&#x27;ll see updated status:</p>
+<p><strong>🟢 Success</strong></p>
+<ul>
+<li>All expectations match actual results</li>
+<li>Topic matches</li>
+<li>All actions executed</li>
+<li>Response matches (if specified)</li>
+</ul>
+<p><strong>🟡 Partial</strong></p>
+<ul>
+<li>Some expectations match</li>
+<li>Example: Topic matches but actions don&#x27;t</li>
+<li>Example: Actions match but response differs</li>
+</ul>
+<p><strong>🔴 Error</strong></p>
+<ul>
+<li>Major mismatches</li>
+<li>Example: Wrong topic identified</li>
+<li>Example: No actions executed when expected</li>
+</ul>
+<p><strong>⚪ No Match</strong></p>
+<ul>
+<li>No agent session found for this utterance</li>
+<li>Agent hasn&#x27;t been tested with this input yet</li>
+<li>Need to run the agent first</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="real-time-feedback">Real-Time Feedback<a href="#real-time-feedback" class="hash-link" aria-label="Direct link to Real-Time Feedback" title="Direct link to Real-Time Feedback">​</a></h3>
+<p>The recalculation typically takes <strong>&lt; 1 second</strong>, giving you immediate feedback:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[Edit Dialog]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Save Changes                     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────────────────────────┘</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">         ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[Saving...]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">         ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[Table Updates]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Test #1: Success ✅              │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ - Topic: Match ✅                │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ - Actions: Match ✅              │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ - Response: Match ✅             │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────────────────────────┘</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="common-workflows">Common Workflows<a href="#common-workflows" class="hash-link" aria-label="Direct link to Common Workflows" title="Direct link to Common Workflows">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-1-copy-actual-to-expected">Workflow 1: Copy Actual to Expected<a href="#workflow-1-copy-actual-to-expected" class="hash-link" aria-label="Direct link to Workflow 1: Copy Actual to Expected" title="Direct link to Workflow 1: Copy Actual to Expected">​</a></h3>
+<p><strong>Use Case:</strong> Agent behavior is correct, update expectations to match.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click ✏️ Edit on test case</li>
+<li>Review left side (actual values)</li>
+<li>Copy/select same values on right side (expected)<!-- -->
+<ul>
+<li>Select matching topic from dropdown</li>
+<li>Check same actions in multi-select</li>
+<li>Copy response text (or adjust as needed)</li>
+</ul>
+</li>
+<li>Click &quot;Save Changes&quot;</li>
+<li>✅ Status updates to &quot;Success&quot;</li>
+</ol>
+<p><strong>Time Saved:</strong> 30 seconds per test case vs. manually editing metadata.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-2-fix-mismatched-expectations">Workflow 2: Fix Mismatched Expectations<a href="#workflow-2-fix-mismatched-expectations" class="hash-link" aria-label="Direct link to Workflow 2: Fix Mismatched Expectations" title="Direct link to Workflow 2: Fix Mismatched Expectations">​</a></h3>
+<p><strong>Use Case:</strong> Agent behavior changed, expectations are outdated.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>See &quot;Error&quot; or &quot;Partial&quot; status in table</li>
+<li>Click ✏️ Edit to see what&#x27;s mismatched</li>
+<li>Compare actual (left) vs expected (right)</li>
+<li>Update expected to match new agent behavior</li>
+<li>Save and verify status changes to &quot;Success&quot;</li>
+</ol>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Before:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Expected Actions: [&#x27;GetBalance&#x27;]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Actual Actions: [&#x27;GetBalance&#x27;, &#x27;CheckLimit&#x27;]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Status: Partial ⚠️</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">After Edit:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Expected Actions: [&#x27;GetBalance&#x27;, &#x27;CheckLimit&#x27;]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Status: Success ✅</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-3-test-input-variations">Workflow 3: Test Input Variations<a href="#workflow-3-test-input-variations" class="hash-link" aria-label="Direct link to Workflow 3: Test Input Variations" title="Direct link to Workflow 3: Test Input Variations">​</a></h3>
+<p><strong>Use Case:</strong> Test if agent handles different phrasings.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click ✏️ Edit on existing test case</li>
+<li>Modify the input utterance<!-- -->
+<ul>
+<li>&quot;What is my balance?&quot; → &quot;Show my balance&quot;</li>
+<li>&quot;What is my balance?&quot; → &quot;How much money do I have?&quot;</li>
+</ul>
+</li>
+<li>Keep or adjust expectations</li>
+<li>Save and see if agent still works correctly</li>
+</ol>
+<p><strong>Use Case:</strong> Ensuring your agent is robust to variations in user input.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-4-add-new-expected-actions">Workflow 4: Add New Expected Actions<a href="#workflow-4-add-new-expected-actions" class="hash-link" aria-label="Direct link to Workflow 4: Add New Expected Actions" title="Direct link to Workflow 4: Add New Expected Actions">​</a></h3>
+<p><strong>Use Case:</strong> Agent now calls additional actions, update expectations.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click ✏️ Edit on test case showing &quot;Partial&quot;</li>
+<li>See actual actions on left (e.g., 3 actions)</li>
+<li>See expected actions on right (e.g., only 1 selected)</li>
+<li>Check additional actions in multi-select</li>
+<li>Save and verify status updates</li>
+</ol>
+<p><strong>Smart Feature:</strong> Actions are filtered by topic, so you only see relevant options.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="workflow-5-refine-response-expectations">Workflow 5: Refine Response Expectations<a href="#workflow-5-refine-response-expectations" class="hash-link" aria-label="Direct link to Workflow 5: Refine Response Expectations" title="Direct link to Workflow 5: Refine Response Expectations">​</a></h3>
+<p><strong>Use Case:</strong> Allow for slight variations in response wording.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Click ✏️ Edit</li>
+<li>See actual response on left</li>
+<li>Decide if exact match is needed</li>
+<li>Update expected response to be more flexible:<!-- -->
+<ul>
+<li>&quot;Your balance is $1,234.56&quot; (exact)</li>
+<li>&quot;$1,234.56&quot; (key info only)</li>
+<li>Leave blank (don&#x27;t check response)</li>
+</ul>
+</li>
+<li>Save and verify</li>
+</ol>
+<p><strong>Pro Tip:</strong> More specific expectations catch regressions, but too strict expectations cause false failures.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="smart-action-filtering">Smart Action Filtering<a href="#smart-action-filtering" class="hash-link" aria-label="Direct link to Smart Action Filtering" title="Direct link to Smart Action Filtering">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-works">How It Works<a href="#how-it-works" class="hash-link" aria-label="Direct link to How It Works" title="Direct link to How It Works">​</a></h3>
+<p>The action multi-select is <strong>dynamically filtered</strong> based on the selected topic:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Step 1: Select a topic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Selected Topic: &quot;ServiceTopic&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">         ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 2: Actions filter automatically</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Available Actions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- GetBalance         ← Only actions from ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- TransferFunds      ← Only actions from ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- CheckAccountLimit  ← Only actions from ServiceTopic</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">         ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Step 3: Select actions</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☑ GetBalance</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☑ TransferFunds</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">☐ CheckAccountLimit</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-matters">Why This Matters<a href="#why-this-matters" class="hash-link" aria-label="Direct link to Why This Matters" title="Direct link to Why This Matters">​</a></h3>
+<p><strong>Without filtering:</strong></p>
+<ul>
+<li>See 50+ actions from all topics</li>
+<li>Hard to find relevant actions</li>
+<li>Easy to select wrong actions</li>
+<li>Confusion about which actions work together</li>
+</ul>
+<p><strong>With smart filtering:</strong></p>
+<ul>
+<li>See only 3-8 actions per topic</li>
+<li>Quickly find the right actions</li>
+<li>Confidence that actions are compatible</li>
+<li>Faster test case creation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="visual-indicators">Visual Indicators<a href="#visual-indicators" class="hash-link" aria-label="Direct link to Visual Indicators" title="Direct link to Visual Indicators">​</a></h3>
+<p><strong>When no topic selected:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Expected Actions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Select a topic first to see   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ available actions              │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ (Dropdown disabled)            │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└────────────────────────────────┘</span><br></span></code></pre></div></div>
+<p><strong>When topic selected:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Expected Actions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ☑ GetBalance                   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ☐ TransferFunds                │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ☐ CheckLimit                   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ☐ UpdateProfile                │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ ☐ ResetPassword                │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└────────────────────────────────┘</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5 action(s) available from &quot;ServiceTopic&quot;</span><br></span></code></pre></div></div>
+<p><strong>When topic has no actions:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Expected Actions:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌────────────────────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ No actions found for this topic│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ (Dropdown disabled)            │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────  ───────────────────────────┘</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="benefits">Benefits<a href="#benefits" class="hash-link" aria-label="Direct link to Benefits" title="Direct link to Benefits">​</a></h3>
+<p>✅ <strong>Speed</strong>: Find actions 5x faster
+✅ <strong>Accuracy</strong>: Select correct actions every time
+✅ <strong>Discoverability</strong>: See what actions are available per topic
+✅ <strong>Confidence</strong>: Know actions are compatible with topic</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-always-compare-before-editing">1. Always Compare Before Editing<a href="#1-always-compare-before-editing" class="hash-link" aria-label="Direct link to 1. Always Compare Before Editing" title="Direct link to 1. Always Compare Before Editing">​</a></h3>
+<p>👀 Look at actual values on the left before making changes.</p>
+<p><strong>Why:</strong> You might find the agent&#x27;s behavior is actually correct, just different from original expectations.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-use-specific-expectations">2. Use Specific Expectations<a href="#2-use-specific-expectations" class="hash-link" aria-label="Direct link to 2. Use Specific Expectations" title="Direct link to 2. Use Specific Expectations">​</a></h3>
+<p>🎯 Be as specific as possible with expectations.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>❌ Bad: Expected response: &quot;balance&quot;</li>
+<li>✅ Good: Expected response: &quot;Your balance is $1,234.56&quot;</li>
+</ul>
+<p><strong>Why:</strong> Specific expectations catch regressions better.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-test-input-variations">3. Test Input Variations<a href="#3-test-input-variations" class="hash-link" aria-label="Direct link to 3. Test Input Variations" title="Direct link to 3. Test Input Variations">​</a></h3>
+<p>📝 Create multiple test cases for different phrasings.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>Test #1: &quot;What is my balance?&quot;</li>
+<li>Test #2: &quot;Show my balance&quot;</li>
+<li>Test #3: &quot;How much money do I have?&quot;</li>
+</ul>
+<p><strong>Why:</strong> Ensures your agent is robust to natural language variations.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-review-after-agent-changes">4. Review After Agent Changes<a href="#4-review-after-agent-changes" class="hash-link" aria-label="Direct link to 4. Review After Agent Changes" title="Direct link to 4. Review After Agent Changes">​</a></h3>
+<p>🔄 When you update your agent, review all test cases.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Check for &quot;Error&quot; or &quot;Partial&quot; statuses</li>
+<li>Edit each failed test case</li>
+<li>Decide if agent or expectation needs fixing</li>
+<li>Update expectations or fix agent</li>
+</ol>
+<p><strong>Why:</strong> Keeps your test suite accurate as your agent evolves.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-group-related-actions">5. Group Related Actions<a href="#5-group-related-actions" class="hash-link" aria-label="Direct link to 5. Group Related Actions" title="Direct link to 5. Group Related Actions">​</a></h3>
+<p>⚡ When selecting multiple actions, ensure they&#x27;re logically related.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>✅ Good: [&#x27;GetBalance&#x27;, &#x27;CheckAccountLimit&#x27;] - Related to account info</li>
+<li>❌ Bad: [&#x27;GetBalance&#x27;, &#x27;ResetPassword&#x27;] - Unrelated actions</li>
+</ul>
+<p><strong>Why:</strong> Ensures test cases represent realistic user flows.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-save-incrementally">6. Save Incrementally<a href="#6-save-incrementally" class="hash-link" aria-label="Direct link to 6. Save Incrementally" title="Direct link to 6. Save Incrementally">​</a></h3>
+<p>💾 Save your changes frequently, don&#x27;t edit multiple fields at once initially.</p>
+<p><strong>Workflow:</strong></p>
+<ol>
+<li>Edit input utterance → Save → Verify</li>
+<li>Edit expected topic → Save → Verify</li>
+<li>Edit expected actions → Save → Verify</li>
+</ol>
+<p><strong>Why:</strong> Easier to identify what caused a test to pass or fail.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-use-comments-in-responses">7. Use Comments in Responses<a href="#7-use-comments-in-responses" class="hash-link" aria-label="Direct link to 7. Use Comments in Responses" title="Direct link to 7. Use Comments in Responses">​</a></h3>
+<p>💬 Add context to complex expected responses.</p>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Expected Response:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Your balance is $1,234.56. </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Available credit: $500.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Note: Should include both balance and available credit</span><br></span></code></pre></div></div>
+<p><strong>Why:</strong> Helps other team members understand the expectations.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-features">Advanced Features<a href="#advanced-features" class="hash-link" aria-label="Direct link to Advanced Features" title="Direct link to Advanced Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="suffix-matching">Suffix Matching<a href="#suffix-matching" class="hash-link" aria-label="Direct link to Suffix Matching" title="Direct link to Suffix Matching">​</a></h3>
+<p><strong>What it is:</strong> Salesforce appends random suffixes to developer names in some orgs.</p>
+<p><strong>Example:</strong></p>
+<ul>
+<li>You expect: <code>ServiceTopic</code></li>
+<li>Agent returns: <code>ServiceTopic_16jgL000000oOlV</code></li>
+</ul>
+<p><strong>How it&#x27;s handled:</strong>
+The system automatically matches names with and without suffixes, so:</p>
+<ul>
+<li><code>ServiceTopic</code> matches <code>ServiceTopic_16jgL000000oOlV</code></li>
+<li>You don&#x27;t need to include the suffix in your expectations</li>
+<li>Works for both topics and actions</li>
+</ul>
+<p><strong>Why it matters:</strong> You can write portable test cases that work across orgs.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="partial-response-matching">Partial Response Matching<a href="#partial-response-matching" class="hash-link" aria-label="Direct link to Partial Response Matching" title="Direct link to Partial Response Matching">​</a></h3>
+<p><strong>What it is:</strong> Match on key parts of the response, not exact text.</p>
+<p><strong>Example:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Expected: &quot;$1,234.56&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Actual: &quot;Your current balance is $1,234.56. You have available credit of $500.&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Result: ✅ Match (contains expected text)</span><br></span></code></pre></div></div>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Keep expected responses short and focused on key info</li>
+<li>Don&#x27;t include filler words if they might vary</li>
+<li>Focus on facts that must be present</li>
+</ul>
+<p><strong>Why it matters:</strong> Allows for more flexible response templates while still validating key information.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bulk-editing">Bulk Editing<a href="#bulk-editing" class="hash-link" aria-label="Direct link to Bulk Editing" title="Direct link to Bulk Editing">​</a></h3>
+<p><strong>What it is:</strong> Edit multiple test cases at once (coming soon).</p>
+<p><strong>Planned features:</strong></p>
+<ul>
+<li>Select multiple test cases</li>
+<li>Bulk update expected topic</li>
+<li>Bulk update expected actions</li>
+<li>Apply changes to all selected</li>
+</ul>
+<p><strong>Use case:</strong> When you rename a topic or action, update all affected test cases at once.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="no-session-match-status">&quot;No session match&quot; Status<a href="#no-session-match-status" class="hash-link" aria-label="Direct link to &quot;No session match&quot; Status" title="Direct link to &quot;No session match&quot; Status">​</a></h3>
+<p><strong>Problem:</strong> Test shows &quot;No session match&quot; after editing.</p>
+<p><strong>Possible causes:</strong></p>
+<ol>
+<li>Agent hasn&#x27;t been tested with this utterance yet</li>
+<li>Session data hasn&#x27;t synced from Salesforce</li>
+<li>Utterance was changed significantly</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Run the agent with this utterance first</li>
+<li>Wait a few minutes for data sync</li>
+<li>Check that utterance matches an actual session</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="actions-dropdown-disabled">Actions Dropdown Disabled<a href="#actions-dropdown-disabled" class="hash-link" aria-label="Direct link to Actions Dropdown Disabled" title="Direct link to Actions Dropdown Disabled">​</a></h3>
+<p><strong>Problem:</strong> Can&#x27;t select actions in the multi-select.</p>
+<p><strong>Possible causes:</strong></p>
+<ol>
+<li>No topic selected yet</li>
+<li>Selected topic has no associated actions</li>
+<li>Planner data hasn&#x27;t loaded</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Select a topic first (required)</li>
+<li>Check that the topic has actions in your GenAiPlanner</li>
+<li>Refresh the page to reload planner data</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changes-not-saving">Changes Not Saving<a href="#changes-not-saving" class="hash-link" aria-label="Direct link to Changes Not Saving" title="Direct link to Changes Not Saving">​</a></h3>
+<p><strong>Problem:</strong> Edits don&#x27;t persist after clicking &quot;Save Changes&quot;.</p>
+<p><strong>Possible causes:</strong></p>
+<ol>
+<li>Salesforce API error</li>
+<li>Insufficient permissions</li>
+<li>Metadata API limits</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Check browser console for errors</li>
+<li>Verify you have &quot;Modify All Data&quot; permission</li>
+<li>Try again after a few minutes</li>
+<li>Contact Salesforce admin</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="status-not-updating">Status Not Updating<a href="#status-not-updating" class="hash-link" aria-label="Direct link to Status Not Updating" title="Direct link to Status Not Updating">​</a></h3>
+<p><strong>Problem:</strong> Test status doesn&#x27;t change after saving edits.</p>
+<p><strong>Possible causes:</strong></p>
+<ol>
+<li>Expectations still don&#x27;t match actual values</li>
+<li>Auto-recalculation failed</li>
+<li>Need to manually refresh</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Review the comparison again - might still have mismatches</li>
+<li>Manually refresh the page</li>
+<li>Click the &quot;Refresh&quot; button in the table toolbar</li>
+<li>Check browser console for errors</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="topics-not-loading">Topics Not Loading<a href="#topics-not-loading" class="hash-link" aria-label="Direct link to Topics Not Loading" title="Direct link to Topics Not Loading">​</a></h3>
+<p><strong>Problem:</strong> Topic dropdown is empty.</p>
+<p><strong>Possible causes:</strong></p>
+<ol>
+<li>GenAiPlanner not configured</li>
+<li>Planner data hasn&#x27;t loaded</li>
+<li>API connection issue</li>
+</ol>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>Verify your AiEvaluationDefinition has a valid GenAiPlanner reference</li>
+<li>Refresh the page</li>
+<li>Check Salesforce connection status</li>
+<li>Contact admin to verify GenAiPlanner setup</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="related-features">Related Features<a href="#related-features" class="hash-link" aria-label="Direct link to Related Features" title="Direct link to Related Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="test-case-creation">Test Case Creation<a href="#test-case-creation" class="hash-link" aria-label="Direct link to Test Case Creation" title="Direct link to Test Case Creation">​</a></h3>
+<p><strong>Learn how to:</strong></p>
+<ul>
+<li>Create new test cases from scratch</li>
+<li>Import test cases from CSV</li>
+<li>Generate test cases from agent logs</li>
+</ul>
+<p><strong>See:</strong> <a href="/genai/einstein-model-testing">Einstein Model Testing</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="session-matching">Session Matching<a href="#session-matching" class="hash-link" aria-label="Direct link to Session Matching" title="Direct link to Session Matching">​</a></h3>
+<p><strong>Learn how to:</strong></p>
+<ul>
+<li>How test cases match against agent sessions</li>
+<li>Matching logic for topics and actions</li>
+<li>Troubleshooting match failures</li>
+</ul>
+<p><strong>See:</strong> <a href="/genai/conversation-history">Conversation History</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bulk-testing">Bulk Testing<a href="#bulk-testing" class="hash-link" aria-label="Direct link to Bulk Testing" title="Direct link to Bulk Testing">​</a></h3>
+<p><strong>Learn how to:</strong></p>
+<ul>
+<li>Run multiple test cases at once</li>
+<li>Batch update test cases</li>
+<li>Export test results</li>
+</ul>
+<p><strong>See:</strong> <a href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="faq">FAQ<a href="#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-edit-multiple-test-cases-at-once">Q: Can I edit multiple test cases at once?<a href="#q-can-i-edit-multiple-test-cases-at-once" class="hash-link" aria-label="Direct link to Q: Can I edit multiple test cases at once?" title="Direct link to Q: Can I edit multiple test cases at once?">​</a></h3>
+<p><strong>A:</strong> Not yet. Currently, you must edit test cases one at a time. Bulk editing is planned for a future release.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-what-happens-to-my-edits-if-i-click-cancel">Q: What happens to my edits if I click Cancel?<a href="#q-what-happens-to-my-edits-if-i-click-cancel" class="hash-link" aria-label="Direct link to Q: What happens to my edits if I click Cancel?" title="Direct link to Q: What happens to my edits if I click Cancel?">​</a></h3>
+<p><strong>A:</strong> All changes are discarded. Only clicking &quot;Save Changes&quot; persists your edits to Salesforce.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-undo-changes-after-saving">Q: Can I undo changes after saving?<a href="#q-can-i-undo-changes-after-saving" class="hash-link" aria-label="Direct link to Q: Can I undo changes after saving?" title="Direct link to Q: Can I undo changes after saving?">​</a></h3>
+<p><strong>A:</strong> Not directly. You would need to manually edit the test case again to revert changes. Consider keeping a backup of your test cases before major edits.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-do-i-need-to-re-run-the-agent-after-editing">Q: Do I need to re-run the agent after editing?<a href="#q-do-i-need-to-re-run-the-agent-after-editing" class="hash-link" aria-label="Direct link to Q: Do I need to re-run the agent after editing?" title="Direct link to Q: Do I need to re-run the agent after editing?">​</a></h3>
+<p><strong>A:</strong> No. The system matches your updated expectations against existing agent sessions. However, if you change the input utterance significantly, you may need to run the agent with the new utterance to get a session match.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-delete-expectations">Q: Can I delete expectations?<a href="#q-can-i-delete-expectations" class="hash-link" aria-label="Direct link to Q: Can I delete expectations?" title="Direct link to Q: Can I delete expectations?">​</a></h3>
+<p><strong>A:</strong> Yes, you can clear expected values:</p>
+<ul>
+<li>Topic: Select the empty option in dropdown</li>
+<li>Actions: Uncheck all actions</li>
+<li>Response: Clear the textarea</li>
+</ul>
+<p>This effectively makes that expectation &quot;don&#x27;t check&quot;.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-are-changes-versioned">Q: Are changes versioned?<a href="#q-are-changes-versioned" class="hash-link" aria-label="Direct link to Q: Are changes versioned?" title="Direct link to Q: Are changes versioned?">​</a></h3>
+<p><strong>A:</strong> Not currently. Changes overwrite the existing test case metadata. Consider using version control for your AiEvaluationDefinition metadata files.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-can-i-see-who-edited-a-test-case">Q: Can I see who edited a test case?<a href="#q-can-i-see-who-edited-a-test-case" class="hash-link" aria-label="Direct link to Q: Can I see who edited a test case?" title="Direct link to Q: Can I see who edited a test case?">​</a></h3>
+<p><strong>A:</strong> Check the Salesforce metadata history:</p>
+<ol>
+<li>Go to Setup → Deployment Status</li>
+<li>Find your AiEvaluationDefinition deployment</li>
+<li>View component history</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="q-how-long-does-recalculation-take">Q: How long does recalculation take?<a href="#q-how-long-does-recalculation-take" class="hash-link" aria-label="Direct link to Q: How long does recalculation take?" title="Direct link to Q: How long does recalculation take?">​</a></h3>
+<p><strong>A:</strong> Typically &lt; 1 second. The system queries for matching sessions and compares expectations against actual results immediately after saving.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps">​</a></h2>
+<ul>
+<li><a href="/genai/chat-with-agents">Chat with Agents</a> - Test your updated expectations</li>
+<li><a href="/genai/request-replay-debugging">Request Replay &amp; Debugging</a> - Debug failed tests</li>
+<li><a href="/genai/conversation-history">Conversation History</a> - View agent session details</li>
+</ul>
+<hr>
+<p><strong>Efficient test case editing leads to faster iteration and more reliable AI agents.</strong></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/sf-explorer/documentation/tree/master/genai/Features/3. Testing Center/2-test-case-editing.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">Last updated<!-- --> on <b><time datetime="2025-11-27T20:06:59.000Z" itemprop="dateModified">Nov 27, 2025</time></b></span></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/genai/atlas-reasoning-engine"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Atlas Reasoning Engine</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/genai/adding-test-cases"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Adding Test Cases</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-problem" class="table-of-contents__link toc-highlight">The Problem</a></li><li><a href="#how-genai-explorer-solves-this" class="table-of-contents__link toc-highlight">How GenAI Explorer Solves This</a></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#accessing-test-case-editor" class="table-of-contents__link toc-highlight">Accessing Test Case Editor</a><ul><li><a href="#from-test-cases-table" class="table-of-contents__link toc-highlight">From Test Cases Table</a></li><li><a href="#test-cases-table-features" class="table-of-contents__link toc-highlight">Test Cases Table Features</a></li></ul></li><li><a href="#edit-dialog-layout" class="table-of-contents__link toc-highlight">Edit Dialog Layout</a></li><li><a href="#editing-features" class="table-of-contents__link toc-highlight">Editing Features</a><ul><li><a href="#1-input-utterance-user-question-" class="table-of-contents__link toc-highlight">1. Input Utterance (User Question) ✨</a></li><li><a href="#2-expected-topic" class="table-of-contents__link toc-highlight">2. Expected Topic</a></li><li><a href="#3-expected-actions-" class="table-of-contents__link toc-highlight">3. Expected Actions 🚀</a></li><li><a href="#4-expected-bot-response" class="table-of-contents__link toc-highlight">4. Expected Bot Response</a></li></ul></li><li><a href="#side-by-side-comparison" class="table-of-contents__link toc-highlight">Side-by-Side Comparison</a><ul><li><a href="#left-side-actual-what-agent-did-" class="table-of-contents__link toc-highlight">Left Side: Actual (What Agent Did) 🟢</a></li><li><a href="#right-side-expected-what-you-want-" class="table-of-contents__link toc-highlight">Right Side: Expected (What You Want) 🔵</a></li><li><a href="#reading-flow" class="table-of-contents__link toc-highlight">Reading Flow</a></li></ul></li><li><a href="#auto-recalculation-feature" class="table-of-contents__link toc-highlight">Auto-Recalculation Feature</a><ul><li><a href="#what-happens-after-saving" class="table-of-contents__link toc-highlight">What Happens After Saving</a></li><li><a href="#status-indicators" class="table-of-contents__link toc-highlight">Status Indicators</a></li><li><a href="#real-time-feedback" class="table-of-contents__link toc-highlight">Real-Time Feedback</a></li></ul></li><li><a href="#common-workflows" class="table-of-contents__link toc-highlight">Common Workflows</a><ul><li><a href="#workflow-1-copy-actual-to-expected" class="table-of-contents__link toc-highlight">Workflow 1: Copy Actual to Expected</a></li><li><a href="#workflow-2-fix-mismatched-expectations" class="table-of-contents__link toc-highlight">Workflow 2: Fix Mismatched Expectations</a></li><li><a href="#workflow-3-test-input-variations" class="table-of-contents__link toc-highlight">Workflow 3: Test Input Variations</a></li><li><a href="#workflow-4-add-new-expected-actions" class="table-of-contents__link toc-highlight">Workflow 4: Add New Expected Actions</a></li><li><a href="#workflow-5-refine-response-expectations" class="table-of-contents__link toc-highlight">Workflow 5: Refine Response Expectations</a></li></ul></li><li><a href="#smart-action-filtering" class="table-of-contents__link toc-highlight">Smart Action Filtering</a><ul><li><a href="#how-it-works" class="table-of-contents__link toc-highlight">How It Works</a></li><li><a href="#why-this-matters" class="table-of-contents__link toc-highlight">Why This Matters</a></li><li><a href="#visual-indicators" class="table-of-contents__link toc-highlight">Visual Indicators</a></li><li><a href="#benefits" class="table-of-contents__link toc-highlight">Benefits</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#1-always-compare-before-editing" class="table-of-contents__link toc-highlight">1. Always Compare Before Editing</a></li><li><a href="#2-use-specific-expectations" class="table-of-contents__link toc-highlight">2. Use Specific Expectations</a></li><li><a href="#3-test-input-variations" class="table-of-contents__link toc-highlight">3. Test Input Variations</a></li><li><a href="#4-review-after-agent-changes" class="table-of-contents__link toc-highlight">4. Review After Agent Changes</a></li><li><a href="#5-group-related-actions" class="table-of-contents__link toc-highlight">5. Group Related Actions</a></li><li><a href="#6-save-incrementally" class="table-of-contents__link toc-highlight">6. Save Incrementally</a></li><li><a href="#7-use-comments-in-responses" class="table-of-contents__link toc-highlight">7. Use Comments in Responses</a></li></ul></li><li><a href="#advanced-features" class="table-of-contents__link toc-highlight">Advanced Features</a><ul><li><a href="#suffix-matching" class="table-of-contents__link toc-highlight">Suffix Matching</a></li><li><a href="#partial-response-matching" class="table-of-contents__link toc-highlight">Partial Response Matching</a></li><li><a href="#bulk-editing" class="table-of-contents__link toc-highlight">Bulk Editing</a></li></ul></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#no-session-match-status" class="table-of-contents__link toc-highlight">&quot;No session match&quot; Status</a></li><li><a href="#actions-dropdown-disabled" class="table-of-contents__link toc-highlight">Actions Dropdown Disabled</a></li><li><a href="#changes-not-saving" class="table-of-contents__link toc-highlight">Changes Not Saving</a></li><li><a href="#status-not-updating" class="table-of-contents__link toc-highlight">Status Not Updating</a></li><li><a href="#topics-not-loading" class="table-of-contents__link toc-highlight">Topics Not Loading</a></li></ul></li><li><a href="#related-features" class="table-of-contents__link toc-highlight">Related Features</a><ul><li><a href="#test-case-creation" class="table-of-contents__link toc-highlight">Test Case Creation</a></li><li><a href="#session-matching" class="table-of-contents__link toc-highlight">Session Matching</a></li><li><a href="#bulk-testing" class="table-of-contents__link toc-highlight">Bulk Testing</a></li></ul></li><li><a href="#faq" class="table-of-contents__link toc-highlight">FAQ</a><ul><li><a href="#q-can-i-edit-multiple-test-cases-at-once" class="table-of-contents__link toc-highlight">Q: Can I edit multiple test cases at once?</a></li><li><a href="#q-what-happens-to-my-edits-if-i-click-cancel" class="table-of-contents__link toc-highlight">Q: What happens to my edits if I click Cancel?</a></li><li><a href="#q-can-i-undo-changes-after-saving" class="table-of-contents__link toc-highlight">Q: Can I undo changes after saving?</a></li><li><a href="#q-do-i-need-to-re-run-the-agent-after-editing" class="table-of-contents__link toc-highlight">Q: Do I need to re-run the agent after editing?</a></li><li><a href="#q-can-i-delete-expectations" class="table-of-contents__link toc-highlight">Q: Can I delete expectations?</a></li><li><a href="#q-are-changes-versioned" class="table-of-contents__link toc-highlight">Q: Are changes versioned?</a></li><li><a href="#q-can-i-see-who-edited-a-test-case" class="table-of-contents__link toc-highlight">Q: Can I see who edited a test case?</a></li><li><a href="#q-how-long-does-recalculation-take" class="table-of-contents__link toc-highlight">Q: How long does recalculation take?</a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learn More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/company/salesforce-explorer/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://www.youtube.com/@SFExplorer" target="_blank" rel="noopener noreferrer" class="footer__link-item">Youtube Channel<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Apps</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://app.sf-explorer.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Web<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://chromewebstore.google.com/detail/sf-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde" target="_blank" rel="noopener noreferrer" class="footer__link-item">Chrome<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://microsoftedge.microsoft.com/addons/detail/sf-explorer/poadmeoldhchlfeaiicmfjlfjmkjbgdh" target="_blank" rel="noopener noreferrer" class="footer__link-item">Edge<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Made by Nicolas Despres while discovering salesforce ecosystem</div></div></div></footer></div>
+</body>
+</html>
