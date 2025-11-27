@@ -50,6 +50,11 @@ const config = {
         path: 'genai',
         routeBasePath: 'genai',
         sidebarPath: require.resolve('./sidebarGenAI.js'),
+        // Table of Contents configuration
+        showLastUpdateTime: true,
+        showLastUpdateAuthor: false,
+        // Default image for social sharing
+        editUrl: 'https://github.com/sf-explorer/documentation/tree/master/',
       },
     ],
     [require.resolve("docusaurus-lunr-search"), {
@@ -64,6 +69,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Global metadata for social sharing
+      image: 'img/demo.png', // Default OG image for all pages
+      metadata: [
+        {name: 'twitter:card', content: 'summary_large_image'},
+      ],
       navbar: {
         title: 'SF Explorer',
         logo: {

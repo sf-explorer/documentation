@@ -744,9 +744,9 @@ When troubleshooting issues:
 
 ## Next Steps
 
-- [Einstein Model Testing](./4-einstein-model-testing.md) - Test individual models
-- [Data Cloud Integration](./6-data-cloud-integration.md) - Deep dive into queries
-- [Request Replay & Debugging](./11-request-replay-debugging.md) - Advanced debugging
+- [Einstein Model Testing](/genai/einstein-model-testing) - Test individual models
+- [Data Cloud Integration](/genai/data-cloud-integration) - Deep dive into queries
+- [Request Replay & Debugging](/genai/request-replay-debugging) - Advanced debugging
 
 ---
 

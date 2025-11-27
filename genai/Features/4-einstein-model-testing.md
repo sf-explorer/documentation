@@ -530,8 +530,8 @@ Track token usage and costs, especially when testing with GPT-4 models.
 
 ## Next Steps
 
-- [Chat with Agents](./4-chat-with-agents.md) - Test models in agent context
-- [Request Replay & Debugging](./11-request-replay-debugging.md) - Debug and optimize
+- [Chat with Agents](/genai/chat-with-agents) - Test models in agent context
+- [Request Replay & Debugging](/genai/request-replay-debugging) - Debug and optimize
 
 ---
 

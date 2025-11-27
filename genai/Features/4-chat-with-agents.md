@@ -4,6 +4,7 @@ slug: /chat-with-agents
 title: Chat with Agentforce Agents
 sidebar_label: Chat with Agents
 description: Learn how to have real-time conversations with your Agentforce agents, configure session variables, and test different scenarios.
+image: ../images/chat.png
 keywords:
   - agentforce
   - chat
@@ -330,9 +331,9 @@ Test 3: "Find related knowledge articles"
 
 ## Next Steps
 
-- [Configuration Explorer](./1-configuration-explorer.md) - Understand your agent setup
-- [Atlas Reasoning Engine](./3-atlas-reasoning-engine.md) - See how queries are processed
-- [Data Cloud Integration](./6-data-cloud-integration.md) - Analyze conversation data
+- [Configuration Explorer](/genai/configuration-explorer) - Understand your agent setup
+- [Atlas Reasoning Engine](/genai/atlas-reasoning-engine) - See how queries are processed
+- [Data Cloud Integration](/genai/data-cloud-integration) - Analyze conversation data
 
 ---
 
