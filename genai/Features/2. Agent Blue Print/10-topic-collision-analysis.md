@@ -1,5 +1,6 @@
 ---
 id: topic-collision-analysis
+slug: /topic-collision-analysis
 title: Topic Collision Analysis
 sidebar_label: Topic Collision Analysis
 sidebar_position: 10
@@ -18,7 +19,7 @@ keywords:
 Use Einstein AI to detect and resolve overlapping topics that could cause message routing issues.
 
 <!-- ![Topic Collision Analysis](./images/topic-collision-analysis.png) -->
-![Data Cloud Integration](./images/topic-collision.png)
+![Data Cloud Integration](../../images/topic-collision.png)
 
 ## The Problem
 
@@ -369,7 +370,7 @@ This ensures the feature remains functional even without Einstein access.
 
 ## Next Steps
 
-- [Configuration Explorer](./2-configuration-explorer.md) - View all your topics and agents
-- [Chat with Agents](./1-chat-with-agents.md) - Test message routing with sample conversations
-- [FAQ](./9-faq.md) - Frequently asked questions
+- [Configuration Explorer](/genai/configuration-explorer) - View all your topics and agents
+- [Chat with Agents](/genai/chat-with-agents) - Test message routing with sample conversations
+- [FAQ](/genai/faq) - Frequently asked questions
 

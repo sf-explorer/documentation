@@ -1,5 +1,6 @@
 ---
 id: request-replay-debugging
+slug: /request-replay-debugging
 title: Request Replay & Debugging Tools
 sidebar_label: Request Replay & Debugging
 sidebar_position: 11
@@ -17,7 +18,7 @@ keywords:
 
 Advanced debugging and testing features for analyzing and replaying GenAI requests.
 
-![Atlas Query Lab](./images/query-replay.png)
+![Atlas Query Lab](../../images/query-replay.png)
 
 ## The Problem
 
@@ -645,6 +646,6 @@ graph TD
 
 ## Next Steps
 
-- [Atlas Reasoning Engine](./3-atlas-reasoning-engine.md) - Understand the 6-stage pipeline
-- [Data Cloud Integration](./6-data-cloud-integration.md) - Advanced querying
+- [Atlas Reasoning Engine](/genai/atlas-reasoning-engine) - Understand the 6-stage pipeline
+- [Data Cloud Integration](/genai/data-cloud-integration) - Advanced querying
 

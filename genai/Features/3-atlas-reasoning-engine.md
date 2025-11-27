@@ -1,5 +1,6 @@
 ---
 id: atlas-reasoning-engine
+slug: /atlas-reasoning-engine
 title: Atlas Reasoning Engine
 sidebar_label: Atlas Reasoning Engine
 sidebar_position: 3
@@ -17,7 +18,7 @@ keywords:
 
 Understand and visualize the "brain" behind Salesforce Agentforce - the six-stage AI processing pipeline that powers intelligent agent responses.
 
-![Atlas Overview](./images/atlas.png)
+![Atlas Overview](../images/atlas.png)
 
 ## The Problem
 

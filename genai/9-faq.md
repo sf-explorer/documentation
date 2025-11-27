@@ -113,8 +113,7 @@ Yes, you can:
 
 No. GenAI Explorer:
 - Does NOT collect personal information
-- Does NOT send data to external servers
-- Does NOT track your usage
+- Does NOT send data to external servers (outside our heroku server to overcome cors)
 - Only connects directly to your Salesforce org
 
 ### Is my Salesforce data secure?
@@ -125,9 +124,6 @@ Yes:
 - No data stored externally
 - Follows Salesforce security best practices
 
-### Can other users see my boards?
-
-No. Boards are stored locally in your browser. They're only visible to you unless you explicitly export and share them.
 
 ## Chat & Agents
 
@@ -174,13 +170,6 @@ Cited references show the sources the agent used to generate its response:
 
 This helps verify accuracy and understand reasoning.
 
-### Can I export conversation history?
-
-Yes:
-1. Open conversation history
-2. Select a conversation
-3. Click "Export"
-4. Choose format (JSON, CSV, or text)
 
 ## Data Cloud & Queries
 
@@ -219,7 +208,7 @@ Contact your Salesforce administrator to:
 - Always filter by `CreatedDate`
 - Use `LIMIT` clause
 - Query indexed fields
-- See [Data Cloud Integration](./6-data-cloud-integration.md) for optimization tips
+- See [Data Cloud Integration](./data-cloud-integration) for optimization tips
 
 ### Can I query custom objects?
 
@@ -411,12 +400,12 @@ GenAI Explorer doesn't provide its own API, but it helps you work with:
 ### Where can I learn more?
 
 **Documentation:**
-- [Chat with Agents](./1-chat-with-agents.md)
-- [Configuration Explorer](./2-configuration-explorer.md)
-- [Atlas Reasoning Engine](./3-atlas-reasoning-engine.md)
-- [Einstein Model Testing](./4-einstein-model-testing.md)
-- [Data Cloud Integration](./6-data-cloud-integration.md)
-- [Topic Collision Analysis](./10-topic-collision-analysis.md)
+- [Chat with Agents](./chat-with-agents)
+- [Configuration Explorer](./configuration-explorer)
+- [Atlas Reasoning Engine](./atlas-reasoning-engine)
+- [Einstein Model Testing](./einstein-model-testing)
+- [Data Cloud Integration](./data-cloud-integration)
+- [Topic Collision Analysis](./topic-collision-analysis)
 
 ### Is there a tutorial?
 

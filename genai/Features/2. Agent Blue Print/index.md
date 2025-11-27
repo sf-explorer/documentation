@@ -1,5 +1,6 @@
 ---
 id: configuration-explorer
+slug: /configuration-explorer
 title: Agent blueprint
 sidebar_label:  Agent blueprint
 sidebar_position: 2
@@ -17,7 +18,7 @@ keywords:
 
 Browse and understand all AI Agents, Topics, Actions, and Prompts configured in your Salesforce org with comprehensive entity relationship diagrams.
 
-![Configuration Explorer](./images/agent-blueprint.png)
+![Configuration Explorer](../../images/agent-blueprint.png)
 
 ## The Problem
 

@@ -1,8 +1,8 @@
 ---
 id: chat-with-agents
+slug: /chat-with-agents
 title: Chat with Agentforce Agents
 sidebar_label: Chat with Agents
-sidebar_position: 1
 description: Learn how to have real-time conversations with your Agentforce agents, configure session variables, and test different scenarios.
 keywords:
   - agentforce
@@ -16,7 +16,7 @@ keywords:
 
 The primary feature of GenAI Explorer - have real-time conversations with your Agentforce agents directly from your browser.
 
-![Chat Interface](./images/chat.png)
+![Chat Interface](../images/chat.png)
 
 ## The Problem
 
@@ -330,11 +330,11 @@ Test 3: "Find related knowledge articles"
 
 ## Next Steps
 
-- [Configuration Explorer](./2-configuration-explorer.md) - Understand your agent setup
+- [Configuration Explorer](./1-configuration-explorer.md) - Understand your agent setup
 - [Atlas Reasoning Engine](./3-atlas-reasoning-engine.md) - See how queries are processed
 - [Data Cloud Integration](./6-data-cloud-integration.md) - Analyze conversation data
 
 ---
 
-**Have questions?** See the [FAQ](./9-faq.md)
+**Have questions?** See the [FAQ](../9-faq.md)
 

@@ -1,5 +1,6 @@
 ---
 id: data-cloud-integration
+slug: /data-cloud-integration
 title: Data Cloud Integration
 sidebar_label: Data Cloud Integration
 sidebar_position: 6
@@ -16,7 +17,7 @@ keywords:
 
 Execute queries and monitor AI data directly from GenAI Explorer with comprehensive Data Cloud integration for analytics and insights.
 
-![Data Cloud Integration](./images/data-cloud.png)
+![Data Cloud Integration](../images/data-cloud.png)
 
 ## The Problem
 

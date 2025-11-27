@@ -1,8 +1,9 @@
 ---
 id: conversation-history
+slug: /conversation-history
 title: Conversation History
 sidebar_label: Conversation History
-sidebar_position: 5
+sidebar_position: 1
 description: View, filter, and analyze all historical conversations with advanced filtering and analytics.
 keywords:
   - conversation history
@@ -16,7 +17,7 @@ keywords:
 
 View, filter, and analyze all historical conversations with your Agentforce agents.
 
-![Conversation History](./images/conversation-history.png)
+![Conversation History](../../images/conversation-history.png)
 
 ## The Problem
 
@@ -79,7 +80,7 @@ The Conversation History feature provides a comprehensive view of all past inter
 - **Error Visibility**: Failed actions and error messages
 
 ### 🔍 Advanced Filtering
-![Conversation History Filters](./images/conversation-history-filters.png)
+![Conversation History Filters](../../images/conversation-history-filters.png)
 
 - **Text Search**: Search across all conversation content
 - **Date Range**: Filter by time period (From/To dates)
@@ -265,7 +266,7 @@ Click any badge to remove that filter.
 
 Click on any conversation to expand and see:
 
-![Conversation Expanded](./images/conversation-expanded.png)
+![Conversation Expanded](../../images/conversation-expanded.png)
 
 **1. Header Information:**
 - Conversation ID
@@ -626,7 +627,7 @@ AGENT: Let me check your order status...
 
 ## Next Steps
 
-- [Request Replay & Debugging](./11-request-replay-debugging.md) - Debug specific conversations
-- [Data Cloud Integration](./6-data-cloud-integration.md) - Advanced queries
-- [Atlas Reasoning Engine](./3-atlas-reasoning-engine.md) - Understanding AI processing stages
+- [Request Replay & Debugging](/genai/request-replay-debugging) - Debug specific conversations
+- [Data Cloud Integration](/genai/data-cloud-integration) - Advanced queries
+- [Atlas Reasoning Engine](/genai/atlas-reasoning-engine) - Understanding AI processing stages
 

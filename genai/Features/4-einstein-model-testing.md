@@ -1,5 +1,6 @@
 ---
 id: einstein-model-testing
+slug: /einstein-model-testing
 title: Einstein Model Testing
 sidebar_label: Einstein Model Testing
 sidebar_position: 4
@@ -17,7 +18,7 @@ keywords:
 
 Test and compare Einstein AI models directly from your browser with custom prompts, parameter control, and real-time results.
 
-![Model Testing](./images/einstein-model-testing.png)
+![Model Testing](../images/einstein-model-testing.png)
 
 ## The Problem
 
@@ -529,7 +530,7 @@ Track token usage and costs, especially when testing with GPT-4 models.
 
 ## Next Steps
 
-- [Chat with Agents](./1-chat-with-agents.md) - Test models in agent context
+- [Chat with Agents](./4-chat-with-agents.md) - Test models in agent context
 - [Request Replay & Debugging](./11-request-replay-debugging.md) - Debug and optimize
 
 ---
