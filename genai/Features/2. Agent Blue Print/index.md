@@ -5,6 +5,7 @@ title: Agent blueprint
 sidebar_label:  Agent blueprint
 sidebar_position: 2
 description: Browse and understand all AI Agents, Topics, Actions, and Prompts with comprehensive ERD diagrams.
+image: ../../images/agent-blueprint.png
 keywords:
   - configuration
   - agents

@@ -5,6 +5,7 @@ title: Test Case Editing
 sidebar_label: Test Case Editing
 sidebar_position: 5
 description: Edit and manage AI agent test cases with side-by-side actual vs expected comparison, smart action filtering, and auto-recalculation.
+image: ../../images/testing_center.png
 keywords:
   - agentforce
   - test cases
@@ -13,13 +14,22 @@ keywords:
   - quality assurance
   - ai testing
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 # Test Case Editing
 
 Edit and refine your AI agent test cases with an intuitive interface that shows actual results alongside expected values, making it easy to update expectations and validate agent behavior.
 
-<!-- ![Test Case Editing](../../images/test-case-editing.png) -->
-![Testing Center](../../images/testing_center.png)
+
+
+<LiteYouTubeEmbed
+              id="U8wbpn-mg1E"
+              params="autoplay=1&autohide=1&showinfo=0&rel=0"
+              title="Testing center"
+              poster="maxresdefault"
+              webp
+            />
 
 ## The Problem
 
@@ -37,6 +47,9 @@ When building and testing AI agents, teams face challenges:
 **In short**: You need a streamlined way to edit test cases while comparing actual agent behavior with expected outcomes.
 
 ## How GenAI Explorer Solves This
+
+
+
 
 GenAI Explorer provides **comprehensive test case editing** with:
 
@@ -74,10 +87,13 @@ The Test Case Editing interface allows you to modify test expectations while vie
 
 ## Accessing Test Case Editor
 
+<!-- ![Test Case Editing](../../images/test-case-editing.png) -->
+![Testing Center](../../images/testing_center.png)
+
 ### From Test Cases Table
 
-1. Navigate to your **AiEvaluationDefinition** record
-2. View the test cases table
+1. Navigate to your **Testing>Test Cases** record
+2. View the test cases 
 3. Click the **✏️ Edit** button in the "Actions" column for any test case
 
 <!-- ![Edit Button Location](../../images/test-case-edit-button.png) -->
@@ -284,6 +300,8 @@ After:  ['GetBalance', 'TransferFunds', 'CheckAccountLimit']
 
 ## Side-by-Side Comparison
 
+![Einstein Model Testing](../../images/einstein-model-testing.png)
+
 ### Left Side: Actual (What Agent Did) 🟢
 
 **Characteristics:**
@@ -341,6 +359,8 @@ Step 3: Save changes
 ```
 
 ## Auto-Recalculation Feature
+
+![Conversation Expanded](../../images/conversation-expanded.png)
 
 ### What Happens After Saving
 
@@ -488,6 +508,8 @@ Status: Success ✅
 **Pro Tip:** More specific expectations catch regressions, but too strict expectations cause false failures.
 
 ## Smart Action Filtering
+
+![Agent Blueprint](../../images/agent-blueprint.png)
 
 ### How It Works
 

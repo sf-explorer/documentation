@@ -5,6 +5,7 @@ title: Request Replay & Debugging Tools
 sidebar_label: Request Replay & Debugging
 sidebar_position: 11
 description: Replay historical GenAI requests, edit prompts, and use AI-powered optimization for debugging.
+image: ../../images/query-replay.png
 keywords:
   - replay
   - debugging

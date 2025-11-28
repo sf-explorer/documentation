@@ -5,6 +5,7 @@ title: Conversation History
 sidebar_label: Conversation History
 sidebar_position: 1
 description: View, filter, and analyze all historical conversations with advanced filtering and analytics.
+image: ../../images/conversation-history.png
 keywords:
   - conversation history
   - filtering

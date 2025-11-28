@@ -5,6 +5,7 @@ title: Atlas Reasoning Engine
 sidebar_label: Atlas Reasoning Engine
 sidebar_position: 3
 description: Understand the six-stage AI processing pipeline that powers Agentforce with interactive visualizations and Query Lab.
+image: ../images/atlas.png
 keywords:
   - atlas
   - reasoning engine

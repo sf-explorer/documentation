@@ -5,6 +5,7 @@ title: Adding Test Cases
 sidebar_label: Adding Test Cases
 sidebar_position: 6
 description: Create new test cases from scratch or convert real agent interactions into tests with multi-select support.
+image: ../../images/testing_center.png
 keywords:
   - agentforce
   - test cases

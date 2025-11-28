@@ -5,6 +5,7 @@ title: Data Cloud Integration
 sidebar_label: Data Cloud Integration
 sidebar_position: 6
 description: Query and analyze AI data with pre-built Data Cloud queries and live data integration.
+image: ../images/data-cloud.png
 keywords:
   - data cloud
   - queries

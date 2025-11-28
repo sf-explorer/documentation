@@ -5,6 +5,7 @@ title: Topic Collision Analysis
 sidebar_label: Topic Collision Analysis
 sidebar_position: 10
 description: Use Einstein AI to detect and resolve overlapping topics that could cause message routing issues.
+image: ../../images/topic-collision.png
 keywords:
   - topic collision
   - topics

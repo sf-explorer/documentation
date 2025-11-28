@@ -5,6 +5,7 @@ title: Einstein Model Testing
 sidebar_label: Einstein Model Testing
 sidebar_position: 4
 description: Test and compare different Einstein AI models side-by-side with custom prompts and parameters.
+image: ../images/einstein-model-testing.png
 keywords:
   - einstein
   - models
