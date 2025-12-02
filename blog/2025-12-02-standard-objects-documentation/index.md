@@ -11,6 +11,44 @@ There's a better way! After every Salesforce release, the SF Explorer team runs 
 
 <!-- truncate -->
 
+## 📊 Visual Overview
+
+Here's how the SF Explorer ecosystem provides Salesforce metadata to different users:
+
+```mermaid
+graph TB
+    subgraph "Data Pipeline"
+        A[Salesforce Release] -->|Official Documentation| B[Script]
+        B -->|Parses & Extracts| C[sf-explorer/salesforce-object-reference<br/>NPM Package]
+    end
+    
+    subgraph "Solutions by User Type"
+        C --> D{Choose Your Path}
+        
+        D -->|👤 User<br/>Browse Docs| E[Web Interface<br/>sf-explorer.github.io/sf-doc-to-json]
+        E -->|Features| E1[⚡ Lightning-fast search<br/>🎨 Clean UI<br/>📱 Responsive design]
+        
+        D -->|💻 Developer<br/>Build Apps| F[NPM Package<br/>npm install @sf-explorer/...-reference]
+        F -->|Features| F1[📦 Easy integration<br/>🔄 Auto-updated<br/>🚀 No API calls]
+        
+        D -->|🔧 Admin<br/>Enhance Setup| G[Chrome Extension<br/>Advanced Setup]
+        G -->|Features| G1[✨ Inline descriptions<br/>📝 Enhanced Setup<br/>🎯 Better productivity]
+        
+        D -->|📊 Architect<br/>Create ERDs| H[Diagrams<br/>Cloud-specific ERDs]
+        H -->|Features| H1[🗺️ Visual relationships<br/>📐 DrawIO format<br/>📥 Export ready]
+        
+        D -->|🌐 Any Role<br/>Org-Specific| I[SF Explorer App<br/>app.sf-explorer.com]
+        I -->|Features| I1[📚 Complete metadata<br/>🎨 Custom objects<br/>📊 Visualizations]
+    end
+    
+    style C fill:#4CAF50,stroke:#2E7D32,color:#fff
+    style E fill:#2196F3,stroke:#1565C0,color:#fff
+    style F fill:#FF9800,stroke:#E65100,color:#fff
+    style G fill:#9C27B0,stroke:#6A1B9A,color:#fff
+    style H fill:#00BCD4,stroke:#006064,color:#fff
+    style I fill:#F44336,stroke:#B71C1C,color:#fff
+```
+
 ## 🎯 The Challenge
 
 As Salesforce developers and administrators, we often need quick access to standard object and field descriptions. But navigating through Setup or hunting through the official documentation can be time-consuming and inefficient.
@@ -102,6 +140,46 @@ Behind the scenes, here's what happens:
 4. All our tools and interfaces consume this package to provide **consistent, up-to-date information**
 
 ## 🎯 Choose Your Path
+
+```mermaid
+flowchart TD
+    Start([Need Salesforce Metadata?]) --> Q1{What's your goal?}
+    
+    Q1 -->|Quick lookup & browse| User[👤 User Path]
+    Q1 -->|Build an application| Dev[💻 Developer Path]
+    Q1 -->|Improve Setup UI| Admin[🔧 Admin Path]
+    Q1 -->|Visualize relationships| Arch[📊 Architect Path]
+    Q1 -->|Full org analysis| Org[🌐 Org-Specific Path]
+    
+    User --> UserSol[Web Interface<br/>sf-explorer.github.io/sf-doc-to-json]
+    UserSol --> UserBen[✓ Instant access<br/>✓ No installation<br/>✓ Fast search]
+    
+    Dev --> DevSol[NPM Package<br/>npm install]
+    DevSol --> DevBen[✓ Programmatic access<br/>✓ Type-safe<br/>✓ Offline-ready]
+    
+    Admin --> AdminSol[Chrome Extension<br/>Advanced Setup]
+    AdminSol --> AdminBen[✓ Enhanced Setup<br/>✓ Inline docs<br/>✓ Time-saver]
+    
+    Arch --> ArchSol[ERD Diagrams<br/>DrawIO Charts]
+    ArchSol --> ArchBen[✓ Visual models<br/>✓ Cloud-specific<br/>✓ Editable]
+    
+    Org --> OrgSol[SF Explorer App<br/>app.sf-explorer.com]
+    OrgSol --> OrgBen[✓ Your metadata<br/>✓ Custom objects<br/>✓ Full analysis]
+    
+    UserBen --> End([Pick your solution!])
+    DevBen --> End
+    AdminBen --> End
+    ArchBen --> End
+    OrgBen --> End
+    
+    style Start fill:#E8EAF6,stroke:#3F51B5,stroke-width:3px
+    style End fill:#E8F5E9,stroke:#4CAF50,stroke-width:3px
+    style UserSol fill:#2196F3,stroke:#1565C0,color:#fff
+    style DevSol fill:#FF9800,stroke:#E65100,color:#fff
+    style AdminSol fill:#9C27B0,stroke:#6A1B9A,color:#fff
+    style ArchSol fill:#00BCD4,stroke:#006064,color:#fff
+    style OrgSol fill:#F44336,stroke:#B71C1C,color:#fff
+```
 
 Depending on your role and needs, pick the solution that works best for you:
 
