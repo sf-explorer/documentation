@@ -16,6 +16,9 @@
             <description><![CDATA[Want to access Salesforce standard object and field descriptions without digging through Setup?]]></description>
             <content:encoded><![CDATA[<p><strong>Want to access Salesforce standard object and field descriptions without digging through Setup?</strong></p>
 <p>There's a better way! After every Salesforce release, the SF Explorer team runs a script that parses the official documentation and publishes an npm package: <strong>@sf-explorer/salesforce-object-reference</strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-visual-overview">📊 Visual Overview<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-visual-overview" class="hash-link" aria-label="Direct link to 📊 Visual Overview" title="Direct link to 📊 Visual Overview">​</a></h2>
+<p>Here's how the SF Explorer ecosystem provides Salesforce metadata to different users:</p>
+<!-- -->
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-the-challenge">🎯 The Challenge<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-the-challenge" class="hash-link" aria-label="Direct link to 🎯 The Challenge" title="Direct link to 🎯 The Challenge">​</a></h2>
 <p>As Salesforce developers and administrators, we often need quick access to standard object and field descriptions. But navigating through Setup or hunting through the official documentation can be time-consuming and inefficient.</p>
 <p>That's why we built a comprehensive ecosystem of tools to make this information readily accessible—whether you're a user, developer, or administrator.</p>
@@ -89,6 +92,7 @@
 <li>All our tools and interfaces consume this package to provide <strong>consistent, up-to-date information</strong></li>
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-choose-your-path">🎯 Choose Your Path<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-choose-your-path" class="hash-link" aria-label="Direct link to 🎯 Choose Your Path" title="Direct link to 🎯 Choose Your Path">​</a></h2>
+<!-- -->
 <p>Depending on your role and needs, pick the solution that works best for you:</p>
 <table><thead><tr><th>Role</th><th>Use Case</th><th>Solution</th></tr></thead><tbody><tr><td>👤 User</td><td>Browse documentation</td><td><a href="https://sf-explorer.github.io/sf-doc-to-json/" target="_blank" rel="noopener noreferrer">Web Interface</a></td></tr><tr><td>💻 Developer</td><td>Build applications</td><td><a href="https://www.npmjs.com/package/@sf-explorer/salesforce-object-reference" target="_blank" rel="noopener noreferrer">NPM Package</a></td></tr><tr><td>🔧 Admin</td><td>Enhance Setup</td><td><a href="https://github.com/sf-explorer/sf-explorer-advanced-setup" target="_blank" rel="noopener noreferrer">Chrome Extension</a></td></tr><tr><td>📊 Architect</td><td>Create ERDs</td><td><a href="https://github.com/sf-explorer/app?tab=readme-ov-file#diagrams" target="_blank" rel="noopener noreferrer">Diagrams</a></td></tr><tr><td>🌐 Any</td><td>Org-specific docs</td><td><a href="https://app.sf-explorer.com/" target="_blank" rel="noopener noreferrer">SF Explorer</a></td></tr></tbody></table>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-get-started-today">🚀 Get Started Today<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-get-started-today" class="hash-link" aria-label="Direct link to 🚀 Get Started Today" title="Direct link to 🚀 Get Started Today">​</a></h2>
