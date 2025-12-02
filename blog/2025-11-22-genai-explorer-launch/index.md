@@ -1,7 +1,7 @@
 ---
 slug: introducing-genai-explorer
 title: Introducing GenAI Explorer - Your Gateway to Salesforce AI
-authors: [sf-explorer-team]
+authors: [ndespres]
 tags: [release, genai, agentforce, einstein, chrome-extension]
 image: ./genai-explorer-logo.png
 ---
