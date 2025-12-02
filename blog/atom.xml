@@ -2,11 +2,116 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://info.sf-explorer.com/blog</id>
     <title>SF Explorer Blog</title>
-    <updated>2025-11-22T00:00:00.000Z</updated>
+    <updated>2025-12-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://info.sf-explorer.com/blog"/>
     <subtitle>SF Explorer Blog</subtitle>
     <icon>http://info.sf-explorer.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[How to Get Standard Object and Field Descriptions in Salesforce]]></title>
+        <id>http://info.sf-explorer.com/blog/standard-objects-documentation</id>
+        <link href="http://info.sf-explorer.com/blog/standard-objects-documentation"/>
+        <updated>2025-12-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Want to access Salesforce standard object and field descriptions without digging through Setup?]]></summary>
+        <content type="html"><![CDATA[<p><strong>Want to access Salesforce standard object and field descriptions without digging through Setup?</strong></p>
+<p>There's a better way! After every Salesforce release, the SF Explorer team runs a script that parses the official documentation and publishes an npm package: <strong>@sf-explorer/salesforce-object-reference</strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-the-challenge">🎯 The Challenge<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-the-challenge" class="hash-link" aria-label="Direct link to 🎯 The Challenge" title="Direct link to 🎯 The Challenge">​</a></h2>
+<p>As Salesforce developers and administrators, we often need quick access to standard object and field descriptions. But navigating through Setup or hunting through the official documentation can be time-consuming and inefficient.</p>
+<p>That's why we built a comprehensive ecosystem of tools to make this information readily accessible—whether you're a user, developer, or administrator.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-solutions-for-every-use-case">🚀 Solutions for Every Use Case<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-solutions-for-every-use-case" class="hash-link" aria-label="Direct link to 🚀 Solutions for Every Use Case" title="Direct link to 🚀 Solutions for Every Use Case">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1--for-users-lightning-fast-documentation-browser">1. 📖 For Users: Lightning-Fast Documentation Browser<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#1--for-users-lightning-fast-documentation-browser" class="hash-link" aria-label="Direct link to 1. 📖 For Users: Lightning-Fast Documentation Browser" title="Direct link to 1. 📖 For Users: Lightning-Fast Documentation Browser">​</a></h3>
+<p>If you just want to <strong>browse the documentation</strong> with a really fast interface, check out:</p>
+<p><strong>🔗 <a href="https://sf-explorer.github.io/sf-doc-to-json/" target="_blank" rel="noopener noreferrer">https://sf-explorer.github.io/sf-doc-to-json/</a></strong></p>
+<p>This web interface provides instant access to all standard object and field descriptions with:</p>
+<ul>
+<li>⚡ Lightning-fast search</li>
+<li>🎨 Clean, intuitive UI</li>
+<li>📱 Responsive design</li>
+<li>🔍 Comprehensive metadata coverage</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2--for-developers-npm-package">2. 💻 For Developers: NPM Package<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#2--for-developers-npm-package" class="hash-link" aria-label="Direct link to 2. 💻 For Developers: NPM Package" title="Direct link to 2. 💻 For Developers: NPM Package">​</a></h3>
+<p>If you're <strong>building an application</strong> that needs programmatic access to Salesforce metadata, you can consume the npm package directly:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm install @sf-explorer/salesforce-object-reference</span><br></span></code></pre></div></div>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>📦 Easy integration into your applications</li>
+<li>🔄 Updated with each Salesforce release</li>
+<li>🎯 Type-safe access to metadata</li>
+<li>🚀 No API calls required</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3--for-admins-chrome-extension">3. 🔧 For Admins: Chrome Extension<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#3--for-admins-chrome-extension" class="hash-link" aria-label="Direct link to 3. 🔧 For Admins: Chrome Extension" title="Direct link to 3. 🔧 For Admins: Chrome Extension">​</a></h3>
+<p>If you're an <strong>administrator</strong> who wants to add descriptions directly within Setup, install our Chrome extension that enhances your Setup experience:</p>
+<p><strong>🔗 <a href="https://github.com/sf-explorer/sf-explorer-advanced-setup/blob/main/readme.md" target="_blank" rel="noopener noreferrer">SF Explorer Advanced Setup</a></strong></p>
+<p>This extension:</p>
+<ul>
+<li>✨ Enriches Setup with field descriptions</li>
+<li>📝 Shows documentation inline</li>
+<li>🎯 Improves productivity</li>
+<li>💡 Makes configuration easier</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4--for-architects-erd-diagrams">4. 📊 For Architects: ERD Diagrams<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#4--for-architects-erd-diagrams" class="hash-link" aria-label="Direct link to 4. 📊 For Architects: ERD Diagrams" title="Direct link to 4. 📊 For Architects: ERD Diagrams">​</a></h3>
+<p>If you need <strong>Entity Relationship Diagrams (ERDs) by cloud</strong> with DrawIO charts:</p>
+<p><strong>🔗 <a href="https://github.com/sf-explorer/app?tab=readme-ov-file#diagrams" target="_blank" rel="noopener noreferrer">SF Explorer Diagrams</a></strong></p>
+<p>Features:</p>
+<ul>
+<li>🗺️ Cloud-specific ERDs</li>
+<li>📐 DrawIO format for easy editing</li>
+<li>🔗 Visual relationship mapping</li>
+<li>📥 Export capabilities</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5--for-your-org-custom-data-dictionary">5. 🌐 For Your Org: Custom Data Dictionary<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#5--for-your-org-custom-data-dictionary" class="hash-link" aria-label="Direct link to 5. 🌐 For Your Org: Custom Data Dictionary" title="Direct link to 5. 🌐 For Your Org: Custom Data Dictionary">​</a></h3>
+<p>And finally, if you want a <strong>complete data dictionary with objects and fields specific to your org</strong>, just connect to SF Explorer:</p>
+<p><strong>🔗 <a href="https://app.sf-explorer.com/" target="_blank" rel="noopener noreferrer">app.sf-explorer.com</a></strong></p>
+<p>Get:</p>
+<ul>
+<li>📚 Complete org metadata</li>
+<li>🎨 Custom object documentation</li>
+<li>🔍 Search across all metadata</li>
+<li>📊 Relationship visualization</li>
+<li>📝 Data dictionary exports</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-all-free-most-open-source">💰 All Free, Most Open Source!<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-all-free-most-open-source" class="hash-link" aria-label="Direct link to 💰 All Free, Most Open Source!" title="Direct link to 💰 All Free, Most Open Source!">​</a></h2>
+<p>The best part? <strong>All of these tools are completely free</strong>, and most are <strong>open source</strong>!</p>
+<p>We believe in giving back to the Salesforce community by:</p>
+<ul>
+<li>🆓 Providing free access to all tools</li>
+<li>🌐 Open-sourcing the code</li>
+<li>🔄 Keeping documentation up-to-date</li>
+<li>🤝 Building for the community</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-how-it-works">🛠️ How It Works<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#%EF%B8%8F-how-it-works" class="hash-link" aria-label="Direct link to 🛠️ How It Works" title="Direct link to 🛠️ How It Works">​</a></h2>
+<p>Behind the scenes, here's what happens:</p>
+<ol>
+<li><strong>After each Salesforce release</strong>, our automated scripts parse the official Salesforce documentation</li>
+<li>We <strong>extract all standard object and field metadata</strong> including descriptions, data types, and relationships</li>
+<li>The data is <strong>published as an npm package</strong> (<code>@sf-explorer/salesforce-object-reference</code>)</li>
+<li>All our tools and interfaces consume this package to provide <strong>consistent, up-to-date information</strong></li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-choose-your-path">🎯 Choose Your Path<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-choose-your-path" class="hash-link" aria-label="Direct link to 🎯 Choose Your Path" title="Direct link to 🎯 Choose Your Path">​</a></h2>
+<p>Depending on your role and needs, pick the solution that works best for you:</p>
+<table><thead><tr><th>Role</th><th>Use Case</th><th>Solution</th></tr></thead><tbody><tr><td>👤 User</td><td>Browse documentation</td><td><a href="https://sf-explorer.github.io/sf-doc-to-json/" target="_blank" rel="noopener noreferrer">Web Interface</a></td></tr><tr><td>💻 Developer</td><td>Build applications</td><td><a href="https://www.npmjs.com/package/@sf-explorer/salesforce-object-reference" target="_blank" rel="noopener noreferrer">NPM Package</a></td></tr><tr><td>🔧 Admin</td><td>Enhance Setup</td><td><a href="https://github.com/sf-explorer/sf-explorer-advanced-setup" target="_blank" rel="noopener noreferrer">Chrome Extension</a></td></tr><tr><td>📊 Architect</td><td>Create ERDs</td><td><a href="https://github.com/sf-explorer/app?tab=readme-ov-file#diagrams" target="_blank" rel="noopener noreferrer">Diagrams</a></td></tr><tr><td>🌐 Any</td><td>Org-specific docs</td><td><a href="https://app.sf-explorer.com/" target="_blank" rel="noopener noreferrer">SF Explorer</a></td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-get-started-today">🚀 Get Started Today<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-get-started-today" class="hash-link" aria-label="Direct link to 🚀 Get Started Today" title="Direct link to 🚀 Get Started Today">​</a></h2>
+<p>No matter which solution you choose, you'll have access to comprehensive Salesforce metadata documentation without the hassle of navigating through Setup or parsing official docs.</p>
+<p>Try out the tools that fit your workflow and let us know what you think!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-join-the-community">🤝 Join the Community<a href="http://info.sf-explorer.com/blog/standard-objects-documentation#-join-the-community" class="hash-link" aria-label="Direct link to 🤝 Join the Community" title="Direct link to 🤝 Join the Community">​</a></h2>
+<p>Have feedback or suggestions? We'd love to hear from you:</p>
+<ul>
+<li>⭐ Star our repositories on <a href="https://github.com/sf-explorer" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+<li>🐛 Report issues or request features</li>
+<li>💡 Contribute to the open-source projects</li>
+<li>📢 Share with your Salesforce colleagues</li>
+</ul>
+<hr>
+<p><em>Making Salesforce metadata accessible to everyone, one tool at a time.</em> 🚀</p>]]></content>
+        <author>
+            <name>Nicolas Despres</name>
+            <uri>https://github.com/nicolas-despres</uri>
+        </author>
+        <category label="documentation" term="documentation"/>
+        <category label="metadata" term="metadata"/>
+        <category label="open-source" term="open-source"/>
+        <category label="tools" term="tools"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Introducing GenAI Explorer - Your Gateway to Salesforce AI]]></title>
         <id>http://info.sf-explorer.com/blog/introducing-genai-explorer</id>
@@ -305,8 +410,8 @@
 <hr>
 <p><em>GenAI Explorer v6.3.3 - Built for the Salesforce community to unlock the full potential of Generative AI.</em></p>]]></content>
         <author>
-            <name>SF Explorer Team</name>
-            <uri>https://github.com/sf-explorer</uri>
+            <name>Nicolas Despres</name>
+            <uri>https://github.com/nicolas-despres</uri>
         </author>
         <category label="release" term="release"/>
         <category label="genai" term="genai"/>
