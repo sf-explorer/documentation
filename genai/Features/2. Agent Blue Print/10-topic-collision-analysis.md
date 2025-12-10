@@ -20,7 +20,7 @@ keywords:
 Use Einstein AI to detect and resolve overlapping topics that could cause message routing issues.
 
 <!-- ![Topic Collision Analysis](./images/topic-collision-analysis.png) -->
-![Data Cloud Integration](../../images/topic-collision.png)
+
 
 ## The Problem
 
@@ -54,6 +54,10 @@ GenAI Explorer uses **Einstein AI analysis** to:
 ✅ **Resolution Strategies**: Learn 5 proven approaches to fix collisions (scope refinement, merging, exclusions, splitting, hierarchy)
 
 **Impact:** Achieve 95%+ topic classification accuracy, eliminate routing inconsistencies, and build reliable agents users can trust.
+
+
+![Data Cloud Integration](../../images/topic-collision.png)
+
 
 ## Overview
 

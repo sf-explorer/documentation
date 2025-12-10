@@ -379,6 +379,10 @@ graph TD
 
 ### Query Examples
 
+:::info SSOT Data Lake Objects
+The queries below use **Salesforce Standard Semantics for Output Telemetry (SSOT)** Data Lake Model objects (`ssot__*__dlm`). These are standard Salesforce objects available when Data Cloud and Einstein features are enabled. Verify availability in your org before use.
+:::
+
 #### 1. Load Session Interactions
 ```sql
 SELECT 

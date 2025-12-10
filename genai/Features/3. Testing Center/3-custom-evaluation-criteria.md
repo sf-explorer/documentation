@@ -474,7 +474,7 @@ $.generatedData.invokedActions[*][?(@.function.name == 'ComplexAction')].functio
 
 ## Related Features
 
-- [Adding Test Cases](/adding-test-cases) - Create comprehensive test suites
-- [Test Case Editing](/editing-test-cases) - Modify and refine tests
-- [Conversation History](/conversation-history) - Convert interactions to tests
+- [Adding Test Cases](/genai/adding-test-cases) - Create comprehensive test suites
+- [Test Case Editing](/genai/test-case-editing) - Modify and refine tests
+- [Conversation History](/genai/conversation-history) - Convert interactions to tests
 
