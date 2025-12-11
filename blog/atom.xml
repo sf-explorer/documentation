@@ -141,7 +141,7 @@
 <li>Future: A unified lens for understanding any AI agent, anywhere</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-what-is-genai-explorer">🚀 What is GenAI Explorer?<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#-what-is-genai-explorer" class="hash-link" aria-label="Direct link to 🚀 What is GenAI Explorer?" title="Direct link to 🚀 What is GenAI Explorer?">​</a></h2>
-<p>GenAI Explorer is a browser extension designed specifically for the Salesforce AI ecosystem. It provides a unified interface for interacting with your organization's AI agents, understanding their configuration, and analyzing their performance - all without leaving your browser.</p>
+<p>GenAI Explorer is a web application designed specifically for the Salesforce AI ecosystem. It provides a unified interface for interacting with your organization's AI agents, understanding their configuration, and analyzing their performance - accessible from any browser.</p>
 <p><strong>Single Purpose:</strong> A developer and administrator tool for chatting with, testing, and monitoring Salesforce Agentforce and Einstein AI capabilities—with transparency at its core.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-key-features">✨ Key Features<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#-key-features" class="hash-link" aria-label="Direct link to ✨ Key Features" title="Direct link to ✨ Key Features">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="-chat-with-agentforce-agents">💬 <a href="http://info.sf-explorer.com/genai/chat-with-agents">Chat with Agentforce Agents</a><a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#-chat-with-agentforce-agents" class="hash-link" aria-label="Direct link to -chat-with-agentforce-agents" title="Direct link to -chat-with-agentforce-agents">​</a></h3>
@@ -266,19 +266,23 @@
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-getting-started">🚦 Getting Started<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#-getting-started" class="hash-link" aria-label="Direct link to 🚦 Getting Started" title="Direct link to 🚦 Getting Started">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="installation">Installation<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#installation" class="hash-link" aria-label="Direct link to Installation" title="Direct link to Installation">​</a></h3>
-<p><strong>🎉 Now Available on Chrome Web Store!</strong></p>
-<p>Install GenAI Explorer directly from the <a href="https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag" target="_blank" rel="noopener noreferrer">Chrome Web Store</a> with one click!</p>
-<p>Or use the web version:</p>
+<p><strong>Access GenAI Explorer:</strong></p>
+<p><strong>Option 1: Web Application</strong> (Recommended)</p>
+<p>Visit <a href="https://app.sf-explorer.com/gen-ai.html" target="_blank" rel="noopener noreferrer">https://app.sf-explorer.com/gen-ai.html</a> to use GenAI Explorer directly in your browser without any installation. Authentication is done securely via OAuth 2.0.</p>
+<p><strong>Option 2: Chrome Extension</strong></p>
+<p>Install from the <a href="https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag" target="_blank" rel="noopener noreferrer">Chrome Web Store</a> for browser integration with side panel and context menu shortcuts.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="setup-your-connected-app">Setup Your Connected App<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#setup-your-connected-app" class="hash-link" aria-label="Direct link to Setup Your Connected App" title="Direct link to Setup Your Connected App">​</a></h3>
+<p>Before using GenAI Explorer, you need to set up a connected app in your Salesforce org for OAuth 2.0 authentication:</p>
 <ol>
 <li>Create a connected app in your org following the official salesforce doc: <a href="https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html" target="_blank" rel="noopener noreferrer">https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html</a></li>
 <li>Give some right to your API only user (Datacloud user, prompt user)</li>
-<li>Visit <a href="https://app.sf-explorer.com/gen-ai.html" target="_blank" rel="noopener noreferrer">https://app.sf-explorer.com/gen-ai.html</a></li>
-<li>Fill in the required info</li>
-<li>Click on <strong>Connect to salesforce</strong></li>
+<li>Visit <a href="https://app.sf-explorer.com/gen-ai.html" target="_blank" rel="noopener noreferrer">https://app.sf-explorer.com/gen-ai.html</a> (or open the extension)</li>
+<li>Fill in the required OAuth 2.0 credentials (Consumer Key, Instance URL)</li>
+<li>Click on <strong>Connect to salesforce</strong> to complete the OAuth 2.0 flow</li>
 </ol>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements">​</a></h3>
 <ul>
-<li>Chrome browser (version 88 or higher)</li>
+<li>Modern web browser (Chrome, Firefox, Safari, Edge)</li>
 <li>Salesforce org with Agentforce or Einstein AI features enabled</li>
 <li>Appropriate Salesforce permissions:<!-- -->
 <ul>
@@ -377,7 +381,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-built-for-today-designed-for-tomorrow">5. Built for Today, Designed for Tomorrow<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#5-built-for-today-designed-for-tomorrow" class="hash-link" aria-label="Direct link to 5. Built for Today, Designed for Tomorrow" title="Direct link to 5. Built for Today, Designed for Tomorrow">​</a></h3>
 <p>Starting with Salesforce, but our architecture is designed to support multiple AI platforms in the future. One tool to understand all your AI agents.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-all-in-one-tool">6. All-in-One Tool<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#6-all-in-one-tool" class="hash-link" aria-label="Direct link to 6. All-in-One Tool" title="Direct link to 6. All-in-One Tool">​</a></h3>
-<p>Everything you need in one extension - chat, test, monitor, document, analyze. No need to juggle multiple tools.</p>
+<p>Everything you need in one web application - chat, test, monitor, document, analyze. No need to juggle multiple tools or switch between different interfaces.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-free-and-open">7. Free and Open<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#7-free-and-open" class="hash-link" aria-label="Direct link to 7. Free and Open" title="Direct link to 7. Free and Open">​</a></h3>
 <p>Available at no cost. Built for the Salesforce community, by developers who understand the challenges.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-whats-next">🔮 What's Next?<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#-whats-next" class="hash-link" aria-label="Direct link to 🔮 What's Next?" title="Direct link to 🔮 What's Next?">​</a></h2>
@@ -421,7 +425,7 @@
         <category label="genai" term="genai"/>
         <category label="agentforce" term="agentforce"/>
         <category label="einstein" term="einstein"/>
-        <category label="chrome-extension" term="chrome-extension"/>
+        <category label="web-app" term="web-app"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Release 6.0.0]]></title>
