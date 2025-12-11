@@ -4,10 +4,225 @@
         <title>SF Explorer Blog</title>
         <link>http://info.sf-explorer.com/blog</link>
         <description>SF Explorer Blog</description>
-        <lastBuildDate>Tue, 02 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 11 Dec 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Accelerate Your AgentScript Migration - Community Tool for Agentforce]]></title>
+            <link>http://info.sf-explorer.com/blog/agentscript-migration-tool</link>
+            <guid>http://info.sf-explorer.com/blog/agentscript-migration-tool</guid>
+            <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Migrating to Salesforce's new AgentScript format? A community tool can now generate 85% of your migration code automatically!]]></description>
+            <content:encoded><![CDATA[<p><strong>Migrating to Salesforce's new AgentScript format? A community tool can now generate 85% of your migration code automatically!</strong></p>
+<p>Salesforce's AgentScript is powerful, but migrating existing UI-based agents can feel overwhelming. This new community tool in GenAI Explorer helps teams adopt AgentScript faster by automatically generating production-ready YAML from your existing Agentforce configurations.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tldr">TLDR;<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#tldr" class="hash-link" aria-label="Direct link to TLDR;" title="Direct link to TLDR;">​</a></h2>
+<blockquote>
+<p>Here is a 30s demo</p>
+</blockquote>
+<link rel="preload" href="https://i.ytimg.com/vi_webp/r8TqMmiC2UA/maxresdefault.webp" as="image"><article class="yt-lite" data-title="Agentscript Migration tool" style="background-image:url(https://i.ytimg.com/vi_webp/r8TqMmiC2UA/maxresdefault.webp);--aspect-ratio:56.25%"><button type="button" class="lty-playbtn" aria-label="Watch Agentscript Migration tool"></button></article>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-the-agentscript-migration-challenge">🎯 The AgentScript Migration Challenge<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-the-agentscript-migration-challenge" class="hash-link" aria-label="Direct link to 🎯 The AgentScript Migration Challenge" title="Direct link to 🎯 The AgentScript Migration Challenge">​</a></h2>
+<p>Salesforce's AgentScript represents a major shift in how we build agents - from UI-based configuration to code-based development. While this brings huge benefits (version control, code review, CI/CD), the migration path isn't straightforward:</p>
+<table><thead><tr><th>Challenge</th><th>Impact</th></tr></thead><tbody><tr><td>📖 <strong>Learning Curve</strong></td><td>New YAML syntax and patterns to master</td></tr><tr><td>⏰ <strong>Time Investment</strong></td><td>4-6 hours per agent for manual migration</td></tr><tr><td>📝 <strong>Error-Prone</strong></td><td>Easy to make syntax mistakes</td></tr><tr><td>🔄 <strong>Repetitive Work</strong></td><td>Copying topics, actions, variables manually</td></tr><tr><td>🤝 <strong>Team Adoption</strong></td><td>Getting everyone comfortable with the new approach</td></tr></tbody></table>
+<p><strong>Result:</strong> Many teams delay adopting AgentScript because migration feels like too much work.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-how-this-community-tool-helps">💡 How This Community Tool Helps<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-how-this-community-tool-helps" class="hash-link" aria-label="Direct link to 💡 How This Community Tool Helps" title="Direct link to 💡 How This Community Tool Helps">​</a></h2>
+<p>The AgentScript Migration Tool in GenAI Explorer bridges this gap by:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-accelerating-migration-85-automated">✅ Accelerating Migration (85% Automated)<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-accelerating-migration-85-automated" class="hash-link" aria-label="Direct link to ✅ Accelerating Migration (85% Automated)" title="Direct link to ✅ Accelerating Migration (85% Automated)">​</a></h3>
+<p>Generate complete agent scripts automatically from your UI configurations:</p>
+<ul>
+<li>Config and system blocks</li>
+<li>All variables converted to YAML</li>
+<li>Initial topics routing logic (very basic, based on scope)</li>
+<li>Actions with parameters</li>
+<li>Proper Salesforce formatting</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-teaching-by-example">✅ Teaching by Example<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-teaching-by-example" class="hash-link" aria-label="Direct link to ✅ Teaching by Example" title="Direct link to ✅ Teaching by Example">​</a></h3>
+<p>Learn AgentScript by seeing <em>your own</em> configurations converted:</p>
+<ul>
+<li>Study the generated structure</li>
+<li>Understand YAML patterns</li>
+<li>See how UI maps to code</li>
+<li>Learn best practices</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-ensuring-spec-compliance">✅ Ensuring Spec Compliance<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-ensuring-spec-compliance" class="hash-link" aria-label="Direct link to ✅ Ensuring Spec Compliance" title="Direct link to ✅ Ensuring Spec Compliance">​</a></h3>
+<p>Generated code follows <a href="https://developer.salesforce.com/sample-apps/agent-script-recipes/" target="_blank" rel="noopener noreferrer">Salesforce Agent Script Recipes</a>:</p>
+<ul>
+<li>Python-style booleans (<code>True</code>/<code>False</code>)</li>
+<li>Compact action notation</li>
+<li>Multi-line instruction format</li>
+<li>Proper protocol handling</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-migration-time-savings">🚀 Migration Time Savings<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-migration-time-savings" class="hash-link" aria-label="Direct link to 🚀 Migration Time Savings" title="Direct link to 🚀 Migration Time Savings">​</a></h2>
+<table><thead><tr><th>Scenario</th><th>Manual Migration</th><th>With This Tool</th><th>Time Saved</th></tr></thead><tbody><tr><td><strong>1 Agent</strong></td><td>4-6 hours</td><td>30-45 minutes</td><td>~85%</td></tr><tr><td><strong>10 Agents</strong></td><td>40-60 hours</td><td>5-7 hours</td><td>~1 week</td></tr><tr><td><strong>Enterprise (50 agents)</strong></td><td>200-300 hours</td><td>25-37 hours</td><td>~1 month</td></tr></tbody></table>
+<p><em>Plus reduced learning curve as team members learn from generated examples!</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-how-it-works">📋 How It Works<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-how-it-works" class="hash-link" aria-label="Direct link to 📋 How It Works" title="Direct link to 📋 How It Works">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-1-open-your-agent">Step 1: Open Your Agent<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#step-1-open-your-agent" class="hash-link" aria-label="Direct link to Step 1: Open Your Agent" title="Direct link to Step 1: Open Your Agent">​</a></h3>
+<p>Navigate to any GenAI Planner Definition in GenAI Explorer.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-2-generate-agentscript">Step 2: Generate AgentScript<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#step-2-generate-agentscript" class="hash-link" aria-label="Direct link to Step 2: Generate AgentScript" title="Direct link to Step 2: Generate AgentScript">​</a></h3>
+<p>Click <strong>"Generate Agent Script"</strong> button.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-3-study-the-code">Step 3: Study the Code<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#step-3-study-the-code" class="hash-link" aria-label="Direct link to Step 3: Study the Code" title="Direct link to Step 3: Study the Code">​</a></h3>
+<p>Review the complete YAML structure - this is your learning opportunity!</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-4-add-business-logic-15">Step 4: Add Business Logic (15%)<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#step-4-add-business-logic-15" class="hash-link" aria-label="Direct link to Step 4: Add Business Logic (15%)" title="Direct link to Step 4: Add Business Logic (15%)">​</a></h3>
+<p>The generated script is 85% complete. You add:</p>
+<ul>
+<li>Detailed reasoning instructions</li>
+<li>Specific business rules</li>
+<li>Custom error handling</li>
+<li>Advanced routing logic</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="step-5-deploy--test">Step 5: Deploy &amp; Test<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#step-5-deploy--test" class="hash-link" aria-label="Direct link to Step 5: Deploy &amp; Test" title="Direct link to Step 5: Deploy &amp; Test">​</a></h3>
+<p>Save to your project, deploy to sandbox, test thoroughly.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-example-what-gets-generated">🎓 Example: What Gets Generated<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-example-what-gets-generated" class="hash-link" aria-label="Direct link to 🎓 Example: What Gets Generated" title="Direct link to 🎓 Example: What Gets Generated">​</a></h2>
+<p>Here's a simplified example of what the tool creates:</p>
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Generated automatically from your Agentforce configuration</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">system</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">instructions</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"You are a helpful customer support assistant..."</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">messages</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">welcome</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Hi there! How can I help you today?"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">error</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Sorry, something went wrong..."</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">config</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">developer_name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"customer_support_assistant"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">default_agent_user</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"agentforce@salesforce.com"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Assists customers with orders and billing"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">variables</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">user_email</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> mutable string</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">order_id</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> mutable string = ""</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">verified</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> mutable boolean = False</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">start_agent topic_selector</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Welcome and route to appropriate topic"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">reasoning</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">actions</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token key atrule" style="color:#00a4db">go_to_orders</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> @utils.transition to @topic.Orders</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token key atrule" style="color:#00a4db">go_to_billing</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> @utils.transition to @topic.Billing</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">topic Orders</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Handle order-related inquiries"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">actions</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">lookup_order</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token key atrule" style="color:#00a4db">description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Look up order by ID"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token key atrule" style="color:#00a4db">inputs</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                </span><span class="token key atrule" style="color:#00a4db">order_id</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> string</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token key atrule" style="color:#00a4db">outputs</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                </span><span class="token key atrule" style="color:#00a4db">order_summary</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> string</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token key atrule" style="color:#00a4db">target</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"flow://GetOrderDetails"</span><br></span></code></pre></div></div>
+<p><strong>85% done!</strong> You just need to add detailed reasoning instructions.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-why-community-tools-matter">🌟 Why Community Tools Matter<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-why-community-tools-matter" class="hash-link" aria-label="Direct link to 🌟 Why Community Tools Matter" title="Direct link to 🌟 Why Community Tools Matter">​</a></h2>
+<p>Salesforce's AgentScript is the future of agent development, but the community needs practical support for adoption:</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-bridge-the-gap">🤝 Bridge the Gap<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-bridge-the-gap" class="hash-link" aria-label="Direct link to 🤝 Bridge the Gap" title="Direct link to 🤝 Bridge the Gap">​</a></h3>
+<p>Help teams transition without overwhelming complexity.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-practical-learning">📚 Practical Learning<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-practical-learning" class="hash-link" aria-label="Direct link to 📚 Practical Learning" title="Direct link to 📚 Practical Learning">​</a></h3>
+<p>Learn by doing - see your configs transformed, not just reading docs.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-reduce-friction">⚡ Reduce Friction<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-reduce-friction" class="hash-link" aria-label="Direct link to ⚡ Reduce Friction" title="Direct link to ⚡ Reduce Friction">​</a></h3>
+<p>Make migration feel achievable instead of daunting.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-enable-innovation">🎯 Enable Innovation<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-enable-innovation" class="hash-link" aria-label="Direct link to 🎯 Enable Innovation" title="Direct link to 🎯 Enable Innovation">​</a></h3>
+<p>Faster adoption = faster innovation with AgentScript's full capabilities.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-understanding-the-new-agentscript-approach">📖 Understanding the New AgentScript Approach<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-understanding-the-new-agentscript-approach" class="hash-link" aria-label="Direct link to 📖 Understanding the New AgentScript Approach" title="Direct link to 📖 Understanding the New AgentScript Approach">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="before-ui-based">Before (UI-Based)<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#before-ui-based" class="hash-link" aria-label="Direct link to Before (UI-Based)" title="Direct link to Before (UI-Based)">​</a></h3>
+<ul>
+<li>❌ Click through Salesforce Setup</li>
+<li>❌ No version control</li>
+<li>❌ Hard to review changes</li>
+<li>❌ Manual deployment</li>
+<li>❌ Environment drift</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="after-agentscript">After (AgentScript)<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#after-agentscript" class="hash-link" aria-label="Direct link to After (AgentScript)" title="Direct link to After (AgentScript)">​</a></h3>
+<ul>
+<li>✅ Code in your IDE</li>
+<li>✅ Git integration</li>
+<li>✅ Standard code reviews</li>
+<li>✅ CLI deployment</li>
+<li>✅ Consistent across orgs</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-best-practices-for-migration">🛠️ Best Practices for Migration<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#%EF%B8%8F-best-practices-for-migration" class="hash-link" aria-label="Direct link to 🛠️ Best Practices for Migration" title="Direct link to 🛠️ Best Practices for Migration">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-start-small">1. Start Small<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#1-start-small" class="hash-link" aria-label="Direct link to 1. Start Small" title="Direct link to 1. Start Small">​</a></h3>
+<p>Begin with 1-2 non-critical agents:</p>
+<ul>
+<li>Learn the patterns</li>
+<li>Build team confidence</li>
+<li>Scale gradually</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-use-as-learning-tool">2. Use as Learning Tool<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#2-use-as-learning-tool" class="hash-link" aria-label="Direct link to 2. Use as Learning Tool" title="Direct link to 2. Use as Learning Tool">​</a></h3>
+<p>Study generated code to understand:</p>
+<ul>
+<li>YAML structure</li>
+<li>AgentScript patterns</li>
+<li>Best practices</li>
+<li>How UI maps to code</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-migrate-progressively">3. Migrate Progressively<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#3-migrate-progressively" class="hash-link" aria-label="Direct link to 3. Migrate Progressively" title="Direct link to 3. Migrate Progressively">​</a></h3>
+<p>Don't migrate everything at once:</p>
+<ul>
+<li>Pick simple agents first</li>
+<li>Test thoroughly</li>
+<li>Document learnings</li>
+<li>Train team members</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-test-thoroughly">4. Test Thoroughly<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#4-test-thoroughly" class="hash-link" aria-label="Direct link to 4. Test Thoroughly" title="Direct link to 4. Test Thoroughly">​</a></h3>
+<p>Always test in sandbox:</p>
+<ul>
+<li>Compare behavior with UI version</li>
+<li>Validate all topics</li>
+<li>Check action parameters</li>
+<li>Test error scenarios</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-embrace-code-practices">5. Embrace Code Practices<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#5-embrace-code-practices" class="hash-link" aria-label="Direct link to 5. Embrace Code Practices" title="Direct link to 5. Embrace Code Practices">​</a></h3>
+<p>Treat AgentScript like any code:</p>
+<ul>
+<li>Version control (Git)</li>
+<li>Code reviews</li>
+<li>Feature branches</li>
+<li>Documentation</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-what-makes-this-different">🎯 What Makes This Different<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-what-makes-this-different" class="hash-link" aria-label="Direct link to 🎯 What Makes This Different" title="Direct link to 🎯 What Makes This Different">​</a></h2>
+<p>This isn't just code generation - it's a <strong>learning and migration accelerator</strong>:</p>
+<table><thead><tr><th>Traditional Approach</th><th>With Migration Tool</th></tr></thead><tbody><tr><td>Read docs, write from scratch</td><td>See your config as AgentScript</td></tr><tr><td>Hours of syntax debugging</td><td>Spec-compliant from start</td></tr><tr><td>Manual copying of metadata</td><td>Automatic extraction</td></tr><tr><td>Trial and error learning</td><td>Learn from working examples</td></tr><tr><td>Each team member struggles</td><td>Share generated examples</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-learn-more">📚 Learn More<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-learn-more" class="hash-link" aria-label="Direct link to 📚 Learn More" title="Direct link to 📚 Learn More">​</a></h2>
+<p>Want to dive deeper? Check out the complete documentation:</p>
+<p><strong>📖 <a href="http://info.sf-explorer.com/genai/agentscript-view">Full Migration Guide</a></strong></p>
+<p>The guide covers:</p>
+<ul>
+<li>Detailed step-by-step migration process</li>
+<li>Complete code examples</li>
+<li>Best practices and tips</li>
+<li>Troubleshooting common issues</li>
+<li>Community resources</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-help-build-the-community">🤝 Help Build the Community<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-help-build-the-community" class="hash-link" aria-label="Direct link to 🤝 Help Build the Community" title="Direct link to 🤝 Help Build the Community">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="share-your-experience">Share Your Experience<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#share-your-experience" class="hash-link" aria-label="Direct link to Share Your Experience" title="Direct link to Share Your Experience">​</a></h3>
+<ul>
+<li>Blog about your migration</li>
+<li>Present at user groups</li>
+<li>Share tips and gotchas</li>
+<li>Help others on forums</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="contribute-improvements">Contribute Improvements<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#contribute-improvements" class="hash-link" aria-label="Direct link to Contribute Improvements" title="Direct link to Contribute Improvements">​</a></h3>
+<ul>
+<li>Report issues</li>
+<li>Suggest enhancements</li>
+<li>Share migration patterns</li>
+<li>Help on Trailblazer Community</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="build-on-this-foundation">Build on This Foundation<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#build-on-this-foundation" class="hash-link" aria-label="Direct link to Build on This Foundation" title="Direct link to Build on This Foundation">​</a></h3>
+<p>This tool is a starting point:</p>
+<ul>
+<li>Create team-specific templates</li>
+<li>Add custom validation</li>
+<li>Share your enhancements</li>
+<li>Contribute back to community</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-try-it-today">🚀 Try It Today<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-try-it-today" class="hash-link" aria-label="Direct link to 🚀 Try It Today" title="Direct link to 🚀 Try It Today">​</a></h2>
+<p>Ready to accelerate your AgentScript migration?</p>
+<ol>
+<li><strong>Open <a href="https://app.sf-explorer.com/" target="_blank" rel="noopener noreferrer">GenAI Explorer</a></strong></li>
+<li><strong>Navigate to any agent</strong></li>
+<li><strong>Click "Generate Agent Script"</strong></li>
+<li><strong>Study the generated code</strong></li>
+<li><strong>Start your migration!</strong></li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-success-stories">💪 Success Stories<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-success-stories" class="hash-link" aria-label="Direct link to 💪 Success Stories" title="Direct link to 💪 Success Stories">​</a></h2>
+<p>Teams using this tool report:</p>
+<ul>
+<li>⚡ <strong>85% faster</strong> migration time</li>
+<li>📚 <strong>Faster learning</strong> curve for AgentScript</li>
+<li>🎯 <strong>Higher confidence</strong> in generated code</li>
+<li>🤝 <strong>Better team adoption</strong> of new approach</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-resources">🎓 Resources<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-resources" class="hash-link" aria-label="Direct link to 🎓 Resources" title="Direct link to 🎓 Resources">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="official-salesforce-resources">Official Salesforce Resources<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#official-salesforce-resources" class="hash-link" aria-label="Direct link to Official Salesforce Resources" title="Direct link to Official Salesforce Resources">​</a></h3>
+<ul>
+<li><a href="https://developer.salesforce.com/sample-apps/agent-script-recipes/" target="_blank" rel="noopener noreferrer">Agent Script Recipes</a></li>
+<li><a href="https://developer.salesforce.com/docs/einstein/genai/guide/agentscript.html" target="_blank" rel="noopener noreferrer">AgentScript Documentation</a></li>
+<li><a href="https://trailhead.salesforce.com/search?keywords=agentforce" target="_blank" rel="noopener noreferrer">Agentforce Trailhead</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-resources">Community Resources<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#community-resources" class="hash-link" aria-label="Direct link to Community Resources" title="Direct link to Community Resources">​</a></h3>
+<ul>
+<li><a href="https://agentforce.guide/" target="_blank" rel="noopener noreferrer">AgentScript Community Guide</a></li>
+<li><a href="http://info.sf-explorer.com/genai">GenAI Explorer Documentation</a></li>
+<li><a href="https://trailhead.salesforce.com/trailblazer-community" target="_blank" rel="noopener noreferrer">Trailblazer Community</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-join-the-movement">🌟 Join the Movement<a href="http://info.sf-explorer.com/blog/agentscript-migration-tool#-join-the-movement" class="hash-link" aria-label="Direct link to 🌟 Join the Movement" title="Direct link to 🌟 Join the Movement">​</a></h2>
+<p>AgentScript represents the future of Agentforce development. This community tool helps ensure everyone can participate in that future, regardless of team size or resources.</p>
+<p><strong>Let's make AgentScript adoption easier together!</strong></p>
+<p>Try the migration tool, share your experience, and help build the community resources that benefit everyone.</p>
+<hr>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Community-Driven Tool</div><div class="admonitionContent_BuS1"><p>This is a community tool to help teams adopt Salesforce's modern AgentScript approach. While it automates 85% of the migration work, always review and test thoroughly before production deployment.</p></div></div>
+<p><em>Accelerating Agentforce innovation through community tools.</em> 🚀</p>]]></content:encoded>
+            <category>agentforce</category>
+            <category>agentscript</category>
+            <category>migration</category>
+            <category>community-tools</category>
+            <category>automation</category>
+        </item>
         <item>
             <title><![CDATA[How to Get Standard Object and Field Descriptions in Salesforce]]></title>
             <link>http://info.sf-explorer.com/blog/standard-objects-documentation</link>
