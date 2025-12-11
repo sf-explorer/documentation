@@ -5,7 +5,7 @@
 
 Productivity tool for Salesforce admins and devs
 
-[Salesforce Explorer](https://chromewebstore.google.com/detail/salesforce-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde) is a chrome extension that brings a number of setup enhancements with:
+[Salesforce Explorer](https://app.sf-explorer.com) is available as a web application and Chrome extension that brings a number of setup enhancements with:
 * excel like capabilities (pivot, sort, grouping,...)
 * a focus on usability/innovation
 * enhanced object manager
@@ -20,9 +20,10 @@ Productivity tool for Salesforce admins and devs
 
 ## 🤖 GenAI Explorer
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue)](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag)
+[![Web App](https://img.shields.io/badge/Web%20App-Launch-blue)](https://app.sf-explorer.com/gen-ai.html)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Extension-Available-green)](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag)
 
-**NEW!** [GenAI Explorer](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag) is a specialized Chrome extension for exploring, testing, and monitoring Salesforce Generative AI capabilities:
+**NEW!** [GenAI Explorer](https://app.sf-explorer.com/gen-ai.html) is a comprehensive web application for exploring, testing, and monitoring Salesforce Generative AI capabilities:
 
 * 💬 Chat with Agentforce agents in real-time
 * 🤖 Browse AI configuration (agents, topics, actions)
@@ -31,5 +32,9 @@ Productivity tool for Salesforce admins and devs
 * ☁️ Query Data Cloud for AI analytics
 * 🎨 Create visual documentation boards
 * 📊 Monitor AI performance and token usage
+
+**Access Options:**
+- **Web App** (Recommended): https://app.sf-explorer.com/gen-ai.html
+- **Chrome Extension**: [Install from Chrome Web Store](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag)
 
 [Read the full announcement →](https://app.sf-explorer.com/blog/introducing-genai-explorer)

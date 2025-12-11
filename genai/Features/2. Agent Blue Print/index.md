@@ -14,12 +14,23 @@ keywords:
   - prompts
   - erd
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+
+
 
 # Agent blueprint
 
 Browse and understand all AI Agents, Topics, Actions, and Prompts configured in your Salesforce org with comprehensive entity relationship diagrams.
 
-![Configuration Explorer](../../images/agent-blueprint.png)
+
+<LiteYouTubeEmbed
+              id="-R6PvpGFHPs"
+              params="autoplay=1&autohide=1&showinfo=0&rel=0"
+              title="Testing center"
+              poster="maxresdefault"
+              webp
+            />
 
 ## The Problem
 

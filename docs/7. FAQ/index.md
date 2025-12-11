@@ -2,7 +2,7 @@
 
 
 ## Wait - what is Salesforce Explorer?
-**Salesforce Explorer** is a productivity tool provided as a [web app](https://app.sf-explorer.com) or a [chrome extension](https://chrome.google.com/webstore/detail/salesforce-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde) or intended for Salesforce **administrators** and **developers**.
+**Salesforce Explorer** is a productivity tool provided as a [web app](https://app.sf-explorer.com) and [Chrome extension](https://chrome.google.com/webstore/detail/salesforce-explorer/eabpolgjfkpchgffbkiedgfemcgbnbde) intended for Salesforce **administrators** and **developers**.
 
 ## Why did you build SF Explorer?
 Most of the features where built because I needed it on my projects. I usually work in design authorities so I need to understand quickly what is going on in multiple sandboxes. I am the first user and if it helps me, it may help others, so I decided to package it.

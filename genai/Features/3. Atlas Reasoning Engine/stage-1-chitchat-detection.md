@@ -273,3 +273,6 @@ graph LR
 
 **Stage 1 ensures that only valid business queries consume expensive processing resources, optimizing both performance and cost.**
 
+
+
+

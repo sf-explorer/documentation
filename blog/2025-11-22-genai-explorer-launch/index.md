@@ -2,7 +2,7 @@
 slug: introducing-genai-explorer
 title: Introducing GenAI Explorer - Your Gateway to Salesforce AI
 authors: [ndespres]
-tags: [release, genai, agentforce, einstein, chrome-extension]
+tags: [release, genai, agentforce, einstein, web-app]
 image: ./genai-explorer-logo.png
 ---
 
@@ -35,7 +35,7 @@ While our initial focus is on **Salesforce Agentforce and Einstein AI**, our vis
 
 ## 🚀 What is GenAI Explorer?
 
-GenAI Explorer is a browser extension designed specifically for the Salesforce AI ecosystem. It provides a unified interface for interacting with your organization's AI agents, understanding their configuration, and analyzing their performance - all without leaving your browser.
+GenAI Explorer is a web application designed specifically for the Salesforce AI ecosystem. It provides a unified interface for interacting with your organization's AI agents, understanding their configuration, and analyzing their performance - accessible from any browser.
 
 **Single Purpose:** A developer and administrator tool for chatting with, testing, and monitoring Salesforce Agentforce and Einstein AI capabilities—with transparency at its core.
 
@@ -167,22 +167,30 @@ We take your data security seriously:
 
 ### Installation
 
-**🎉 Now Available on Chrome Web Store!**
+**Access GenAI Explorer:**
 
-Install GenAI Explorer directly from the [Chrome Web Store](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag) with one click!
+**Option 1: Web Application** (Recommended)
 
-Or use the web version:
+Visit https://app.sf-explorer.com/gen-ai.html to use GenAI Explorer directly in your browser without any installation. Authentication is done securely via OAuth 2.0.
+
+**Option 2: Chrome Extension**
+
+Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag) for browser integration with side panel and context menu shortcuts.
+
+### Setup Your Connected App
+
+Before using GenAI Explorer, you need to set up a connected app in your Salesforce org for OAuth 2.0 authentication:
 
 1. Create a connected app in your org following the official salesforce doc: https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html
 2. Give some right to your API only user (Datacloud user, prompt user)
-3. Visit https://app.sf-explorer.com/gen-ai.html
-4. Fill in the required info
-5. Click on **Connect to salesforce**
+3. Visit https://app.sf-explorer.com/gen-ai.html (or open the extension)
+4. Fill in the required OAuth 2.0 credentials (Consumer Key, Instance URL)
+5. Click on **Connect to salesforce** to complete the OAuth 2.0 flow
 
 
 ### Requirements
 
-- Chrome browser (version 88 or higher)
+- Modern web browser (Chrome, Firefox, Safari, Edge)
 - Salesforce org with Agentforce or Einstein AI features enabled
 - Appropriate Salesforce permissions:
   - Einstein AI User
@@ -288,7 +296,7 @@ The Atlas pipeline visualization helps you actually understand how Salesforce AI
 Starting with Salesforce, but our architecture is designed to support multiple AI platforms in the future. One tool to understand all your AI agents.
 
 ### 6. All-in-One Tool
-Everything you need in one extension - chat, test, monitor, document, analyze. No need to juggle multiple tools.
+Everything you need in one web application - chat, test, monitor, document, analyze. No need to juggle multiple tools or switch between different interfaces.
 
 ### 7. Free and Open
 Available at no cost. Built for the Salesforce community, by developers who understand the challenges.

@@ -389,3 +389,6 @@ graph LR
 
 **Stage 2 ensures that only queries with sufficient information proceed to expensive processing stages, improving both user experience and system efficiency.**
 
+
+
+

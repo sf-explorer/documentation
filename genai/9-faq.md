@@ -4,7 +4,7 @@
 
 ### What is GenAI Explorer?
 
-GenAI Explorer is a Chrome extension for Salesforce developers and administrators to explore, test, and monitor Agentforce and Einstein AI capabilities. It provides tools for chatting with agents, testing models, analyzing performance, and understanding AI configuration.
+GenAI Explorer is a web application for Salesforce developers and administrators to explore, test, and monitor Agentforce and Einstein AI capabilities. It provides tools for chatting with agents, testing models, analyzing performance, and understanding AI configuration.
 
 ### Is GenAI Explorer free?
 
@@ -24,20 +24,51 @@ Yes, you need:
 - Data Cloud access (for analytics features)
 - Read access to AI metadata objects
 - API Enabled permission
+- A connected app for some features (see below)
 
 Contact your Salesforce administrator if you don't have these permissions.
 
 ## Installation & Setup
 
-### How do I install GenAI Explorer?
+### Do I need a connected app?
 
-**Chrome Extension (Recommended):**
+Yes, but only for specific features that interact with Salesforce AI APIs:
+
+**Features requiring a connected app:**
+- 💬 Agent interaction and chatting with Agentforce agents
+- 🔬 Replay Debugger for reproducing and testing requests
+- 🎯 Topic Collision Analysis
+- 🧠 Atlas Reasoning Engine visualization with live data
+- 📊 Data Cloud query execution
+
+**Features that work without a connected app:**
+- 📖 Browsing documentation and examples
+- 🎨 Creating and editing interactive boards (offline mode)
+- 📝 Viewing static configuration examples
+
+### How do I set up a connected app?
+
+To set up a connected app for GenAI Explorer, follow the official Salesforce documentation:
+
+**📖 [Agent API - Get Started Guide](https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html)**
+
+This official guide covers:
+- Creating a connected app in Setup
+- Configuring OAuth settings and scopes
+- Setting the correct callback URLs
+- Granting required user permissions
+
+Once your connected app is configured, you can connect GenAI Explorer by entering your Consumer Key, Secret and Instance URL.
+
+### How can I use GenAI Explorer?
+
+**Web Application (Recommended):**
+Visit https://app.sf-explorer.com/gen-ai.html to use GenAI Explorer directly in your browser without installing anything. Simply connect to your Salesforce org using OAuth 2.0 authentication and start exploring.
+
+**Chrome Extension (Alternative):**
 1. Visit the [GenAI Explorer Chrome Web Store page](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag)
 2. Click "Add to Chrome"
-3. Click the extension icon and connect to your Salesforce org
-
-**Web Application:**
-Visit https://app.sf-explorer.com/gen-ai.html to use GenAI Explorer without installing an extension
+3. Click the extension icon and connect to your Salesforce org via OAuth 2.0
 
 ### Can I use GenAI Explorer in multiple orgs?
 
@@ -48,7 +79,7 @@ Yes! You can connect to multiple Salesforce orgs and switch between them:
 
 ### Does GenAI Explorer work in incognito mode?
 
-Yes, but you need to enable it:
+The web application works in any browser mode without restrictions. If you're using the Chrome extension, you'll need to enable it for incognito mode:
 1. Go to `chrome://extensions`
 2. Find GenAI Explorer
 3. Click "Details"
@@ -56,7 +87,7 @@ Yes, but you need to enable it:
 
 ### Can I use it on mobile?
 
-Not currently. GenAI Explorer is designed for desktop Chrome. Mobile browser extensions have limited functionality.
+The web application works on mobile browsers, though the interface is optimized for desktop use. For the best experience with complex features like boards and visualizations, we recommend using a desktop browser.
 
 ## Features & Capabilities
 
@@ -303,6 +334,21 @@ The extension monitors usage and warns at 80% capacity.
 
 ### Why is the extension slow?
 
+**For Web Application:**
+**Common Causes:**
+- Slow network connection
+- Large boards with many nodes
+- Auto-refreshing queries
+- Browser with limited resources
+
+**Solutions:**
+- Check your internet connection
+- Simplify boards
+- Disable auto-refresh
+- Close unused browser tabs
+- Clear browser cache
+
+**For Chrome Extension:**
 **Common Causes:**
 - Too many open tabs
 - Large boards with many nodes
@@ -317,11 +363,13 @@ The extension monitors usage and warns at 80% capacity.
 
 ### How much memory does it use?
 
-Typically 50-200MB depending on:
-- Number of open tabs
+The web application runs in your browser and typically uses 50-200MB depending on:
+- Number of open features
 - Board complexity
 - Query result sizes
 - Chat history length
+
+The Chrome extension has similar memory usage patterns when installed.
 
 ## Troubleshooting
 
