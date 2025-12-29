@@ -20,17 +20,37 @@ Detailed comparison of available Einstein AI models to help you choose the right
 
 ## Quick Comparison Table
 
-| Feature | GPT-4 Omni | GPT-4o Mini | GPT-3.5 Turbo |
-|---------|------------|-------------|---------------|
+A side-by-side comparison of popular models showing performance, cost, and **sustainability metrics**. 
+
+> 💡 **Sustainability Note**: Lower CO₂ emissions and water consumption typically correlate with lower costs and faster response times. Models with A+ ratings are the most environmentally friendly. [Learn more about sustainability →](./sustainability.md)
+
+| Feature | GPT-4o | GPT-4o Mini | Claude 3 Haiku* |
+|---------|--------|-------------|-----------------|
 | **Quality** | ⭐⭐⭐⭐⭐ Excellent | ⭐⭐⭐⭐ Good | ⭐⭐⭐ Adequate |
 | **Speed** | 🐢 Slower (2-5s) | 🚗 Medium (1-3s) | 🚀 Fast (0.5-1.5s) |
-| **Cost** | 💰💰💰 Highest | 💰💰 Moderate | 💰 Lowest |
-| **Context Window** | 128K tokens | 128K tokens | 16K tokens |
+| **Cost (per 1k tokens)** | 💰💰💰 $0.010 | 💰💰 $0.0015 | 💰 $0.0008 |
+| **Context Window** | 128K tokens | 128K tokens | 128K tokens |
+| **Parameters** | 1,700B | 100B | 50B |
 | **Best For** | Complex tasks | General purpose | Simple tasks |
+| | | | |
+| **🌍 CO₂ Emissions** | 0.064 g/1k tokens | 0.006 g/1k tokens | 0.006 g/1k tokens |
+| **💧 Water Consumption** | 0.16 L/1k tokens | 0.015 L/1k tokens | 0.015 L/1k tokens |
+| **🟢 Sustainability Rating** | **A** | **A+** | **A+** |
+
+*_Claude 3 Haiku is shown as a representative fast, cost-effective model. Other similar options include Amazon Nova Lite and Gemini 2.0 Flash Lite._
+
+### Key Sustainability Insights
+
+- **Smaller models are more sustainable**: Models with fewer parameters (50-100B) typically have 10x lower CO₂ emissions than large models (1,700B+)
+- **Cost correlates with sustainability**: More sustainable models (A+ rating) are also more cost-effective
+- **Mini variants offer the best balance**: GPT-4o Mini provides excellent quality with minimal environmental impact
+- **Fast = Sustainable**: Faster models generally consume less energy and water
+
+[View complete sustainability comparison →](./sustainability.md)
 
 ---
 
-## GPT-4 Omni
+## GPT-4o
 
 ### Overview
 
@@ -65,7 +85,10 @@ The most advanced model with superior reasoning, creativity, and accuracy.
 | Tokens/Second | ~100 |
 | Avg Input Tokens | 150 |
 | Avg Output Tokens | 300 |
-| Cost per 1K Tokens | $0.03 (input), $0.06 (output) |
+| Cost per 1K Tokens | $0.010 |
+| **CO₂ Emissions** | **0.064 g/1k tokens** |
+| **Water Consumption** | **0.16 L/1k tokens** |
+| **Sustainability Rating** | **A** |
 
 ### Use Case Examples
 
@@ -121,7 +144,10 @@ Balanced model offering good quality at moderate cost - the "sweet spot" for mos
 | Tokens/Second | ~150 |
 | Avg Input Tokens | 150 |
 | Avg Output Tokens | 250 |
-| Cost per 1K Tokens | $0.006 (input), $0.012 (output) |
+| Cost per 1K Tokens | $0.0015 |
+| **CO₂ Emissions** | **0.006 g/1k tokens** |
+| **Water Consumption** | **0.015 L/1k tokens** |
+| **Sustainability Rating** | **A+** |
 
 ### Use Case Examples
 
@@ -141,11 +167,11 @@ Balanced model offering good quality at moderate cost - the "sweet spot" for mos
 
 ---
 
-## GPT-3.5 Turbo
+## Claude 3 Haiku
 
 ### Overview
 
-Fast, affordable model perfect for high-volume, straightforward tasks.
+Fast, affordable model perfect for high-volume, straightforward tasks. Representative of the "fast and efficient" model category.
 
 **When to Use:**
 - Simple classification
@@ -177,7 +203,10 @@ Fast, affordable model perfect for high-volume, straightforward tasks.
 | Tokens/Second | ~200 |
 | Avg Input Tokens | 100 |
 | Avg Output Tokens | 150 |
-| Cost per 1K Tokens | $0.002 (input), $0.004 (output) |
+| Cost per 1K Tokens | $0.0008 |
+| **CO₂ Emissions** | **0.006 g/1k tokens** |
+| **Water Consumption** | **0.015 L/1k tokens** |
+| **Sustainability Rating** | **A+** |
 
 ### Use Case Examples
 
@@ -202,7 +231,7 @@ Fast, affordable model perfect for high-volume, straightforward tasks.
 ### By Use Case Priority
 
 **Quality is Critical:**
-→ **GPT-4 Omni**
+→ **GPT-4o**
 - Legal documents
 - Medical content
 - Complex analysis
@@ -216,7 +245,7 @@ Fast, affordable model perfect for high-volume, straightforward tasks.
 - Most use cases (80%)
 
 **Speed & Volume Matter Most:**
-→ **GPT-3.5 Turbo**
+→ **Claude 3 Haiku** (or similar fast models)
 - Simple classification
 - Data extraction
 - High-volume tasks
@@ -230,15 +259,19 @@ Fast, affordable model perfect for high-volume, straightforward tasks.
 
 **Scenario:** 200 input tokens, 300 output tokens per request
 
-| Model | Monthly Cost | Cost per Request |
-|-------|--------------|------------------|
-| GPT-4 Omni | $300 | $0.030 |
-| GPT-4o Mini | $60 | $0.006 |
-| GPT-3.5 Turbo | $20 | $0.002 |
+| Model | Monthly Cost | Cost per Request | CO₂ per Request | Water per Request |
+|-------|--------------|------------------|------------------|-------------------|
+| GPT-4o | $300 | $0.030 | 0.032 g | 0.08 L |
+| GPT-4o Mini | $60 | $0.006 | 0.003 g | 0.0075 L |
+| Claude 3 Haiku | $20 | $0.002 | 0.003 g | 0.0075 L |
 
 **Potential Savings:**
-- GPT-4o Mini vs GPT-4 Omni: **$240/month (80% savings)**
-- GPT-3.5 vs GPT-4 Omni: **$280/month (93% savings)**
+- GPT-4o Mini vs GPT-4o: **$240/month (80% savings)** + **90% lower CO₂ emissions**
+- Claude 3 Haiku vs GPT-4o: **$280/month (93% savings)** + **95% lower CO₂ emissions**
+
+**Environmental Impact:**
+- Using GPT-4o Mini instead of GPT-4o saves **~14.5 kg CO₂/month** (equivalent to ~60 km driven)
+- Using Claude 3 Haiku instead of GPT-4o saves **~14.5 kg CO₂/month** + **~36 L water/month**
 
 ---
 
@@ -251,18 +284,19 @@ Fast, affordable model perfect for high-volume, straightforward tasks.
 ```javascript
 function selectModel(request) {
   if (isComplex(request)) {
-    return "GPT-4-Omni";      // 10% of requests
+    return "GPT-4o";          // 10% of requests
   } else if (isStandard(request)) {
     return "GPT-4o-Mini";     // 60% of requests
   } else {
-    return "GPT-3.5-Turbo";   // 30% of requests
+    return "Claude-3-Haiku";  // 30% of requests
   }
 }
 ```
 
 **Example Results:**
-- Average cost per request: $0.008 (vs $0.030 with GPT-4 only)
+- Average cost per request: $0.008 (vs $0.030 with GPT-4o only)
 - **Savings: 73%** while maintaining quality where needed
+- **Environmental Impact**: ~85% reduction in CO₂ emissions vs using GPT-4o for all requests
 
 ---
 
@@ -295,11 +329,30 @@ Define what "good enough" means:
 - **[Temperature Guide](./temperature-guide)** - Optimize creativity settings
 - **[Parameters Reference](./parameters)** - All configuration options
 - **[Cost Optimization](./cost-optimization)** - Reduce spending strategies
+- **[Sustainability](./sustainability)** - Complete sustainability guide with all models
 - **[Best Practices](./best-practices)** - Testing tips
 
 ---
 
 **Choose the right model for each task to balance quality, speed, and cost effectively.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

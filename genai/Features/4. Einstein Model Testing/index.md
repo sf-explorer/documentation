@@ -223,6 +223,7 @@ See responses as they're generated, with live metrics updating.
 - **[Model Comparison](/genai/einstein-model-testing/model-comparison)** - Detailed performance analysis
 - **[Best Practices](/genai/einstein-model-testing/best-practices)** - Tips for effective testing
 - **[Cost Optimization](/genai/einstein-model-testing/cost-optimization)** - Strategies to reduce spending
+- **[Sustainability](/genai/einstein-model-testing/sustainability)** - Understand environmental impact and sustainability ratings
 
 ### Related Features
 
