@@ -1,292 +1,325 @@
-# AI Model Sustainability
+---
+id: sustainability
+slug: /einstein-model-testing/sustainability
+title: AI Model Sustainability Guide
+sidebar_label: Sustainability Guide
+sidebar_position: 7
+description: Understanding CO₂ emissions, water consumption, and environmental impact of AI models with actionable sustainability recommendations.
+keywords:
+  - sustainability
+  - co2
+  - carbon footprint
+  - water consumption
+  - green ai
+  - environmental impact
+---
 
-## What is Sustainability?
+# AI Model Sustainability Guide
 
-Sustainability in AI refers to the environmental impact of running AI models, particularly focusing on:
+Understanding and minimizing the environmental impact of AI model usage.
 
-- **Carbon Dioxide (CO₂) Emissions**: The greenhouse gases released during model inference
-- **Water Consumption**: The water used for cooling data centers that host AI models
-- **Energy Usage**: The electricity consumed to power computational resources
-
-As AI adoption grows, understanding and minimizing these environmental impacts becomes crucial for responsible AI development and deployment.
+---
 
 ## Why Sustainability Matters
 
-### Environmental Impact
+### The Environmental Impact of AI
 
 AI models, especially large language models (LLMs), require significant computational resources:
 
-- **Data Centers**: Consume massive amounts of electricity for training and inference
-- **Cooling Systems**: Require substantial water for temperature regulation
-- **Carbon Footprint**: Contribute to greenhouse gas emissions that drive climate change
+- **Energy Consumption**: Large models like GPT-5 can use 20-100x more energy than efficient models
+- **CO₂ Emissions**: Training GPT-3 produced ~552 tons of CO₂; inference adds up at scale
+- **Water Usage**: Data centers use water for cooling - up to 17 liters per 1,000 tokens for largest models
+- **Scaling Impact**: As AI adoption grows, cumulative environmental impact becomes significant
 
-### Business Impact
+### Business & Environmental Benefits
 
-Beyond environmental concerns, sustainability metrics also correlate with:
+| Benefit | Impact |
+|---------|--------|
+| **Cost Reduction** | More sustainable models are typically 5-50x cheaper |
+| **Regulatory Compliance** | EU AI Act and sustainability reporting requirements |
+| **Corporate Responsibility** | ESG goals and stakeholder expectations |
+| **Performance** | Efficient models often have faster response times |
 
-- **Cost Efficiency**: More sustainable models often have lower operational costs
-- **Regulatory Compliance**: Increasing regulations around carbon reporting and environmental impact
-- **Corporate Responsibility**: Demonstrating commitment to sustainable practices
-- **Long-term Viability**: Ensuring AI development remains sustainable as adoption scales
-
-### Making Informed Decisions
-
-By understanding sustainability metrics, you can:
-
-- **Choose Appropriate Models**: Select models that balance performance with environmental impact
-- **Optimize Usage**: Make informed decisions about when to use larger vs. smaller models
-- **Track Impact**: Monitor and report on your organization's AI carbon footprint
-- **Reduce Costs**: Lower environmental impact often correlates with lower operational costs
+---
 
 ## How We Calculate Sustainability
 
-### CO₂ Emissions Calculation
-
-We calculate CO₂ emissions using the following formula:
+### CO₂ Emissions Formula
 
 ```
 CO₂ (grams) = (Tokens ÷ 1000) × CO₂_per_1k_tokens
 ```
 
-**Assumptions:**
-
-- CO₂ values are measured in **grams per 1,000 tokens**
-- Values are based on published research and industry estimates for model inference
-- Calculations assume standard data center operations and average energy mix
-- Values may vary based on:
-  - Geographic location of data centers
-  - Energy source (renewable vs. fossil fuels)
-  - Model optimization and hardware efficiency
-  - Actual workload patterns
-
 **Data Sources:**
+- Artificial Analysis benchmark data
+- Model provider specifications
+- Industry research on AI carbon footprints
 
-- Published research on AI model carbon footprints
-- Industry benchmarks from major cloud providers
-- Estimates based on model size and computational requirements
+**Factors Considered:**
+- Model size (parameters)
+- Hardware efficiency (DGX A100, H100, H200, TPU)
+- Data center PUE (Power Usage Effectiveness)
+- Carbon Intensity Factor (CIF) by region
 
-### Water Consumption Calculation
-
-We calculate water consumption using the following formula:
+### Water Consumption Formula
 
 ```
 Water (liters) = (Tokens ÷ 1000) × Water_liters_per_1k_tokens
 ```
 
-**Assumptions:**
-
-- Water consumption is measured in **liters per 1,000 tokens**
-- Values account for:
-  - Direct water usage for cooling systems
-  - Indirect water usage in power generation
-  - Average data center water efficiency
-- Actual consumption varies based on:
-  - Cooling technology (air vs. water cooling)
-  - Climate and geographic location
-  - Data center efficiency measures
+**Factors:**
+- Direct cooling water usage
+- Indirect water from power generation
+- Data center location and climate
 
 ### Sustainability Rating System
 
-We use a **percentile-based rating system** to help you quickly identify the most sustainable models:
+Models are rated on a percentile-based scale:
 
-- **A+**: Top 20% most sustainable (lowest CO₂ emissions)
-- **A**: Next 20% (very low CO₂ emissions)
-- **B**: Middle 20% (moderate CO₂ emissions)
-- **C**: Next 20% (higher CO₂ emissions)
-- **D**: Bottom 20% (highest CO₂ emissions)
-
-**How Ratings Are Calculated:**
-
-1. All models with available CO₂ data are ranked from lowest to highest emissions
-2. The range between minimum and maximum CO₂ values is calculated
-3. Each model's percentile position within this range determines its rating
-4. Ratings are **relative** to the current set of available models
-
-**Important Notes:**
-
-- Ratings are **dynamic** and update as new models are added
-- Models without CO₂ data receive no rating (shown as "N/A")
-- Ratings help compare models but should be considered alongside performance and cost
-- Lower emissions generally correlate with lower costs and faster response times
-
-### Cost Calculation
-
-We also track cost alongside sustainability metrics:
-
-```
-Cost (USD) = (Tokens ÷ 1000) × Cost_USD_per_1k_tokens
-```
-
-Cost data helps you understand the **total cost of ownership** including both financial and environmental costs.
-
-## Model Sustainability Comparison
-
-The following table shows all available Einstein AI models with their sustainability metrics:
-
-| Model Name | Parameters (Billions) | CO₂ per 1k Tokens (g) | Water per 1k Tokens (L) | Cost per 1k Tokens (USD) | Sustainability Rating |
-|------------|---------------------|----------------------|------------------------|-------------------------|----------------------|
-| GPT-4o Mini | 100 | 0.006 | 0.015 | 0.0015 | A+ |
-| GPT-4o Mini (OpenAI) | 100 | 0.006 | 0.015 | 0.0015 | A+ |
-| Claude Haiku 4.5 (Beta) | 50 | 0.006 | 0.015 | 0.0010 | A+ |
-| Claude 3 Haiku | 50 | 0.006 | 0.015 | 0.0008 | A+ |
-| Amazon Nova Lite | 10 | 0.006 | 0.015 | 0.0005 | A+ |
-| Gemini 2.0 Flash Lite | 10 | 0.006 | 0.015 | 0.0007 | A+ |
-| GPT-4.1 Mini | 100 | 0.008 | 0.020 | 0.0020 | A+ |
-| O4 Mini (Beta) | 100 | 0.008 | 0.020 | 0.0020 | A+ |
-| Gemini 2.5 Flash Lite | 10 | 0.008 | 0.020 | 0.0008 | A+ |
-| Gemini 2.0 Flash | 100 | 0.016 | 0.040 | 0.0020 | A+ |
-| GPT-5 Mini | 100 | 0.024 | 0.060 | 0.0050 | A+ |
-| O3 (Beta) | 2000 | 0.024 | 0.060 | 0.0060 | A+ |
-| Gemini 2.5 Flash | 100 | 0.024 | 0.060 | 0.0025 | A+ |
-| Amazon Nova Pro | 100 | 0.028 | 0.070 | 0.0030 | A+ |
-| Claude Sonnet 4.5 (Beta) | 200 | 0.056 | 0.140 | 0.0180 | A |
-| Claude Sonnet 4 | 200 | 0.056 | 0.140 | 0.0180 | A |
-| Claude 3.7 Sonnet | 200 | 0.056 | 0.140 | 0.0150 | A |
-| GPT-4o | 1700 | 0.064 | 0.160 | 0.0100 | A |
-| GPT-4.1 | 1800 | 0.072 | 0.180 | 0.0120 | B |
-| Gemini 2.5 Pro | 1000 | 0.080 | 0.200 | 0.0100 | B |
-| GPT-5 | 2000 | 0.160 | 0.400 | 0.0200 | D |
-| GPT-5.1 (Beta) | 2000 | 0.160 | 0.400 | 0.0250 | D |
-| Azure OpenAI Text Embedding Ada 002 | - | N/A | N/A | N/A | N/A |
-| OpenAI Text Embedding Ada 002 | - | N/A | N/A | N/A | N/A |
-
-### Understanding the Table
-
-**Parameters (Billions):**
-- Estimated number of parameters in billions
-- Larger models generally have higher emissions but better capabilities
-
-**CO₂ per 1k Tokens:**
-- Measured in grams
-- Lower values indicate better sustainability
-- Values range from 0.006g (most sustainable) to 0.160g (least sustainable)
-
-**Water per 1k Tokens:**
-- Measured in liters
-- Accounts for both direct and indirect water usage
-- Values range from 0.015L to 0.400L per 1,000 tokens
-
-**Cost per 1k Tokens:**
-- Measured in US Dollars
-- Lower cost often correlates with lower environmental impact
-- Values range from $0.0005 to $0.0250 per 1,000 tokens
-
-**Sustainability Rating:**
-- Letter grade (A+ to D) based on CO₂ emissions percentile
-- Helps quickly identify the most sustainable options
-- Models without CO₂ data show "N/A"
-
-## Best Practices for Sustainable AI Usage
-
-### 1. Choose the Right Model Size
-
-- **Use smaller models** (Mini/Lite variants) for simple tasks
-- **Reserve larger models** for complex reasoning and high-accuracy requirements
-- Consider the **cost-benefit ratio** of model capabilities vs. environmental impact
-
-### 2. Optimize Token Usage
-
-- **Reduce prompt length** where possible
-- **Use efficient prompting techniques** to minimize token consumption
-- **Cache responses** for repeated queries
-- **Batch requests** when feasible
-
-### 3. Monitor and Track Impact
-
-- Use the **Performance & Sustainability Metrics** in SF Explorer to track:
-  - Total CO₂ emissions per session
-  - Water consumption
-  - Cost analysis
-- Set **sustainability goals** for your AI usage
-- **Report metrics** to stakeholders
-
-### 4. Consider Model Recommendations
-
-- Use the **Model Tester** to compare models before deployment
-- Review **sustainability ratings** alongside performance metrics
-- Test with **realistic workloads** to understand actual impact
-
-### 5. Balance Multiple Factors
-
-Sustainability is important, but consider it alongside:
-
-- **Performance**: Model accuracy and capabilities
-- **Cost**: Financial impact of model usage
-- **Latency**: Response time requirements
-- **Use Case**: Specific requirements of your application
-
-## Relatable Equivalents
-
-To help you understand the environmental impact, SF Explorer converts CO₂ emissions and water consumption into relatable equivalents:
-
-### CO₂ Equivalents
-
-- **Car kilometers driven**: How far you could drive a car to produce the same CO₂
-- **Dishwasher hours**: Hours of dishwasher operation equivalent
-- **Smartphone charges**: Number of smartphone charges equivalent
-- **Tree days**: Days a tree would need to absorb the CO₂
-
-### Water Equivalents
-
-- **Water bottles**: Number of 500mL water bottles
-- **Shower minutes**: Minutes of average shower usage
-- **Glasses of water**: Number of 250mL glasses
-- **Toilet flushes**: Number of standard toilet flushes
-
-These equivalents help make abstract environmental metrics more tangible and understandable.
-
-## Limitations and Disclaimers
-
-### Data Accuracy
-
-- Sustainability metrics are **estimates** based on available research and industry data
-- Actual values may vary based on:
-  - Geographic location of data centers
-  - Energy mix (renewable vs. fossil fuels)
-  - Model optimizations and hardware efficiency
-  - Specific workload patterns
-
-### Model Coverage
-
-- Not all models have complete sustainability data
-- Some models (especially embedding models) may not have published metrics
-- Data is updated as new information becomes available
-
-### Calculation Scope
-
-- Calculations focus on **inference** (model usage), not training
-- Training emissions are typically much higher but are one-time costs
-- Infrastructure overhead (networking, storage) is approximated
-
-### Rating System
-
-- Ratings are **relative** to the current set of available models
-- Ratings update automatically as new models are added
-- A "D" rating doesn't mean a model is "bad" - it's simply less sustainable relative to other options
-
-## Future Improvements
-
-We're continuously working to improve sustainability tracking:
-
-- **More accurate data**: Incorporating provider-specific emissions data
-- **Geographic factors**: Accounting for regional energy mixes
-- **Real-time updates**: Reflecting changes in model efficiency
-- **Training emissions**: Including model training impact where available
-- **Carbon offsetting**: Tracking and reporting offset programs
-
-## Additional Resources
-
-- [Salesforce Sustainability Cloud](https://www.salesforce.com/products/sustainability-cloud/)
-- [AI Carbon Footprint Research](https://www.nature.com/articles/d41586-021-02372-4)
-- [Green AI Initiative](https://www.greenai.org/)
-- [EPA Carbon Equivalencies Calculator](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator)
-
-## Questions or Feedback?
-
-If you have questions about sustainability metrics or suggestions for improvements, please reach out through our support channels or contribute to our documentation.
+| Rating | Percentile | CO₂ Range | Description |
+|--------|------------|-----------|-------------|
+| **A+** | Top 20% | < 1.0 g/1k | Most sustainable |
+| **A** | 20-40% | 1.0-2.0 g/1k | Very sustainable |
+| **B** | 40-60% | 2.0-5.0 g/1k | Moderate |
+| **C** | 60-80% | 5.0-10.0 g/1k | Higher impact |
+| **D** | Bottom 20% | > 10.0 g/1k | Highest impact |
 
 ---
 
-**Last Updated**: January 2025  
-**Data Version**: Based on models.json v1.0
+## Complete Model Sustainability Reference
 
+### All Models Ranked by CO₂ Efficiency
+
+| Rank | Model | CO₂/1k (g) | Water/1k (L) | Cost/1k ($) | Rating |
+|------|-------|------------|--------------|-------------|--------|
+| 1 | Amazon Nova Lite | 0.10 | 0.07 | 0.0005 | **A+** |
+| 2 | Gemini 2.0 Flash Lite | 0.12 | 0.15 | 0.0007 | **A+** |
+| 3 | Gemini 2.5 Flash Lite | 0.15 | 0.18 | 0.0008 | **A+** |
+| 4 | Gemini 2.0 Flash | 0.45 | 0.54 | 0.002 | **A+** |
+| 5 | Amazon Nova Pro | 0.50 | 0.35 | 0.003 | **A+** |
+| 6 | GPT-4.1 | 0.56 | 0.44 | 0.012 | **A+** |
+| 7 | Gemini 2.5 Flash | 0.56 | 0.66 | 0.0025 | **A+** |
+| 8 | GPT-4.1 Mini | 0.59 | 0.46 | 0.002 | **A+** |
+| 9 | GPT-4o Mini | 0.64 | 0.46 | 0.0015 | **A+** |
+| 10 | Claude 3 Haiku | 0.64 | 0.34 | 0.0008 | **A+** |
+| 11 | Claude Haiku 4.5 | 0.78 | 0.41 | 0.001 | **A+** |
+| 12 | O3 (Beta) | 0.99 | 0.78 | 0.006 | **A** |
+| 13 | GPT-4o | 1.17 | 0.88 | 0.010 | **A** |
+| 14 | Claude 3.7 Sonnet | 1.18 | 0.62 | 0.015 | **A** |
+| 15 | Claude Sonnet 4 | 1.18 | 0.62 | 0.018 | **A** |
+| 16 | Claude Sonnet 4.5 | 1.20 | 0.63 | 0.018 | **A** |
+| 17 | Gemini 2.5 Pro | 1.54 | 1.84 | 0.010 | **A** |
+| 18 | O4 Mini (Beta) | 5.13 | 4.04 | 0.002 | **B** |
+| 19 | GPT-5 Mini | 7.75 | 6.10 | 0.005 | **B** |
+| 20 | GPT-5 | 13.78 | 17.69 | 0.020 | **D** |
+| 21 | GPT-5.1 (Beta) | 13.78 | 17.69 | 0.025 | **D** |
+
+---
+
+## Relatable Equivalents
+
+To make environmental impact tangible, we convert metrics to everyday equivalents:
+
+### CO₂ Equivalents
+
+| CO₂ Amount | Equivalent |
+|------------|------------|
+| 1 gram | 0.004 km driving |
+| 10 grams | Charging a smartphone |
+| 100 grams | 1 dishwasher cycle |
+| 1 kg | 4 km driving |
+
+### Water Equivalents
+
+| Water Amount | Equivalent |
+|--------------|------------|
+| 0.1 liters | 1/5 glass of water |
+| 0.5 liters | 1 water bottle |
+| 1 liter | 2 water bottles |
+| 5 liters | 1 minute shower |
+
+### Example: 10,000 Requests (500 tokens each)
+
+| Model | CO₂ | Equivalent | Water | Equivalent |
+|-------|-----|------------|-------|------------|
+| GPT-5 | 68.9 kg | 275 km driving | 88.4 L | 18 min shower |
+| GPT-4o Mini | 3.2 kg | 13 km driving | 2.3 L | 5 water bottles |
+| Amazon Nova Lite | 0.5 kg | 2 km driving | 0.35 L | 1 glass water |
+
+---
+
+## Best Practices for Sustainable AI
+
+### 1. Right-Size Your Model
+
+**Rule of thumb:** Use the smallest model that meets quality requirements.
+
+```
+Simple tasks → Lite/Haiku models (A+)
+Standard tasks → Mini models (A+)
+Complex tasks → Pro/Full models (A/B)
+Critical tasks → Premium models (C/D) - only when necessary
+```
+
+### 2. Optimize Token Usage
+
+**Reduce input tokens:**
+- Use concise prompts
+- Remove unnecessary context
+- Use efficient prompt templates
+
+**Reduce output tokens:**
+- Set appropriate max_tokens limits
+- Request concise responses
+- Use structured output formats
+
+### 3. Implement Smart Routing
+
+Route requests based on complexity:
+
+```javascript
+function selectModel(complexity) {
+  switch(complexity) {
+    case 'simple':
+      return 'amazon-nova-lite';     // A+ rating
+    case 'standard':
+      return 'gpt-4o-mini';          // A+ rating
+    case 'complex':
+      return 'gpt-4.1';              // A+ rating
+    case 'critical':
+      return 'gpt-5';                // D rating - use sparingly
+  }
+}
+```
+
+### 4. Cache and Batch
+
+- **Cache responses** for repeated queries
+- **Batch similar requests** to reduce overhead
+- **Use embeddings** for semantic caching
+
+### 5. Monitor and Report
+
+Track sustainability metrics:
+- Total CO₂ emissions per day/week/month
+- Water consumption trends
+- Cost vs. sustainability correlation
+- Model usage distribution
+
+---
+
+## Model Selection by Sustainability Priority
+
+### 🌱 Sustainability-First (A+ Only)
+
+Best for organizations prioritizing environmental impact:
+
+| Model | CO₂/1k | Use Case |
+|-------|--------|----------|
+| Amazon Nova Lite | 0.10g | Simple tasks, high volume |
+| Gemini 2.0 Flash Lite | 0.12g | Fast responses |
+| GPT-4.1 | 0.56g | Complex tasks with sustainability |
+| GPT-4o Mini | 0.64g | General purpose |
+| Claude 3 Haiku | 0.64g | High-volume chatbots |
+
+### ⚖️ Balanced Approach (A+ and A)
+
+Good sustainability with broader capability:
+
+| Model | CO₂/1k | Use Case |
+|-------|--------|----------|
+| GPT-4o | 1.17g | Multimodal tasks |
+| Claude Sonnet 4 | 1.18g | Complex reasoning |
+| Gemini 2.5 Pro | 1.54g | Research, analysis |
+
+### 🎯 Quality-First (Accept Higher Impact)
+
+When quality is paramount:
+
+| Model | CO₂/1k | Use Case |
+|-------|--------|----------|
+| GPT-5 | 13.78g | Most complex tasks |
+| GPT-5.1 | 13.78g | Cutting-edge features |
+
+---
+
+## ROI Calculator: Sustainability Switch
+
+### Scenario: 100,000 requests/month
+
+**Current State: GPT-5 for all requests**
+- Monthly CO₂: 689 kg
+- Monthly Water: 884 L
+- Monthly Cost: $1,000
+
+**After Optimization: Hybrid approach**
+- 70% GPT-4o Mini → 224 kg CO₂
+- 20% GPT-4.1 → 56 kg CO₂
+- 10% GPT-5 → 69 kg CO₂
+
+**Results:**
+| Metric | Before | After | Savings |
+|--------|--------|-------|---------|
+| CO₂ | 689 kg | 349 kg | **49% reduction** |
+| Water | 884 L | 450 L | **49% reduction** |
+| Cost | $1,000 | $220 | **78% reduction** |
+
+---
+
+## Data Sources & Methodology
+
+### Calculation Methodology
+
+Our sustainability data is based on:
+
+1. **Artificial Analysis Benchmarks**: Real-world inference measurements
+2. **Hardware Specifications**: 
+   - NVIDIA DGX A100/H100/H200
+   - Google TPU v5e/v6e
+3. **Data Center Metrics**:
+   - PUE (Power Usage Effectiveness): 1.09-1.14
+   - CIF (Carbon Intensity Factor): 0.231-0.34 gCO2e/Wh
+
+### Assumptions
+
+- Inference only (not training)
+- Standard 300-token query baseline
+- Average data center efficiency
+- Regional carbon intensity averages
+
+### Limitations
+
+- Actual values vary by:
+  - Geographic location
+  - Time of day (grid mix)
+  - Specific hardware configuration
+  - Workload patterns
+- Values are estimates; actual impact may differ ±20%
+
+---
+
+## Additional Resources
+
+- [Salesforce Net Zero Cloud](https://www.salesforce.com/products/net-zero-cloud/)
+- [AI Carbon Footprint Calculator](https://mlco2.github.io/impact/)
+- [Artificial Analysis Benchmarks](https://artificialanalysis.ai/)
+- [Green Software Foundation](https://greensoftware.foundation/)
+
+---
+
+## Key Takeaways
+
+1. **Small changes = Big impact**: Switching from GPT-5 to GPT-4o Mini reduces CO₂ by 95%
+2. **Cost and sustainability align**: Cheaper models are usually more sustainable
+3. **Right-size your models**: Use premium models only when quality demands it
+4. **Monitor and optimize**: Track your AI carbon footprint over time
+5. **Hybrid approach wins**: Route requests to appropriate models based on complexity
+
+---
+
+**Building sustainable AI isn't just good for the planet—it's good for your bottom line.**
+
+---
+
+*Last Updated: January 2025*
+*Data Version: Based on models.json with Artificial Analysis benchmark data*

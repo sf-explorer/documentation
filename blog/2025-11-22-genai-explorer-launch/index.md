@@ -177,17 +177,6 @@ Visit https://app.sf-explorer.com/gen-ai.html to use GenAI Explorer directly in 
 
 Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag) for browser integration with side panel and context menu shortcuts.
 
-### Setup Your Connected App
-
-Before using GenAI Explorer, you need to set up a connected app in your Salesforce org for OAuth 2.0 authentication:
-
-1. Create a connected app in your org following the official salesforce doc: https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html
-2. Give some right to your API only user (Datacloud user, prompt user)
-3. Visit https://app.sf-explorer.com/gen-ai.html (or open the extension)
-4. Fill in the required OAuth 2.0 credentials (Consumer Key, Instance URL)
-5. Click on **Connect to salesforce** to complete the OAuth 2.0 flow
-
-
 ### Requirements
 
 - Modern web browser (Chrome, Firefox, Safari, Edge)

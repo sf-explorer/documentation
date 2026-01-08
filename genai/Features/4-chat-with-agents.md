@@ -17,12 +17,6 @@ keywords:
 
 The primary feature of GenAI Explorer - have real-time conversations with your Agentforce agents directly from your browser.
 
-:::warning Connected App Required
-To chat with Agentforce agents, you need to set up a connected app in your Salesforce org for OAuth 2.0 authentication. This is required for agent interaction features.
-
-**[📖 Learn how to set up your connected app →](/genai/faq#how-do-i-set-up-a-connected-app)**
-:::
-
 ![Chat Interface](../images/chat.png)
 
 ## The Problem

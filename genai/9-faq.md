@@ -24,7 +24,6 @@ Yes, you need:
 - Data Cloud access (for analytics features)
 - Read access to AI metadata objects
 - API Enabled permission
-- A connected app for some features (see below)
 
 Contact your Salesforce administrator if you don't have these permissions.
 
@@ -32,33 +31,7 @@ Contact your Salesforce administrator if you don't have these permissions.
 
 ### Do I need a connected app?
 
-Yes, but only for specific features that interact with Salesforce AI APIs:
-
-**Features requiring a connected app:**
-- 💬 Agent interaction and chatting with Agentforce agents
-- 🔬 Replay Debugger for reproducing and testing requests
-- 🎯 Topic Collision Analysis
-- 🧠 Atlas Reasoning Engine visualization with live data
-- 📊 Data Cloud query execution
-
-**Features that work without a connected app:**
-- 📖 Browsing documentation and examples
-- 🎨 Creating and editing interactive boards (offline mode)
-- 📝 Viewing static configuration examples
-
-### How do I set up a connected app?
-
-To set up a connected app for GenAI Explorer, follow the official Salesforce documentation:
-
-**📖 [Agent API - Get Started Guide](https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html)**
-
-This official guide covers:
-- Creating a connected app in Setup
-- Configuring OAuth settings and scopes
-- Setting the correct callback URLs
-- Granting required user permissions
-
-Once your connected app is configured, you can connect GenAI Explorer by entering your Consumer Key, Secret and Instance URL.
+No, a connected app is no longer required. GenAI Explorer uses standard OAuth 2.0 authentication directly with your Salesforce org. Simply connect using your Salesforce credentials and you'll have access to all features.
 
 ### How can I use GenAI Explorer?
 
