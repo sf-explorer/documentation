@@ -490,15 +490,6 @@
 <p>Visit <a href="https://app.sf-explorer.com/gen-ai.html" target="_blank" rel="noopener noreferrer">https://app.sf-explorer.com/gen-ai.html</a> to use GenAI Explorer directly in your browser without any installation. Authentication is done securely via OAuth 2.0.</p>
 <p><strong>Option 2: Chrome Extension</strong></p>
 <p>Install from the <a href="https://chromewebstore.google.com/detail/genai-explorer/dopnhbkmnclgkeenfadmbcfllplbgcag" target="_blank" rel="noopener noreferrer">Chrome Web Store</a> for browser integration with side panel and context menu shortcuts.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="setup-your-connected-app">Setup Your Connected App<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#setup-your-connected-app" class="hash-link" aria-label="Direct link to Setup Your Connected App" title="Direct link to Setup Your Connected App">​</a></h3>
-<p>Before using GenAI Explorer, you need to set up a connected app in your Salesforce org for OAuth 2.0 authentication:</p>
-<ol>
-<li>Create a connected app in your org following the official salesforce doc: <a href="https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html" target="_blank" rel="noopener noreferrer">https://developer.salesforce.com/docs/einstein/genai/guide/agent-api-get-started.html</a></li>
-<li>Give some right to your API only user (Datacloud user, prompt user)</li>
-<li>Visit <a href="https://app.sf-explorer.com/gen-ai.html" target="_blank" rel="noopener noreferrer">https://app.sf-explorer.com/gen-ai.html</a> (or open the extension)</li>
-<li>Fill in the required OAuth 2.0 credentials (Consumer Key, Instance URL)</li>
-<li>Click on <strong>Connect to salesforce</strong> to complete the OAuth 2.0 flow</li>
-</ol>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements<a href="http://info.sf-explorer.com/blog/introducing-genai-explorer#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements">​</a></h3>
 <ul>
 <li>Modern web browser (Chrome, Firefox, Safari, Edge)</li>
