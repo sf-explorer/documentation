@@ -116,10 +116,30 @@ The Token Usage Report consists of **six key visualizations**, each providing un
 **What it shows:** Table displaying estimated token sizes for topic classification prompts, grouped by planner.
 
 **Why it matters:**
+
+Topic classification is **critical for cost optimization** because it's executed **for every single interaction** in the Atlas Reasoning Engine. Topic resolution happens as the first step of every conversation, making it one of the most frequently executed operations.
+
+**Real-World Impact:**
+
+Consider this example:
+- **10 conversations** with an average of **10 interactions** each
+- This results in **100 topic classification executions**
+- If each classification uses 500 tokens, that's **50,000 tokens** just for topic resolution
+- At scale, this multiplies quickly: 100 conversations × 10 interactions = **1,000 executions**
+
+**Cost Implications:**
+
+Because topic classification runs so frequently, even small optimizations can lead to significant cost savings:
+- **Reducing scope field size by 50%** can cut topic classification costs in half
+- **Optimizing 10 topics** that are used frequently can save thousands of tokens per day
+- **Choosing efficient topic definitions** compounds savings across all conversations
+
+**Key Benefits:**
 - **Cost Estimation**: Understand token costs for topic classification before deployment
 - **Optimization**: Identify topics with large scope fields that consume excessive tokens
 - **Capacity Planning**: Plan token budgets per planner based on topic definitions
 - **Performance Analysis**: Compare token requirements across different planners
+- **Scalability**: Make informed decisions about topic definitions that will scale efficiently
 
 **How to use it:**
 - **Identify Optimization Opportunities**: Look for planners with high total token sizes - these may benefit from scope field optimization
