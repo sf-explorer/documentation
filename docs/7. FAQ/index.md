@@ -11,6 +11,19 @@ Most of the features where built because I needed it on my projects. I usually w
 ## How is it built?
 It is built with React, Typescript and [React SLDS](https://github.com/mashmatrix/react-lightning-design-system/blob/master/README.md) to provide a salesforce like UX experience.
 
+## What server is involved with SF Explorer?
+For the **web app**, the data transits through Heroku (EU hosted). No data is stored, we have no database, only compute with an Express server to do the proxy.
+
+For the **Chrome app**, the server is only involved if you:
+- Connect through OAuth (the server keeps our client secret safe)
+- Do special operations like OpenAI or you use Einstein with a connected app
+- Use Marketing Cloud app
+
+## What analytics are used?
+SF Explorer uses Google Analytics to track usage and improve the product. This helps us understand how features are being used and identify areas for improvement.
+
+**Important:** No personal data or way to identify users is stored. No client data or metadata is sent to analytics.
+
 ## Is it open source?
 Some pieces are. You can find the different components [here](https://github.com/orgs/sf-explorer/repositories)
 
