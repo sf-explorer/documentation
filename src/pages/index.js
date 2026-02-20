@@ -52,9 +52,9 @@ export default function Home() {
         <div className={styles.topBanner}>
           <div className={styles.topBannerTitle}>
             {'🎉\xa0'}
-            <Link to="/blog/introducing-genai-explorer" className={styles.topBannerTitleText}>
+            <Link to="/blog/release65" className={styles.topBannerTitleText}>
 
-              {'GenAI Explorer is\xa0here!️'}
+              {'Release 6.5.0 is\xa0here!️'}
 
             </Link>
             {'\xa0🥳'}
